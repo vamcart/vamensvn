@@ -21,7 +21,7 @@
   require_once(DIR_FS_INC.'xtc_redirect.inc.php');
   require_once(DIR_FS_INC.'xtc_href_link.inc.php');
   
-  include('language/russian.php');
+  include('language/english.php');
 
   // Include Developer - standard settings for installer
   //  require('developer_settings.php');  
@@ -42,7 +42,7 @@
     $error = false;
 
 
-      if ( ($_SESSION['language'] != 'russian') && ($_SESSION['language'] != 'english') ) {
+      if ( ($_SESSION['language'] != 'english') ) {
         $error = true;
 
         $messageStack->add('index', SELECT_LANGUAGE_ERROR);
@@ -301,12 +301,6 @@ if ($ok_message!='') {
             </font> <form name="language" method="post" action="index.php">
 
               <table width="300" border="0" cellpadding="0" cellspacing="4">
-                <tr>
-                  <td width="98"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/icons/arrow02.gif" width="13" height="6"><?php echo TEXT_RUSSIAN; ?></font></td>
-                  <td width="192"><img src="images/icons/icon-rus.gif" width="30" height="16">
-                    <?php echo xtc_draw_radio_field_installer('LANGUAGE', 'russian'); ?>
-                  </td>
-                </tr>
                 <tr>
                   <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><img src="images/icons/arrow02.gif" width="13" height="6"><?php echo TEXT_ENGLISH; ?></font></td>
                   <td><img src="images/icons/icon-eng.gif" width="30" height="16">
