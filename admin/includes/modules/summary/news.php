@@ -45,7 +45,7 @@ CarpConf('maxitems',5);
         
         // after each item
         CarpConf('ai','</div>');
-CarpShow('http://vamshop.ru/support/modules/news/backendt.php?topicid=1');
+CarpShow('http://vamshop.com/rss2.php?feed=news');
 
 ?>
                 
