@@ -20,7 +20,7 @@ define('MODULE_IMAGE_PROCESS_TEXT_DESCRIPTION', 'Image processing');
 define('MODULE_IMAGE_PROCESS_TEXT_TITLE', 'Image processing');
 define('MODULE_IMAGE_PROCESS_STATUS_DESC','Module status');
 define('MODULE_IMAGE_PROCESS_STATUS_TITLE','Status');
-define('IMAGE_EXPORT','Click Submit to start image processing!');
+define('IMAGE_EXPORT','Click Ok to start image processing!');
 define('IMAGE_EXPORT_TYPE','<hr noshade><b>Image processing:</b>');
 
 
