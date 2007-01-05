@@ -13,7 +13,7 @@
    Released under the GNU General Public License 
    --------------------------------------------------------------*/
 // Global
-define('TEXT_FOOTER','Powered by <a href="http://vamshop.ru">VaM Shop</a>'); 
+define('TEXT_FOOTER','Powered by <a href="http://vamshop.com">VaM Shop</a>'); 
    
 // Box names
 define('BOX_LANGUAGE','Language');
@@ -219,7 +219,7 @@ define('TITLE_CHMOD','Setting rights on files');
 // fnished.php
 
 define('TEXT_SHOP_CONFIG_SUCCESS','<strong>VaM Shop</strong> Shop configuration was successful.');
-define('TEXT_TEAM','<a href="http://vamshop.ru" target="_blank">VaM Shop russian support site</a>');
+define('TEXT_TEAM','<a href="http://vamshop.com" target="_blank">VaM Shop support site</a>');
 
 // —борка VaM
 
