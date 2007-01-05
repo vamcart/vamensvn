@@ -16,12 +16,12 @@
    ---------------------------------------------------------------------------------------*/
 defined( '_VALID_XTC' ) or die( 'Direct Access to this location is not allowed.' );
 
-define('MODULE_IMAGE_PROCESS_TEXT_DESCRIPTION', 'Пакетная обработка изображений');
-define('MODULE_IMAGE_PROCESS_TEXT_TITLE', 'Пакетная обработка изображений');
-define('MODULE_IMAGE_PROCESS_STATUS_DESC','Статус модуля');
-define('MODULE_IMAGE_PROCESS_STATUS_TITLE','Статус');
-define('IMAGE_EXPORT','Нажмите [Одобрить] для начала пакетной обработки изображений, этот процесс может длиться некоторое время, ничего не трогайте и не прерывайте!');
-define('IMAGE_EXPORT_TYPE','<hr noshade><b>Пакетная обработка:</b>');
+define('MODULE_IMAGE_PROCESS_TEXT_DESCRIPTION', 'Image processing');
+define('MODULE_IMAGE_PROCESS_TEXT_TITLE', 'Image processing');
+define('MODULE_IMAGE_PROCESS_STATUS_DESC','Module status');
+define('MODULE_IMAGE_PROCESS_STATUS_TITLE','Status');
+define('IMAGE_EXPORT','Click Submit to start image processing!');
+define('IMAGE_EXPORT_TYPE','<hr noshade><b>Image processing:</b>');
 
 
   class image_processing {
