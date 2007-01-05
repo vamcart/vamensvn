@@ -81,7 +81,7 @@ define('TEXT_WELCOME_STEP2','<b>Install database</b><br /><br />The VaM Shop ins
 define('TEXT_WELCOME_STEP3','<b>Database import.</b><br /><br />');
 define('TEXT_WELCOME_STEP4','<b>Configure VaM Shop main files</b><br /><br /><b>If there are old configure files from a further installation, VaM Shop wiill delete them</b><br /><br />The installer will set up the configuration files with the main parameters for database and file structur.<br /><br />You can choose between different session handling systems.');
 define('TEXT_WELCOME_STEP5','<b>Webserver Configuration</b><br /><br />');
-define('TEXT_WELCOME_STEP6','<b>Basic shop configuration</b><br /><br />The installer will create the admin account and will perform some db actions.<br /> The given informations for <b>Country</b> and <b>Post Code</b> are used for shipping and tax callculations.<br /><br />If you wish, VaM Shop can automatically setup the zones,tax-rates and tax-classes for delivering/selling within the European Union.<br />Just set <b>setup zones for EU</b> to <b>YES</b>.');
+define('TEXT_WELCOME_STEP6','<b>Basic shop configuration</b><br /><br />The installer will create the admin account and will perform some db actions.<br /> The given informations for <b>Country</b> and <b>Post Code</b> are used for shipping and tax callculations.');
 define('TEXT_WELCOME_STEP7','<b>Guest and default customers setup</b><br /><br />The VaM Shop group- and pricesystem got nearly infinite possibilities of different prices.<br /><br />
 <b>% discount on single product</b><br />
 %max can be set for every single product, and single customers group<br />
