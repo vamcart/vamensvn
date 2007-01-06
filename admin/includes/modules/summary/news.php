@@ -50,7 +50,8 @@ CarpShow('http://vamshop.com/rss2.php?feed=news');
 ?>
                 
                 
-                
+<br /><a href="http://www.geckotribe.com/rss/carp/" target="_blank">Newsfeed display by CaRP</a>                
+
                 </td>
               </tr>
 
