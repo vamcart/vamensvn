@@ -101,6 +101,7 @@ define('BOX_CONFIGURATION_19', 'xt:C Partner');
 define('BOX_CONFIGURATION_22', 'Search-Options');
 define('BOX_CONFIGURATION_23', 'Yandex-Market');
 define('BOX_CONFIGURATION_24', 'Quick Price Updates');
+define('BOX_CONFIGURATION_25', 'Contribution Installer');
  
 define('BOX_MODULES', 'Payment-/Shipping-/Billing-Modules');
 define('BOX_PAYMENT', 'Payment Systems');
@@ -159,6 +160,7 @@ define('BOX_PRODUCTS_VPE','Packing unit');
 define('BOX_CAMPAIGNS_REPORT','Campaign report');
 define('BOX_ORDERS_XSELL_GROUP','Cross-sell groups');
 define('BOX_SUPPORT_SITE','Support site');
+define('BOX_CONTRIBUTION_INSTALLER','Contribution Installer');
 
 define('TXT_GROUPS','<b>Groups</b>:');
 define('TXT_SYSTEM','System');
