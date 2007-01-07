@@ -57,7 +57,7 @@
               <td width="5" align="center" valign="top" class="button1">&nbsp;</td>
               <td align="center" valign="top"><img src="images/corners/corner_top_left.gif" width="3" height="3" align="left" hspace="0" /></td>
               <td width="84" align="center" valign="top">
-              <div class="buttonadmin"><a class="shippingInfo" href="http://vamshop.com" target="_blank"><?php echo TEXT_HEADER_SUPPORT; ?></a></div>              
+              <div class="buttonadmin"><a class="shippingInfo" href="http://vamshop.ru" target="_blank"><?php echo TEXT_HEADER_SUPPORT; ?></a></div>              
               </td>
               <td align="center" valign="top"><img src="images/corners/corner_top_right.gif" width="3" height="3" align="right" hspace="0" /></td>
               <td width="5" align="center" valign="top" class="button1">&nbsp;</td>
@@ -161,6 +161,7 @@
   if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['configuration'] == '1')) echo '<li><span><img src="images/icons/16x16/configure.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_CONFIGURATION, 'gID=22', 'NONSSL') . '">' . BOX_CONFIGURATION_22 . '</a></li>' . "\n";
   if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['configuration'] == '1')) echo '<li><span><img src="images/icons/16x16/configure.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_CONFIGURATION, 'gID=23', 'NONSSL') . '">' . BOX_CONFIGURATION_23 . '</a></li>' . "\n";
   if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['configuration'] == '1')) echo '<li><span><img src="images/icons/16x16/configure.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_CONFIGURATION, 'gID=24', 'NONSSL') . '">' . BOX_CONFIGURATION_24 . '</a></li>' . "\n";
+  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['configuration'] == '1')) echo '<li><span><img src="images/icons/16x16/configure.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_CONFIGURATION, 'gID=25', 'NONSSL') . '">' . BOX_CONFIGURATION_25 . '</a></li>' . "\n";
 ?>
 
           </ul>
@@ -222,6 +223,8 @@
   if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['modules'] == '1')) echo '<li><span><img src="images/icons/16x16/calculator.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_MODULES, 'set=ordertotal', 'NONSSL') . '">' . BOX_ORDER_TOTAL . '</a></li>' . "\n";
 
   if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['module_export'] == '1')) echo '<li><span><img src="images/icons/16x16/date.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_MODULE_EXPORT) . '">' . BOX_MODULE_EXPORT . '</a></li>' . "\n";
+
+  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['cip_manager'] == '1')) echo '<li><span><img src="images/icons/16x16/configure.png" border="0" alt=""></span><a href="' . xtc_href_link(FILENAME_CIP_MANAGER) . '">' . BOX_CONTRIBUTION_INSTALLER . '</a></li>' . "\n";
 
 ?>
 
@@ -360,7 +363,7 @@
 
 <?php
 
-  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['languages'] == '1')) echo '<li><span><img src="images/icons/16x16/home.png" border="0" alt=""></span><a href="http://vamshop.com" target="_blank">' . BOX_SUPPORT_SITE . '</a></li>' . "\n";
+  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['languages'] == '1')) echo '<li><span><img src="images/icons/16x16/home.png" border="0" alt=""></span><a href="http://vamshop.ru" target="_blank">' . BOX_SUPPORT_SITE . '</a></li>' . "\n";
 
 ?>
 
