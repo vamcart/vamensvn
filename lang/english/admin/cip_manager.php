@@ -38,6 +38,7 @@ define('ICON_ZIP', 'Pack');
 define('ICON_EDIT', 'Edit');
 define('ICON_INSTALL', 'Install');
 define('ICON_REMOVE', 'Remove');
+define('ICON_DELETE_MODULE', 'Delete module archive');
 define('ICON_WITHOUT_DATA_REMOVING', 'without data removing');
 define('ICON_EMPTY', '');
 
