@@ -28,5 +28,6 @@
    define('TITLE_UPDATED','Product Attributes Updated.');
    define('SELECT_PRODUCT','Please select a product to edit:');
    define('SELECT_COPY','Please select a product to copy attributes from:');
+   define('SELECT_FILE','Select file');
 
 ?>
