@@ -48,5 +48,20 @@ define('ICON_INSTALLED_CURRENT_FOLDER', 'folder of CIP that has been installed')
 //Uploader:
 define('ERROR_FILE_ALREADY_EXISTS','File %s  <b>already exists</b>.');
 
+define('CIP_MANAGER_SUPPORT','Support: ');
+define('CIP_MANAGER_UPLOADER','Uploader: ');
+define('CIP_MANAGER_SUPPORT_FORUM','Support Forum for this CIP at VaM Shop support site');
+define('CIP_MANAGER_CONTRIBUTION_PAGE','Contributions official page on osCommerce site');
+define('CIP_MANAGER_SUPPORT_FORUM_DEVELOPER','Support Forum for this CIP at developer site');
+define('CIP_MANAGER_INFO','Contrib Info: ');
+define('CIP_MANAGER_INSTALLED','CIP have been INSTALLED');
+define('CIP_MANAGER_NOT_INSTALLED','CIP have NOT been installed');
+define('CIP_MANAGER_UPLOAD_NOTE','Remember that you could upload <b>only ZIPs</b>, <br><b>no more than 500Kb</b><br>and <b>only Contrib Installer Packages! :-)</b>.');
+define('CIP_MANAGER_XML_NOT_FOUND',' does not exists!');
+define('CIP_MANAGER_GENERAL_INFO','General Info: ');
+define('CIP_MANAGER_IMAGE_PREVIEW','Image Preview: ');
+define('CIP_MANAGER_ENLARGE','Click to enlarge');
+define('CIP_MANAGER_INSTALLED','CIP was <b>installed!</b>');
+define('CIP_MANAGER_REMOVED','CIP was <b>removed.</b>');
 
 ?>
