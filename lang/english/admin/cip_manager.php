@@ -43,14 +43,13 @@ define('ICON_WITHOUT_DATA_REMOVING', 'without data removing');
 define('ICON_EMPTY', '');
 
 define('ICON_INSTALLED_CURRENT_FOLDER', 'Current folder of CIP that has been installed');
-define('ICON_INSTALLED_CURRENT_FOLDER', 'folder of CIP that has been installed');
 
 //Uploader:
 define('ERROR_FILE_ALREADY_EXISTS','File %s  <b>already exists</b>.');
 
 define('CIP_MANAGER_SUPPORT','Support: ');
 define('CIP_MANAGER_UPLOADER','Uploader: ');
-define('CIP_MANAGER_SUPPORT_FORUM','Support Forum for this CIP at VaM Shop support site');
+define('CIP_MANAGER_SUPPORT_FORUM','Support Forum for this CIP');
 define('CIP_MANAGER_CONTRIBUTION_PAGE','Contributions official page on osCommerce site');
 define('CIP_MANAGER_SUPPORT_FORUM_DEVELOPER','Support Forum for this CIP at developer site');
 define('CIP_MANAGER_INFO','Contrib Info: ');
