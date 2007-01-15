@@ -505,4 +505,6 @@ define('TEXT_OF_5_STARS', '%s of 5 stars!');
 
 define('IMAGE_BUTTON_PRINT', 'Print');
 
+define('TEXT_AJAX_QUICKSEARCH_TOP', 'Top %s results...');
+
 ?>
