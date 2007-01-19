@@ -27,31 +27,9 @@ defined('_VALID_XTC') or die('Direct Access to this location is not allowed.');
                 <td class="dataTableContentRss" valign="top">
                 
                 
-<?php
+<iframe src="http://vamshop.com/rss2.php?feed=news" frameborder="0" width="100%"></iframe>
 
-CarpConf('iorder','link,date,desc');
-
-        CarpConf('cborder','link,desc');
-        CarpConf('caorder','image');
-        CarpConf('bcb','<div style="font-size:10; font-weight: bold; background:#f1f1f1; border: 1px solid #CCCCCC; padding:4px;">');
-        CarpConf('acb','</div>');
-        CarpConf('bca','<center>');
-        CarpConf('aca','</center>');
-CarpConf('maxitems',5);
-
-        
-        // before each item
-        CarpConf('bi','<div style="font-size:10; font-family: verdana; background:#F6F6F6; border-bottom: 1px dashed #cccccc; padding:5px;">');
-        
-        // after each item
-        CarpConf('ai','</div>');
-CarpShow('http://vamshop.com/rss2.php?feed=news');
-
-?>
                 
-                
-<br /><a href="http://www.geckotribe.com/rss/carp/" target="_blank">Newsfeed display by CaRP</a>                
-
                 </td>
               </tr>
 
