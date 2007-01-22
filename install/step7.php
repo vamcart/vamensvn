@@ -18,6 +18,8 @@
   
   require('includes/application.php');
   
+  if (!isset($_SESSION['language']) ) $_SESSION['language'] = 'english';
+
   require_once(DIR_FS_INC . 'xtc_rand.inc.php');
   require_once(DIR_FS_INC . 'xtc_encrypt_password.inc.php');   
   require_once(DIR_FS_INC . 'xtc_db_connect.inc.php');
