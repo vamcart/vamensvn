@@ -34,31 +34,31 @@ if(datePicker.languageinfo != 'en') {
 
 // Defaults for the language should the locale file not load
 datePicker.months = [
-                "Январь",
-                "Февраль",
-                "Март",
-                "Апрель",
-                "Май",
-                "Июнь",
-                "Июль",
-                "Август",
-                "Сентябрь",
-                "Октябрь",
-                "Ноябрь",
-                "Декабрь"];
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "Jun",
+                "Jul",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"];
 datePicker.fullDay = [
-                "Понедельник",
-                "Вторник",
-                "Среда",
-                "Четверг",
-                "Пятница",
-                "Суббота",
-                "Воскресенье"];
+                "S",
+                "M",
+                "T",
+                "W",
+                "T",
+                "F",
+                "S"];
 datePicker.titles = [
-                "Предыдущий месяц",
-                "Следующий месяц",
-                "Предыдущий год",
-                "Следующий  год"];
+                "Prev. month",
+                "Next month",
+                "Prev year.",
+                "Next year"];
 datePicker.daysPerMonth = [31,28,31,30,31,30,31,31,30,31,30,31];
 
 datePicker.getDaysPerMonth = function (nMonth, nYear) {
