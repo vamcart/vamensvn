@@ -17,6 +17,8 @@
   
   require('includes/application.php');
 
+  if (!isset($_SESSION['language']) ) $_SESSION['language'] = 'english';
+
   include('language/'.$_SESSION['language'].'.php');
   
   if (!$script_filename = str_replace('\\', '/', getenv('PATH_TRANSLATED'))) {
