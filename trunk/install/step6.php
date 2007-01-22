@@ -189,57 +189,53 @@
     
 	
 	    if ($error == false) {
-		
-xtc_db_query("insert into " . TABLE_CUSTOMERS . " (
-										customers_id,
-										customers_status,
-										customers_firstname,
-										customers_lastname,
-										customers_email_address,
-										customers_default_address_id,
-										customers_telephone,
-										customers_password,
-										delete_user) VALUES
-										('1',
-										'0',
-										'".$firstname."',
-										'".$lastname."',
-										'".$email_address."',
-										'1',
-										'".$telephone."',
-										'".xtc_encrypt_password($password)."',
-										'0')");
+$customer_query = xtc_db_query("select c.customers_id, ci.customers_info_id, ab.customers_id from " . TABLE_CUSTOMERS . " c, " . TABLE_CUSTOMERS_INFO . " ci, " . TABLE_ADDRESS_BOOK . " ab ");
+if (xtc_db_num_rows($customer_query) >= 1) {
+  $db_action = "update";
+} else {
+    $db_action = "insert";
+  }
 
-xtc_db_query("insert into " . TABLE_CUSTOMERS_INFO . " (
-										customers_info_id,
-										customers_info_date_of_last_logon, 
-										customers_info_number_of_logons, 
-										customers_info_date_account_created,
-										customers_info_date_account_last_modified,
-										global_product_notifications) VALUES
-										('1','','','','','')");
-xtc_db_query("insert into " .TABLE_ADDRESS_BOOK . " (
-										customers_id,
-										entry_company,
-   										entry_firstname,
-   										entry_lastname,
-   										entry_street_address,
-   										entry_postcode,
-   										entry_city,
-   										entry_state,
-   										entry_country_id,
-   										entry_zone_id) VALUES
-										('1',
-										'".($company)."',
-										'".($firstname)."',
-										'".($lastname)."',
-										'".($street_address)."',
-										'".($postcode)."',
-										'".($city)."',
-										'".($state)."',
-										'".($country)."',
-										'".($zone_id)."'
-										)");
+xtc_db_perform(TABLE_CUSTOMERS, array(
+              'customers_id' => '1',
+              'customers_status' => '0',
+              'customers_firstname' => $firstname,
+              'customers_lastname' => $lastname,
+              'customers_email_address' => $email_address,
+              'customers_default_address_id' => '1',
+              'customers_telephone' => $telephone,
+              'customers_password' => xtc_encrypt_password($password),
+              'delete_user' => '0',
+              'customers_date_added' => 'now()',
+              'customers_last_modified' => 'now()',),
+              $db_action, 'customers_id = 1'
+              );
+
+xtc_db_perform(TABLE_CUSTOMERS_INFO, array(
+              'customers_info_id' => '1',
+              'customers_info_date_of_last_logon' => '',
+              'customers_info_number_of_logons' => '',
+              'customers_info_date_account_created' => 'now()',
+              'customers_info_date_account_last_modified' => 'now()',
+              'global_product_notifications' => ''),
+              $db_action, 'customers_info_id = 1'
+              );
+
+xtc_db_perform(TABLE_ADDRESS_BOOK, array(
+              'customers_id' => '1',
+              'entry_company' => ($company),
+              'entry_firstname' => ($firstname),
+              'entry_lastname' => ($lastname),
+              'entry_street_address' => ($street_address),
+              'entry_postcode' => ($postcode),
+              'entry_city' => ($city),
+              'entry_state' => ($state),
+              'entry_country_id' => ($country),
+              'entry_zone_id' => ($zone_id),
+              'address_date_added' => 'now()',
+              'address_last_modified' => 'now()'),
+              $db_action, 'customers_id = 1'
+              );
 										
 										 
  
