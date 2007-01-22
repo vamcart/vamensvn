@@ -15,8 +15,13 @@
   
   require('includes/application.php');
   require('../admin/includes/configure.php'); 
+
+  if (!isset($_SESSION['language']) ) $_SESSION['language'] = 'english';
   
   include('language/'.$_SESSION['language'].'.php');
+
+  // try to rename catalog 'install'  rename(DIR_FS_CATALOG.'install/', DIR_FS_CATALOG.'install_BAK/');
+  
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
