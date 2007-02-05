@@ -22,6 +22,7 @@
   require_once(DIR_FS_INC . 'xtc_encrypt_password.inc.php');
   require_once(DIR_FS_INC . 'xtc_db_connect.inc.php');
   require_once(DIR_FS_INC . 'xtc_db_query.inc.php');
+  require_once(DIR_FS_INC . 'xtc_db_perform.inc.php');
   require_once(DIR_FS_INC . 'xtc_db_fetch_array.inc.php');
   require_once(DIR_FS_INC .'xtc_validate_email.inc.php');
   require_once(DIR_FS_INC .'xtc_db_input.inc.php');
