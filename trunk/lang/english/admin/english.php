@@ -73,6 +73,7 @@ define('BOX_HEADING_MODULES','Modules');
 define('BOX_HEADING_ZONE','Zone / Tax');
 define('BOX_HEADING_CUSTOMERS','Customers');
 define('BOX_HEADING_PRODUCTS','Catalog');
+define('BOX_HEADING_OTHER','Other');
 define('BOX_HEADING_STATISTICS','Statistics');
 define('BOX_HEADING_TOOLS','Tools');
 define('BOX_HEADING_LOGOFF','Logoff');
