@@ -30,7 +30,7 @@
   define('TITLE_SEND','Sent');
   define('TEXT_NEWSLETTER_ONLY','Also to groupmembers, which have no newsletter subscribed');
   define('TEXT_USERS','Subscribers of ');
-  define('TEXT_CUSTOMERS',' Customers )</i>');
+  define('TEXT_CUSTOMERS',' Customers)</i>');
   define('TITLE_DATE','Date');
   define('TEXT_SEND_TO','Recipient:');
   define('TEXT_PREVIEW','<b>Preview:</b>');
