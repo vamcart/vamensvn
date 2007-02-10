@@ -98,7 +98,7 @@ define('BOX_CONFIGURATION_12', 'eMail Options');
 define('BOX_CONFIGURATION_13', 'Download Options');
 define('BOX_CONFIGURATION_14', 'Gzip Compression');
 define('BOX_CONFIGURATION_15', 'Sessions');
-define('BOX_CONFIGURATION_16', 'Meta-Tags/Searchengines');
+define('BOX_CONFIGURATION_16', 'Meta-Tags / Searchengines');
 define('BOX_CONFIGURATION_17', 'Specialmodules');
 define('BOX_CONFIGURATION_19', 'xt:C Partner');
 define('BOX_CONFIGURATION_22', 'Search-Options');
