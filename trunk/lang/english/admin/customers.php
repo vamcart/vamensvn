@@ -58,7 +58,6 @@ define('ENTRY_SHIPPING_UNALLOWED','Unallowed shippingmodules:');
 define('ENTRY_NEW_PASSWORD','New Password:');
 define('ENTRY_NEW_PASSWORD_HELP','');
 
-define('TEXT_INFO_ORIGINAL_REFERER', 'Original Reference:');
-define('TEXT_INFO_LOGIN_REFERER', 'New Reference:');
+define('TEXT_INFO_ORIGINAL_REFERER', 'Referer:');
 
 ?>
