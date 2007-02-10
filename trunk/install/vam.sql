@@ -1462,7 +1462,7 @@ INSERT INTO configuration (configuration_id,  configuration_key, configuration_v
 INSERT INTO configuration (configuration_id,  configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES   ('', 'DOWNLOAD_ENABLED', 'false',  13, 1, NULL, '', NULL, 'xtc_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_id,  configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES   ('', 'DOWNLOAD_BY_REDIRECT', 'false',  13, 2, NULL, '', NULL, 'xtc_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_id,  configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES   ('', 'DOWNLOAD_UNALLOWED_PAYMENT', 'banktransfer,cod,invoice,moneyorder',  13, 5, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_id,  configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES   ('', 'DOWNLOAD_MIN_ORDERS_STATUS', '3',  13, 5, NULL, '', NULL, NULL);
+INSERT INTO configuration (configuration_id,  configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES   ('', 'DOWNLOAD_MIN_ORDERS_STATUS', '4',  13, 5, NULL, '', NULL, NULL);
 
 
 # configuration_group_id 14
@@ -1868,10 +1868,10 @@ INSERT INTO languages VALUES (1,'English','en','icon.gif','english',2,'iso-8859-
 
 INSERT INTO orders_status VALUES ( '1', '1', 'Pending');
 INSERT INTO orders_status VALUES ( '2', '1', 'Waiting approval');
-INSERT INTO orders_status VALUES ( '3', '1', 'Processing');
-INSERT INTO orders_status VALUES ( '4', '1', 'Delivering');
-INSERT INTO orders_status VALUES ( '5', '1', 'Delivered');
-INSERT INTO orders_status VALUES ( '6', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '3', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '4', '1', 'Processing');
+INSERT INTO orders_status VALUES ( '5', '1', 'Delivering');
+INSERT INTO orders_status VALUES ( '6', '1', 'Delivered');
 
 
 
