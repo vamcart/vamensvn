@@ -57,7 +57,7 @@
               <td width="5" align="center" valign="top" class="button1">&nbsp;</td>
               <td align="center" valign="top"><img src="images/corners/corner_top_left.gif" width="3" height="3" align="left" hspace="0" /></td>
               <td width="84" align="center" valign="top">
-              <div class="buttonadmin"><a class="shippingInfo" href="http://vamshop.ru" target="_blank"><?php echo TEXT_HEADER_SUPPORT; ?></a></div>              
+              <div class="buttonadmin"><a class="shippingInfo" href="http://vamshop.com" target="_blank"><?php echo TEXT_HEADER_SUPPORT; ?></a></div>              
               </td>
               <td align="center" valign="top"><img src="images/corners/corner_top_right.gif" width="3" height="3" align="right" hspace="0" /></td>
               <td width="5" align="center" valign="top" class="button1">&nbsp;</td>
@@ -357,7 +357,7 @@
 
 <?php
 
-  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['languages'] == '1')) echo '<li><a href="http://vamshop.ru" target="_blank">' . BOX_SUPPORT_SITE . '</a></li>' . "\n";
+  if (($_SESSION['customers_status']['customers_status_id'] == '0') && ($admin_access['languages'] == '1')) echo '<li><a href="http://vamshop.com" target="_blank">' . BOX_SUPPORT_SITE . '</a></li>' . "\n";
 
 ?>
 
