@@ -31,7 +31,7 @@ h2, h3
      padding: 0 0 0 0;
    }
    
-/* Цвет обычных ссылок в магазине */
+/* Links color */
 a 
    {
      color: #67748B;
@@ -43,9 +43,9 @@ a:hover
      color: #990000;
      text-decoration: none;
    }
-/* /Цвет обычных ссылок в магазине */
+/* /Links color */
 
-/* Центр */
+/* Content */
 div#wrapper
    {
      float: left;
@@ -54,32 +54,32 @@ div#wrapper
 
 div#content
    {
-     margin: 0 19%; /* отступ центра от боковых колонок */
+     margin: 0 19%;
    }
 
-/* /Центр */
+/* /Content */
 
-/* Левая колонка */
+/* Left column */
 div#left
    {
      float: left;
-     width: 18%; /* Ширина левой колонки */
+     width: 18%;
      margin-left: -100%;
      background: #fff;
    }
-/* /Левая колонка */
+/* /Left column */
 
-/* Правая колонка */
+/* Right column */
 div#right
    {
      float: left;
-     width: 18%; /* Ширина правой колонки */
+     width: 18%;
      margin-left: -18%;
      background: #fff;
    }
-/* /Правая колонка */
+/* /Right column */
 
-/* Низ */
+/* Footer */
 div#footer
    {
      clear: left;
@@ -96,9 +96,9 @@ div#footer p
      padding: 5px 10px;
    }
    
-/* /Низ */
+/* /Footer */
 
-/* Навигация */
+/* Navigation */
 div#navigation 
    {
      padding-top: 0.5em;
@@ -144,9 +144,9 @@ div#navigation
      text-decoration: none;
    }
    
-/* /Навигация */
+/* /Navigation */
    
-/* Заголовок страницы */
+/* Page header */
 #content h1 
    {
      display: block;
@@ -164,9 +164,9 @@ div#navigation
      color: #990000;
      text-decoration: none;
    }
-/* /Заголовок страницы */
+/* /Page header */
 
-/* Скругленные углы */
+/* Page content */
 .page 
    {
      background: transparent;
@@ -295,9 +295,9 @@ div#navigation
      background:#ffffff;
      margin-top: 0.5em;
    }
-/* /Скругленные углы */
+/* /Page content */
 
-/*- Меню-закладки сверху */
+/*- Bookmarks */
 
 #menu 
    {
@@ -395,23 +395,23 @@ div#navigation
    }
 /**/
 
-/*- /Меню-закладки сверху */
+/*- /Bookmarks */
 
-/*- Боксы */
+/*- Boxes */
 
-/*- Бокс разделы */
+/*- Categories box */
 #boxCategories
    {
      text-align: left;
      margin-bottom: 0.5em;
      margin-top: 0.5em;
-     padding-bottom: 0.3em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.3em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса разделы */
+/*- Categories box header */
 #boxCategories h5 
    {
      display: block;
@@ -423,12 +423,12 @@ div#navigation
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса разделы */
+/*- /Categories box header */
 
-/*- Список разделов */
+/*- Categories listing */
 #categoriesBoxMenu 
    {
-     padding-left: 1em; /* отступ разделов от левого края бокса */
+     padding-left: 1em;
      margin: 0 auto;
    }
 
@@ -479,18 +479,18 @@ div#navigation
      font-weight: bold;
      position: relative;
    }
-/*- /Список разделов */
+/*- /Categories listing */
 
-/*- /Бокс разделы */
+/*- /Categories box */
 
-/*- Бокс контент */
+/*- Content box */
 #boxContent
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     margin-right: 0.2em;
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
@@ -512,17 +512,17 @@ div#navigation
      padding: 0 0 0 12px; 
    }
 
-/*- /Бокс контент */
+/*- /Content box */
 
-/*- Бокс информация */
+/*- Information box */
 #boxInformation
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
@@ -543,23 +543,23 @@ div#navigation
    padding: 0 0 0 12px; 
 }
 
-/*- /Бокс информация */
+/*- /Information box */
 
-/*- Бокс быстрый заказ */
+/*- Add quickie box */
 #boxAddQuickie
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса быстрый заказ */
+/*- Add quickie header */
 #boxAddQuickie h5 
    {
      display: block;
@@ -571,9 +571,9 @@ div#navigation
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса быстрый заказ */
+/*- /Add quickie header */
 
-/*- Содержимое бокса быстрый заказ */
+/*- Add quickie content */
 #boxAddQuickieContent 
    {
      padding-left: 1em;
@@ -585,9 +585,9 @@ div#navigation
      text-align: left;
   }
 
-/*- /Содержимое бокса быстрый заказ */
+/*- /Add quickie content */
 
-/*- Форма быстрый заказ */
+/*- Add quickie form */
 .addquickieform input {
 	width: 80%;
 	font-size: 1em;
@@ -601,25 +601,25 @@ div#navigation
 .addquickieform input:focus, .sffocus, .sffocus {
 	background-color: #ffc;
 }
-/*- /Форма быстрый заказ */
+/*- /Add quickie form */
 
-/*- /Бокс быстрый заказ */
+/*- /Add quickie box */
 
-/*- Бокс просмотренные товары */
+/*- Last viewed box */
 #boxLastViewed
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса просмотренные товары */
+/*- Last viewed box header */
 #boxLastViewed h5 
    {
      display: block;
@@ -631,9 +631,9 @@ div#navigation
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса просмотренные товары */
+/*- /Last viewed box header */
 
-/*- Содержимое бокса просмотренные товары */
+/*- Last viewed box content */
 #boxLastViewedContent 
    {
      padding-left: 0;
@@ -646,25 +646,25 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса просмотренные товары */
+/*- /Last viewed box content */
 
-/*- /Бокс просмотренные товары */
+/*- /Last viewed box */
 
-/*- Бокс отзывы */
+/*- Reviews box */
 #boxReviews
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса отзывы */
+/*- Reviews box header */
 #boxReviews h5 
    {
      display: block;
@@ -676,9 +676,9 @@ div#navigation
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса отзывы */
+/*- /Reviews box header */
 
-/*- Содержимое бокса отзывы */
+/*- Reviews box content */
 #boxReviewsContent 
    {
      padding-left: 0;
@@ -691,25 +691,25 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса отзывы */
+/*- /Reviews box content */
 
-/*- /Бокс отзывы */
+/*- /Reviews box */
 
-/*- Бокс поиск */
+/*- Search box */
 #boxSearch
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса поиск */
+/*- Search box header */
 #boxSearch h5 
    {
      display: block;
@@ -727,9 +727,9 @@ div#navigation
      color: #FF6600;
      text-decoration: none;
    }
-/*- /Заголовок бокса поиск */
+/*- /Search box header */
 
-/*- Содержимое бокса поиск */
+/*- Search box content */
 #boxSearchContent 
    {
      padding-left: 1em;
@@ -741,9 +741,9 @@ div#navigation
      text-align: left;
   }
 
-/*- /Содержимое бокса поиск */
+/*- /Search box content */
 
-/*- Форма бокса поиск */
+/*- Search box form */
 .searchboxform input {
 	width: 80%;
 	font-size: 1em;
@@ -757,25 +757,25 @@ div#navigation
 .searchboxform input:focus, .sffocus, .sffocus {
 	background-color: #ffc;
 }
-/*- /Форма бокса поиск */
+/*- /Search box form */
 
-/*- /Бокс поиск */
+/*- /Search box */
 
-/*- Бокс скидки */
+/*- Specials box */
 #boxSpecials
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса скидки */
+/*- Specials box header */
 #boxSpecials h5 
    {
      display: block;
@@ -793,9 +793,9 @@ div#navigation
      color: #67748B;
      text-decoration: none;
    }
-/*- /Заголовок бокса скидки */
+/*- /Specials box header */
 
-/*- Содержимое бокса скидки */
+/*- Specials box content */
 #boxSpecialsContent 
    {
      padding-left: 0;
@@ -808,25 +808,25 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса скидки */
+/*- /Specials box content */
 
-/*- /Бокс скидки */
+/*- /Specials box */
 
-/*- Бокс рекомендуемые */
+/*- Featured box */
 #boxFeatured
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса рекомендуемые */
+/*- Featured box header */
 #boxFeatured h5 
    {
      display: block;
@@ -844,9 +844,9 @@ div#navigation
      color: #006600;
      text-decoration: none;
    }
-/*- /Заголовок бокса рекомендуемые */
+/*- /Featured box header */
 
-/*- Содержимое бокса рекомендуемые */
+/*- Featured box content */
 #boxFeaturedContent 
    {
      padding-left: 0;
@@ -859,25 +859,25 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса рекомендуемые */
+/*- /Featured box content */
 
-/*- /Бокс рекомендуемые */
+/*- /Featured box */
 
-/*- Бокс новинки */
+/*- Whats new box */
 #boxWhatsNew
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса новинки */
+/*- Whats new box header */
 #boxWhatsNew h5 
    {
      display: block;
@@ -895,9 +895,9 @@ div#navigation
      color: #990000;
      text-decoration: none;
    }
-/*- /Заголовок бокса новинки */
+/*- /Whats new box header */
 
-/*- Содержимое бокса новинки */
+/*- Whats new box content */
 #boxWhatsNewContent 
    {
      padding-left: 0;
@@ -910,25 +910,25 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса новинки */
+/*- /Whats new box content */
 
-/*- /Бокс новинки */
+/*- /Whats new box */
 
-/*- Бокс новости */
+/*- Latest news box */
 #boxNews
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса новости */
+/*- Latest news box header */
 #boxNews h5 
    {
      display: block;
@@ -946,9 +946,9 @@ div#navigation
      color: #006600;
      text-decoration: none;
    }
-/*- /Заголовок бокса новости */
+/*- /Latest news box header */
 
-/*- Содержимое бокса новости */
+/*- Latest news box content */
 #boxNews .boxNewsContent 
    {
      padding-left: 1em;
@@ -962,21 +962,21 @@ div#navigation
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса новости */
+/*- /Latest news box content */
 
-/*- /Бокс новости */
+/*- /Latest news box */
 
-/*- Бокс корзина */
+/*- Shopping cart box */
 
-/* Оформление */
+/* Content */
 #boxCart 
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.5em;
-     margin-right: 0.4em; /* отступ от правого края браузера */
+     margin-right: 0.4em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
    }
 
 #boxCart .top, #boxCart .bottom 
@@ -986,7 +986,7 @@ div#navigation
      font-size: 1px;
    }
 
-/* Шапка с углами */
+/* Header */
 #boxCart .b1, #boxCart .b2, #boxCart .b3, #boxCart .b4, #boxCart .b5 
    {
      display: block; 
@@ -996,9 +996,9 @@ div#navigation
      border-left: 1px solid #000; 
      border-right: 1px solid #000;
    }
-/* /Шапка с углами */
+/* /Header */
 
-/* Низ с углами */
+/* Footer */
 #boxCart .b1b, #boxCart .b2b, #boxCart .b3b, #boxCart .b4b, #boxCart .b5b 
    {
      display: block; 
@@ -1008,7 +1008,7 @@ div#navigation
      border-left: 1px solid #000; 
      border-right: 1px solid #000;
    }
-/* /Низ с углами */
+/* /Footer */
 
 #boxCart .b1, #boxCart .b1b
    {
@@ -1081,9 +1081,9 @@ div#navigation
      margin-left: 0;
      margin-right: 0;
    }
-/* /Оформление */
+/* /Content */
 
-/* Ссылки в заголовке бокса */
+/* Links */
 #boxCart .boxheader a 
    {
      color: #fff;
@@ -1095,7 +1095,7 @@ div#navigation
      color: #fff;
      text-decoration: none;
    }
-/* /Ссылки в заголовке бокса */
+/* /Links */
 
 p.CartContentRight
    {
@@ -1103,19 +1103,19 @@ p.CartContentRight
      padding-right: 0.2em;
    }
 
-/*- /Бокс корзина */
+/*- /Shopping cart box */
 
-/*- Бокс вход/админ */
+/*- Login box */
 
-/* Оформление */
+/* Content */
 #boxLogin 
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.4em; /* отступ от правого края браузера */
+     margin-right: 0.4em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
    }
 
 #boxLogin .top, #boxLogin .bottom 
@@ -1125,7 +1125,7 @@ p.CartContentRight
      font-size: 1px;
    }
 
-/* Шапка с углами */
+/* Header */
 #boxLogin .b1, #boxLogin .b2, #boxLogin .b3, #boxLogin .b4, #boxLogin .b5 
    {
      display: block; 
@@ -1135,9 +1135,9 @@ p.CartContentRight
      border-left: 1px solid #000; 
      border-right: 1px solid #000;
    }
-/* /Шапка с углами */
+/* /Header */
 
-/* Низ с углами */
+/* Footer */
 #boxLogin .b1b, #boxLogin .b2b, #boxLogin .b3b, #boxLogin .b4b, #boxLogin .b5b 
    {
      display: block; 
@@ -1147,7 +1147,7 @@ p.CartContentRight
      border-left: 1px solid #000; 
      border-right: 1px solid #000;
    }
-/* /Низ с углами */
+/* /Footer */
 
 #boxLogin .b1, #boxLogin .b1b
    {
@@ -1221,9 +1221,9 @@ p.CartContentRight
      margin-left: 0;
      margin-right: 0;
    }
-/* /Оформление */
+/* /Content */
 
-/*- Форма входа */
+/*- Login form */
 .loginform input {
 	width: 70%;
 	font-size: 1em;
@@ -1237,7 +1237,7 @@ p.CartContentRight
 .loginform input:focus, .sffocus, .sffocus {
 	background-color: #ffc;
 }
-/*- /Форма входа */
+/*- /Login form */
 
 p.LoginContentCenter
    {
@@ -1249,23 +1249,23 @@ p.LoginContentLeft
      text-align: left;
    }
 
-/*- /Бокс вход/админ */
+/*- /Login box */
 
-/*- Бокс рассылка */
+/*- Newsletter box */
 #boxNewsletter
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса рассылка */
+/*- Newsletter box header */
 #boxNewsletter h5 
    {
      display: block;
@@ -1277,9 +1277,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса рассылка */
+/*- /Newsletter box header */
 
-/*- Содержимое бокса рассылка */
+/*- Newsletter box content */
 #boxNewsletterContent 
    {
      padding-left: 1em;
@@ -1291,9 +1291,9 @@ p.LoginContentLeft
      text-align: left;
   }
 
-/*- /Содержимое бокса рассылка */
+/*- /Newsletter box content */
 
-/*- Форма рассылка */
+/*- Newsletter box form */
 .newsletterform input {
 	width: 70%;
 	font-size: 1em;
@@ -1307,25 +1307,25 @@ p.LoginContentLeft
 .newsletterform input:focus, .sffocus, .sffocus {
 	background-color: #ffc;
 }
-/*- /Форма рассылка */
+/*- /Newsletter box form */
 
-/*- /Бокс рассылка */
+/*- /Newsletter box */
 
-/*- Бокс лучшие товары */
+/*- Bestsellers box */
 #boxBestsellers
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса лучшие товары */
+/*- Bestsellers box header */
 #boxBestsellers h5 
    {
      display: block;
@@ -1337,9 +1337,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса лучшие товары */
+/*- /Bestsellers box header */
 
-/*- Содержимое бокса лучшие товары */
+/*- Bestsellers box content */
 #boxBestsellersContent 
    {
      padding-left: 1em;
@@ -1351,7 +1351,7 @@ p.LoginContentLeft
      text-align: left;
   }
 
-/*- /Содержимое бокса лучшие товары */
+/*- /Bestsellers box content */
 
 #boxBestsellersContent p.BestsellersContentRight
    {
@@ -1365,23 +1365,23 @@ p.LoginContentLeft
      font-weight: bold;
    }
    
-/*- /Бокс лучшие товары */
+/*- /Bestsellers box */
 
-/*- Бокс информация о группе */
+/*- Group info box */
 #boxGroupInfo
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса информация о группе */
+/*- Group info box header */
 #boxGroupInfo h5 
    {
      display: block;
@@ -1393,9 +1393,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса информация о группе */
+/*- /Group info box header */
 
-/*- Содержимое бокса информация о группе */
+/*- Group info box content */
 #boxGroupInfoContent 
    {
      padding-left: 0;
@@ -1413,25 +1413,25 @@ p.LoginContentLeft
      font-weight: bold;
    }
 
-/*- /Содержимое бокса информация о группе */
+/*- /Group info box content */
 
-/*- /Бокс информация о группе */
+/*- /Group info box */
 
-/*- Бокс валюты */
+/*- Currencies box */
 #boxCurrencies
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса валюты */
+/*- Currencies box header */
 #boxCurrencies h5 
    {
      display: block;
@@ -1443,9 +1443,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса валюты */
+/*- /Currencies box header */
 
-/*- Содержимое бокса валюты */
+/*- Currencies box content */
 #boxCurrenciesContent 
    {
      padding-left: 0;
@@ -1458,9 +1458,9 @@ p.LoginContentLeft
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса валюты */
+/*- /Currencies box content */
 
-/*- Форма выбора валюты */
+/*- Currencies box form */
 #boxCurrenciesContent select {
 	width: 70%;
 	font-size: 1em;
@@ -1470,25 +1470,25 @@ p.LoginContentLeft
    margin-top: 0.2em;
    margin-bottom: 0.4em;
 }
-/*- /Форма выбора валюты */
+/*- /Currencies box form */
 
-/*- /Бокс валюты */
+/*- /Currencies box */
 
-/*- Бокс языки */
+/*- Languages box */
 #boxLanguages
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса языки */
+/*- Languages box header */
 #boxLanguages h5 
    {
      display: block;
@@ -1500,9 +1500,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса языки */
+/*- /Languages box header */
 
-/*- Содержимое бокса языки */
+/*- Languages box content */
 #boxLanguagesContent 
    {
      padding-left: 0;
@@ -1515,25 +1515,25 @@ p.LoginContentLeft
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса языки */
+/*- /Languages box content */
 
-/*- /Бокс языки */
+/*- /Languages box */
 
-/*- Бокс производители */
+/*- Manufacturers box */
 #boxManufacturers
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса производители */
+/*- Manufacturers box header */
 #boxManufacturers h5 
    {
      display: block;
@@ -1545,9 +1545,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса производители */
+/*- /Manufacturers box header */
 
-/*- Содержимое бокса производители */
+/*- Manufacturers box content */
 #boxManufacturersContent 
    {
      padding-left: 0;
@@ -1560,9 +1560,9 @@ p.LoginContentLeft
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса производители */
+/*- /Manufacturers box content */
 
-/*- Форма выбора производителя */
+/*- Manufacturers box form */
 #boxManufacturersContent select {
 	width: 70%;
 	font-size: 1em;
@@ -1572,25 +1572,25 @@ p.LoginContentLeft
    margin-top: 0.2em;
    margin-bottom: 0.4em;
 }
-/*- /Форма выбора производителя */
+/*- /Manufacturers box form */
 
-/*- /Бокс производители */
+/*- /Manufacturers box */
 
-/*- Бокс информация о производителе */
+/*- Manufacturers info box */
 #boxManufacturersInfo
    {
      text-align: left;
      margin-bottom: 0.2em;
      margin-top: 0.2em;
-     margin-right: 0.2em; /* отступ от правого края браузера */
+     margin-right: 0.2em;
      padding-top: 0.2em;
-     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+     padding-bottom: 0.4em;
   	  border-bottom-width: 1px;
 	  border-bottom-style: dashed;
      border-bottom-color: #67748B;
    }
 
-/*- Заголовок бокса информация о производителе */
+/*- Manufacturers info box header */
 #boxManufacturersInfo h5 
    {
      display: block;
@@ -1602,9 +1602,9 @@ p.LoginContentLeft
      margin: 0 0 .4em .3em;
      padding: .1em 0 0 16px;
   }
-/*- /Заголовок бокса информация о производителе */
+/*- /Manufacturers info box header */
 
-/*- Содержимое бокса информация о производителе */
+/*- Manufacturers info box content */
 #boxManufacturersInfoContent 
    {
      padding-left: 0;
@@ -1617,13 +1617,13 @@ p.LoginContentLeft
      padding-bottom: 0.2em;
   }
 
-/*- /Содержимое бокса информация о производителе */
+/*- /Manufacturers info box content */
 
-/*- /Бокс информация о производителе */
+/*- /Manufacturers info box */
 
-/*- /Боксы */
+/*- /Boxes */
 
-/*- /Время парсинга */
+/*- Parse time */
 div#parseTime
    {
      clear: left;
@@ -1634,9 +1634,9 @@ div#parseTime
      padding-top: 0.5em;
      padding-bottom: 0.5em;
    }
-/*- /Время парсинга */
+/*- /Parse time */
 
-/*- Информация о магазине */
+/*- Copyright */
 div#copyright
    {
      clear: left;
@@ -1647,9 +1647,9 @@ div#copyright
      padding-top: 0.5em;
      padding-bottom: 0.5em;
    }
-/*- /Информация о магазине */
+/*- /Copyright */
 
-/*- Формы */
+/*- Forms */
 
 form 
    {
@@ -1665,7 +1665,7 @@ form
 	  padding: 2px;
    }
 
-/*- Подсветка ошибок формы */
+/*- Error */
 #errormsg
    {
      border: 2px solid #c00;
@@ -1677,7 +1677,7 @@ form
    {
 	  background: #fcc;
    }
-/*- /Подсветка ошибок формы */
+/*- /Error */
    
 .form textarea:focus, input:focus, .sffocus, .sffocus 
    {
@@ -1689,9 +1689,9 @@ span.Requirement
      color: red;
    }
 
-/*- /Формы */
+/*- /Forms */
 
-/*- Цены */
+/*- Price */
 
 span.markProductOutOfStock 
    {
@@ -1719,9 +1719,9 @@ span.errorText
      color: #ff0000;
    }
 
-/*- /Цены */
+/*- /Price */
 
-/* Ошибка на странице свяжитесь с нами */
+/* Contact page error */
 
 div.contacterror 
    {
@@ -1733,95 +1733,79 @@ div.contacterror
      margin-top: 0.5em;
    }
 
-/* /Ошибка на странице свяжитесь с нами */
+/* /Contact page error */
 
-/* Вывод товаров */
+/* Product listing */
 
-/* Количества колонок с товаром на странице новинки */
 dl.itemNewProducts 
    {
-     width: 100%; /* количество колонок, 50% - товар выводится двумя колонками, т.е. два товара в одной строке, 100% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 100%;
      float: left;
-     height: 160px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 160px; 
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      background: transparent;
    }
-/* /Количества колонок с товаром на странице новинки */
 
-/* Количества колонок с товаром на странице рекомендуемые товары */
 dl.itemFeaturedProducts 
    {
-     width: 48%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 48%;
      float: left;
-     height: 160px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 160px;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      border-bottom: 1px #e5e5e5 solid;
    }
-/* /Количества колонок с товаром на странице рекомендуемые товары */
 
-/* Количества колонок с товаром в блоке новинки на главной странице */
 dl.itemNewProductsDefault 
    {
-     width: 48%; /* количество колонок, 48% (не 50, иначе в IE всё равно в одну колонку будут) - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 48%;
      float: left;
-     height: 160px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 160px;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      background: transparent;
    }
-/* /Количества колонок с товаром в блоке новинки на главной странице */
 
-/* Количества колонок с новостями на главной странице */
 dl.itemLatestNewsDefault 
    {
-     width: 48%; /* количество колонок, 48% (не 50, иначе в IE всё равно в одну колонку будут) - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 48%;
      float: left;
      margin: 0.5em 0 0.5em 0;
      padding: 0 0 0 0;
    }
-/* /Количества колонок с новостями на главной странице */
 
-/* Количества колонок с новостями на странице новостей */
 dl.itemLatestNews 
    {
-     width: 98%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 98%;
      float: left;
      margin: 0.5em 0 0.5em 0;
      padding: 0 0 0 0;
    }
-/* /Количества колонок с новостями на странице новостей */
 
-/* Количества колонок с товаром на странице скидки */
 dl.itemSpecials 
    {
-     width: 48%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 48%;
      float: left;
-     height: 160px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 160px;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      border-bottom: 1px #e5e5e5 solid;
    }
-/* /Количества колонок с товаром на странице скидки */
 
-/* Количества колонок с товаром на странице мои данные */
 dl.itemLastViewed 
    {
-     width: 98%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 98%;
      float: left;
-     height: 160px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 160px;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      border-bottom: 1px #e5e5e5 solid;
    }
 
-/* /Количества колонок с товаром на странице мои данные */
-
-/* Информация о заказе, адрес клиента и адрес доставки */
 dl.ordersAddress 
    {
-     width: 50%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 50%;
      float: left;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
@@ -1846,12 +1830,10 @@ dd.ordersAddress
      background: transparent;
    }
 
-/* /Информация о заказе, адрес клиента и адрес доставки */
-
-/* Адресная книга */
+/* Address book */
 dl.AddressBook 
    {
-     width: 50%; /* количество колонок, 48% - товар выводится двумя колонками, т.е. два товара в одной строке, 99% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 50%;
      float: left;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
@@ -1903,9 +1885,9 @@ dd.AddressBookList
      background: transparent;
    }
 
-/* /Адресная книга */
+/* /Address book */
 
-/* Адресная книга */
+/* Login */
 dl.Login 
    {
      width: 50%;
@@ -1931,7 +1913,7 @@ dd.Login
      background: transparent;
    }
 
-/* /Вход */
+/* /Login */
 
 dt.itemImage 
    {
@@ -1997,15 +1979,15 @@ span.right
      float: right;
    }
 
-/* /Вывод товаров */
+/* /Product listing */
 
-/* Вывод категорий */
+/* Categorie listing */
 
 dl.itemCategoriesListing 
    {
-     width: 30%; /* количество колонок, 50% - товар выводится двумя колонками, т.е. два товара в одной строке, 100% - товар выводится одной колонкой, т.е. один товар в одной строке */ 
+     width: 30%;
      float: left;
-     height: 100px; /* высота блока с товаром, нужно устанавливать обязательно, иначе блоки товаров с картинками и без будут "слипаться" */ 
+     height: 100px;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      background: transparent;
@@ -2031,9 +2013,9 @@ dd.itemCategoriesListing
      text-align: center;
    }
 
-/* /Вывод категорий */
+/* /Categorie listing */
 
-/* Страница карточки товара */
+/* Product info */
 
 p.center
    {
@@ -2053,9 +2035,9 @@ div.ProductInfoRight
      text-align: right;
    }
 
-/* /Страница карточки товара */
+/* /Product info */
 
-/* Ссылки на странице мои данные */
+/* My account */
 
 ul.accountLinks 
    {
@@ -2073,7 +2055,7 @@ li.accountLinks
      padding: 0 0 0 14px; 
    }
 
-/* /Ссылки на странице мои данные */
+/* /My account */
 
 span.bold 
    {

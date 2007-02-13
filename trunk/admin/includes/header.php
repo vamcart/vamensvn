@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: header.php 1025 2007-02-08 12:90:57 VaM $   
+   $Id: header.php 1025 2007-02-08 12:09:57 VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -26,7 +26,7 @@
 
 <script type="text/javascript" src="includes/javascript/ie.js"></script>
 
-<!-- шапка -->        
+<!-- header -->        
           <table width="100%"  border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td width="200" align="left">
@@ -45,7 +45,7 @@
               &nbsp;
               </td>
               <td width="470" align="center">
-<!-- кнопки -->
+<!-- buttons -->
           <table width="100%"  border="0" cellspacing="0" cellpadding="0">
             <tr class="buttonadmin">
               <td width="5" align="center" valign="top" class="button1">&nbsp;</td>
@@ -67,7 +67,7 @@
               </td>
 <?php 
 
-# Выбор языка в админке, автор незнама
+# Languages list
 
   if (!isset($lng) && !is_object($lng)) {
     include(DIR_WS_CLASSES . 'language.php');
@@ -92,13 +92,13 @@
  ';
   }
   
-# /Выбор языка в админке, автор незнама
+# /Languages list
 ?>
               <?php if ($count_lng > 1 ) { echo $languages_string; } ?>
               <td align="center" valign="top"><img src="images/corners/corner_top_right.gif" width="3" height="3" align="right" hspace="0" /></td>
             </tr>
           </table>
-<!-- /кнопки -->
+<!-- /buttons -->
 
               </td>
               <td width="200">
@@ -391,4 +391,4 @@
 </tr>
 
           </table>
-<!-- /шапка -->
+<!-- /header -->

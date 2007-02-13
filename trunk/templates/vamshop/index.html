@@ -1,13 +1,13 @@
 {config_load file="$language/lang_$language.conf" section="index"}
 
-<!-- Контейнер -->
+<!-- Container -->
 <div id="container">
 
-<!-- Шапка -->
+<!-- Header -->
 <div id="header">
 <img src="{$tpl_path}img/logo.gif" alt="{$store_name}" />
 </div>
-<!-- /Шапка -->
+<!-- /Header -->
 
 <div id="menu">
 <ul>
@@ -26,13 +26,13 @@
 </ul>
 </div>
 
-<!-- Навигация -->
+<!-- Navigation -->
 <div id="navigation">
 <span>{$navtrail}</span>
 </div>
-<!-- /Навигация -->
+<!-- /Navigation -->
 
-<!-- Центр -->
+<!-- Content -->
 <div id="wrapper">
 <div id="content">
 
@@ -40,9 +40,9 @@
 
 </div>
 </div>
-<!-- /Центр -->
+<!-- /Content -->
 
-<!-- Левая колонка -->
+<!-- Left column -->
 <div id="left">
 
 {$box_CATEGORIES}
@@ -58,9 +58,9 @@
 {$box_LATESTNEWS}
 
 </div>
-<!-- /Левая колонка -->
+<!-- /Left column -->
 
-<!-- Правая колонка -->
+<!-- Right column -->
 <div id="right">
 
 {$box_CART}
@@ -75,9 +75,9 @@
 {$box_MANUFACTURERS_INFO}
 
 </div>
-<!-- /Правая колонка -->
+<!-- /Right column -->
 
-<!-- Низ -->
+<!-- Footer -->
 <div id="footer">
 {if $BANNER}
 <p>
@@ -88,7 +88,7 @@
 <a href="vam_rss2_info.php"><img src="images/rss.png" width="36" height="14" alt="RSS" border="0" /></a>
 </p>
 </div>
-<!-- /Низ -->
+<!-- /Footer -->
 
 </div>
-<!-- /Контейнер -->
+<!-- /Container -->
