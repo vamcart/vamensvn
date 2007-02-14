@@ -635,6 +635,8 @@ define('DISPLAY_STATUT_TITLE' , 'Modify the statut of the products');
 define('DISPLAY_WEIGHT_TITLE' , 'Modify the weight of the products');
 define('DISPLAY_QUANTITY_TITLE' , 'Modify the quantity of the products');
 define('DISPLAY_IMAGE_TITLE' , 'Modify the image of the products');
+define('DISPLAY_XML_TITLE' , 'Modify the yandex market status of the products');
+define('DISPLAY_SORT_TITLE' , 'Modify the sort order of the products');
 define('DISPLAY_MANUFACTURER_TITLE' , 'Display the manufacturer');
 define('MODIFY_MANUFACTURER_TITLE' , 'Modify the manufacturer of the products');
 define('DISPLAY_TAX_TITLE' , 'Display the tax');
@@ -652,6 +654,8 @@ define('DISPLAY_STATUT_DESC', 'Allow/Disallow the Statut displaying and modifica
 define('DISPLAY_WEIGHT_DESC', 'Allow/Disallow the Weight displaying and modification?');
 define('DISPLAY_QUANTITY_DESC', 'Allow/Disallow the Quantity displaying and modification?');
 define('DISPLAY_IMAGE_DESC', 'Allow/Disallow the Image displaying and modification?');
+define('DISPLAY_XML_DESC', 'Allow/Disallow the yandex market displaying and modification?');
+define('DISPLAY_SORT_DESC', 'Allow/Disallow the sort order displaying and modification?');
 define('MODIFY_MANUFACTURER_DESC', 'Allow/Disallow the Manufacturer displaying and modification');
 define('MODIFY_TAX_DESC', 'Allow/Disallow the Class of tax displaying and modification');
 define('DISPLAY_TVA_OVER_DESC', 'Enable/Disable the displaying of the Price with all tax included when your mouse is over a product');
