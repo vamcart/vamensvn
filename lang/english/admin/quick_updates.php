@@ -40,6 +40,8 @@ define('TABLE_HEADING_QUANTITY', 'Qty.');
 define('TABLE_HEADING_STATUS', 'Status');
 define('TABLE_HEADING_MANUFACTURERS', 'Manufacturers');
 define('TABLE_HEADING_IMAGE', 'Image');
+define('TABLE_HEADING_XML', 'XML');
+define('TABLE_HEADING_SORT', 'Sort');
 define('DISPLAY_CATEGORIES', 'Select category:');
 define('DISPLAY_MANUFACTURERS', 'Select manufacturer');
 define('PRINT_TEXT', 'Print this page');
