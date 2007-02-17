@@ -15,7 +15,7 @@
    Released under the GNU General Public License 
    --------------------------------------------------------------*/
 // Global
-define('TEXT_FOOTER','Powered by <a href="http://vamshop.com">VaM Shop</a>'); 
+define('TEXT_FOOTER',''); 
    
 // Box names
 define('BOX_LANGUAGE','Language');
