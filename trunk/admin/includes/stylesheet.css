@@ -235,7 +235,7 @@ FORM { display: inline; }
 .main { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
 .errorText { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #ff0000; }
 
-/* Сборка VaM */
+/* VaM Shop */
 
 div.buttonadmin {
   font-family: Tahoma, Verdana, Arial, sans-serif;
@@ -380,7 +380,7 @@ h1.contentBoxHeading a {
   text-decoration: none;
 }
 
-/* Подсказки */
+/* Tooltip */
 
 .help
    {
@@ -433,7 +433,7 @@ a.info:hover span
      font-size: 11px;
    }
 
-/* /Подсказки */
+/* /Tooltip */
 
 /* Навигационное меню */
 
