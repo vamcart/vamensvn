@@ -435,7 +435,7 @@ a.info:hover span
 
 /* /Tooltip */
 
-/* Навигационное меню */
+/* Nav menu */
 
 #nav, #nav ul 
    {
@@ -532,4 +532,4 @@ select.hide
      visibility: hidden; 
    }
 
-/* /Навигационное меню */
+/* /Nav menu */
