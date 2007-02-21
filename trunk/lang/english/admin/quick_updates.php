@@ -46,4 +46,8 @@ define('DISPLAY_CATEGORIES', 'Select category:');
 define('DISPLAY_MANUFACTURERS', 'Select manufacturer');
 define('PRINT_TEXT', 'Print this page');
 define('TOTAL_COST', 'TTC');
+
+define('HEADING_TITLE_SEARCH', 'Search:');
+define('HEADING_TITLE_SEARCH_MODEL', 'Product model search:');
+
 ?>
