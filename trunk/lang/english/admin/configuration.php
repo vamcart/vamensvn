@@ -271,7 +271,7 @@ define('PRODUCT_IMAGE_POPUP_FRAME_DESC' , 'Product-Popup-Images: Frame<br /><br 
 define('PRODUCT_IMAGE_POPUP_DROP_SHADDOW_TITLE' , 'Product-Popup-Images: Drop-Shadow');
 define('PRODUCT_IMAGE_POPUP_DROP_SHADDOW_DESC' , 'Product-Popup-Images: Drop-Shadow<br /><br />Default-values: (3,333333,FFFFFF)<br /><br />more like a dodgy motion blur [semi buggy]<br /><br />Usage:<br />(shadow width,hex shadow colour,hex background colour)');
 define('PRODUCT_IMAGE_POPUP_MOTION_BLUR_TITLE' , 'Product-Popup-Images: Motion-Blur');
-define('PRODUCT_IMAGE_POPUP_MOTION_BLUR_DESC' , 'Product-Popup-Images: Motion-Blur<br /><br />Default-values: (4,FFFFFF)<br /><br />fading parallel lines<br /><br />Usage:<br />(int number of lines,hex background colour)');
+define('PRODUCT_IMAGE_POPUP_MOTION_BLUR_DESC' , 'Product-Popup-Images: Motion-Blur<br /><br />Default-values: (4,FFFFFF)<br /><br />fading parallel lines<br /><br />Usage:<br />(number of lines,hex background colour)');
 
 define('MO_PICS_TITLE','Number of products images');
 define('MO_PICS_DESC','if this number is set > 0 , you will be able to upload/display more images per product');
