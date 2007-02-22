@@ -218,21 +218,21 @@ define('IMAGE_REQUIRED_DESC' , 'Enable to display broken images. Good for develo
 
 //This is for the Images showing your products for preview. All the small stuff.
 
-define('PRODUCT_IMAGE_THUMBNAIL_BEVEL_TITLE' , 'Products-Thumbnails: Bevel<br /><img src="images/config_bevel.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_BEVEL_TITLE' , 'Products-Thumbnails: Bevel<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_BEVEL_DESC' , 'Products-Thumbnails: Bevel<br /><br />Default-values: (8,FFCCCC,330000)<br /><br />shaded bevelled edges<br /><br />Usage:<br />(edge width,hex light colour,hex dark colour)');
-define('PRODUCT_IMAGE_THUMBNAIL_GREYSCALE_TITLE' , 'Products-Thumbnails: Greyscale<br /><img src="images/config_greyscale.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_GREYSCALE_TITLE' , 'Products-Thumbnails: Greyscale<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_GREYSCALE_DESC' , 'Products-Thumbnails: Greyscale<br /><br />Default-values: (32,22,22)<br /><br />basic black n white<br /><br />Usage:<br />(int red,int green,int blue)');
-define('PRODUCT_IMAGE_THUMBNAIL_ELLIPSE_TITLE' , 'Products-Thumbnails: Ellipse<br /><img src="images/config_eclipse.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_ELLIPSE_TITLE' , 'Products-Thumbnails: Ellipse<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_ELLIPSE_DESC' , 'Products-Thumbnails: Ellipse<br /><br />Default-values: (FFFFFF)<br /><br />ellipse on bg colour<br /><br />Usage:<br />(hex background colour)');
-define('PRODUCT_IMAGE_THUMBNAIL_ROUND_EDGES_TITLE' , 'Products-Thumbnails: Round-edges<br /><img src="images/config_edge.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_ROUND_EDGES_TITLE' , 'Products-Thumbnails: Round-edges<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_ROUND_EDGES_DESC' , 'Products-Thumbnails: Round-edges<br /><br />Default-values: (5,FFFFFF,3)<br /><br />corner trimming<br /><br />Usage:<br />(edge_radius,background colour,anti-alias width)');
-define('PRODUCT_IMAGE_THUMBNAIL_MERGE_TITLE' , 'Products-Thumbnails: Merge<br /><img src="images/config_merge.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_MERGE_TITLE' , 'Products-Thumbnails: Merge<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_MERGE_DESC' , 'Products-Thumbnails: Merge<br /><br />Default-values: (overlay.gif,10,-50,60,FF0000)<br /><br />overlay merge image<br /><br />Usage:<br />(merge image,x start [neg = from right],y start [neg = from base],opacity, transparent colour on merge image)');
-define('PRODUCT_IMAGE_THUMBNAIL_FRAME_TITLE' , 'Products-Thumbnails: Frame<br /><img src="images/config_frame.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_FRAME_TITLE' , 'Products-Thumbnails: Frame<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_FRAME_DESC' , 'Products-Thumbnails: Frame<br /><br />Default-values: (FFFFFF,000000,3,EEEEEE)<br /><br />plain raised border<br /><br />Usage:<br />(hex light colour,hex dark colour,int width of mid bit,hex frame colour [optional - defaults to half way between light and dark edges])');
-define('PRODUCT_IMAGE_THUMBNAIL_DROP_SHADDOW_TITLE' , 'Products-Thumbnails: Drop-Shadow<br /><img src="images/config_shadow.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_DROP_SHADDOW_TITLE' , 'Products-Thumbnails: Drop-Shadow<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_DROP_SHADDOW_DESC' , 'Products-Thumbnails: Drop-Shadow<br /><br />Default-values: (3,333333,FFFFFF)<br /><br />more like a dodgy motion blur [semi buggy]<br /><br />Usage:<br />(shadow width,hex shadow colour,hex background colour)');
-define('PRODUCT_IMAGE_THUMBNAIL_MOTION_BLUR_TITLE' , 'Products-Thumbnails: Motion-Blur<br /><img src="images/config_motion.gif">');
+define('PRODUCT_IMAGE_THUMBNAIL_MOTION_BLUR_TITLE' , 'Products-Thumbnails: Motion-Blur<br />');
 define('PRODUCT_IMAGE_THUMBNAIL_MOTION_BLUR_DESC' , 'Products-Thumbnails: Motion-Blur<br /><br />Default-values: (4,FFFFFF)<br /><br />fading parallel lines<br /><br />Usage:<br />(int number of lines,hex background colour)');
 
 //And this is for the Images showing your products in single-view
