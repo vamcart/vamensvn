@@ -126,5 +126,6 @@ define('TABLE_HEADING_NUMBER','Nr');
 define('TEXT_PRODUCTS',' Products ');
 
 define('ENTRY_ORIGINAL_REFERER', 'Referer:');
+define('ENTRY_ORDER_NUMBER', 'Order number:');
 
 ?>
