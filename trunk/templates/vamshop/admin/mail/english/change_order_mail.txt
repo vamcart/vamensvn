@@ -1,7 +1,7 @@
 
 Dear Customer ,
 
-The status of your order changed.
+The status of your order #{$ORDER_NR} changed.
 
 {if $NOTIFY_COMMENTS}Comments:{$NOTIFY_COMMENTS}{/if}
 
