@@ -56,7 +56,6 @@ define('NEW_ORDER','New order ?');
 define('ENTRY_PAYMENT_UNALLOWED','Unallowed paymentmodules:');
 define('ENTRY_SHIPPING_UNALLOWED','Unallowed shippingmodules:');
 define('ENTRY_NEW_PASSWORD','New Password:');
-define('ENTRY_NEW_PASSWORD_HELP','');
 
 define('TEXT_INFO_ORIGINAL_REFERER', 'Referer:');
 

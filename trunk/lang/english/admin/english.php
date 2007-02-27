@@ -336,7 +336,7 @@ define('TEXT_SHIPPING_ERROR','<b>WARNING:</b><br />Please activate a Shipping Mo
 
 define('TEXT_NETTO','no tax: ');
 
-define('ENTRY_CID','Customers ID:');
+define('ENTRY_CID','Customer number:');
 define('IP','Order IP:');
 define('CUSTOMERS_MEMO','Memos:');
 define('DISPLAY_MEMOS','Show/Write');
