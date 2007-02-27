@@ -215,4 +215,7 @@ define('TEXT_TAB_CATEGORIES_IMAGE', 'Categories image');
 
 define('ENTRY_CUSTOMERS_ACCESS','Permissions');
 
+define('TEXT_PAGES', 'Pages: ');
+define('TEXT_TOTAL_PRODUCTS', 'Products total: ');
+
 ?>

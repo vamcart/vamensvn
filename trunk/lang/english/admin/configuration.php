@@ -130,6 +130,8 @@ define('MAX_ADDRESS_BOOK_ENTRIES_TITLE' , 'Address Book Entries');
 define('MAX_ADDRESS_BOOK_ENTRIES_DESC' , 'Maximum address book entries a customer is allowed to have');
 define('MAX_DISPLAY_SEARCH_RESULTS_TITLE' , 'Search Results');
 define('MAX_DISPLAY_SEARCH_RESULTS_DESC' , 'Amount of products to list');
+define('MAX_DISPLAY_ADMIN_PAGE_TITLE' , 'Products per page in admin');
+define('MAX_DISPLAY_ADMIN_PAGE_DESC' , 'Maximum products per page in admin');
 define('MAX_DISPLAY_PAGE_LINKS_TITLE' , 'Page Links');
 define('MAX_DISPLAY_PAGE_LINKS_DESC' , 'Number of "number" links use for page-sets');
 define('MAX_DISPLAY_SPECIAL_PRODUCTS_TITLE' , 'Special Products');
