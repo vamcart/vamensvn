@@ -49,7 +49,7 @@ define('ICON_INSTALLED_CURRENT_FOLDER', 'Current folder of CIP that has been ins
 define('CIP_MANAGER_SUPPORT','Support: ');
 define('CIP_MANAGER_UPLOADER','Uploader: ');
 define('CIP_MANAGER_SUPPORT_FORUM','Support Forum for this CIP');
-define('CIP_MANAGER_CONTRIBUTION_PAGE','Contributions official page on osCommerce site');
+define('CIP_MANAGER_CONTRIBUTION_PAGE','Contribution official page');
 define('CIP_MANAGER_SUPPORT_FORUM_DEVELOPER','Support Forum for this CIP at developer site');
 define('CIP_MANAGER_INFO','Contrib Info: ');
 define('CIP_MANAGER_INSTALLED','CIP have been INSTALLED');
