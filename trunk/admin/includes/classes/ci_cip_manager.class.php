@@ -120,17 +120,15 @@ class cip_manager {
             else     $goto_link=$this->current_path.'/'.$contents[$i]['name'];
 
             //<TR>
-            $output.='<tr';
             if (isset($fInfo) && is_object($fInfo) && ($contents[$i]['name'] == $fInfo->name)) {
-                $output.=' id="defaultSelected" class="dataTableRowSelected"';
+                $output.='<tr class="dataTableRowSelected" onmouseover="this.style.cursor=\'hand\'">';
                 $onclick_link = (($fInfo->is_dir) ?
                         'goto='.$goto_link : 'cip='.urlencode($fInfo->name) /*.'&action=edit'*/);
             } else {
-                $output.=' class="dataTableRow"';
+                $output.='<tr class="dataTableRow" onmouseover="this.className=\'dataTableRowOver\';this.style.cursor=\'hand\'" onmouseout="this.className=\'dataTableRow\'">'; 
                 $onclick_link = 'cip='.urlencode($contents[$i]['name']);
                 //$contents[$i]['name'] ==$fInfo->name...
             }
-            $output.=' onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)">'."\n";
 
 
             //===============================================
@@ -737,12 +735,12 @@ class cip_manager {
             if ($key=='contrib_ref') {
                 if ($value) {
                 $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_CONTR) ? TEXT_LINK_CONTR :
-                                        'http://vamshop.com/?,'). $value.'" >' . CIP_MANAGER_CONTRIBUTION_PAGE . '</a></b>');
+                                        'http://vamshop.ru/?,'). $value.'" >' . CIP_MANAGER_CONTRIBUTION_PAGE . '</a></b>');
                 }
             } elseif ($key=='forum_ref') {
                 if ($value) {
                 $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_FORUM) ? TEXT_LINK_FORUM :
-                                    'http://vamshop.com/?').$value. '">' . CIP_MANAGER_SUPPORT_FORUM . '</a></b>');
+                                    'http://vamshop.ru/?').$value. '">' . CIP_MANAGER_SUPPORT_FORUM . '</a></b>');
                 }
                 $contents[] = array('text' => '<hr><h3>' . CIP_MANAGER_INFO . '</h3>');
             } else 
