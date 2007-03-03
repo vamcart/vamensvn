@@ -175,7 +175,7 @@ define('TEXT_SINGLECOPY_DESC','Copy elements into following category');
 define('TEXT_SINGLECOPY_CATEGORY','Category:');
 
 define('TEXT_PRODUCTS_VPE','Unit');
-define('TEXT_PRODUCTS_VPE_VISIBLE','Show Unit Price:');
+define('TEXT_PRODUCTS_VPE_VISIBLE','Show unit price:');
 define('TEXT_PRODUCTS_VPE_VALUE',' Value:');
 
 define('CROSS_SELLING','Cross selling for article');
