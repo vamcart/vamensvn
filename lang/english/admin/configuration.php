@@ -715,4 +715,7 @@ define('SHOW_SIZE_COLUMN_DESC' , 'Choose TRUE and Size column will be shown.');
 define('USE_LOG_SYSTEM_TITLE' , 'Use Log System');
 define('USE_LOG_SYSTEM_DESC' , 'Choose TRUE and all actions will be logged into file in backups folder.');
 
+define('USE_EP_IMAGE_MANIPULATOR_TITLE','Use image manipulator for easypopulate');
+define('USE_EP_IMAGE_MANIPULATOR_DESC','Use image manipulator for product images when your data file imported to shop');
+
 ?>
