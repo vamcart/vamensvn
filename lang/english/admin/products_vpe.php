@@ -23,7 +23,7 @@ define('TABLE_HEADING_PRODUCTS_VPE', 'Packing unit');
 define('TABLE_HEADING_ACTION', 'Action');
 
 define('TEXT_INFO_EDIT_INTRO', 'Please make any necessary changes');
-define('TEXT_INFO_PRODUCTS_VPE_NAME', 'Orders Status:');
+define('TEXT_INFO_PRODUCTS_VPE_NAME', 'Unit name:');
 define('TEXT_INFO_INSERT_INTRO', 'Please enter the new packing unit with its related data');
 define('TEXT_INFO_DELETE_INTRO', 'Are you sure you want to delete this packing unit?');
 define('TEXT_INFO_HEADING_NEW_PRODUCTS_VPE', 'New packing unit');
