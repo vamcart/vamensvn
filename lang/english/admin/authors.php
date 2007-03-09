@@ -37,7 +37,7 @@ define('TEXT_EDIT_INTRO', 'Please make any necessary changes.');
 
 define('TEXT_AUTHORS_NAME', 'Authors Name:');
 define('TEXT_AUTHORS_DESCRIPTION', 'Authors Description:');
-define('TEXT_AUTHORS_URL', 'Authors URL:');
+define('TEXT_AUTHORS_URL', 'Authors URL (without http://):');
 
 define('TEXT_DELETE_INTRO', 'Are you sure you want to delete this author?');
 define('TEXT_DELETE_ARTICLES', 'Delete articles from this author? (including article reviews and upcoming articles)');
