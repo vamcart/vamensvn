@@ -437,4 +437,14 @@ define('TEXT_HEADER_LOGOFF','Logout');
 
 define('BOX_CACHE_FILES', 'Cache control');
 
+define('BOX_HEADING_ARTICLES', 'Article Manager');
+define('BOX_TOPICS_ARTICLES', 'Topics/Articles');
+define('BOX_ARTICLES_CONFIG', 'Configuration');
+define('BOX_ARTICLES_AUTHORS', 'Authors');
+define('BOX_ARTICLES_REVIEWS', 'Reviews'); 
+define('BOX_ARTICLES_XSELL', 'Cross-Sell Articles');
+define('IMAGE_NEW_TOPIC', 'New Topic');
+define('IMAGE_NEW_ARTICLE', 'New Article');
+define('TEXT_DISPLAY_NUMBER_OF_AUTHORS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> authors)'); 
+
 ?>
