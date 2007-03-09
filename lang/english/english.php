@@ -517,4 +517,12 @@ define('IMAGE_BUTTON_PRINT', 'Print');
 define('TEXT_AJAX_QUICKSEARCH_TOP', 'Top %s results...');
 define('TEXT_AJAX_ADDQUICKIE_SEARCH_TOP', 'Top %s products...');
 
+define('BOX_ALL_ARTICLES', 'All Articles');
+define('BOX_NEW_ARTICLES', 'New Articles');
+define('TEXT_DISPLAY_NUMBER_OF_ARTICLES', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> articles)');
+define('TEXT_DISPLAY_NUMBER_OF_ARTICLES_NEW', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> new articles)');
+define('TABLE_HEADING_AUTHOR', 'Author');
+define('TABLE_HEADING_ABSTRACT', 'Abstract');
+define('NAVBAR_TITLE_DEFAULT', 'Articles');
+
 ?>
