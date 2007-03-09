@@ -189,7 +189,7 @@ define('HEADING_CATEGORY','category');
 define('HEADING_ADD','Add?');
 define('HEADING_GROUP','Group');
 
-// —борка VaM
+// VaM
 
 define('IMAGE_ICON_STATUS_GREEN', 'Active');
 define('IMAGE_ICON_STATUS_GREEN_STOCK', 'in stock');
