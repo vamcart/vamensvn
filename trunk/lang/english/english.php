@@ -524,5 +524,6 @@ define('TEXT_DISPLAY_NUMBER_OF_ARTICLES_NEW', 'Displaying <b>%d</b> to <b>%d</b>
 define('TABLE_HEADING_AUTHOR', 'Author');
 define('TABLE_HEADING_ABSTRACT', 'Abstract');
 define('NAVBAR_TITLE_DEFAULT', 'Articles');
+define('ARTICLES_BY','Articles by ');
 
 ?>
