@@ -69,6 +69,7 @@ define('DOB_FORMAT_STRING', 'mm/dd/yyyy');
 // configuration box text in includes/boxes/configuration.php
 
 define('BOX_HEADING_CONFIGURATION','Configuration');
+define('BOX_HEADING_CONFIGURATION_MAIN','General options');
 define('BOX_HEADING_MODULES','Modules');
 define('BOX_HEADING_ZONE','Zone / Tax');
 define('BOX_HEADING_CUSTOMERS','Customers');
