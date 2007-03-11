@@ -40,7 +40,7 @@ define('TEXT_AUTHORS_DESCRIPTION', 'Authors Description:');
 define('TEXT_AUTHORS_URL', 'Authors URL (without http://):');
 
 define('TEXT_DELETE_INTRO', 'Are you sure you want to delete this author?');
-define('TEXT_DELETE_ARTICLES', 'Delete articles from this author? (including article reviews and upcoming articles)');
+define('TEXT_DELETE_ARTICLES', 'Delete articles from this author?');
 define('TEXT_DELETE_WARNING_ARTICLES', '<b>WARNING:</b> There are %s articles still linked to this author!');
 
 define('ERROR_DIRECTORY_NOT_WRITEABLE', 'Error: I can not write to this directory. Please set the right user permissions on: %s');
