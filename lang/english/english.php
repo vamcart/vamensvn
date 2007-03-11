@@ -75,7 +75,7 @@ define('TEXT_VALIDATING','Not validated');
 
 // manufacturer box text
 define('BOX_MANUFACTURER_INFO_HOMEPAGE', '%s Homepage');
-define('BOX_MANUFACTURER_INFO_OTHER_PRODUCTS', 'More Products');
+define('BOX_MANUFACTURER_INFO_OTHER_PRODUCTS', 'More products');
 
 define('BOX_HEADING_ADD_PRODUCT_ID','Add To Cart');
   
