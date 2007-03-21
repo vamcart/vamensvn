@@ -265,8 +265,8 @@ define('ERROR_CONDITIONS_NOT_ACCEPTED', 'If you do not accept our General Busine
 
 define('SUB_TITLE_OT_DISCOUNT','Discount:');
 
-define('TAX_ADD_TAX','incl. ');
-define('TAX_NO_TAX','plus ');
+define('TAX_ADD_TAX','Incl. ');
+define('TAX_NO_TAX','Plus ');
 
 define('NOT_ALLOWED_TO_SEE_PRICES','You do not have the permission to see the prices ');
 define('NOT_ALLOWED_TO_SEE_PRICES_TEXT','You do not have the permission to see the prices, please create an account.');
