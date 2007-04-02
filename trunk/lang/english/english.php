@@ -494,6 +494,9 @@ Random upcoming - <a href="' . HTTP_SERVER . DIR_WS_CATALOG . FILENAME_RSS2. '?f
 <h3>Limit parameter</h3>
 <p>You can use limit parameter.<br />
 For example, you can display only 10 items from new products rss2.php?feed=new_products&amp;limit=10</p>
+<h3>Ref parameter</h3>
+<p>You can use affiliate id parameter.<br />
+For example, you can display products from new products with your affiliate id rss2.php?feed=new_products&amp;ref=1</p>
 ');
 
 define('ENTRY_STATE_RELOAD', 'Click <span class="bold">"Update"</span> button to fill State field');
