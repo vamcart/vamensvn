@@ -6,6 +6,8 @@
 Order Nr.: {$oID}
 Date: {$DATE}
 {if $csID}Customer ID :{$csID}{/if}
+Телефон: {$PHONE}
+E-mail: {$EMAIL}
 ----------------------------------------------------------------------
 
 
