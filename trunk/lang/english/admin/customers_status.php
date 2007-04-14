@@ -93,13 +93,19 @@ define('TEXT_INFO_HEADING_DELETE_CUSTOMERS_STATUS', 'Delete Customer Group');
 define('TEXT_INFO_HEADING_EDIT_CUSTOMERS_STATUS','Edit Group Data');
 define('TEXT_INFO_HEADING_NEW_CUSTOMERS_STATUS', 'New Customer Group');
 
-define('TEXT_INFO_CUSTOMERS_STATUS_BASE', '<b>Basis Kundengruppe für Artikelpreise</b>');
-define('ENTRY_CUSTOMERS_STATUS_BASE', 'wird als Grundlage für die Preise der neuen Kundengruppe gewählt. Wenn Auswahl = Admin werden keine Preise für die neue Kundengruppe angelegt.');
+define('TEXT_INFO_CUSTOMERS_STATUS_BASE', '<b>Base price for group</b>');
+define('ENTRY_CUSTOMERS_STATUS_BASE', 'What price will be shown for this group.');
 
 // Ñáîðêà VaM
 
 define('TEXT_PUBLIC',', public');
 define('TABLE_HEADING_ICON','Icon');
 define('TABLE_HEADING_USERS','Users');
+
+define('TEXT_INFO_CUSTOMERS_STATUS_ACCUMULATED_LIMIT_INTRO', '<b>Accumulated limit</b>');
+define('ENTRY_CUSTOMERS_STATUS_ACCUMULATED_LIMIT_DISPLAY','');
+
+define('TEXT_INFO_CUSTOMERS_STATUS_ORDERS_STATUS_INTRO', '<b>Accumulated orders status:</b>');
+define('TEXT_INFO_CUSTOMERS_STATUS_ORDERS_STATUS_DISPLAY', '');
 
 ?>
