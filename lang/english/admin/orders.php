@@ -128,4 +128,6 @@ define('TEXT_PRODUCTS',' Products ');
 define('ENTRY_ORIGINAL_REFERER', 'Referer:');
 define('ENTRY_ORDER_NUMBER', 'Order number:');
 
+define('EMAIL_ACC_SUBJECT', 'New discount');
+
 ?>
