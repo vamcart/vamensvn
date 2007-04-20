@@ -106,7 +106,7 @@ class cip_manager {
             //Install Buttons for ZIP
             if (!$cip->is_installed() or ALWAYS_DISPLAY_INSTALL_BUTTON=='true') {
                 //install
-                $output.= xtc_image(DIR_WS_ADMIN_ICONS . 'empty.gif', ICON_EMPTY).'&nbsp;';
+//                $output.= xtc_image(DIR_WS_ADMIN_ICONS . 'empty.gif', ICON_EMPTY).'&nbsp;';
                 $output.= '<a href="'.xtc_href_link($this->script_name(), 'cip='.urlencode($contents[$i]['name']) . '&action=install').'">'.xtc_image(DIR_WS_ADMIN_ICONS . 'remove.gif', ICON_INSTALL).'</a>&nbsp;';
             }
             //Remove Buttons for ZIP
@@ -120,9 +120,6 @@ class cip_manager {
             if (SHOW_PACK_BUTTONS=='true') {
               $output.= '<a href="'.xtc_href_link($this->script_name(), 'cip='. urlencode($contents[$i]['name']) .'&action=unpack').'">'.xtc_image(DIR_WS_ADMIN_ICONS.'unpack.gif', ICON_UNZIP).'</a>&nbsp;';
             }
-
-            //Delete Button
-            $output.= '<a href="'.xtc_href_link($this->script_name(), 'cip=' . urlencode($contents[$i]['name']). '&action=deleteconfirm'). '"  onclick="return confirmSubmit()">'.xtc_image(DIR_WS_ADMIN_ICONS . 'cip_delete.gif', ICON_DELETE).'</a>&nbsp;';
 
             //$cip_buttons[xtc_image(DIR_WS_ADMIN_ICONS.'cip_delete.gif', ICON_DELETE)]= xtc_href_link($this->script_name(), 'cip=' . urlencode($contents[$i]['name']).'&action=delete');
 
@@ -155,6 +152,8 @@ class cip_manager {
                 $output.='<a href="'.xtc_href_link($this->script_name(), 'cip='.
                                 urlencode($contents[$i]['name'])).'">'.xtc_image(DIR_WS_ADMIN_ICONS. 'info.gif', IMAGE_ICON_INFO).'</a>';
             }
+            //Delete Button
+            $output.= '<a href="'.xtc_href_link($this->script_name(), 'cip=' . urlencode($contents[$i]['name']). '&action=deleteconfirm'). '"  onclick="return confirmSubmit()">'.xtc_image(DIR_WS_ADMIN_ICONS . 'cip_delete.gif', ICON_DELETE).'</a>&nbsp;';
             $output.='</td>'."\n";
 //Play and Info Buttons end
             $output.='</tr>';
@@ -376,11 +375,11 @@ class cip_manager {
             $value=htmlspecialchars($value);//convert to entries...
             if ($key=='contrib_ref') {
                 if ($value) {
-                $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_CONTR) ? TEXT_LINK_CONTR : 'http://vamshop.ru?'). $value.'" title= "'. CONTRIBS_PAGE_ALT . '">' . CONTRIBS_PAGE .'</a></b>');
+                $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_CONTR) ? TEXT_LINK_CONTR : 'http://vamshop.com?'). $value.'" title= "'. CONTRIBS_PAGE_ALT . '">' . CONTRIBS_PAGE .'</a></b>');
                 }
             } elseif ($key=='forum_ref') {
                 if ($value) {
-                $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_FORUM) ? TEXT_LINK_FORUM : 'http://vamshop.ru?').$value. '" title="'. CONTRIBS_FORUM_ALT. '">'. CONTRIBS_FORUM.'</a></b>');
+                $contents[]=array('text'=>'<b>&#8226;&nbsp;<a href="'. (!defined(TEXT_LINK_FORUM) ? TEXT_LINK_FORUM : 'http://vamshop.com?').$value. '" title="'. CONTRIBS_FORUM_ALT. '">'. CONTRIBS_FORUM.'</a></b>');
                 }
                 $contents[] = array('text' => '<hr><h3>'.TEXT_INFO_CONTRIB.':</h3>');
             } else $contents[]=array('text'=>'<b>'.$key.'</b>: '.nl2br($value));
