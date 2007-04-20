@@ -96,4 +96,24 @@ define('NO_CONTRIB_TYPE_PARAMETER_IN_DETAILS_TAG_TEXT', 'No contrib_type paramet
 define('NO_STATUS_PARAMETER_IN_DETAILS_TAG_TEXT', 'No status parameter in details tag');
 define('NO_LAST_UPDATE_PARAMETER_IN_DETAILS_TAG_TEXT', 'No last_update parameter in details tag');
 
+define('TEXT_INFO_SUPPORT', 'Support');
+define('TEXT_INFO_CONTRIB', 'Contrib Info');
+define('CONTRIBS_PAGE_ALT','Contributions official page');
+define('CONTRIBS_PAGE','Contrib\'s Page');
+
+define('CONTRIBS_FORUM_ALT','Link to forum where you can get a support');
+define('CONTRIBS_FORUM','Support Forum for contrib');
+
+define('CIP_STATUS_REMOVED_ALT', 'CIP have NOT been installed');
+define('CIP_STATUS_INSTALLED_ALT', 'CIP have been INSTALLED');
+
+define('CIP_USES', 'CIP uses');
+define('TEXT_DOESNT_EXISTS', ' doesn\'t exists');
+
+define('MSG_WAS_INSTALLED','CIP was installed!');
+define('MSG_WAS_APPLIED',' was aplied!');
+define('MSG_WAS_REMOVED','CIP was removed.');
+
+define('TEXT_POST_INSTALL_NOTES','POST INSTALL NOTES');
+
 ?>
