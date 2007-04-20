@@ -31,6 +31,7 @@ define('TEXT_FILE_CONTENTS', 'Contents:');
 define('TEXT_LAST_MODIFIED', 'Last Modified:');
 define('TEXT_DELETE_INTRO', 'Are you sure you want to delete this file?');
 define('TEXT_UPLOAD_INTRO', 'Please select the files to upload.');
+define('TEXT_UPLOAD_LIMITS','Remember that you could upload only <b>ZIPs</b>, no more than <b>'.round(MAX_UPLOADED_FILESIZE/1024).'Kb</b> and only <b>Contrib Installer Packages</b>!');
 
 define('ERROR_DIRECTORY_NOT_WRITEABLE', 'Error: I can not write to this directory. Please set the right user permissions on: %s');
 define('ERROR_FILE_NOT_WRITEABLE', 'Error: I can not write to this file. Please set the right user permissions on: %s');
