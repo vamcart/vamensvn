@@ -30,7 +30,7 @@
  define('TABLE_HEADING_CONTENT_NAME','Name/Filename');
  define('TABLE_HEADING_CONTENT_LINK','Link');
  define('TABLE_HEADING_CONTENT_HITS','Viewed');
- define('TABLE_HEADING_CONTENT_GROUP','Group');
+ define('TABLE_HEADING_CONTENT_GROUP','Код');
  define('TABLE_HEADING_CONTENT_SORT','Sort Order');
  define('TEXT_YES','Yes');
  define('TEXT_NO','No');
