@@ -50,6 +50,7 @@
  define('TEXT_TITLE_FILE','Title/Filename:');
  define('TEXT_SELECT','-Select-');
  define('TEXT_HEADING','Heading:');
+ define('TEXT_URL','URL (with http://):');
  define('TEXT_CONTENT','Text:');
  define('TEXT_UPLOAD_FILE','Upload File:');
  define('TEXT_UPLOAD_FILE_LOCAL','(from local system)');
