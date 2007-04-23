@@ -531,5 +531,6 @@ define('NAVBAR_TITLE_DEFAULT', 'Articles');
 define('ARTICLES_BY','Articles by ');
 
 define('MODULE_PAYMENT_SCHET_PRINT','Print invoice');
+define('MODULE_PAYMENT_KVITANCIA_PRINT','Print kvitancia');
 
 ?>
