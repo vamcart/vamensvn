@@ -112,7 +112,7 @@ define('TEXT_DATABASE_SERVER','Database Server');
 define('TEXT_DATABASE_SERVER_LONG','The database server can be in the form of a hostname, such as <i>db1.myserver.com</i>, or as an IP address, such as <i>192.168.0.1</i>.');
 define('TEXT_USERNAME','Username');
 define('TEXT_USERNAME_LONG','The username is used to connect to the database server. An example username is <i>mysql_10</i>.<br /><br />Note: If the VaM Shop Database is to be imported (selected above), the account used to connect to the database server needs to have Create and Drop permissions.');
-define('TEXT_PASSWORD','Password');
+define('TEXT_PASSWORD','Password:');
 define('TEXT_PASSWORD_LONG','The password is used together with the username, which forms the database user account.');
 define('TEXT_DATABASE','Database');
 define('TEXT_DATABASE_LONG','The database used to hold the catalog data. An example database name is <i>vamshop</i>.<br /><b>ATTENTION:</b> VaM Shop need an empty Database to perform Installation.');
@@ -187,7 +187,7 @@ define('TEXT_PASSWORD_CONF','Password Confirmation:');
 define('TITLE_SHOP_CONFIG','Shop configuration');
 define('TEXT_STORE','Store Name:');
 define('TEXT_STORE_LONG','(The name of my store)');
-define('TEXT_EMAIL_FROM','E-Mail From');
+define('TEXT_EMAIL_FROM','E-Mail From:');
 define('TEXT_EMAIL_FROM_LONG','(The e-mail adress used in (sent) e-mails)');
 define('TITLE_ZONE_CONFIG','Zone configuration');
 define('TEXT_ZONE','Set up zones for EU?');
@@ -196,7 +196,7 @@ define('TITLE_SHOP_CONFIG_NOTE','*Note; Information for basic Shop configuration
 define('TITLE_ADMIN_CONFIG_NOTE','*Note; Information for Admin/Superuser');
 define('TEXT_ZONE_NO','No');
 define('TEXT_ZONE_YES','Yes');
-define('TEXT_COMPANY','Company name');
+define('TEXT_COMPANY','Company name:');
 
 
 
@@ -266,5 +266,14 @@ define('TEXT_OK','OK');
 //finished
 
 define('TEXT_CATALOG','Catalog');
+
+define('START','Install');
+define('STEP1','Step 1');
+define('STEP2','Step 2');
+define('STEP3','Step 3');
+define('STEP4','Step 4');
+define('STEP5','Step 5');
+define('STEP6','Step 6');
+define('END','Finished');
 
 ?>
