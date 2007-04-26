@@ -128,6 +128,8 @@ define('TEXT_WS_CATALOG_LONG','The virtual directory where the VaM Shop Catalog 
 define('TEXT_WS_ADMINTOOL','WWW Administration Tool Directory');
 define('TEXT_WS_ADMINTOOL_LONG','The virtual directory where the VaM Shop Administration Tool resides, usually <i>/vamshop/admin/</i>');
 
+define('TEXT_WWW','Shop URL');
+
 // step2.php
 
 define('TEXT_PROCESS_1','Please continue the installation process to execute the database import procedure.');
