@@ -6,10 +6,9 @@
 Order Nr.: {$oID}
 Date: {$DATE}
 {if $csID}Customer ID :{$csID}{/if}
-Телефон: {$PHONE}
+Phone: {$PHONE}
 E-mail: {$EMAIL}
 ----------------------------------------------------------------------
-
 
 Dear {$NAME},
 
