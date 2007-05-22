@@ -1706,7 +1706,6 @@ function walk( $item1 ) {
 	if (trim($v_products_image)==''){
 		$v_products_image = $default_image_product;
 	} else {
-		$v_products_image;
 		if (USE_EP_IMAGE_MANIPULATOR == 'true') { prepare_image($v_products_image); } else { $v_products_image; }
 	}
 
