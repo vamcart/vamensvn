@@ -533,4 +533,6 @@ define('ARTICLES_BY','Articles by ');
 define('MODULE_PAYMENT_SCHET_PRINT','Print invoice');
 define('MODULE_PAYMENT_KVITANCIA_PRINT','Print kvitancia');
 
+define('ENTRY_CAPTCHA_ERROR','Captcha code you entered in invalid, try again. Case sensitive');
+
 ?>
