@@ -36,7 +36,7 @@ define('TEXT_INFORMATIONS','Informations');
 define('TEXT_MARKED_ELEMENTS','Marked Elements');
 define('TEXT_INSERT_ELEMENT','New Element');
 
-define('TEXT_WARN_MAIN','Main');
+define('TEXT_WARN_MAIN','0');
 define('TEXT_NEW_PRODUCT', 'New Product in &quot;%s&quot;');
 define('TEXT_CATEGORIES', 'Categories:');
 define('TEXT_PRODUCTS', 'Products:');
