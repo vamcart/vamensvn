@@ -35,5 +35,6 @@
   define('TEXT_SEND_TO','Recipient:');
   define('TEXT_PREVIEW','<b>Preview:</b>');
   define('TEXT_REMOVE_LINK', 'Newsletter unsubscribe');
+  define('TEXT_NEWSLETTER_REMOVE', 'Newsletter unsubscribe: ');
 
 ?>
