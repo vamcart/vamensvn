@@ -22,7 +22,7 @@
 \***************************************************************************/
 
 /* --------------------------------------------------------------
-   $Id: backup.php 1023 2007-02-08 11:13:01Z VaM $   
+   $Id: backup.php 1023 2007-06-17 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -199,7 +199,7 @@ if (!$auth || (isset($_SERVER['QUERY_STRING']) && $_SERVER['QUERY_STRING'] == 'r
 	exit;
 }
 if (!file_exists(PATH) && !$is_safe_mode) {
-    mkdir(PATH, 0777) || trigger_error("Не удалось создать каталог для бекапа", E_USER_ERROR);
+    mkdir(PATH, 0777) || trigger_error("Backup directory create error", E_USER_ERROR);
 }
 
 $SK = new dumper();
@@ -222,7 +222,7 @@ switch($action){
 
 mysql_close();
 
-echo "<script>document.getElementById('timer').innerHTML = '" . round(array_sum(explode(' ', microtime())) - $timer, 4) . " сек.'</script>";
+echo "<script>document.getElementById('timer').innerHTML = '" . round(array_sum(explode(' ', microtime())) - $timer, 4) . " sec.'</script>";
 
 class dumper {
 	function dumper() {
@@ -259,8 +259,8 @@ class dumper {
 	function backup() {
 		if (!isset($_REQUEST)) {$this->main();}
 		set_error_handler("SXD_errorHandler");
-		$buttons = "<a id=save href='' style='display: none;'>Скачать файл</a> &nbsp; <input id=back type=button class=button value='Вернуться' disabled onclick=\"history.back();\">";
-		echo tpl_page(tpl_process("Создается резервная копия БД"), $buttons);
+		$buttons = "<a id=save href='' style='display: none;'>Download file</a> &nbsp; <input id=back type=button class=button value='Back' disabled onclick=\"history.back();\">";
+		echo tpl_page(tpl_process("Backup"), $buttons);
 
 		$this->SET['last_action']     = 0;
 		$this->SET['last_db_backup']  = isset($_REQUEST['db_backup']) ? $_REQUEST['db_backup'] : '';
@@ -289,12 +289,12 @@ class dumper {
 		$db = $this->SET['last_db_backup'];
 
 		if (!$db) {
-			echo tpl_l("ОШИБКА! Не указана база данных!", C_ERROR);
+			echo tpl_l("ERROR! DB not selected!", C_ERROR);
 			echo tpl_enableBack();
 		    exit;
 		}
-		echo tpl_l("Подключение к БД `{$db}`.");
-		mysql_select_db($db) or trigger_error ("Не удается выбрать базу данных.<br />" . mysql_error(), E_USER_ERROR);
+		echo tpl_l("Connecting to DB `{$db}`.");
+		mysql_select_db($db) or trigger_error ("Database select error.<br />" . mysql_error(), E_USER_ERROR);
 		$tables = array();
         $result = mysql_query("SHOW tableS");
 		$all = 0;
@@ -349,14 +349,14 @@ class dumper {
 		$info = $tabinfo[0] . $info;
 		$name = $db . '_' . date("Y-m-d_H-i");
         $fp = $this->fn_open($name, "w");
-		echo tpl_l("Создание файла с резервной копией БД:<br />\\n  -  {$this->filename}");
+		echo tpl_l("Backup creation:<br />\\n  -  {$this->filename}");
 		$this->fn_write($fp, "#SKD101|{$db}|{$tabs}|" . date("Y.m.d H:i:s") ."|{$info}\n\n");
 		$t=0;
 		echo tpl_l(str_repeat("-", 60));
 		$result = mysql_query("SET SQL_QUOTE_SHOW_CREATE = 1");
 		// Кодировка соединения по умолчанию
 		if ($this->mysql_version > 40101 && CHARSET != 'auto') {
-			mysql_query("SET NAMES '" . CHARSET . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />" . mysql_error(), E_USER_ERROR);
+			mysql_query("SET NAMES '" . CHARSET . "'") or trigger_error ("Databse charset error.<br />" . mysql_error(), E_USER_ERROR);
 			$last_charset = CHARSET;
 		}
 		else{
@@ -366,16 +366,16 @@ class dumper {
 			// Выставляем кодировку соединения соответствующую кодировке таблицы
 			if ($this->mysql_version > 40101 && $tab_charset[$table] != $last_charset) {
 				if (CHARSET == 'auto') {
-					mysql_query("SET NAMES '" . $tab_charset[$table] . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />" . mysql_error(), E_USER_ERROR);
-					echo tpl_l("Установлена кодировка соединения `" . $tab_charset[$table] . "`.", C_WARNING);
+					mysql_query("SET NAMES '" . $tab_charset[$table] . "'") or trigger_error ("Databse charset error.<br />" . mysql_error(), E_USER_ERROR);
+					echo tpl_l("Set database charset to `" . $tab_charset[$table] . "`.", C_WARNING);
 					$last_charset = $tab_charset[$table];
 				}
 				else{
-					echo tpl_l('Кодировка соединения и таблицы не совпадает:', C_ERROR);
-					echo tpl_l('Таблица `'. $table .'` -> ' . $tab_charset[$table] . ' (соединение '  . CHARSET . ')', C_ERROR);
+					echo tpl_l('Charset collation error:', C_ERROR);
+					echo tpl_l('Table `'. $table .'` -> ' . $tab_charset[$table] . ' (charset '  . CHARSET . ')', C_ERROR);
 				}
 			}
-			echo tpl_l("Обработка таблицы `{$table}` [" . fn_int($tabinfo[$table]) . "].");
+			echo tpl_l("Processing table `{$table}` [" . fn_int($tabinfo[$table]) . "].");
         	// Создание таблицы
 			$result = mysql_query("SHOW CREATE table `{$table}`");
         	$tab = mysql_fetch_array($result);
@@ -434,13 +434,13 @@ class dumper {
         echo tpl_s(1, 1);
         echo tpl_l(str_repeat("-", 60));
         $this->fn_close($fp);
-		echo tpl_l("Резервная копия БД `{$db}` создана.", C_RESULT);
-		echo tpl_l("Размер БД:       " . round($this->size / 1048576, 2) . " МБ", C_RESULT);
+		echo tpl_l("Backup for db `{$db}` created successful.", C_RESULT);
+		echo tpl_l("DB size:       " . round($this->size / 1048576, 2) . " МБ", C_RESULT);
 		$filesize = round(filesize(PATH . $this->filename) / 1048576, 2) . " МБ";
-		echo tpl_l("Размер файла: {$filesize}", C_RESULT);
-		echo tpl_l("Таблиц обработано: {$tabs}", C_RESULT);
-		echo tpl_l("Строк обработано:   " . fn_int($tabinfo[0]), C_RESULT);
-		echo "<script>with (document.getElementById('save')) {style.display = ''; innerHTML = 'Скачать файл ({$filesize})'; href = '" . URL . $this->filename . "'; }document.getElementById('back').disabled = 0;</script>";
+		echo tpl_l("File size: {$filesize}", C_RESULT);
+		echo tpl_l("Tables saved: {$tabs}", C_RESULT);
+		echo tpl_l("Strings saved:   " . fn_int($tabinfo[0]), C_RESULT);
+		echo "<script>with (document.getElementById('save')) {style.display = ''; innerHTML = 'Download file ({$filesize})'; href = '" . URL . $this->filename . "'; }document.getElementById('back').disabled = 0;</script>";
 		// Передача данных для глобальной статистики
 		if (GS) echo "<script>document.getElementById('GS').src = 'http://sypex.net/gs.php?b={$this->tabs},{$this->records},{$this->size},{$this->comp},108';</script>";
 
@@ -449,8 +449,8 @@ class dumper {
 	function restore(){
 		if (!isset($_REQUEST)) {$this->main();}
 		set_error_handler("SXD_errorHandler");
-		$buttons = "<input id=back type=button class=button value='Вернуться' disabled onclick=\"history.back();\">";
-		echo tpl_page(tpl_process("Восстановление БД из резервной копии"), $buttons);
+		$buttons = "<input id=back type=button class=button value='Back' disabled onclick=\"history.back();\">";
+		echo tpl_page(tpl_process("Restore"), $buttons);
 
 		$this->SET['last_action']     = 1;
 		$this->SET['last_db_restore'] = isset($_REQUEST['db_restore']) ? $_REQUEST['db_restore'] : '';
@@ -459,12 +459,12 @@ class dumper {
 		$db = $this->SET['last_db_restore'];
 
 		if (!$db) {
-			echo tpl_l("ОШИБКА! Не указана база данных!", C_ERROR);
+			echo tpl_l("ERROR! DB not selected!", C_ERROR);
 			echo tpl_enableBack();
 		    exit;
 		}
-		echo tpl_l("Подключение к БД `{$db}`.");
-		mysql_select_db($db) or trigger_error ("Не удается выбрать базу данных.<br />" . mysql_error(), E_USER_ERROR);
+		echo tpl_l("Connecting to DB `{$db}`.");
+		mysql_select_db($db) or trigger_error ("Database select error.<br />" . mysql_error(), E_USER_ERROR);
 
 		// Определение формата файла
 		if(preg_match("/^(.+?)\.sql(\.(bz2|gz))?$/", $file, $matches)) {
@@ -479,15 +479,15 @@ class dumper {
 			}
 			$this->SET['comp_level'] = '';
 			if (!file_exists(PATH . "/{$file}")) {
-    		    echo tpl_l("ОШИБКА! Файл не найден!", C_ERROR);
+    		    echo tpl_l("ERROR! File not found!", C_ERROR);
 				echo tpl_enableBack();
     		    exit;
     		}
-			echo tpl_l("Чтение файла `{$file}`.");
+			echo tpl_l("Read file `{$file}`.");
 			$file = $matches[1];
 		}
 		else{
-			echo tpl_l("ОШИБКА! Не выбран файл!", C_ERROR);
+			echo tpl_l("ERROR! File not selected!", C_ERROR);
 			echo tpl_enableBack();
 		    exit;
 		}
@@ -503,8 +503,8 @@ class dumper {
 
 		// Установка кодировки соединения
 		if ($this->mysql_version > 40101 && (CHARSET != 'auto' || $this->forced_charset)) { // Кодировка по умолчанию, если в дампе не указана кодировка
-			mysql_query("SET NAMES '" . $this->restore_charset . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />" . mysql_error(), E_USER_ERROR);
-			echo tpl_l("Установлена кодировка соединения `" . $this->restore_charset . "`.", C_WARNING);
+			mysql_query("SET NAMES '" . $this->restore_charset . "'") or trigger_error ("Databse charset error.<br />" . mysql_error(), E_USER_ERROR);
+			echo tpl_l("Set database charset to `" . $this->restore_charset . "`.", C_WARNING);
 			$last_charset = $this->restore_charset;
 		}
 		else {
@@ -526,7 +526,7 @@ class dumper {
 				if ($table != $m[2]) {
 				    $table = $m[2];
 					$tabs++;
-					$cache .= tpl_l("Таблица `{$table}`.");
+					$cache .= tpl_l("Table `{$table}`.");
 					$last_showed = $table;
 					$i = 0;
 					if ($is_skd)
@@ -574,13 +574,13 @@ class dumper {
 							if (preg_match("/(CHARACTER SET|CHARSET)[=\s]+(\w+)/i", $sql, $charset)) {
 								if (!$this->forced_charset && $charset[2] != $last_charset) {
 									if (CHARSET == 'auto') {
-										mysql_query("SET NAMES '" . $charset[2] . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
-										$cache .= tpl_l("Установлена кодировка соединения `" . $charset[2] . "`.", C_WARNING);
+										mysql_query("SET NAMES '" . $charset[2] . "'") or trigger_error ("Databse charset error.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
+										$cache .= tpl_l("Set database charset to `" . $charset[2] . "`.", C_WARNING);
 										$last_charset = $charset[2];
 									}
 									else{
-										$cache .= tpl_l('Кодировка соединения и таблицы не совпадает:', C_ERROR);
-										$cache .= tpl_l('Таблица `'. $table .'` -> ' . $charset[2] . ' (соединение '  . $this->restore_charset . ')', C_ERROR);
+										$cache .= tpl_l('Charset collation error:', C_ERROR);
+										$cache .= tpl_l('Table `'. $table .'` -> ' . $charset[2] . ' (charset '  . $this->restore_charset . ')', C_ERROR);
 									}
 								}
 								// Меняем кодировку если указано форсировать кодировку
@@ -592,17 +592,17 @@ class dumper {
 							elseif(CHARSET == 'auto'){ // Вставляем кодировку для таблиц, если она не указана и установлена auto кодировка
 								$sql .= ' DEFAULT CHARSET=' . $this->restore_charset . $this->restore_collate;
 								if ($this->restore_charset != $last_charset) {
-									mysql_query("SET NAMES '" . $this->restore_charset . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
-									$cache .= tpl_l("Установлена кодировка соединения `" . $this->restore_charset . "`.", C_WARNING);
+									mysql_query("SET NAMES '" . $this->restore_charset . "'") or trigger_error ("Databse charset error.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
+									$cache .= tpl_l("Set database charset to `" . $this->restore_charset . "`.", C_WARNING);
 									$last_charset = $this->restore_charset;
 								}
 							}
 						}
-						if ($last_showed != $table) {$cache .= tpl_l("Таблица `{$table}`."); $last_showed = $table;}
+						if ($last_showed != $table) {$cache .= tpl_l("Table `{$table}`."); $last_showed = $table;}
 					}
 					elseif($this->mysql_version > 40101 && empty($last_charset)) { // Устанавливаем кодировку на случай если отсутствует CREATE table
-						mysql_query("SET $this->restore_charset '" . $this->restore_charset . "'") or trigger_error ("Неудается изменить кодировку соединения.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
-						echo tpl_l("Установлена кодировка соединения `" . $this->restore_charset . "`.", C_WARNING);
+						mysql_query("SET $this->restore_charset '" . $this->restore_charset . "'") or trigger_error ("Databse charset error.<br />{$sql}<br />" . mysql_error(), E_USER_ERROR);
+						echo tpl_l("Set database charset to `" . $this->restore_charset . "`.", C_WARNING);
 						$last_charset = $this->restore_charset;
 					}
             		$insert = '';
@@ -614,7 +614,7 @@ class dumper {
             	}
     			if ($execute) {
             		$q++;
-            		mysql_query($sql) or trigger_error ("Неправильный запрос.<br />" . mysql_error(), E_USER_ERROR);
+            		mysql_query($sql) or trigger_error ("Query error.<br />" . mysql_error(), E_USER_ERROR);
 					if (preg_match("/^insert/i", $sql)) {
             		    $aff_rows += mysql_affected_rows();
             		}
@@ -627,11 +627,11 @@ class dumper {
 		echo $cache;
 		echo tpl_s(1 , 1);
 		echo tpl_l(str_repeat("-", 60));
-		echo tpl_l("БД восстановлена из резервной копии.", C_RESULT);
-		if (isset($info[3])) echo tpl_l("Дата создания копии: {$info[3]}", C_RESULT);
-		echo tpl_l("Запросов к БД: {$q}", C_RESULT);
-		echo tpl_l("Таблиц создано: {$tabs}", C_RESULT);
-		echo tpl_l("Строк добавлено: {$aff_rows}", C_RESULT);
+		echo tpl_l("DB restored.", C_RESULT);
+		if (isset($info[3])) echo tpl_l("Date: {$info[3]}", C_RESULT);
+		echo tpl_l("Number of queries: {$q}", C_RESULT);
+		echo tpl_l("Tables added: {$tabs}", C_RESULT);
+		echo tpl_l("Strings added: {$aff_rows}", C_RESULT);
 
 		$this->tabs = $tabs;
 		$this->records = $aff_rows;
@@ -645,7 +645,7 @@ class dumper {
 	}
 
 	function main(){
-		$this->comp_levels = array('9' => '9 (максимальная)', '8' => '8', '7' => '7', '6' => '6', '5' => '5 (средняя)', '4' => '4', '3' => '3', '2' => '2', '1' => '1 (минимальная)','0' => 'Без сжатия');
+		$this->comp_levels = array('9' => '9 (max)', '8' => '8', '7' => '7', '6' => '6', '5' => '5 (med)', '4' => '4', '3' => '3', '2' => '2', '1' => '1 (min)','0' => 'No compression');
 
 		if (function_exists("bzopen")) {
 		    $this->comp_methods[2] = 'BZip2';
@@ -653,9 +653,9 @@ class dumper {
 		if (function_exists("gzopen")) {
 		    $this->comp_methods[1] = 'GZip';
 		}
-		$this->comp_methods[0] = 'Без сжатия';
+		$this->comp_methods[0] = 'No compression';
 		if (count($this->comp_methods) == 1) {
-		    $this->comp_levels = array('0' =>'Без сжатия');
+		    $this->comp_levels = array('0' =>'No compression');
 		}
 
 		$dbs = $this->db_select();
@@ -665,7 +665,7 @@ class dumper {
 		$this->vars['comp_methods'] = $this->fn_select($this->comp_methods, $this->SET['comp_method']);
 		$this->vars['tables']       = $this->SET['tables'];
 		$this->vars['files']        = $this->fn_select($this->file_select(), '');
-		$buttons = "<input type=submit value=Применить>";
+		$buttons = "<input type=submit value=Submit>";
 		echo tpl_page(tpl_main(), $buttons);
 	}
 
@@ -882,26 +882,26 @@ return <<<HTML
 <fieldset onclick="document.skb.action[0].checked = 1;">
 <legend>
 <input type="radio" name="action" value="backup">
-Backup / Создание резервной копии БД&nbsp;</legend>
+Backup&nbsp;</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr>
-<td width="35%">БД:</td>
+<td width="35%">DB:</td>
 <td width="65%"><select name="db_backup">
 {$SK->vars['db_backup']}
 </select></td>
 </tr>
 <tr>
-<td>Фильтр таблиц:</td>
+<td>Tables filter:</td>
 <td><input name="tables" type="text" class="text" value="{$SK->vars['tables']}"></td>
 </tr>
 <tr>
-<td>Метод сжатия:</td>
+<td>Compression:</td>
 <td><select name="comp_method">
 {$SK->vars['comp_methods']}
 </select></td>
 </tr>
 <tr>
-<td>Степень сжатия:</td>
+<td>Compression level:</td>
 <td><select name="comp_level">
 {$SK->vars['comp_levels']}
 </select></td>
@@ -911,16 +911,16 @@ Backup / Создание резервной копии БД&nbsp;</legend>
 <fieldset onclick="document.skb.action[1].checked = 1;">
 <legend>
 <input type="radio" name="action" value="restore">
-Restore / Восстановление БД из резервной копии&nbsp;</legend>
+Restore&nbsp;</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr>
-<td>БД:</td>
+<td>DB:</td>
 <td><select name="db_restore">
 {$SK->vars['db_restore']}
 </select></td>
 </tr>
 <tr>
-<td width="35%">Файл:</td>
+<td width="35%">File:</td>
 <td width="65%"><select name="file">
 {$SK->vars['files']}
 </select></td>
@@ -941,11 +941,11 @@ return <<<HTML
 <legend>{$title}&nbsp;</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr><td colspan="2"><div id="logarea" style="width: 100%; height: 140px; border: 1px solid #7F9DB9; padding: 3px; overflow: auto;"></div></td></tr>
-<tr><td width="31%">Статус таблицы:</td><td width="69%"><table width="100%" border="1" cellpadding="0" cellspacing="0">
+<tr><td width="31%">Table status:</td><td width="69%"><table width="100%" border="1" cellpadding="0" cellspacing="0">
 <tr><td bgcolor="#FFFFFF"><table width="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#5555CC" id="st_tab"
 style="FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#CCCCFF,endColorStr=#5555CC);
 border-right: 1px solid #AAAAAA"><tr><td height="12"></td></tr></table></td></tr></table></td></tr>
-<tr><td>Общий статус:</td><td><table width="100%" border="1" cellspacing="0" cellpadding="0">
+<tr><td>Total:</td><td><table width="100%" border="1" cellspacing="0" cellpadding="0">
 <tr><td bgcolor="#FFFFFF"><table width="1" border="0" cellpadding="0" cellspacing="0" bgcolor="#00AA00" id="so_tab"
 style="FILTER: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#CCFFCC,endColorStr=#00AA00);
 border-right: 1px solid #AAAAAA"><tr><td height="12"></td></tr></table></td>
@@ -982,10 +982,10 @@ function tpl_auth($error){
 return <<<HTML
 <span id="error">
 <fieldset>
-<legend>Ошибка</legend>
+<legend>Error</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr>
-<td>Для работы Sypex Dumper Lite требуется:<br /> - Internet Explorer 5.5+, Mozilla либо Opera 8+ (<span id="sie">-</span>)<br /> - включено выполнение JavaScript скриптов (<span id="sjs">-</span>)</td>
+<td>Minimum system requirements:<br /> - Internet Explorer 5.5+, Mozilla or Opera 8+ (<span id="sie">-</span>)<br /> - JavaScript enabled (<span id="sjs">-</span>)</td>
 </tr>
 </table>
 </fieldset>
@@ -993,14 +993,14 @@ return <<<HTML
 <span id="body" style="display: none;">
 {$error}
 <fieldset>
-<legend>Введите логин и пароль</legend>
+<legend>Login and password</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr>
-<td width="41%">Логин:</td>
+<td width="41%">Login:</td>
 <td width="59%"><input name="login" type="text" class="text"></td>
 </tr>
 <tr>
-<td>Пароль:</td>
+<td>Password:</td>
 <td><input name="pass" type="password" class="text"></td>
 </tr>
 </table>
@@ -1044,7 +1044,7 @@ HTML;
 function tpl_backup_index(){
 return <<<HTML
 <center>
-<h1>У вас нет прав для просмотра этого каталога</h1>
+<h1>Permission error</h1>
 </center>
 
 HTML;
@@ -1053,7 +1053,7 @@ HTML;
 function tpl_error($error){
 return <<<HTML
 <fieldset>
-<legend>Ошибка при подключении к БД</legend>
+<legend>DB connection error</legend>
 <table width="100%" border="0" cellspacing="0" cellpadding="2">
 <tr>
 <td align="center">{$error}</td>
@@ -1070,7 +1070,7 @@ function SXD_errorHandler($errno, $errmsg, $filename, $linenum, $vars) {
     $dt = date("Y.m.d H:i:s");
     $errmsg = addslashes($errmsg);
 
-	echo tpl_l("{$dt}<br /><b>Возникла ошибка!</b>", C_ERROR);
+	echo tpl_l("{$dt}<br /><b>Error!</b>", C_ERROR);
 	echo tpl_l("{$errmsg} ({$errno})", C_ERROR);
 	echo tpl_enableBack();
 	die();
