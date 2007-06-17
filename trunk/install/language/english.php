@@ -197,8 +197,7 @@ define('TITLE_ADMIN_CONFIG_NOTE','*Note; Information for Admin/Superuser');
 define('TEXT_ZONE_NO','No');
 define('TEXT_ZONE_YES','Yes');
 define('TEXT_COMPANY','Company name:');
-
-
+define('ENTRY_STATE_ERROR_SELECT','Select state');
 
 // step7
 define('TITLE_GUEST_CONFIG','Guest configuration');
