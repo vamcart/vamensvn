@@ -16,24 +16,24 @@
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
 
-  define('MODULE_PAYMENT_KVITANCIA_TEXT_TITLE', 'Квитанция СБ РФ');
-  define('MODULE_PAYMENT_KVITANCIA_TEXT_DESCRIPTION', '<br /><strong>Квитанцию для оплаты Вы сможете распечатать на следующей странице.</strong><br /><br />Информация для оплаты:<br />' .
-                                                         '<br />Название банка: ' . MODULE_PAYMENT_KVITANCIA_1 .
-                                                         '<br />Расчётный счёт: ' . MODULE_PAYMENT_KVITANCIA_2 .
-                                                         '<br />БИК: ' . MODULE_PAYMENT_KVITANCIA_3 .
-                                                         '<br />Кор./счет: ' . MODULE_PAYMENT_KVITANCIA_4 .
-                                                         '<br />ИНН: ' . MODULE_PAYMENT_KVITANCIA_5 .
-                                                         '<br />Получатель: ' . MODULE_PAYMENT_KVITANCIA_6 .
-                                                         '<br />КПП: ' . MODULE_PAYMENT_KVITANCIA_7 .
-                                                         '<br /><br />Ваш заказ будет выполнен только после получения оплаты.<br />');
+  define('MODULE_PAYMENT_KVITANCIA_TEXT_TITLE', 'Kvitancia SB RF');
+  define('MODULE_PAYMENT_KVITANCIA_TEXT_DESCRIPTION', '<br /><strong>Kvitanciy dlia oplaty vy mogete raspechtat na sleduiyschei stranice.</strong><br /><br />Informacia dlia oplaty:<br />' .
+                                                         '<br />Nazvanie banka: ' . MODULE_PAYMENT_KVITANCIA_1 .
+                                                         '<br />Raschetny schet: ' . MODULE_PAYMENT_KVITANCIA_2 .
+                                                         '<br />BIK: ' . MODULE_PAYMENT_KVITANCIA_3 .
+                                                         '<br />Kor./schet: ' . MODULE_PAYMENT_KVITANCIA_4 .
+                                                         '<br />INN: ' . MODULE_PAYMENT_KVITANCIA_5 .
+                                                         '<br />Poluchatel: ' . MODULE_PAYMENT_KVITANCIA_6 .
+                                                         '<br />KPP: ' . MODULE_PAYMENT_KVITANCIA_7 .
+                                                         '<br /><br />Vash zakaz budet vypolnen tolko posle poluchenia oplaty.<br />');
   define('MODULE_PAYMENT_KVITANCIA_TEXT_EMAIL_FOOTER', str_replace('<br />','\n',MODULE_PAYMENT_KVITANCIA_TEXT_DESCRIPTION));
 
-  define('MODULE_PAYMENT_KVITANCIA_STATUS_TITLE','Разрешить модуль Квитанция СБ РФ');
-  define('MODULE_PAYMENT_KVITANCIA_STATUS_DESC','Разрешить использование модуля Квитанция СБ РФ при оформлении заказа в магазине?');
+  define('MODULE_PAYMENT_KVITANCIA_STATUS_TITLE','Razreshit modul Kvitancia SB RF');
+  define('MODULE_PAYMENT_KVITANCIA_STATUS_DESC','Razreshit ispolzovanie modulia Kvitancia SB RF?');
 
   define('MODULE_PAYMENT_KVITANCIA_TEXT_INFO','');
 
-  define('MODULE_PAYMENT_KVITANCIA_1_TITLE','Название банка');
+  define('MODULE_PAYMENT_KVITANCIA_1_TITLE','Nazvanie banka');
   define('MODULE_PAYMENT_KVITANCIA_1_DESC','Укажите название банка.');
 
   define('MODULE_PAYMENT_KVITANCIA_2_TITLE','Расчётный счёт');
