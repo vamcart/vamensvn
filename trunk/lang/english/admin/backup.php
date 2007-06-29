@@ -17,40 +17,65 @@
    Released under the GNU General Public License
    --------------------------------------------------------------*/
 
-define('HEADING_TITLE', 'Database Backup Manager');
+define('TEXT_DUMPER_SUBMIT', 'Submit');
+define('TEXT_DUMPER_SEC', ' sec.');
+define('TEXT_DUMPER_DIR_ERROR', 'Backup directory create error');
+define('TEXT_DUMPER_DOWNLOAD', 'Download file');
+define('TEXT_DUMPER_BACK', 'Back');
+define('TEXT_DUMPER_CREATE', 'Backup');
+define('TEXT_DUMPER_NAME_ERROR', 'ERROR! DB not selected!');
+define('TEXT_DUMPER_CONNECT', 'Connecting to DB ');
+define('TEXT_DUMPER_CONNECT_ERROR', 'Database select error.');
+define('TEXT_DUMPER_CREATE_FILE', 'Backup creation:');
+define('TEXT_DUMPER_CHARSET_ERROR', 'Databse charset error.');
+define('TEXT_DUMPER_CHARSET', 'Set database charset to ');
+define('TEXT_DUMPER_CHARSET_COLLATION', 'Charset collation error:');
+define('TEXT_DUMPER_TABLE', 'Table ');
+define('TEXT_DUMPER_CONNECT1', 'charset ');
+define('TEXT_DUMPER_PROCESS', 'Processing table ');
+define('TEXT_DUMPER_MAKE', 'Backup for db ');
+define('TEXT_DUMPER_MAKE1', ' created successful.');
+define('TEXT_DUMPER_SIZE', 'DB size:       ');
+define('TEXT_DUMPER_MB', ' mb');
+define('TEXT_DUMPER_FILE_SIZE', 'File size: ');
+define('TEXT_DUMPER_TABLES_COUNT', 'Tables saved: ');
+define('TEXT_DUMPER_STRING_COUNT', 'Strings saved:   ');
+define('TEXT_DUMPER_RESTORE', 'Restore');
+define('TEXT_DUMPER_FILE_ERROR', 'ERROR! File not found!');
+define('TEXT_DUMPER_FILE_READ', 'Read file ');
+define('TEXT_DUMPER_FILE_ERROR1', 'ERROR! File not selected!');
+define('TEXT_DUMPER_QUERY_ERROR', 'Query error.');
+define('TEXT_DUMPER_RESTORED', 'DB restored.');
+define('TEXT_DUMPER_DATE', 'Date: ');
+define('TEXT_DUMPER_QUERY_COUNT', 'Number of queries: ');
+define('TEXT_DUMPER_TABLES_CREATED', 'Tables added: ');
+define('TEXT_DUMPER_STRINGS_CREATED', 'Strings added: ');
+define('TEXT_DUMPER_MAX', '9 (max)');
+define('TEXT_DUMPER_MED', '5 (med)');
+define('TEXT_DUMPER_MIN', '1 (min)');
+define('TEXT_DUMPER_NO', 'No compression');
 
-define('TABLE_HEADING_TITLE', 'Title');
-define('TABLE_HEADING_FILE_DATE', 'Date');
-define('TABLE_HEADING_FILE_SIZE', 'Size');
-define('TABLE_HEADING_ACTION', 'Action');
+define('TEXT_DUMPER_BACKUP', 'Backup&nbsp;');
+define('TEXT_DUMPER_DB', 'DB:');
+define('TEXT_DUMPER_FILTER', 'Tables filter:');
+define('TEXT_DUMPER_COMPRESS', 'Compression:');
+define('TEXT_DUMPER_COMPRESS_LEVEL', 'Compression level:');
 
-define('TEXT_INFO_HEADING_NEW_BACKUP', 'New Backup');
-define('TEXT_INFO_HEADING_RESTORE_LOCAL', 'Restore Local');
-define('TEXT_INFO_NEW_BACKUP', 'Do not interrupt the backup process which might take a couple of minutes.');
-define('TEXT_INFO_UNPACK', '<br /><br />(after unpacking the file from the archive)');
-define('TEXT_INFO_RESTORE', 'Do not interrupt the restoration process.<br /><br />The larger the backup, the longer this process takes!<br /><br />If possible, use the mysql client.<br /><br />For example:<br /><br /><b>mysql -h' . DB_SERVER . ' -u' . DB_SERVER_USERNAME . ' -p ' . DB_DATABASE . ' < %s </b> %s');
-define('TEXT_INFO_RESTORE_LOCAL', 'Do not interrupt the restoration process.<br /><br />The larger the backup, the longer this process takes!');
-define('TEXT_INFO_RESTORE_LOCAL_RAW_FILE', 'The file uploaded must be a raw sql (text) file.');
-define('TEXT_INFO_DATE', 'Date:');
-define('TEXT_INFO_SIZE', 'Size:');
-define('TEXT_INFO_COMPRESSION', 'Compression:');
-define('TEXT_INFO_USE_GZIP', 'Use GZIP');
-define('TEXT_INFO_USE_ZIP', 'Use ZIP');
-define('TEXT_INFO_USE_NO_COMPRESSION', 'No Compression (Pure SQL)');
-define('TEXT_INFO_DOWNLOAD_ONLY', 'Download only (do not store server side)');
-define('TEXT_INFO_BEST_THROUGH_HTTPS', 'Best through a HTTPS connection');
-define('TEXT_DELETE_INTRO', 'Are you sure you want to delete this backup?');
-define('TEXT_NO_EXTENSION', 'None');
-define('TEXT_BACKUP_DIRECTORY', 'Backup Directory:');
-define('TEXT_LAST_RESTORATION', 'Last Restoration:');
-define('TEXT_FORGET', '(<u>forget</u>)');
+define('TEXT_DUMPER_RESTORE_DB', 'Restore&nbsp;');
+define('TEXT_DUMPER_FILE', 'File:');
 
-define('ERROR_BACKUP_DIRECTORY_DOES_NOT_EXIST', 'Error: Backup directory does not exist. Please set this in configure.php.');
-define('ERROR_BACKUP_DIRECTORY_NOT_WRITEABLE', 'Error: Backup directory is not writeable.');
-define('ERROR_DOWNLOAD_LINK_NOT_ACCEPTABLE', 'Error: Download link not acceptable.');
+define('TEXT_DUMPER_TABLE_STATUS', 'Table status:');
+define('TEXT_DUMPER_TOTAL_STATUS', 'Total:');
 
-define('SUCCESS_LAST_RESTORE_CLEARED', 'Success: The last restoration date has been cleared.');
-define('SUCCESS_DATABASE_SAVED', 'Success: The database has been saved.');
-define('SUCCESS_DATABASE_RESTORED', 'Success: The database has been restored.');
-define('SUCCESS_BACKUP_DELETED', 'Success: The backup has been removed.');
+define('TEXT_DUMPER_ERROR', 'Œ¯Ë·Í‡');
+define('TEXT_DUMPER_BROWSER_ERROR', 'Minimum system requirements:<br /> - Internet Explorer 5.5+, Mozilla or Opera 8+ (<span id=sie>-</span>)<br /> - JavaScript enabled (<span id=sjs>-</span>)');
+
+define('TEXT_DUMPER_LOGIN_HEADER', 'Login and password');
+define('TEXT_DUMPER_LOGIN', 'Login:');
+define('TEXT_DUMPER_PASSWORD', 'Password:');
+
+define('TEXT_DUMPER_FORBIDDEN', 'Permission error');
+define('TEXT_DUMPER_DB_CONNECT', 'DB connection error');
+define('TEXT_DUMPER_DB_ERROR', 'Error!');
+
 ?>
