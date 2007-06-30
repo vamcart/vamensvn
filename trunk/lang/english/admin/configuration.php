@@ -89,9 +89,10 @@ define('CURRENT_TEMPLATE_DESC' , 'Choose a Templateset (Theme). The Theme must b
 
 define('CC_KEYCHAIN_TITLE','CC String');
 define('CC_KEYCHAIN_DESC','String to encrypt CC number (please change!)');
-
 define('ADMIN_DROP_DOWN_NAVIGATION_TITLE','Drop-down menu style at admin side');
 define('ADMIN_DROP_DOWN_NAVIGATION_DESC','Drop-down menu on the top (true) or standart menu on the left (false).');
+define('AJAX_CART_TITLE','Ajax shopping');
+define('AJAX_CART_DESC','Use ajax shopping cart (true) or standar shopping cart (false).');
 
 define('ENTRY_FIRST_NAME_MIN_LENGTH_TITLE' , 'First Name');
 define('ENTRY_FIRST_NAME_MIN_LENGTH_DESC' , 'Minimum length of first name');
