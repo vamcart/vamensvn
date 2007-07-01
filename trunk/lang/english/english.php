@@ -44,7 +44,7 @@ define('DATE_FORMAT', 'd.m.Y');  // this is used for strftime()
 define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' %H:%M:%S');
 define('DOB_FORMAT_STRING', 'dd.mm.jjjj');
 
-function xtc_date_raw($date, $reverse = false) {
+function vam_date_raw($date, $reverse = false) {
   if ($reverse) {
     return substr($date, 0, 2) . substr($date, 3, 2) . substr($date, 6, 4);
   } else {
@@ -244,8 +244,8 @@ define('TEXT_UNKNOWN_TAX_RATE', 'Unknown tax rate');
 
 define('WARNING_INSTALL_DIRECTORY_EXISTS', 'Warning: The installation directory is still available on: ' . dirname($HTTP_SERVER_VARS['SCRIPT_FILENAME']) . '/install. Please delete this directory for security reasons!');
 define('WARNING_CONFIG_FILE_WRITEABLE', 'Warning: VaM Shop is able to write to the configuration directory: ' . dirname($HTTP_SERVER_VARS['SCRIPT_FILENAME']) . '/includes/configure.php. That represents a possible safety hazard - please correct the user access rights for this directory!');
-define('WARNING_SESSION_DIRECTORY_NON_EXISTENT', 'Warning: Directory for sesssions doesn&acute;t exist: ' . xtc_session_save_path() . '. Sessions will not work until this directory has been created!');
-define('WARNING_SESSION_DIRECTORY_NOT_WRITEABLE', 'Warning: VaM Shop is not able to write into the session directory: ' . xtc_session_save_path() . '. Sessions will not work until the user access rights for this directory have been changed!');
+define('WARNING_SESSION_DIRECTORY_NON_EXISTENT', 'Warning: Directory for sesssions doesn&acute;t exist: ' . vam_session_save_path() . '. Sessions will not work until this directory has been created!');
+define('WARNING_SESSION_DIRECTORY_NOT_WRITEABLE', 'Warning: VaM Shop is not able to write into the session directory: ' . vam_session_save_path() . '. Sessions will not work until the user access rights for this directory have been changed!');
 define('WARNING_SESSION_AUTO_START', 'Warning: session.auto_start is activated (enabled) - Please deactivate (disable) this PHP feature in php.ini and restart your web server!');
 define('WARNING_DOWNLOAD_DIRECTORY_NON_EXISTENT', 'Warning: Directory for article download does not exist: ' . DIR_FS_DOWNLOAD . '. This feature will not work until this directory has been created!');
 
