@@ -120,7 +120,7 @@ define('TITLE_WEBSERVER_SETTINGS','Webserver Settings');
 define('TEXT_WS_ROOT','Webserver Root Directory');
 define('TEXT_WS_ROOT_LONG','The directory where your web pages are being served from, usually <i>/home/myname/public_html</i>.');
 define('TEXT_WS_XTC','Webserver "VaM Shop" Directory');
-define('TEXT_WS_XTC_LONG','The directory where your catalog pages are being served from (from the webserver root directory), usually <i>/home/myname/public_html<b>/vamshop/</b></i>.');
+define('TEXT_WS_vam_LONG','The directory where your catalog pages are being served from (from the webserver root directory), usually <i>/home/myname/public_html<b>/vamshop/</b></i>.');
 define('TEXT_WS_ADMIN','Webserver Administration Tool Directory');
 define('TEXT_WS_ADMIN_LONG','The directory where your administration tool pages are being served from (from the webserver root directory), usually <i>/home/myname/public_html<b>/vamshop/admin/</b></i>.');
 define('TEXT_WS_CATALOG','WWW Catalog Directory');
