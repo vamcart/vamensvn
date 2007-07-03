@@ -724,4 +724,9 @@ define('MAX_UPLOADED_FILESIZE_DESC' , 'Set maximum filesize in bytes for cip arc
 define('USE_EP_IMAGE_MANIPULATOR_TITLE','Use image manipulator for easypopulate');
 define('USE_EP_IMAGE_MANIPULATOR_DESC','Use image manipulator for product images when your data file imported to shop');
 
+define('LOGIN_NUM_TITLE','Safe login - number of attempts');
+define('LOGIN_NUM_DESC','Number of wrong login attempts before captcha displayed.');
+define('LOGIN_TIME_TITLE','Safe login - time');
+define('LOGIN_TIME_DESC','Time (in seconds).');
+
 ?>
