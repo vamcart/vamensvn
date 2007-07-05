@@ -114,6 +114,6 @@ define('MSG_WAS_INSTALLED','CIP was installed!');
 define('MSG_WAS_APPLIED',' was aplied!');
 define('MSG_WAS_REMOVED','CIP was removed.');
 
-define('TEXT_POST_INSTALL_NOTES','POST INSTALL NOTES');
+define('TEXT_POST_INSTALL_NOTES','Post install notes');
 
 ?>
