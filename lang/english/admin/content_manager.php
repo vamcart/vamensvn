@@ -79,5 +79,8 @@
  define('USED_SPACE','Used Space:');
  define('TABLE_HEADING_CONTENT_FILESIZE','Filesize');
 
+define('TEXT_META_TITLE','Meta Title: ');
+define('TEXT_META_DESCRIPTION','Meta Description: ');
+define('TEXT_META_KEYWORDS','Meta Keywords: ');
 
  ?>
