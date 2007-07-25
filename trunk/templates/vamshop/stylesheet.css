@@ -694,6 +694,50 @@ div#navigation
 
 /*- /Articles box */
 
+/*- New articles box */
+#boxArticlesNew
+   {
+     text-align: left;
+     margin-bottom: 0.2em;
+     margin-top: 0.2em;
+     margin-right: 0.2em;
+     padding-top: 0.2em;
+     padding-bottom: 0.4em;
+  	  border-bottom-width: 1px;
+	  border-bottom-style: dashed;
+     border-bottom-color: #67748B;
+   }
+
+/*- New articles header */
+#boxArticlesNew h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #006600;
+     border-bottom: 2px #e5e5e5 solid;
+     background: url(img/box.gif) no-repeat left center;
+     margin: 0 0 .4em .3em;
+     padding: .1em 0 0 16px;
+  }
+/*- /New articles header */
+
+/*- New articles content */
+#boxArticlesNewContent 
+   {
+     padding-left: 1em;
+  }
+
+#boxArticlesNewContent p 
+   {
+     margin: 0 0 0 0;
+     text-align: left;
+  }
+
+/*- /New articles content */
+
+/*- /New articles box */
+
 /*- Last viewed box */
 #boxLastViewed
    {
