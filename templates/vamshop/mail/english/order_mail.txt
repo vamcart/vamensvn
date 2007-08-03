@@ -1,7 +1,8 @@
 
 {$address_label_customer}
 
-{if $PAYMENT_METHOD}Paymentmethod: {$PAYMENT_METHOD}{/if}
+{if $PAYMENT_METHOD}Payment method: {$PAYMENT_METHOD}{/if}
+{if $SHIPPING_METHOD}Shipping method: {$SHIPPING_METHOD}{/if}
 
 Order Nr.: {$oID}
 Date: {$DATE}
