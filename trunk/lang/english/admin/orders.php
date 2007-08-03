@@ -131,4 +131,9 @@ define('ENTRY_ORDER_NUMBER', 'Order number:');
 
 define('EMAIL_ACC_SUBJECT', 'New discount');
 
+define('TEXT_ORDER_SUMMARY','Summary');
+define('TEXT_ORDER_PAYMENT','Payment / Shipping');
+define('TEXT_ORDER_PRODUCTS','Products');
+define('TEXT_ORDER_STATUS','Status');
+
 ?>
