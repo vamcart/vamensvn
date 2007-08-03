@@ -428,7 +428,7 @@ define('TABLE_HEADING_NUMBER', 'Order number');
 define('TABLE_HEADING_ORDER_TOTAL', 'Order total');
 define('TABLE_HEADING_STATUS', 'Status');
 
-define('TABLE_HEADING_PRODUCTS', 'Latest products');
+define('TABLE_HEADING_SUMMARY_PRODUCTS', 'Latest products');
 define('TABLE_HEADING_PRODUCT_NAME', 'Products');
 define('TABLE_HEADING_PRODUCT_PRICE', 'Price');
 
