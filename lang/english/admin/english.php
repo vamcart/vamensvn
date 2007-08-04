@@ -455,4 +455,9 @@ define('IMAGE_NEW_TOPIC', 'New Topic');
 define('IMAGE_NEW_ARTICLE', 'New Article');
 define('TEXT_DISPLAY_NUMBER_OF_AUTHORS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> authors)'); 
 
+define('TEXT_SUMMARY_CUSTOMERS','Customers');
+define('TEXT_SUMMARY_ORDERS','Orders');
+define('TEXT_SUMMARY_PRODUCTS','Products');
+define('TEXT_SUMMARY_NEWS','News');
+
 ?>
