@@ -451,7 +451,7 @@ define('ENTRY_VAT_ERROR', 'The chosen VatID is not valid or not proofable at thi
 define('MSRP','MSRP');
 define('YOUR_PRICE','your price ');
 define('ONLY',' only ');
-define('FROM','from ');
+define('FROM',' ');
 define('YOU_SAVE','you save ');
 define('INSTEAD','instead ');
 define('TXT_PER',' per ');
