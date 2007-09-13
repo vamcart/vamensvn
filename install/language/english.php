@@ -198,6 +198,7 @@ define('TEXT_ZONE_NO','No');
 define('TEXT_ZONE_YES','Yes');
 define('TEXT_COMPANY','Company name:');
 define('ENTRY_STATE_ERROR_SELECT','Select state');
+define('ENTRY_STREET_ADDRESS_TEXT', '');
 
 // step7
 define('TITLE_GUEST_CONFIG','Guest configuration');
