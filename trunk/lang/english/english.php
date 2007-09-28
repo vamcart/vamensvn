@@ -94,7 +94,7 @@ define('PULL_DOWN_DEFAULT', 'Please choose');
 // javascript messages
 define('JS_ERROR', 'Missing necessary information!\nPlease fill in correctly.\n\n');
 
-define('JS_REVIEW_TEXT', '* The text must consist at least of ' . REVIEW_TEXT_MIN_LENGTH . ' alphabetic characters..\n');
+define('JS_REVIEW_TEXT', '* The text must consist at least of ' . REVIEW_TEXT_MIN_LENGTH . ' alphabetic characters.\n');
 define('JS_REVIEW_RATING', '* Enter your review.\n');
 define('JS_ERROR_NO_PAYMENT_MODULE_SELECTED', '* Please choose a method of payment for your order.\n');
 define('JS_ERROR_SUBMITTED', 'This page has already been confirmed. Please click okay and wait until the process has finished.');
@@ -242,8 +242,8 @@ define('TEXT_UNKNOWN_TAX_RATE', 'Unknown tax rate');
  *
  */
 
-define('WARNING_INSTALL_DIRECTORY_EXISTS', 'Warning: The installation directory is still available on: ' . dirname($HTTP_SERVER_VARS['SCRIPT_FILENAME']) . '/install. Please delete this directory for security reasons!');
-define('WARNING_CONFIG_FILE_WRITEABLE', 'Warning: VaM Shop is able to write to the configuration directory: ' . dirname($HTTP_SERVER_VARS['SCRIPT_FILENAME']) . '/includes/configure.php. That represents a possible safety hazard - please correct the user access rights for this directory!');
+define('WARNING_INSTALL_DIRECTORY_EXISTS', 'Warning: The installation directory is still available on: ' . dirname($_SERVER['SCRIPT_FILENAME']) . '/install. Please delete this directory for security reasons!');
+define('WARNING_CONFIG_FILE_WRITEABLE', 'Warning: VaM Shop is able to write to the configuration directory: ' . dirname($_SERVER['SCRIPT_FILENAME']) . '/includes/configure.php. That represents a possible safety hazard - please correct the user access rights for this directory!');
 define('WARNING_SESSION_DIRECTORY_NON_EXISTENT', 'Warning: Directory for sesssions doesn&acute;t exist: ' . vam_session_save_path() . '. Sessions will not work until this directory has been created!');
 define('WARNING_SESSION_DIRECTORY_NOT_WRITEABLE', 'Warning: VaM Shop is not able to write into the session directory: ' . vam_session_save_path() . '. Sessions will not work until the user access rights for this directory have been changed!');
 define('WARNING_SESSION_AUTO_START', 'Warning: session.auto_start is activated (enabled) - Please deactivate (disable) this PHP feature in php.ini and restart your web server!');
@@ -353,11 +353,7 @@ define('NAVBAR_TITLE_2_CHECKOUT_SHIPPING_ADDRESS', 'Change shipping address');
 define('NAVBAR_TITLE_1_CHECKOUT_SUCCESS', 'Checkout');
 define('NAVBAR_TITLE_2_CHECKOUT_SUCCESS', 'Success');
 define('NAVBAR_TITLE_CREATE_ACCOUNT', 'Create account');
-if ($navigation->snapshot['page'] == FILENAME_CHECKOUT_SHIPPING) {
-  define('NAVBAR_TITLE_LOGIN', 'Order');
-} else {
-  define('NAVBAR_TITLE_LOGIN', 'Login');
-}
+define('NAVBAR_TITLE_LOGIN', 'Login');
 define('NAVBAR_TITLE_LOGOFF','Good bye');
 define('NAVBAR_TITLE_PRODUCTS_NEW', 'New products');
 define('NAVBAR_TITLE_SHOPPING_CART', 'Shopping cart');
@@ -433,7 +429,6 @@ define('TEXT_CLOSE_WINDOW', 'Close Window.');
  *
  */
 
-define('TEXT_CLOSE_WINDOW', 'Close Window [x]');
 define('TEXT_COUPON_HELP_HEADER', 'Congratulations, you have redeemed a Discount Coupon.');
 define('TEXT_COUPON_HELP_NAME', '<br /><br />Coupon Name : %s');
 define('TEXT_COUPON_HELP_FIXED', '<br /><br />The coupon is worth %s discount against your order');
