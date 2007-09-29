@@ -683,6 +683,10 @@ define('MAX_DISPLAY_LATEST_NEWS_PAGE_TITLE' , 'News per page');
 define('MAX_DISPLAY_LATEST_NEWS_PAGE_DESC' , 'Maximum number of news per page');
 define('MAX_DISPLAY_LATEST_NEWS_CONTENT_TITLE' , 'Short description');
 define('MAX_DISPLAY_LATEST_NEWS_CONTENT_DESC' , 'Number of symbols displayed in news preview');
+define('MAX_DISPLAY_CART_TITLE' , 'Length of products name in shopping cart box');
+define('MAX_DISPLAY_CART_DESC' , 'Length of products name in shopping cart box');
+define('MAX_DISPLAY_SHORT_DESCRIPTION_TITLE' , 'Length of short description');
+define('MAX_DISPLAY_SHORT_DESCRIPTION_DESC' , 'Length of short description');
 
 // Установка модулей
 
