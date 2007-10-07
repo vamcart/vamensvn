@@ -733,4 +733,7 @@ define('LOGIN_NUM_DESC','Number of wrong login attempts before captcha displayed
 define('LOGIN_TIME_TITLE','Safe login - time');
 define('LOGIN_TIME_DESC','Time (in seconds).');
 
+define('ENABLE_TABS_TITLE','Use tabs in admin');
+define('ENABLE_TABS_DESC','Enable tabs in admin');
+
 ?>
