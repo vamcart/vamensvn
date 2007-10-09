@@ -1,0 +1,51 @@
+{config_load file="$language/lang_$language.conf" section="contact_us"}
+<!-- Page header -->
+<h1>{$CONTACT_HEADING}</h1>
+<!-- /Page header -->
+{if $error_message!=''}
+<div class="contacterror">{$error_message}</div>
+{/if}
+{if $success!='1'}
+{$FORM_ACTION}
+<!-- Rounded corners -->
+<div class="page">
+<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+<!-- Rounded corners -->
+<div class="pagecontent">
+{$CONTACT_CONTENT}
+<br />
+<br />
+<!-- form -->
+<fieldset class="form">
+<legend>{$CONTACT_HEADING}</legend>
+	<p>{#text_name#} {$INPUT_NAME}</p>
+	<p>{#text_email#} {$INPUT_EMAIL}</p>
+	<p>{#text_message#} {$INPUT_TEXT}</p>
+</fieldset>
+<!-- /form -->
+</div>
+<!-- /Cart content -->
+<b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
+<!-- /Rounded corners -->
+<div class="pagecontentfooter">
+{$BUTTON_SUBMIT}
+</div>
+</div>
+{$FORM_END}
+{else}
+<!-- Rounded corners -->
+<div class="page">
+<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+<!-- Cart content -->
+<div class="pagecontent">
+{#text_success#}
+</div>
+<!-- /Cart content -->
+<b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
+<!-- /Rounded corners -->
+<div class="pagecontentfooter">
+{$BUTTON_CONTINUE}
+</div>
+</div>
+{/if}
+<p></p>

@@ -1,0 +1,73 @@
+<?php
+/* -----------------------------------------------------------------------------------------
+   $Id: ot_ps_fee.php,v 1.0 2007/02/07 13:24:46 VaM $
+
+   VaM Shop - open source ecommerce solution
+   http://vamshop.ru
+   http://vamshop.com
+
+   Copyright (c) 2007 VaM Shop
+   -----------------------------------------------------------------------------------------
+   based on:
+   (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
+   (c) 2002-2003 osCommerce(ot_ps_fee.php,v 1.02 2003/02/24); www.oscommerce.com
+   (c) 2001 - 2003 TheMedia, Dipl.-Ing Thomas Plдnkers ; http://www.themedia.at & http://www.oscommerce.at
+   (c) 2004	 xt:Commerce (ot_ps_fee.php,v 1.02 2003/02/24); xt-commerce.com
+
+   Released under the GNU General Public License
+   ---------------------------------------------------------------------------------------*/
+
+  define('MODULE_ORDER_TOTAL_PS_FEE_TITLE', 'Personal Shipping');
+  define('MODULE_ORDER_TOTAL_PS_FEE_DESCRIPTION', 'Calculation of the Personal Shipping charge');
+
+  define('MODULE_ORDER_TOTAL_PS_FEE_STATUS_TITLE','Personal Shipping');
+  define('MODULE_ORDER_TOTAL_PS_FEE_STATUS_DESC','Calculation of the Personal Shipping charge');
+
+  define('MODULE_ORDER_TOTAL_COD_SORT_ORDER_TITLE','Sort Order');
+  define('MODULE_ORDER_TOTAL_COD_SORT_ORDER_DESC','Sort order of display');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_FLAT_TITLE','Flat Shippingcosts');
+  define('MODULE_ORDER_TOTAL_COD_FEE_FLAT_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_ITEM_TITLE','Shippingcosts each');
+  define('MODULE_ORDER_TOTAL_COD_FEE_ITEM_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_TABLE_TITLE','Tabular Shippingcosts');
+  define('MODULE_ORDER_TOTAL_COD_FEE_TABLE_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_ZONES_TITLE','Shippingcosts for zones');
+  define('MODULE_ORDER_TOTAL_COD_FEE_ZONES_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_AP_TITLE','Austrian Post AG');
+  define('MODULE_ORDER_TOTAL_COD_FEE_AP_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_FEE_DP_TITLE','German Post AG');
+  define('MODULE_ORDER_TOTAL_COD_FEE_DP_DESC','&lt;ISO2-Code&gt;:&lt;Price&gt;, ....<br>
+  00 as ISO2-Code allows the COD shipping in all countries. If
+  00 is used you have to enter it as last argument. If
+  no 00:9.99 is entered the COD shipping into foreign countries will not be calculated
+  (not possible).');
+
+  define('MODULE_ORDER_TOTAL_COD_TAX_CLASS_TITLE','Taxclass');
+  define('MODULE_ORDER_TOTAL_COD_TAX_CLASS_DESC','Choose a taxclass.');
+?>
