@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<locale lang="ru">
+<locale lang="en">
    <header>
       <project>VaM Shop</project>
       <create>2007-10-13 17:24</create>
       <revise>2007-10-13 19:15</revise>
-      <trans>Александр Меновщиков - vam@kypi.ru</trans>
-      <lang>Русский</lang>
+      <trans>Alexandr Menovchicov</trans>
+      <lang>English</lang>
    </header>
-   <message>
-      <id><![CDATA[Hello]]></id>
-      <string><![CDATA[Привет]]></string>
-   </message>
-   <message>
-      <id><![CDATA[Sample Text!]]></id>
-      <string><![CDATA[<br />Просто текст!]]></string>
-   </message>
 </locale>
