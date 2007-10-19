@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: application_bottom.php 1239 2007-02-06 20:14:56 VaM $   
+   $Id: application_bottom.php 1239 2007-10-19 20:14:56 VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
