@@ -206,6 +206,7 @@ define('IMAGE_BUTTON_LOGIN', 'Login');
 
 define('SMALL_IMAGE_BUTTON_DELETE', 'Delete');
 define('SMALL_IMAGE_BUTTON_EDIT', 'Edit');
+define('SMALL_IMAGE_BUTTON_VIEW', 'View');
 
 define('ICON_ARROW_RIGHT', 'Show more');
 define('ICON_CART', 'Into the cart');
@@ -319,6 +320,7 @@ define('ERROR_INVALID_PRODUCT', 'The product chosen was not found!');
  *
  */
 
+define('NAVBAR_TITLE_ACCOUNT', 'Your account');
 define('NAVBAR_TITLE_1_ACCOUNT_EDIT', 'Your account');
 define('NAVBAR_TITLE_2_ACCOUNT_EDIT', 'Changing your personal data');
 define('NAVBAR_TITLE_1_ACCOUNT_HISTORY', 'Your account');
