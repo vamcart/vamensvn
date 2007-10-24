@@ -532,4 +532,7 @@ define('ENTRY_CAPTCHA_ERROR','Captcha code you entered in invalid, try again. Ca
 
 define('TEXT_FIRST_REVIEW','You can add first review.');
 
+define('TEXT_PHP_MAILER_ERROR','Message was not sent.<br />');
+define('TEXT_PHP_MAILER_ERROR1','Mailer Error: ');
+
 ?>
