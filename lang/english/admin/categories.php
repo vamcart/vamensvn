@@ -218,4 +218,8 @@ define('ENTRY_CUSTOMERS_ACCESS','Permissions');
 define('TEXT_PAGES', 'Pages: ');
 define('TEXT_TOTAL_PRODUCTS', 'Products total: ');
 
+define('TEXT_YANDEX_MARKET','<br />Yandex-market options:<br />');
+define('TEXT_YANDEX_MARKET_BID','Bid:');
+define('TEXT_YANDEX_MARKET_CBID','Cbid:');
+
 ?>
