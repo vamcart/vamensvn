@@ -736,4 +736,11 @@ define('LOGIN_TIME_DESC','Time (in seconds).');
 define('ENABLE_TABS_TITLE','Use tabs in admin');
 define('ENABLE_TABS_DESC','Enable tabs in admin');
 
+define('YML_VENDOR_TITLE','Generate <vendor>');
+define('YML_VENDOR_DESC','Generate <vendor> tag?');
+define('YML_REF_ID_TITLE','Link');
+define('YML_REF_ID_DESC','Add parameter to the product link.');
+define('YML_REF_IP_TITLE','IP Link');
+define('YML_REF_IP_DESC','Add ip address to the product link.');
+
 ?>
