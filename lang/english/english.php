@@ -202,7 +202,7 @@ define('IMAGE_BUTTON_UPDATE_CART', 'Update shopping cart');
 define('IMAGE_BUTTON_WRITE_REVIEW', 'Write Evaluation');
 define('IMAGE_BUTTON_ADMIN', 'Admin');
 define('IMAGE_BUTTON_PRODUCT_EDIT', 'Edit product');
-define('IMAGE_BUTTON_LOGIN', 'Login');
+define('IMAGE_BUTTON_ARTICLE_EDIT', 'Edit article');
 
 define('SMALL_IMAGE_BUTTON_DELETE', 'Delete');
 define('SMALL_IMAGE_BUTTON_EDIT', 'Edit');
