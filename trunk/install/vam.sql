@@ -2018,10 +2018,10 @@ INSERT INTO languages VALUES (1,'English','en','icon.gif','english',2,'utf-8');
 
 INSERT INTO orders_status VALUES ( '1', '1', 'Pending');
 INSERT INTO orders_status VALUES ( '2', '1', 'Waiting approval');
-INSERT INTO orders_status VALUES ( '3', '1', 'Processing');
-INSERT INTO orders_status VALUES ( '4', '1', 'Delivering');
-INSERT INTO orders_status VALUES ( '5', '1', 'Delivered');
-INSERT INTO orders_status VALUES ( '6', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '3', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '4', '1', 'Processing');
+INSERT INTO orders_status VALUES ( '5', '1', 'Delivering');
+INSERT INTO orders_status VALUES ( '6', '1', 'Delivered');
 
 
 
