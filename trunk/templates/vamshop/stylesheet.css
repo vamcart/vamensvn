@@ -2020,7 +2020,7 @@ dl.AddressBookList
      display: block;
      width: 50%;
      float: left;
-     height: 100px;
+     height: auto;
      margin: 0 0 0 0;
      padding: 0 0 1em 0;
    }
@@ -2152,7 +2152,7 @@ dl.itemCategoriesListing
    {
      width: 30%;
      float: left;
-     height: 100px;
+     height: auto;
      margin: 0 0 0 0;
      padding: 0 0 0 0;
      background: transparent;
@@ -2161,7 +2161,7 @@ dl.itemCategoriesListing
 dt.itemCategoriesListing 
    {
      float: left;
-     height: 100px;
+     height: auto;
      background: transparent;
      border-right: 0px #f1f1f6 solid;
      margin: 0 0 0 0;
