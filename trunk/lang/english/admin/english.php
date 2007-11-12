@@ -284,7 +284,7 @@ define('ICON_FILE_DOWNLOAD', 'Download');
 define('ICON_FOLDER', 'Folder');
 define('ICON_LOCKED', 'Locked');
 define('ICON_PREVIOUS_LEVEL', 'Previous Level');
-define('ICON_PREVIEW', 'Preview');
+define('ICON_PREVIEW', 'Select');
 define('ICON_STATISTICS', 'Statistics');
 define('ICON_SUCCESS', 'Success');
 define('ICON_TICK', 'True');
