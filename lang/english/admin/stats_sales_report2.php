@@ -62,4 +62,10 @@ define('IMAGE_ICON_STATUS_GREEN_LIGHT', 'Set Active');
 define('IMAGE_ICON_STATUS_RED', 'Inactive');
 define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
 
+define('TABLE_HEADING_DATE', 'Date');
+
+define('TEXT_NUMBER_OF_ORDERS','Number of orders');
+define('TEXT_AVERAGE_ORDER','Average order');
+define('TEXT_TOTAL_SUMM','Total');
+
 ?>
