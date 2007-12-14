@@ -460,4 +460,6 @@ define('TEXT_SUMMARY_ORDERS','Orders');
 define('TEXT_SUMMARY_PRODUCTS','Products');
 define('TEXT_SUMMARY_NEWS','News');
 
+define('BOX_SALES_REPORT2','Sales Report 2');
+
 ?>
