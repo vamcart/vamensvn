@@ -57,4 +57,9 @@ define('TO_DATE_FORMAT', 'd, Y');
 define('DAILY_TOTAL','daily total');
 define('AVERAGE_TOTAL','avg. order');
 
+define('IMAGE_ICON_STATUS_GREEN', 'Active');
+define('IMAGE_ICON_STATUS_GREEN_LIGHT', 'Set Active');
+define('IMAGE_ICON_STATUS_RED', 'Inactive');
+define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
+
 ?>
