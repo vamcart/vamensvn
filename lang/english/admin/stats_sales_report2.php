@@ -18,7 +18,7 @@ define('HEADING_TITLE', 'Sales Report');
 
 define('TABLE_HEADING_CONVERSION', 'Total Sales');
 define('TABLE_HEADING_CONV_PER_ORDER', 'Avg. Order');
-define('TABLE_HEADING_ORDERS', '# of Orders');
+define('TABLE_HEADING_STAT_ORDERS', '# of Orders');
 define('TEXT_MONTH', 'Month');
 define('TEXT_WEEK', 'Week');
 
@@ -67,5 +67,11 @@ define('TABLE_HEADING_DATE', 'Date');
 define('TEXT_NUMBER_OF_ORDERS','Number of orders');
 define('TEXT_AVERAGE_ORDER','Average order');
 define('TEXT_TOTAL_SUMM','Total');
+
+define('TEXT_STATS_SALES',' sales report');
+
+define('TAB_CHART','Chart');
+define('TAB_TABLE','Table');
+define('TAB_STATUS','Orders status');
 
 ?>
