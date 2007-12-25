@@ -59,4 +59,8 @@ define('ENTRY_NEW_PASSWORD','New Password:');
 
 define('TEXT_INFO_ORIGINAL_REFERER', 'Referer:');
 
+define('SHIPPING_FLAT','Flat Rate');
+define('ORDER_TOTAL','<b>Total:</b>');
+define('ORDER_SUBTOTAL','<b>Sub-Total:</b>');
+
 ?>
