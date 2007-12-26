@@ -2,7 +2,7 @@
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
 
-   Copyright (c) 2007 VaM Shop 
+   Copyright (c) 2005-2008 VaM Shop 
    -----------------------------------------------------------------------------------------
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
@@ -1446,6 +1446,51 @@ p.LoginContentLeft
    }
 
 /*- /Login box */
+
+/*- My downloads box */
+#boxDownloads
+   {
+     text-align: left;
+     margin-bottom: 0.2em;
+     margin-top: 0.2em;
+     margin-right: 0.2em;
+     padding-top: 0.2em;
+     padding-bottom: 0.4em;
+  	  border-bottom-width: 1px;
+	  border-bottom-style: dashed;
+     border-bottom-color: #67748B;
+   }
+
+/*- My downloads box header */
+#boxDownloads h5 
+   {
+     display: block;
+     font: 12px Tahoma, Verdana, Arial, sans-serif;
+     font-weight: bold;
+     color: #006600;
+     border-bottom: 2px #e5e5e5 solid;
+     background: url(img/box.gif) no-repeat left center;
+     margin: 0 0 .4em .3em;
+     padding: .1em 0 0 16px;
+  }
+/*- /My downloads box header */
+
+/*- My downloads box content */
+#boxDownloadsContent 
+   {
+     padding-left: 0;
+     text-align: left;
+  }
+
+#boxDownloadsContent p 
+   {
+     margin: 0 0 0 0;
+     padding-bottom: 0.2em;
+  }
+
+/*- /My downloads box content */
+
+/*- /My downloads box */
 
 /*- Newsletter box */
 #boxNewsletter
