@@ -463,4 +463,7 @@ define('TEXT_SUMMARY_NEWS','News');
 
 define('BOX_SALES_REPORT2','Sales Report 2');
 
+define('TEXT_PHP_MAILER_ERROR','Message was not sent.<br />');
+define('TEXT_PHP_MAILER_ERROR1','Mailer Error: ');
+
 ?>
