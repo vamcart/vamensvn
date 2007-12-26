@@ -743,4 +743,9 @@ define('YML_REF_ID_DESC','Add parameter to the product link.');
 define('YML_REF_IP_TITLE','IP Link');
 define('YML_REF_IP_DESC','Add ip address to the product link.');
 
+define('SESSION_TIMEOUT_ADMIN_TITLE','Admin session timeout');
+define('SESSION_TIMEOUT_ADMIN_DESC','Set admin session timeout (seconds).');
+define('SESSION_TIMEOUT_CATALOG_TITLE','Customer session timeout');
+define('SESSION_TIMEOUT_CATALOG_DESC','Set customer session timeout (seconds).');
+
 ?>
