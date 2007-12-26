@@ -535,4 +535,12 @@ define('TEXT_FIRST_REVIEW','You can add first review.');
 define('TEXT_PHP_MAILER_ERROR','Message was not sent.<br />');
 define('TEXT_PHP_MAILER_ERROR1','Mailer Error: ');
 
+define('BOX_TEXT_DOWNLOAD', 'Your downloads: ');
+define('BOX_TEXT_DOWNLOAD_NOW', 'Download');
+
+define('TABLE_HEADING_DOWNLOAD_DATE','Link active before: ');
+define('TABLE_HEADING_DOWNLOAD_COUNT','Downloads remainning: ');
+define('TEXT_FOOTER_DOWNLOAD','If your download does not appear above, you can check you order at this link: ');
+define('TEXT_DOWNLOAD_MY_ACCOUNT','Orders history');
+
 ?>
