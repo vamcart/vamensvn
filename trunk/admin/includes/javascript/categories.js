@@ -7,14 +7,14 @@ function CheckMultiForm ()
     for (var i = 0; i < len; i++) 
     {
       var e = ml.elements[i];
-      if (e.name == "multi_products[]" || e.name == "multi_categories[]") 
+      if (e.name == "multi_products[]" || e.name == "multi_categories[]" || e.name == "multi_orders[]") 
       {
           if (e.checked == true) {
               return true;
           }
       }
     }
-    alert('Please check at least one element!');
+    alert('Выделите хотя бы один элемент!\nPlease check at least one element!');
     return false;
   }
 
@@ -26,7 +26,7 @@ function SwitchCheck ()
     for (var i = 0; i < len; i++) 
     {
       var e = maf.elements[i];
-      if (e.name == "multi_products[]" || e.name == "multi_categories[]") 
+      if (e.name == "multi_products[]" || e.name == "multi_categories[]" || e.name == "multi_orders[]") 
       {
           if (e.checked == true) {
               e.checked = false;
@@ -45,7 +45,7 @@ function CheckAll (wert)
     for (var i = 0; i < len; i++) 
     {
       var e = maf.elements[i];
-      if (e.name == "multi_products[]" || e.name == "multi_categories[]") 
+      if (e.name == "multi_products[]" || e.name == "multi_categories[]" || e.name == "multi_orders[]") 
       {
         e.checked = wert;
       }

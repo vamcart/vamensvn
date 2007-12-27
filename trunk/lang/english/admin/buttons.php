@@ -76,5 +76,6 @@ define('BUTTON_DETAILS', 'Details');
 define('BUTTON_NEW_TAX_CLASS', 'New Tax Class');
 define('BUTTON_NEW_TAX_RATE', 'New Tax Rate');
 define('BUTTON_SEND', 'Send');
+define('BUTTON_SUBMIT', 'Submit');
 
 ?>
