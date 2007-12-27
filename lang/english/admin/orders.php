@@ -136,4 +136,14 @@ define('TEXT_ORDER_PAYMENT','Payment / Shipping');
 define('TEXT_ORDER_PRODUCTS','Products');
 define('TEXT_ORDER_STATUS','Status');
 
+define('BUS_HEADING_TITLE','Batch Update Status');
+define('BUS_TEXT_NEW_STATUS', 'Select New Status');
+define('BUS_NOTIFY_CUSTOMERS', 'Notify customer(s)');
+define('BUS_ORDER','Order #');
+define('BUS_SUCCESS','updated!');
+define('BUS_WARNING','not updated!');
+define('BUS_DELETE_SUCCESS','deleted!');
+define('BUS_DELETE_WARNING','not deleted!');
+define('BUS_DELETE_ORDERS','Delete selected orders');
+
 ?>
