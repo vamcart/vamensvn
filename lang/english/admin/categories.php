@@ -29,7 +29,7 @@ define('TABLE_HEADING_STATUS', 'Status');
 define('TABLE_HEADING_STARTPAGE', 'TOP');
 define('TABLE_HEADING_STOCK','Stock Warning');
 define('TABLE_HEADING_SORT','Sort');
-define('TABLE_HEADING_EDIT','Edit');
+define('TABLE_HEADING_EDIT','');
 
 define('TEXT_ACTIVE_ELEMENT','Active Element');
 define('TEXT_INFORMATIONS','Informations');
