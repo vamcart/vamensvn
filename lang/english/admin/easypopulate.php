@@ -28,13 +28,15 @@ define('EASY_SPLIT_EP_FILE', 'Upload and Split a EP File');
 define('EASY_INSERT', 'Insert into DB');
 define('EASY_SPLIT', 'Upload and Split a EP File');
 define('EASY_LIMIT', 'Export:');
-define('EASY_LABEL_IMPORT', 'Import:');
 
 define('TEXT_IMPORT_TEMP', 'Import Data from file in %s');
 define('TEXT_INSERT_INTO_DB', 'Insert into DB');
 define('TEXT_SELECT_ONE', 'Select a EP File for Import');
 define('TEXT_SPLIT_FILE', 'Select a EP File');
 define('EASY_LABEL_CREATE', 'Create an export file');
+define('EASY_LABEL_IMPORT', 'Import:');
+define('EASY_LABEL_EXPORT_CHARSET', 'Export file charset: ');
+define('EASY_LABEL_IMPORT_CHARSET', 'Import file charset: ');
 define('EASY_LABEL_CREATE_SELECT', 'Select method to save export file');
 define('EASY_LABEL_CREATE_SAVE', 'Save to temp file on server');
 define('EASY_LABEL_SELECT_DOWN', 'Select field set to download');
