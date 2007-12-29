@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: easypopulate.php 1064 2007-05-12 11:13:01Z VaM $   
+   $Id: easypopulate.php 1064 2007-12-29 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -802,8 +802,7 @@ if (is_uploaded_file($_FILES['usrfl']['tmp_name']) && $_GET['split']==1) {
 				<b><?php echo EASY_LABEL_IMPORT_CHARSET;?></b>
 </span>
 			<select name="import_charset">
-			<option selected value ="cp1251" size="5">cp1251</option>
-			<option value="utf8" size="5">utf8</option>
+			<option selected value ="utf8" size="5">utf8</option>
 			</select>
 			
 			<br>
@@ -874,8 +873,7 @@ if (is_uploaded_file($_FILES['usrfl']['tmp_name']) && $_GET['split']==1) {
 				<b><?php echo EASY_LABEL_EXPORT_CHARSET;?></b>
 </span>
 			<select name="export_charset">
-			<option selected value ="cp1251" size="5">cp1251</option>
-			<option value="utf8" size="5">utf8</option>
+			<option selected value ="utf8" size="5">utf8</option>
 			</select>
 			
 			<br>
