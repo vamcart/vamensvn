@@ -281,7 +281,7 @@ if ($ok_message!='') {
 
 <form name="language" method="post" action="index.php">
 <p>
-<?php echo TEXT_ENGLISH; ?>  <img src="images/icons/icon-eng.gif" width="30" height="16" alt="" /> <?php echo vam_draw_radio_field_installer('LANGUAGE', 'english'); ?>
+<?php echo TEXT_ENGLISH; ?>  <?php echo vam_draw_radio_field_installer('LANGUAGE', 'english'); ?>
 </p>
 
 <input type="hidden" name="action" value="process" />
