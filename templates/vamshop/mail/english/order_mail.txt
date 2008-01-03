@@ -13,6 +13,8 @@ E-mail: {$EMAIL}
 
 Dear {$NAME},
 
+Your order info:
+
 Payment info
 
 {$PAYMENT_INFO_TXT}
