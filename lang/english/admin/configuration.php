@@ -579,11 +579,11 @@ define('ACCOUNT_VAT_BLOCK_ERROR_DESC' , 'Set to true, only validated VAT IDs are
 define('DEFAULT_CUSTOMERS_VAT_STATUS_ID_LOCAL_TITLE','Customer-group - correct VAT ID (Shop country)');
 define('DEFAULT_CUSTOMERS_VAT_STATUS_ID_LOCAL_DESC','Customers-group for customers with correct VAT ID, Shop country = customers country');
 // Google Conversion
-define('GOOGLE_CONVERSION_TITLE','Google Conversion-Tracking');
+define('GOOGLE_CONVERSION_TITLE','Enable Google Analytics');
 define('GOOGLE_CONVERSION_DESC','Track the Conversion Keywords at orders');
-define('GOOGLE_CONVERSION_ID_TITLE','Conversion ID');
-define('GOOGLE_CONVERSION_ID_DESC','Your Google Conversion ID');
-define('GOOGLE_LANG_TITLE','Google Language');
+define('GOOGLE_CONVERSION_ID_TITLE','Your ID');
+define('GOOGLE_CONVERSION_ID_DESC','Your Google Analytics ID (like UA-XXXXXX-X)');
+define('GOOGLE_LANG_TITLE','Shop Language');
 define('GOOGLE_LANG_DESC','ISO Code of used Language');
 
 // Afterbuy
