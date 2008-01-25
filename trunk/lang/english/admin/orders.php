@@ -146,4 +146,7 @@ define('BUS_DELETE_SUCCESS','deleted!');
 define('BUS_DELETE_WARNING','not deleted!');
 define('BUS_DELETE_ORDERS','Delete selected orders');
 
+define('TEXT_QTY','stock: ');
+define('TEXT_UNITS','');
+
 ?>
