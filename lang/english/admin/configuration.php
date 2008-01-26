@@ -282,6 +282,30 @@ define('PRODUCT_IMAGE_POPUP_MOTION_BLUR_DESC' , 'Product-Popup-Images: Motion-Bl
 define('MO_PICS_TITLE','Number of products images');
 define('MO_PICS_DESC','if this number is set > 0 , you will be able to upload/display more images per product');
 
+define('CATEGORIES_IMAGE_THUMBNAIL_ACTIVE_TITLE' , 'Allow to use GD library for Category Images');
+define('CATEGORIES_IMAGE_THUMBNAIL_ACTIVE_DESC' , 'Allow to use GD library for Category Images. If false, upload product images into images directory manually by ftp.');
+define('CATEGORIES_IMAGE_THUMBNAIL_WIDTH_TITLE' , 'Width of Category Images');
+define('CATEGORIES_IMAGE_THUMBNAIL_WIDTH_DESC' , 'Maximal Width of Category Images in Pixel');
+define('CATEGORIES_IMAGE_THUMBNAIL_HEIGHT_TITLE' , 'Height of Category Images');
+define('CATEGORIES_IMAGE_THUMBNAIL_HEIGHT_DESC' , 'Maximal Height of Category Images in Pixel');
+
+define('CATEGORIES_IMAGE_THUMBNAIL_BEVEL_TITLE' , 'Category Images: Bevel<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_BEVEL_DESC' , 'Category Images: Bevel<br /><br />Default-values: (8,FFCCCC,330000)<br /><br />shaded bevelled edges<br /><br />Usage:<br />(edge width,hex light colour,hex dark colour)');
+define('CATEGORIES_IMAGE_THUMBNAIL_GREYSCALE_TITLE' , 'Category Images: Greyscale<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_GREYSCALE_DESC' , 'Category Images: Greyscale<br /><br />Default-values: (32,22,22)<br /><br />basic black n white<br /><br />Usage:<br />(int red,int green,int blue)');
+define('CATEGORIES_IMAGE_THUMBNAIL_ELLIPSE_TITLE' , 'Category Images: Ellipse<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_ELLIPSE_DESC' , 'Category Images: Ellipse<br /><br />Default-values: (FFFFFF)<br /><br />ellipse on bg colour<br /><br />Usage:<br />(hex background colour)');
+define('CATEGORIES_IMAGE_THUMBNAIL_ROUND_EDGES_TITLE' , 'Category Images: Round-edges<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_ROUND_EDGES_DESC' , 'Category Images: Round-edges<br /><br />Default-values: (5,FFFFFF,3)<br /><br />corner trimming<br /><br />Usage:<br />(edge_radius,background colour,anti-alias width)');
+define('CATEGORIES_IMAGE_THUMBNAIL_MERGE_TITLE' , 'Category Images: Merge<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_MERGE_DESC' , 'Category Images: Merge<br /><br />Default-values: (overlay.gif,10,-50,60,FF0000)<br /><br />overlay merge image<br /><br />Usage:<br />(merge image,x start [neg = from right],y start [neg = from base],opacity, transparent colour on merge image)');
+define('CATEGORIES_IMAGE_THUMBNAIL_FRAME_TITLE' , 'Category Images: Frame<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_FRAME_DESC' , 'Category Images: Frame<br /><br />Default-values: (FFFFFF,000000,3,EEEEEE)<br /><br />plain raised border<br /><br />Usage:<br />(hex light colour,hex dark colour,int width of mid bit,hex frame colour [optional - defaults to half way between light and dark edges])');
+define('CATEGORIES_IMAGE_THUMBNAIL_DROP_SHADDOW_TITLE' , 'Category Images: Drop-Shadow<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_DROP_SHADDOW_DESC' , 'Category Images: Drop-Shadow<br /><br />Default-values: (3,333333,FFFFFF)<br /><br />more like a dodgy motion blur [semi buggy]<br /><br />Usage:<br />(shadow width,hex shadow colour,hex background colour)');
+define('CATEGORIES_IMAGE_THUMBNAIL_MOTION_BLUR_TITLE' , 'Category Images: Motion-Blur<br />');
+define('CATEGORIES_IMAGE_THUMBNAIL_MOTION_BLUR_DESC' , 'Category Images: Motion-Blur<br /><br />Default-values: (4,FFFFFF)<br /><br />fading parallel lines<br /><br />Usage:<br />(int number of lines,hex background colour)');
+
 define('IMAGE_MANIPULATOR_TITLE','GDlib processing');
 define('IMAGE_MANIPULATOR_DESC','Image Manipulator for GD2 or GD1');
 
