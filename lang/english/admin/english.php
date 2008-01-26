@@ -468,4 +468,14 @@ define('TEXT_PHP_MAILER_ERROR1','Mailer Error: ');
 
 define('BOX_TOOLS_EMAIL_MANAGER','Email templates');
 
+define('BOX_CATEGORY_SPECIALS', 'Special Categories');
+define('TEXT_DISPLAY_NUMBER_OF_SPECIAL_CATEGORY', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> Special Categories)');
+
+define('IMAGE_ICON_STATUS_GREEN', 'Active');
+define('IMAGE_ICON_STATUS_GREEN_LIGHT', 'Set active');
+define('IMAGE_ICON_STATUS_RED', 'Inactive');
+define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set inactive');
+
+define('TEXT_IMAGE_NONEXISTENT','No image aviable!'); 
+
 ?>
