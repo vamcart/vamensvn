@@ -57,6 +57,7 @@ define('TEXT_NAME', 'Name:');
 define('TEXT_STREET', 'Street');
 define('TEXT_ZIP', 'Postcode:');
 define('TEXT_CITY', 'City:');
+define('TEXT_STATE', 'State:');
 define('TEXT_COUNTRY', 'Country:');
 
 
