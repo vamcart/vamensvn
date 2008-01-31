@@ -545,9 +545,6 @@ define('PRODUCT_REVIEWS_VIEW_DESC','Number of displayed reviews in the productde
 define('DELETE_GUEST_ACCOUNT_TITLE','Deleting Guest Accounts');
 define('DELETE_GUEST_ACCOUNT_DESC','Shold guest accounts be deleted after placing orders ? (Order data will be saved)');
 
-define('USE_WYSIWYG_TITLE','activate WYSIWYG Editor');
-define('USE_WYSIWYG_DESC','activate WYSIWYG Editor for products, categories etc.');
-
 define('PRICE_IS_BRUTTO_TITLE','Gross Admin');
 define('PRICE_IS_BRUTTO_DESC','Usage of prices with tax in Admin');
 
