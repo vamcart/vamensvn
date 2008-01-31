@@ -478,4 +478,6 @@ define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set inactive');
 
 define('TEXT_IMAGE_NONEXISTENT','No image aviable!'); 
 
+define('TEXT_TOGGLE_EDITOR', 'Toggle HTML Editor');
+
 ?>
