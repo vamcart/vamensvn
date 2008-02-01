@@ -480,4 +480,6 @@ define('TEXT_IMAGE_NONEXISTENT','No image aviable!');
 
 define('TEXT_TOGGLE_EDITOR', 'Toggle HTML Editor');
 
+define('WARNING_MODULES_SORT_ORDER','WARNING: You have duplicate sort orders which will result in calculations errors. Please correct these issues now!');
+
 ?>
