@@ -119,7 +119,7 @@ define('BOX_PAYMENT', 'Payment Systems');
 define('BOX_SHIPPING', 'Shipping Methods');
 define('BOX_ORDER_TOTAL', 'Order Total');
 define('BOX_CATEGORIES', 'Categories / Products');
-define('BOX_PRODUCTS_ATTRIBUTES', 'Product Options');
+define('BOX_PRODUCTS_ATTRIBUTES', 'Product Options Value');
 define('BOX_MANUFACTURERS', 'Manufacturers');
 define('BOX_REVIEWS', 'Product Reviews');
 define('BOX_CAMPAIGNS', 'Campaigns');
@@ -481,5 +481,7 @@ define('TEXT_IMAGE_NONEXISTENT','No image aviable!');
 define('TEXT_TOGGLE_EDITOR', 'Toggle HTML Editor');
 
 define('WARNING_MODULES_SORT_ORDER','WARNING: You have duplicate sort orders which will result in calculations errors. Please correct these issues now!');
+
+define('BOX_PRODUCTS_OPTIONS', 'Product Options Name');
 
 ?>
