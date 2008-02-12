@@ -769,4 +769,7 @@ define('SESSION_TIMEOUT_ADMIN_DESC','Set admin session timeout (seconds).');
 define('SESSION_TIMEOUT_CATALOG_TITLE','Customer session timeout');
 define('SESSION_TIMEOUT_CATALOG_DESC','Set customer session timeout (seconds).');
 
+define('STAY_PAGE_EDIT_TITLE','Stay on edit page');
+define('STAY_PAGE_EDIT_DESC','Stay on edit page after saving changes in category/product.');
+
 ?>
