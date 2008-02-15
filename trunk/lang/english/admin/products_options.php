@@ -18,7 +18,7 @@
    --------------------------------------------------------------*/
 
 define('HEADING_TITLE_OPT', 'Product Options');
-define('HEADING_TITLE_VAL', 'Option Values');
+define('HEADING_TITLE_VAL', 'Option Names');
 define('HEADING_TITLE_ATRIB', 'Products Attributes');
 
 define('TABLE_HEADING_ID', 'ID');
