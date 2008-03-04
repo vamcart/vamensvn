@@ -17,7 +17,7 @@
 define('WARNING_MESSAGE','Update your modifications before all changing display (sorting, changing page # ...');
 define('TOP_BAR_TITLE', 'Quick Update');
 define('HEADING_TITLE', 'Quick Update');
-define('TEXT_MARGE_INFO','Modify by commercial margin, if you check this box, your products will be stroked at the rates given. To stroke to 25%, means that the price is marked up of 33%.');
+define('TEXT_MARGE_INFO','Modify by commercial margin, if you check this box, your products will be stroked at the rates given.');
 define('TEXT_PRODUCTS_UPDATED', 'Item(s) Updated!');
 define('TEXT_IMAGE_PREVIEW','Preview item');
 define('TEXT_IMAGE_SWITCH_EDIT','Switch to complete edit');
