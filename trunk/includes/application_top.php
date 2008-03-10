@@ -627,9 +627,9 @@ vam_count_cart();
     }
   }
 
-$html_referer = $_SESSION['tracking']['http_referer']['scheme'] . '://' . $_SESSION['tracking']['http_referer']['host'] . $_SESSION['tracking']['http_referer']['path'] . '?' . $_SESSION['tracking']['http_referer']['query'];
+if (isset($_SESSION['tracking']['http_referer'])) $html_referer = $_SESSION['tracking']['http_referer']['scheme'] . '://' . $_SESSION['tracking']['http_referer']['host'] . $_SESSION['tracking']['http_referer']['path'] . '?' . $_SESSION['tracking']['http_referer']['query'];
   
-    require('includes/local_modules.php');
+require('includes/local_modules.php');
 
 require_once(DIR_FS_CATALOG.'includes/classes/vam_template.php');
 
