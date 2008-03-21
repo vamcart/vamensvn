@@ -64,6 +64,7 @@ define('EASY_LABEL_MPQ', 'Model/Price/Qty');
 define('EASY_LABEL_EP_MC', 'Model/Category');
 define('EASY_LABEL_EP_FROGGLE', 'Froogle');
 define('EASY_LABEL_EP_ATTRIB', 'Attributes');
+define('EASY_LABEL_EXTRA_FIELDS', 'Product Extra Fields');
 define('EASY_LABEL_NONE', 'None');
 define('EASY_LABEL_CATEGORY', '1st Category Name');
 define('PULL_DOWN_MANUFACTURES', 'Manufacturers');
