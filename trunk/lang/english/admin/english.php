@@ -468,5 +468,7 @@ define('BOX_MODULES_SHIP2PAY','Ship 2 Pay');
 define('TEXT_DISPLAY_NUMBER_OF_PAYMENTS','Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> ship 2 pay)');
 
 define('BOX_PRODUCT_EXTRA_FIELDS','Product Extra Fields');
+define('TEXT_EDIT_FIELDS','Edit product extra fields.');
+define('TEXT_ADD_FIELDS','Add product extra fields.');
 
 ?>
