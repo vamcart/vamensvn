@@ -772,4 +772,19 @@ define('SESSION_TIMEOUT_CATALOG_DESC','Set customer session timeout (seconds).')
 define('STAY_PAGE_EDIT_TITLE','Stay on edit page');
 define('STAY_PAGE_EDIT_DESC','Stay on edit page after saving changes in category/product.');
 
+define('MAX_THUMB_WIDTH_TITLE','Maximal option thumb width');
+define('MAX_THUMB_WIDTH_DESC','Maximal option thumb width');
+
+define('MAX_THUMB_HEIGHT_TITLE','Maximal option thumb height');
+define('MAX_THUMB_HEIGHT_DESC','Maximal option thumb height');
+
+define('MAX_ADMIN_WIDTH_TITLE','Maximal option admin image width');
+define('MAX_ADMIN_WIDTH_DESC','Maximal option admin image width');
+
+define('MAX_ADMIN_HEIGHT_TITLE','Maximal option admin image height');
+define('MAX_ADMIN_HEIGHT_DESC','Maximal option admin image height');
+
+define('MAX_BYTE_SIZE_TITLE','Maximal option byte size');
+define('MAX_BYTE_SIZE_DESC','Maximal option byte size');
+
 ?>
