@@ -1,0 +1,9 @@
+Ask question {$PRODUCTS_NAME}
+
+Sender email: {$TEXT_EMAIL}
+First name: {$TEXT_FIRSTNAME}
+Last name: {$TEXT_LASTNAME}
+Product name: {$PRODUCT_LINK}
+
+Message:
+{$TEXT_MESSAGE}

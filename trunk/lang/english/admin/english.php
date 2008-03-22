@@ -464,4 +464,9 @@ define('WARNING_MODULES_SORT_ORDER','WARNING: You have duplicate sort orders whi
 
 define('BOX_PRODUCTS_OPTIONS', 'Product Options Name');
 
+define('BOX_MODULES_SHIP2PAY','Ship 2 Pay');
+define('TEXT_DISPLAY_NUMBER_OF_PAYMENTS','Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> ship 2 pay)');
+
+define('BOX_PRODUCT_EXTRA_FIELDS','Product Extra Fields');
+
 ?>
