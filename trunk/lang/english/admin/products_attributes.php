@@ -49,7 +49,7 @@ define('TEXT_OPTION_NAME', 'Option Name');
 define('TABLE_HEADING_OPT_IMAGE','Image');
 define('TABLE_HEADING_OPT_DESC','Description');
 define('TABLE_TEXT_DELETE','delete image');
-define('TEXT_OPTIONS_IMAGE','Option Image')
+define('TEXT_OPTIONS_IMAGE','Option Image');
 
 define('EDIT_TEXT','edit');
 define('DELETE_TEXT','delete');
