@@ -25,6 +25,9 @@ define('TABLE_HEADING_ID', 'ID');
 define('TABLE_HEADING_PRODUCT', 'Product Name');
 define('TABLE_HEADING_OPT_NAME', 'Option Name');
 define('TABLE_HEADING_OPT_VALUE', 'Option Value');
+define('TABLE_HEADING_OPT_TEXT', 'Short description');
+define('TABLE_HEADING_OPT_IMAGE', 'Image');
+define('TABLE_HEADING_OPT_LINK', 'URL');
 define('TABLE_HEADING_OPT_PRICE', 'Value Price');
 define('TABLE_HEADING_OPT_PRICE_PREFIX', 'Prefix (+/-)');
 define('TABLE_HEADING_ACTION', 'Action');
@@ -47,5 +50,11 @@ define('TABLE_HEADING_OPT_IMAGE','Image');
 define('TABLE_HEADING_OPT_DESC','Description');
 define('TABLE_TEXT_DELETE','delete image');
 define('TEXT_OPTIONS_IMAGE','Option Image')
+
+define('EDIT_TEXT','edit');
+define('DELETE_TEXT','delete');
+
+define('IMAGE_EDIT','edit');
+define('IMAGE_DELETE','delete');
 
 ?>
