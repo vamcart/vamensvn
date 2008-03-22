@@ -528,4 +528,9 @@ define('TABLE_HEADING_DOWNLOAD_COUNT','Downloads remainning: ');
 define('TEXT_FOOTER_DOWNLOAD','If your download does not appear above, you can check you order at this link: ');
 define('TEXT_DOWNLOAD_MY_ACCOUNT','Orders history');
 
+define('NAVBAR_TITLE_ASK','Ask a question');
+define('TEXT_EMAIL_SUCCESSFUL_SENT','Your question about <b>%s</b> successfully sended.');
+define('THX_SUCCESSFUL_SENT','Thank you!');
+define('TEXT_MESSAGE_ERROR','Form validation error.');
+
 ?>
