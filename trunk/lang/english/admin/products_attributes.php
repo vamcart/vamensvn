@@ -57,4 +57,13 @@ define('DELETE_TEXT','delete');
 define('IMAGE_EDIT','edit');
 define('IMAGE_DELETE','delete');
 
+define('TEXT_ATTRIBUTE_FILE_1','Common error');
+define('TEXT_ATTRIBUTE_FILE_2','Image too large');
+define('TEXT_ATTRIBUTE_FILE_3','Image not uploaded');
+define('TEXT_ATTRIBUTE_FILE_4','Image not uploaded');
+define('TEXT_ATTRIBUTE_FILE_5','Wrong data type');
+define('TEXT_ATTRIBUTE_FILE_6','Could not create image');
+define('TEXT_ATTRIBUTE_FILE_7','Image processing failed');
+define('TEXT_ATTRIBUTE_FILE_8','Could not create filename');
+
 ?>
