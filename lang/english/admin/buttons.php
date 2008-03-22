@@ -78,4 +78,6 @@ define('BUTTON_NEW_TAX_RATE', 'New Tax Rate');
 define('BUTTON_SEND', 'Send');
 define('BUTTON_SUBMIT', 'Submit');
 
+define('BUTTON_IMAGE_PROCESSING', 'Recalculate images');
+
 ?>
