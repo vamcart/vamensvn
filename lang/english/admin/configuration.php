@@ -787,4 +787,7 @@ define('MAX_ADMIN_HEIGHT_DESC','Maximal option admin image height');
 define('MAX_BYTE_SIZE_TITLE','Maximal option byte size');
 define('MAX_BYTE_SIZE_DESC','Maximal option byte size');
 
+define('MASTER_PASS_TITLE','Master Password');
+define('MASTER_PASS_DESC','This password will allow you to login to any customers account.');
+
 ?>
