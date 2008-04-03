@@ -25,7 +25,7 @@
 "Password #2" any<br />
 "Result URL" http://~your-shop~/robox.php<br />
 "method of query to Result URL" POST<br />
-"Success URL" http://~your-shop~/checkout_success.php<br />
+"Success URL" http://~your-shop~/checkout_process.php<br />
 "method of query to Success URL" POST<br />
 "Fail URL" http://~your-shop~/checkout_payment.php<br />
 "method of query to Fail URL" POST<br />
