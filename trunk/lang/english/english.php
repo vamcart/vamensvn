@@ -533,4 +533,6 @@ define('TEXT_EMAIL_SUCCESSFUL_SENT','Your question about <b>%s</b> successfully 
 define('THX_SUCCESSFUL_SENT','Thank you!');
 define('TEXT_MESSAGE_ERROR','Form validation error.');
 
+define('NAVBAR_TITLE_MAINTENANCE','Down for maintenance');
+
 ?>
