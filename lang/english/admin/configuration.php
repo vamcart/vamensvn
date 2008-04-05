@@ -790,4 +790,9 @@ define('MAX_BYTE_SIZE_DESC','Maximal option byte size');
 define('MASTER_PASS_TITLE','Master Password');
 define('MASTER_PASS_DESC','This password will allow you to login to any customers account.');
 
+define('DOWN_FOR_MAINTENANCE_TITLE','Down for Maintenance');
+define('DOWN_FOR_MAINTENANCE_DESC','Down for Maintenance.');
+define('EXCLUDE_ADMIN_IP_FOR_MAINTENANCE_TITLE','Down For Maintenance (exclude this IP-Address)');
+define('EXCLUDE_ADMIN_IP_FOR_MAINTENANCE_DESC','This IP Address is able to access the website while it is Down For Maintenance (like webmaster)');
+
 ?>
