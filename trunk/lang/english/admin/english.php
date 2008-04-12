@@ -152,7 +152,9 @@ define('BOX_PRODUCTS_VPE','Packing unit');
 define('BOX_CAMPAIGNS_REPORT','Campaign report');
 define('BOX_ORDERS_XSELL_GROUP','Cross-sell groups');
 define('BOX_SUPPORT_SITE','Support site');
-define('BOX_CONTRIBUTION_INSTALLER','Contribution Installer');
+define('BOX_SUPPORT_FAQ','FAQ');
+define('BOX_SUPPORT_FORUM','Forum');
+define('BOX_CONTRIBUTION_INSTALLER','Contrib Installer');
 
 define('TXT_GROUPS','<b>Groups</b>:');
 define('TXT_SYSTEM','System');
