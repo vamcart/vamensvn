@@ -795,4 +795,11 @@ define('DOWN_FOR_MAINTENANCE_DESC','Down for Maintenance.');
 define('EXCLUDE_ADMIN_IP_FOR_MAINTENANCE_TITLE','Down For Maintenance (exclude this IP-Address)');
 define('EXCLUDE_ADMIN_IP_FOR_MAINTENANCE_DESC','This IP Address is able to access the website while it is Down For Maintenance (like webmaster)');
 
+define('MAX_DISPLAY_FAQ_TITLE' , 'Faq box');
+define('MAX_DISPLAY_FAQ_DESC' , 'Maximum number of faqs in faq box');
+define('MAX_DISPLAY_FAQ_PAGE_TITLE' , 'Faqs per page');
+define('MAX_DISPLAY_FAQ_PAGE_DESC' , 'Maximum number of faqs per page');
+define('MAX_DISPLAY_FAQ_ANSWER_TITLE' , 'Short answer');
+define('MAX_DISPLAY_FAQ_ANSWER_DESC' , 'Number of symbols displayed in faq preview');
+
 ?>
