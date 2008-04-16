@@ -474,4 +474,6 @@ define('BOX_PRODUCT_EXTRA_FIELDS','Product Extra Fields');
 define('TEXT_EDIT_FIELDS','Edit product extra fields.');
 define('TEXT_ADD_FIELDS','Add product extra fields.');
 
+define('BOX_CATALOG_FAQ', 'FAQ');
+
 ?>
