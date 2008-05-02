@@ -476,4 +476,6 @@ define('TEXT_ADD_FIELDS','Add product extra fields.');
 
 define('BOX_CATALOG_FAQ', 'FAQ');
 
+require_once(DIR_FS_LANGUAGES . $_SESSION['language'].'/admin/'.'affiliate_english.php');
+
 ?>

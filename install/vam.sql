@@ -49,6 +49,155 @@ CREATE TABLE address_book (
   KEY idx_address_book_customers_id (customers_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+DROP TABLE IF EXISTS affiliate_affiliate;
+CREATE TABLE affiliate_affiliate (
+  affiliate_id int(11) NOT NULL auto_increment,
+  affiliate_lft int(11) NOT NULL,
+  affiliate_rgt int(11) NOT NULL,
+  affiliate_root int(11) NOT NULL,
+  affiliate_gender char(1) NOT NULL default '',
+  affiliate_firstname varchar(32) NOT NULL default '',
+  affiliate_lastname varchar(32) NOT NULL default '',
+  affiliate_dob datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_email_address varchar(96) NOT NULL default '',
+  affiliate_telephone varchar(32) NOT NULL default '',
+  affiliate_fax varchar(32) NOT NULL default '',
+  affiliate_password varchar(40) NOT NULL default '',
+  affiliate_homepage varchar(96) NOT NULL default '',
+  affiliate_street_address varchar(64) NOT NULL default '',
+  affiliate_suburb varchar(64) NOT NULL default '',
+  affiliate_city varchar(32) NOT NULL default '',
+  affiliate_postcode varchar(10) NOT NULL default '',
+  affiliate_state varchar(32) NOT NULL default '',
+  affiliate_country_id int(11) NOT NULL default '0',
+  affiliate_zone_id int(11) NOT NULL default '0',
+  affiliate_agb tinyint(4) NOT NULL default '0',
+  affiliate_company varchar(60) NOT NULL default '',
+  affiliate_company_taxid varchar(64) NOT NULL default '',
+  affiliate_commission_percent DECIMAL(4,2) NOT NULL default '0.00',
+  affiliate_payment_check varchar(100) NOT NULL default '',
+  affiliate_payment_paypal varchar(64) NOT NULL default '',
+  affiliate_payment_bank_name varchar(64) NOT NULL default '',
+  affiliate_payment_bank_branch_number varchar(64) NOT NULL default '',
+  affiliate_payment_bank_swift_code varchar(64) NOT NULL default '',
+  affiliate_payment_bank_account_name varchar(64) NOT NULL default '',
+  affiliate_payment_bank_account_number varchar(64) NOT NULL default '',
+  affiliate_date_of_last_logon datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_number_of_logons int(11) NOT NULL default '0',
+  affiliate_date_account_created datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_date_account_last_modified datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY (affiliate_id),
+  KEY `affiliate_root` (`affiliate_root`),
+  KEY `affiliate_rgt` (`affiliate_rgt`),
+  KEY `affiliate_lft` (`affiliate_lft`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_banners;
+CREATE TABLE affiliate_banners (
+  affiliate_banners_id int(11) NOT NULL auto_increment,
+  affiliate_banners_title varchar(64) NOT NULL default '',
+  affiliate_products_id int(11) NOT NULL default '0',
+  affiliate_banners_image varchar(64) NOT NULL default '',
+  affiliate_banners_group varchar(10) NOT NULL default '',
+  affiliate_banners_html_text text,
+  affiliate_expires_impressions int(7) default '0',
+  affiliate_expires_date datetime default NULL,
+  affiliate_date_scheduled datetime default NULL,
+  affiliate_date_added datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_date_status_change datetime default NULL,
+  affiliate_status int(1) NOT NULL default '1',
+  PRIMARY KEY  (affiliate_banners_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_banners_history;
+CREATE TABLE affiliate_banners_history (
+  affiliate_banners_history_id int(11) NOT NULL auto_increment,
+  affiliate_banners_products_id int(11) NOT NULL default '0',
+  affiliate_banners_id int(11) NOT NULL default '0',
+  affiliate_banners_affiliate_id int(11) NOT NULL default '0',
+  affiliate_banners_shown int(11) NOT NULL default '0',
+  affiliate_banners_clicks tinyint(4) NOT NULL default '0',
+  affiliate_banners_history_date date NOT NULL default '0000-00-00',
+  PRIMARY KEY  (affiliate_banners_history_id,affiliate_banners_products_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_clickthroughs;
+CREATE TABLE affiliate_clickthroughs (
+  affiliate_clickthrough_id int(11) NOT NULL auto_increment,
+  affiliate_id int(11) NOT NULL default '0',
+  affiliate_clientdate datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_clientbrowser varchar(200) default 'Нет данных',
+  affiliate_clientip varchar(50) default 'Нет данных',
+  affiliate_clientreferer varchar(200) default 'не определено (возможно прямая ссылка)',
+  affiliate_products_id int(11) default '0',
+  affiliate_banner_id int(11) NOT NULL default '0',
+  PRIMARY KEY  (affiliate_clickthrough_id),
+  KEY refid (affiliate_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_payment;
+CREATE TABLE affiliate_payment (
+  affiliate_payment_id int(11) NOT NULL auto_increment,
+  affiliate_id int(11) NOT NULL default '0',
+  affiliate_payment decimal(15,2) NOT NULL default '0.00',
+  affiliate_payment_tax decimal(15,2) NOT NULL default '0.00',
+  affiliate_payment_total decimal(15,2) NOT NULL default '0.00',
+  affiliate_payment_date datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_payment_last_modified datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_payment_status int(5) NOT NULL default '0',
+  affiliate_firstname varchar(32) NOT NULL default '',
+  affiliate_lastname varchar(32) NOT NULL default '',
+  affiliate_street_address varchar(64) NOT NULL default '',
+  affiliate_suburb varchar(64) NOT NULL default '',
+  affiliate_city varchar(32) NOT NULL default '',
+  affiliate_postcode varchar(10) NOT NULL default '',
+  affiliate_country varchar(32) NOT NULL default '0',
+  affiliate_company varchar(60) NOT NULL default '',
+  affiliate_state varchar(32) NOT NULL default '0',
+  affiliate_address_format_id int(5) NOT NULL default '0',
+  affiliate_last_modified datetime NOT NULL default '0000-00-00 00:00:00',
+  PRIMARY KEY  (affiliate_payment_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_payment_status;
+CREATE TABLE affiliate_payment_status (
+  affiliate_payment_status_id int(11) NOT NULL default '0',
+  affiliate_language_id int(11) NOT NULL default '1',
+  affiliate_payment_status_name varchar(32) NOT NULL default '',
+  PRIMARY KEY  (affiliate_payment_status_id,affiliate_language_id),
+  KEY idx_affiliate_payment_status_name (affiliate_payment_status_name)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_payment_status_history;
+CREATE TABLE affiliate_payment_status_history (
+  affiliate_status_history_id int(11) NOT NULL auto_increment,
+  affiliate_payment_id int(11) NOT NULL default '0',
+  affiliate_new_value int(5) NOT NULL default '0',
+  affiliate_old_value int(5) default NULL,
+  affiliate_date_added datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_notified int(1) default '0',
+  PRIMARY KEY  (affiliate_status_history_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+DROP TABLE IF EXISTS affiliate_sales;
+CREATE TABLE affiliate_sales (
+  affiliate_id int(11) NOT NULL default '0',
+  affiliate_date datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_browser varchar(100) NOT NULL default '',
+  affiliate_ipaddress varchar(20) NOT NULL default '',
+  affiliate_orders_id int(11) NOT NULL default '0',
+  affiliate_value decimal(15,2) NOT NULL default '0.00',
+  affiliate_payment decimal(15,2) NOT NULL default '0.00',
+  affiliate_clickthroughs_id int(11) NOT NULL default '0',
+  affiliate_billing_status int(5) NOT NULL default '0',
+  affiliate_payment_date datetime NOT NULL default '0000-00-00 00:00:00',
+  affiliate_payment_id int(11) NOT NULL default '0',
+  affiliate_percent  DECIMAL(4,2)  NOT NULL default '0.00',
+  affiliate_salesman int(11) NOT NULL default '0',
+  affiliate_level tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (affiliate_id,affiliate_orders_id)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
 DROP TABLE IF EXISTS topics;
 CREATE TABLE topics (
   topics_id int(11) NOT NULL auto_increment,
@@ -306,6 +455,17 @@ CREATE TABLE admin_access (
   product_extra_fields int(1) NOT NULL default '0',
   ship2pay int(1) NOT NULL default '0',
   faq int(1) NOT NULL default '0',
+
+  affiliate_affiliates int(1) NOT NULL default '0',
+  affiliate_banners int(1) NOT NULL default '0',
+  affiliate_clicks int(1) NOT NULL default '0',
+  affiliate_contact int(1) NOT NULL default '0',
+  affiliate_invoice int(1) NOT NULL default '0',
+  affiliate_payment int(1) NOT NULL default '0',
+  affiliate_popup_image int(1) NOT NULL default '0',
+  affiliate_sales int(1) NOT NULL default '0',
+  affiliate_statistics int(1) NOT NULL default '0',
+  affiliate_summary int(1) NOT NULL default '0',
   
   PRIMARY KEY  (customers_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -1431,6 +1591,10 @@ INSERT INTO database_version(version) VALUES ('1.43');
 
 INSERT INTO cm_file_flags (file_flag, file_flag_name) VALUES ('0', 'information');
 INSERT INTO cm_file_flags (file_flag, file_flag_name) VALUES ('1', 'content');
+INSERT INTO cm_file_flags VALUES ('2', 'affiliate');
+
+INSERT INTO affiliate_payment_status VALUES (0, 1, 'Processing');
+INSERT INTO affiliate_payment_status VALUES (1, 1, 'Payed');
 
 INSERT INTO shipping_status VALUES (1, 1, '3-4 Days', '');
 INSERT INTO shipping_status VALUES (2, 1, '1 Week', '');
@@ -1447,6 +1611,10 @@ INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Sample page', 'Sample pag
 INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','');
 INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Sitemap', 'Sitemap', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','');
 
+INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliate terms', 'Affiliate terms', '', 0, 2, '', 1, 9, 0,'','','','');
+INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Affiliate info', 'Affiliate info', 'Affiliate info', '', 0, 2, '', 1, 10, 0,'','','','');
+INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Affiliate faq', 'Affiliate faq', 'Affiliate faq', '', 0, 2, '', 1, 11, 0,'','','','');
+
 # 1 - Default, 2 - USA, 3 - Spain, 4 - Singapore, 5 - Germany
 INSERT INTO address_format VALUES (1, '$firstname $lastname$cr$streets$cr$city, $postcode$cr$statecomma$country','$city / $country');
 INSERT INTO address_format VALUES (2, '$firstname $lastname$cr$streets$cr$city, $state    $postcode$cr$country','$city, $state / $country');
@@ -1454,8 +1622,8 @@ INSERT INTO address_format VALUES (3, '$firstname $lastname$cr$streets$cr$city$c
 INSERT INTO address_format VALUES (4, '$firstname $lastname$cr$streets$cr$city ($postcode)$cr$country', '$postcode / $country');
 INSERT INTO address_format VALUES (5, '$firstname $lastname$cr$streets$cr$postcode $city$cr$country','$city / $country');
 
-INSERT  INTO admin_access VALUES ( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
-INSERT  INTO admin_access VALUES ( 'groups', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 2, 4, 2, 2, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT  INTO admin_access VALUES ( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
+INSERT  INTO admin_access VALUES ( 'groups', 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 2, 4, 2, 2, 2, 2, 5, 5, 5, 5, 5, 5, 5, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1);
 
 # configuration_group_id 1
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_NAME', 'VaM Shop',  1, 1, NULL, '', NULL, NULL);
@@ -1865,6 +2033,22 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, set_function, date_added, use_function) VALUES ('DOWN_FOR_MAINTENANCE', 'false', '27', '1', 'vam_cfg_select_option(array(\'true\', \'false\'), ', now(), NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EXCLUDE_ADMIN_IP_FOR_MAINTENANCE', 'ip-address', '27', '1', NULL , '0000-00-00 00:00:00', NULL , NULL);
 
+#configuration_group_id 28
+
+INSERT INTO configuration VALUES ('', 'AFFILIATE_EMAIL_ADDRESS', 'affiliate@localhost.com', '28', '1', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_PERCENT', '15.0000', '28', '2', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_THRESHOLD', '30.00', '28', '3', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_COOKIE_LIFETIME', '7200', '28', '4', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_BILLING_TIME', '30', '28', '5', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_PAYMENT_ORDER_MIN_STATUS', '3', '28', '6', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_USE_CHECK', 'true', '28', '7', NULL, now(), NULL,'vam_cfg_select_option(array(\'true\', \'false\'), ');
+INSERT INTO configuration VALUES ('', 'AFFILIATE_USE_PAYPAL', 'false', '28', '8', NULL, now(), NULL,'vam_cfg_select_option(array(\'true\', \'false\'), ');
+INSERT INTO configuration VALUES ('', 'AFFILIATE_USE_BANK', 'false', '28', '9', NULL, now(), NULL,'vam_cfg_select_option(array(\'true\', \'false\'), ');
+INSERT INTO configuration VALUES ('', 'AFFILATE_INDIVIDUAL_PERCENTAGE', 'true', '28', '10', NULL, now(), NULL,'vam_cfg_select_option(array(\'true\', \'false\'), ');
+INSERT INTO configuration VALUES ('', 'AFFILATE_USE_TIER', 'false', '28', '11', NULL, now(), NULL,'vam_cfg_select_option(array(\'true\', \'false\'), ');
+INSERT INTO configuration VALUES ('', 'AFFILIATE_TIER_LEVELS', '0', '28', '12', NULL, now(), NULL, NULL);
+INSERT INTO configuration VALUES ('', 'AFFILIATE_TIER_PERCENTAGE', '8.00;5.00;1.00', '28', '13', NULL, now(), NULL, NULL);
+
 INSERT INTO configuration_group VALUES ('1', 'CG_MY_SHOP', 'My Store', 'General information about my store', '1', '1');
 INSERT INTO configuration_group VALUES ('2', 'CG_MINIMAL_VALUES', 'Minimum Values', 'The minimum values for functions / data', '2', '1');
 INSERT INTO configuration_group VALUES ('3', 'CG_MAXIMAL_VALUES', 'Maximum Values', 'The maximum values for functions / data', '3', '1');
@@ -1890,6 +2074,8 @@ INSERT INTO configuration_group VALUES ('23', 'CG_YANDEX_MARKET', 'Яндекс-
 INSERT INTO configuration_group VALUES ('24', 'CG_QUICK_PRICE_UPDATES', 'Изменение цен', 'Настройки модуля изменения цен', '24', '1');
 INSERT INTO configuration_group VALUES ('25', 'CG_CIP_MANAGER', 'Установка модулей', 'Настройки модуля', '25', '1');
 INSERT INTO configuration_group VALUES ('27', 'CG_MAINTENANCE', 'Site Maintenance', 'Site Maintenance', '27', '1');
+
+INSERT INTO configuration_group VALUES ('28', 'CG_AFFILIATE_PROGRAM', 'Affiliate program', 'Affiliate program settings', '50', '1');
 
 INSERT INTO countries VALUES (1,'Afghanistan','AF','AFG','1','1');
 INSERT INTO countries VALUES (2,'Albania','AL','ALB','1','1');
