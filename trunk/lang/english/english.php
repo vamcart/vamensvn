@@ -540,4 +540,6 @@ define('NAVBAR_TITLE_FAQ', 'FAQ');
 define('TEXT_DISPLAY_NUMBER_OF_FAQ', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> questions)');
 define('TEXT_NO_FAQ', 'No questions.');
 
+require_once(DIR_WS_LANGUAGES . $_SESSION['language'].'/'.'affiliate_english.php');
+
 ?>

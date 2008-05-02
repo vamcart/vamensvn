@@ -802,4 +802,6 @@ define('MAX_DISPLAY_FAQ_PAGE_DESC' , 'Maximum number of faqs per page');
 define('MAX_DISPLAY_FAQ_ANSWER_TITLE' , 'Short answer');
 define('MAX_DISPLAY_FAQ_ANSWER_DESC' , 'Number of symbols displayed in faq preview');
 
+require_once(DIR_FS_LANGUAGES . $_SESSION['language'].'/admin/'.'affiliate_configuration.php');
+
 ?>
