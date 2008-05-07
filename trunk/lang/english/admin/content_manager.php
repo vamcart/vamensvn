@@ -84,7 +84,7 @@ define('TEXT_META_DESCRIPTION','Meta Description: ');
 define('TEXT_META_KEYWORDS','Meta Keywords: ');
 
 // Content URL begin
-define('TEXT_PAGE_URL', 'Content Page URL:');
+define('TEXT_PAGE_URL', 'Content Page SEO URL:');
 // Content URL end
 
  ?>
