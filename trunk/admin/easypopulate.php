@@ -1236,6 +1236,7 @@ break;
 			p.products_id as v_products_id,
 			p.products_model as v_products_model,
 			p.products_image as v_products_image,
+			p.products_page_url as v_products_page_url,
 			p.products_price as v_products_price,
 			p.products_weight as v_products_weight,
 			p.products_date_available as v_date_avail,
@@ -1275,6 +1276,7 @@ break;
 		$filelayout = array(
 			'v_products_id'   => $iii++,  //added
 			'v_products_model'    => $iii++,
+			'v_products_page_url'    => $iii++,
 			'v_products_price'    => $iii++,
 			'v_products_quantity'   => $iii++,
 //      'v_products_quantity_order_min'   => $iii++,
@@ -1293,6 +1295,7 @@ break;
 		$filelayout_sql = "SELECT
 			p.products_id as v_products_id,
 			p.products_model as v_products_model,
+			p.products_page_url as v_products_page_url,
 			p.products_price as v_products_price,
 			p.products_quantity as v_products_quantity,
 			p.products_sort as v_products_sort
@@ -1409,6 +1412,7 @@ break;
 			p.products_id as v_products_id,
 			p.products_model as v_products_model,
 			p.products_image as v_products_image,
+			p.products_page_url as v_products_page_url,
 			p.products_price as v_products_price,
 			p.products_weight as v_products_weight,
 			p.products_date_added as v_date_avail,
@@ -1593,6 +1597,7 @@ function walk( $item1 ) {
 		p.products_id as v_products_id,
 		p.products_model as v_products_model,
 		p.products_image as v_products_image,
+		p.products_page_url as v_products_page_url,
 		p.products_price as v_products_price,
 		p.products_weight as v_products_weight,
 		p.products_date_added as v_date_avail,
@@ -1999,6 +2004,7 @@ vam_db_query("delete from " . TABLE_PRODUCTS_ATTRIBUTES . " where products_id ='
 							products_id,
 					products_image,
 					products_model,
+					products_page_url,
 					products_price,
 					products_status,
 					products_last_modified,
@@ -2013,6 +2019,7 @@ vam_db_query("delete from " . TABLE_PRODUCTS_ATTRIBUTES . " where products_id ='
 							 '$v_products_id',
 							'$v_products_image',
 							'$v_products_model',
+								'$v_products_page_url',
 								'$v_products_price',
 								'$v_db_status',
 									CURRENT_TIMESTAMP,
@@ -2034,6 +2041,7 @@ vam_db_query("delete from " . TABLE_PRODUCTS_ATTRIBUTES . " where products_id ='
 			$row =  vam_db_fetch_array($result);
 			$query = 'UPDATE '.TABLE_PRODUCTS.'
 					SET
+					products_page_url="'.$v_products_page_url.'" ,
 					products_price="'.$v_products_price.'" ,
 					products_model="'.$v_products_model.
 					'" ,products_image="'.$v_products_image;
