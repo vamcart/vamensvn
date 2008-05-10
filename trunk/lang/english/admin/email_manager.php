@@ -24,4 +24,7 @@ define('TEXT_FILE_WRITE_ERROR','File write error');
 define('TEXT_FILE_WRITE_SUCCESS','File saved!');
 define('TEXT_FILE_PERMISSION_ERROR','Write permissions error!');
 
+define('TEXT_CATALOG_TEMPLATES','Catalog email templates:');
+define('TEXT_ADMIN_TEMPLATES','Admin email templates:');
+
 ?>
