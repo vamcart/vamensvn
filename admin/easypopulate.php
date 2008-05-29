@@ -1175,6 +1175,7 @@ break;
 		$filelayout = array(
 												'v_products_id'   => $iii++,
 												'v_products_model'    => $iii++,
+												'v_products_page_url'    => $iii++,
 												'v_products_image'    => $iii++
 											);
 
@@ -1317,6 +1318,7 @@ break;
 		$filelayout = array(
 				'v_products_id'   => $iii++,
 				'v_products_model'    => $iii++,
+				'v_products_page_url'    => $iii++,
 												);
 
 		// build the categories name section of the array based on the number of categores the user wants to have
@@ -1328,6 +1330,7 @@ break;
 		$filelayout_sql = "SELECT
 			p.products_id as v_products_id,
 			p.products_model as v_products_model,
+			p.products_page_url as v_products_page_url,
 			subc.categories_id as v_categories_id
 			FROM
 			".TABLE_PRODUCTS." as p,
@@ -1443,6 +1446,7 @@ break;
 		$filelayout = array(
 						'v_products_id'   => $iii++,
 			'v_products_model'  => $iii++,
+			'v_products_page_url'  => $iii++,
 			);
 
 		$header_array = array();
@@ -1492,6 +1496,7 @@ break;
 
 		$filelayout_sql = "SELECT
 			p.products_id as v_products_id,
+			p.products_page_url as v_products_page_url,
 			p.products_model as v_products_model
 			FROM
 			".TABLE_PRODUCTS." as p
@@ -2043,6 +2048,7 @@ vam_db_query("delete from " . TABLE_PRODUCTS_ATTRIBUTES . " where products_id ='
 					SET
 					products_page_url="'.$v_products_page_url.'" ,
 					products_price="'.$v_products_price.'" ,
+					products_page_url="'.$v_products_page_url.'" ,
 					products_model="'.$v_products_model.
 					'" ,products_image="'.$v_products_image;
 
