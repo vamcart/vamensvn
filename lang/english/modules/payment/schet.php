@@ -86,4 +86,28 @@
   define('MODULE_PAYMENT_SCHET_ORDER_STATUS_ID_TITLE' , 'Статус заказа');
   define('MODULE_PAYMENT_SCHET_ORDER_STATUS_ID_DESC' , 'Заказы, оформленные с использованием данного модуля оплаты будут принимать указанный статус.');
 
+  define('MODULE_PAYMENT_SCHET_J_NAME_TITLE' , 'Info');
+  define('MODULE_PAYMENT_SCHET_J_NAME_DESC' , '');
+
+  define('MODULE_PAYMENT_SCHET_J_NAME' , 'Company:');
+  define('MODULE_PAYMENT_SCHET_J_NAME_IP' , '');
+  define('MODULE_PAYMENT_SCHET_J_INN' , 'INN:');
+  define('MODULE_PAYMENT_SCHET_J_KPP' , 'KPP:');
+  define('MODULE_PAYMENT_SCHET_J_OGRN' , 'OGRN:');
+  define('MODULE_PAYMENT_SCHET_J_OKPO' , 'OKPO:');
+  define('MODULE_PAYMENT_SCHET_J_RS' , 'R/s:');
+  define('MODULE_PAYMENT_SCHET_J_BANK_NAME' , 'Bank name:');
+  define('MODULE_PAYMENT_SCHET_J_BANK_NAME_HELP' , '');
+  define('MODULE_PAYMENT_SCHET_J_BIK' , 'BIK:');
+  define('MODULE_PAYMENT_SCHET_J_KS' , 'K/s:');
+  define('MODULE_PAYMENT_SCHET_J_ADDRESS' , 'Postal Address:');
+  define('MODULE_PAYMENT_SCHET_J_ADDRESS_HELP' , '');
+  define('MODULE_PAYMENT_SCHET_J_YUR_ADDRESS' , 'Billing address');
+  define('MODULE_PAYMENT_SCHET_J_FAKT_ADDRESS' , 'Shipping address');
+  define('MODULE_PAYMENT_SCHET_J_TELEPHONE' , 'Phone');
+  define('MODULE_PAYMENT_SCHET_J_FAX' , 'Fax');
+  define('MODULE_PAYMENT_SCHET_J_EMAIL' , 'Email');
+  define('MODULE_PAYMENT_SCHET_J_DIRECTOR' , 'Director');
+  define('MODULE_PAYMENT_SCHET_J_ACCOUNTANT' , 'Accountant');
+
 ?>
