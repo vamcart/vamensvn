@@ -69,4 +69,10 @@
   define('MODULE_PAYMENT_KVITANCIA_ORDER_STATUS_ID_TITLE' , 'Статус заказа');
   define('MODULE_PAYMENT_KVITANCIA_ORDER_STATUS_ID_DESC' , 'Заказы, оформленные с использованием данного модуля оплаты будут принимать указанный статус.');
 
+define('MODULE_PAYMENT_KVITANCIA_NAME_TITLE','Info');
+define('MODULE_PAYMENT_KVITANCIA_NAME_DESC','');
+define('MODULE_PAYMENT_KVITANCIA_NAME','Name:');
+define('MODULE_PAYMENT_KVITANCIA_ADDRESS','Address:');
+define('MODULE_PAYMENT_KVITANCIA_ADDRESS_HELP','');
+
 ?>
