@@ -478,4 +478,8 @@ define('BOX_CATALOG_FAQ', 'FAQ');
 
 require_once(DIR_FS_LANGUAGES . $_SESSION['language'].'/admin/'.'affiliate_' . $_SESSION['language'] .'.php');
 
+define('BOX_HEADING_CUSTOMER_EXTRA_FIELDS', 'Customer extra fields');
+define('ENTRY_EXTRA_FIELDS_ERROR', 'Field %s must contain a minimum of %d characters');
+define('TEXT_DISPLAY_NUMBER_OF_FIELDS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> Fields)');
+
 ?>
