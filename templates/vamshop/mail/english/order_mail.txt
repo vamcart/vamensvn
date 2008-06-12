@@ -9,6 +9,7 @@ Date: {$DATE}
 {if $csID}Customer ID: {$csID}{/if}
 Phone: {$PHONE}
 E-mail: {$EMAIL}
+{if $customer_extra_fields}{$customer_extra_fields}{/if}
 ----------------------------------------------------------------------
 
 Dear {$NAME},

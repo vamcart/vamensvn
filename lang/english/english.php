@@ -542,4 +542,7 @@ define('TEXT_NO_FAQ', 'No questions.');
 
 require_once(DIR_WS_LANGUAGES . $_SESSION['language'].'/'.'affiliate_' . $_SESSION['language'] .'.php');
 
+define('ENTRY_EXTRA_FIELDS_ERROR', 'Field %s must contain a minimum of %d characters');
+define('CATEGORY_EXTRA_FIELDS', 'Extra Fields');
+
 ?>
