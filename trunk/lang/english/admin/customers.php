@@ -63,4 +63,6 @@ define('SHIPPING_FLAT','Flat Rate');
 define('ORDER_TOTAL','<b>Total:</b>');
 define('ORDER_SUBTOTAL','<b>Sub-Total:</b>');
 
+define('CATEGORY_EXTRA_FIELDS','Additional information');
+
 ?>
