@@ -22,11 +22,15 @@ define('TABLE_HEADING_STATUS','Status');
 
 define('TEXT_FIELD', 'Field: ');
 define('TEXT_FIELD_INPUT_TYPE', 'Input Type: ');
+define('TEXT_FIELD_INPUT_VALUE', 'Input Values:<br>(each string as new item in check/radio list) ');
 define('TEXT_FIELD_REQUIRED_STATUS', 'Required: ');
 define('TEXT_FIELD_REQUIRED_EMAIL', 'Send in email: ');
 define('TEXT_FIELD_STATUS_EMAIL', 'Send in email: ');
 define('TEXT_INPUT_FIELD','Input field');
 define('TEXT_TEXTAREA_FIELD','Textarea field');
+define('TEXT_RADIO_FIELD','Radio Button list');
+define('TEXT_CHECK_FIELD','Multi checkbox');
+define('TEXT_DOWN_FIELD','Drop down menu');
 define('TEXT_FIELD_SIZE', 'Field size: ');
 define('TEXT_NEW_INTRO', 'Add new field');
 define('TEXT_EDIT_INTRO', 'Edit field');
