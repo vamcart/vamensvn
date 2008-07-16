@@ -1,20 +1,20 @@
 {config_load file="$language/lang_$language.conf" section="account_edit"} 
-<!-- Header -->
+<!-- Заголовок страницы -->
 <h1>{#heading_account#}</h1>
-<!-- /Header -->
+<!-- /Заголовок страницы -->
 {if $error!=''}
 {$error}
 {/if}
 {$FORM_ACTION}
-<!-- Rounded corners -->
+<!-- Скругленные углы -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
-<!-- Rounded corners -->
+<!-- Содержимое страницы -->
 <div class="pagecontent">
 <span class="Requirement">{#text_must#}</span>
 <br />
 <br />
-<!-- form -->
+<!-- форма -->
 <fieldset class="form">
 <legend>{#title_personal#}</legend>
 {if $csID}
@@ -39,13 +39,18 @@
 <p>{#text_ustid#} {$INPUT_VAT}</p>
 {/if}
 </fieldset>
-{if $customers_extra_fileds=='1'}<p>{$INPUT_CUSTOMERS_EXTRA_FIELDS}</p>
+{if $customers_extra_fileds=='1'}
+<fieldset class="form">
+<legend>{#title_options#}</legend>
+{foreach item=customers_extra_filelds from=$INPUT_CUSTOMERS_EXTRA_FIELDS}<p><label>{$customers_extra_filelds.NAME}:</label> {$customers_extra_filelds.VALUE}</p>
+{/foreach}
+</fieldset>
 {/if}
-<!-- /form -->
+<!-- /форма -->
 </div>
-<!-- /Content -->
+<!-- /Содержимое страницы -->
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
-<!-- /Rounded corners -->
+<!-- /Скругленные углы -->
 </div>
 
 <div class="pagecontentfooter">
