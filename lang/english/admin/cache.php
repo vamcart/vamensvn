@@ -27,4 +27,11 @@ define('TEXT_NOCACHE_FILES', 'Cache files does not exists.');
 define('USED_SPACE', 'Space used: ');
 define('ERROR_CACHE_DIRECTORY_DOES_NOT_EXIST', 'Error: Cache directory does not exist.');
 define('ERROR_CACHE_DIRECTORY_NOT_WRITEABLE', 'Error: Cache directory is not writeable.');
+
+define('TEXT_FILES_TOTAL','Files Total: ');
+define('TEXT_IMAGES_TOTAL','Products with images total: ');
+define('TEXT_NOT_FOUND','Not found in dir total: ');
+define('TEXT_EXTRA_TOTAL','Unnessesary or extra images total: ');
+define('DELETE_FILES','Delete unnessesary images');
+
 ?>
