@@ -545,4 +545,11 @@ require_once(DIR_WS_LANGUAGES . $_SESSION['language'].'/'.'affiliate_' . $_SESSI
 define('ENTRY_EXTRA_FIELDS_ERROR', 'Field %s must contain a minimum of %d characters');
 define('CATEGORY_EXTRA_FIELDS', 'Extra Fields');
 
+define('TEXT_RSS_NEWS','News');
+define('TEXT_RSS_ARTICLES','Articles');
+define('TEXT_RSS_CATEGORIES','Categories');
+define('TEXT_RSS_NEW_PRODUCTS','New products');
+define('TEXT_RSS_FEATURED_PRODUCTS','Featured products');
+define('TEXT_RSS_BEST_SELLERS','Best sellers');
+
 ?>
