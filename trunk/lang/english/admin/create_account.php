@@ -33,4 +33,7 @@ define('EMAIL_CONTACT', 'For help with any of our online services, please eMail 
 define('EMAIL_WARNING', '<b>Note:</b> This eMail address was given to us by one of our customers. If you did not signup to be a member, please send an eMail to ' . STORE_OWNER_EMAIL_ADDRESS . '.' . "\n");
 define('ENTRY_PAYMENT_UNALLOWED','Unallowed paymentmodules:');
 define('ENTRY_SHIPPING_UNALLOWED','Unallowed shippingmodules:');
+
+define('CATEGORY_EXTRA_FIELDS','Additional information');
+
 ?>
