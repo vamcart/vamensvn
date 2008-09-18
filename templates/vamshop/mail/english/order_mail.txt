@@ -40,7 +40,7 @@ Your ordered following products
 
 
 {if $address_label_payment}
-Paymentaddress
+Payment address
 ----------------------------------------------------------------------
 {$address_label_payment}
 {/if}
