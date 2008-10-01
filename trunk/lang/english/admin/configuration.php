@@ -804,4 +804,31 @@ define('MAX_DISPLAY_FAQ_ANSWER_DESC' , 'Number of symbols displayed in faq previ
 
 require_once(DIR_FS_LANGUAGES . $_SESSION['language'].'/admin/'.'affiliate_configuration.php');
 
+define('CG_MY_SHOP_TITLE', 'My Store');
+define('CG_MINIMAL_VALUES_TITLE', 'Minimum Values');
+define('CG_MAXIMAL_VALUES_TITLE', 'Maximum Values');
+define('CG_PICTURES_PARAMETERS_TITLE', 'Images');
+define('CG_CUSTOMERS_TITLE', 'Customer Details');
+define('CG_MODULES_TITLE', 'Module Options');
+define('CG_SHIPPING_TITLE', 'Shipping/Packaging');
+define('CG_PRODUCTS_TITLE', 'Product Listing');
+define('CG_WAREHOUSE_TITLE', 'Stock');
+define('CG_LOGGING_TITLE', 'Logging');
+define('CG_CACHE_TITLE', 'Cache');
+define('CG_EMAIL_TITLE', 'E-Mail Options');
+define('CG_DOWNLOAD_TITLE', 'Download');
+define('CG_MY_GZIP_TITLE', 'GZip Compression');
+define('CG_MY_SESSIONS_TITLE', 'Sessions');
+define('CG_META_TAGS_TITLE', 'Meta Tags');
+define('CG_VAT_ID_TITLE', 'Vat');
+define('CG_GOOGLE_TITLE', 'Google Analytics');
+define('CG_IMPORT_EXPORT_TITLE', 'Import/Export');
+define('CG_AFTER_BUY_TITLE', 'Afterbuy');
+define('CG_SEARCH_TITLE', 'Search Options');
+define('CG_YANDEX_MARKET_TITLE', 'Yandex-Market');
+define('CG_QUICK_PRICE_UPDATES_TITLE', 'Quick Price Updates');
+define('CG_CIP_MANAGER_TITLE', 'Contrib Installer');
+define('CG_MAINTENANCE_TITLE', 'Site Maintenance');
+define('CG_AFFILIATE_PROGRAM_TITLE', 'Affiliate Program');
+
 ?>
