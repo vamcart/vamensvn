@@ -42,4 +42,6 @@ define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
 define('EMPTY_CATEGORY', 'No news');
 define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No news at this moment');
 
+define('TEXT_NEWS_PAGE_URL', 'News SEO URL');
+
 ?>
