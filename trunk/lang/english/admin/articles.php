@@ -108,4 +108,7 @@ define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
 
 define('TEXT_ARTICLE_OTHER', 'Other');
 
+define('TEXT_ARTICLE_PAGE_URL', 'Article SEO URL:');
+define('TEXT_TOPIC_PAGE_URL', 'Topic SEO URL:');
+
 ?>
