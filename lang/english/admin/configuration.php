@@ -832,4 +832,11 @@ define('CG_MAINTENANCE_TITLE', 'Site Maintenance');
 define('CG_AFFILIATE_PROGRAM_TITLE', 'Affiliate Program');
 define('_TITLE', 'Other');
 
+define('STORE_TELEPHONE_TITLE','Telephone');
+define('STORE_TELEPHONE_DESC','Store telephone.');
+define('STORE_ICQ_TITLE','ICQ');
+define('STORE_ICQ_DESC','Store ICQ.');
+define('STORE_SKYPE_TITLE','Skype');
+define('STORE_SKYPE_DESC','Store Skype.');
+
 ?>
