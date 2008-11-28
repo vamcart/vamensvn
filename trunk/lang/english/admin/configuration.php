@@ -839,4 +839,7 @@ define('STORE_ICQ_DESC','Store ICQ.');
 define('STORE_SKYPE_TITLE','Skype');
 define('STORE_SKYPE_DESC','Store Skype.');
 
+define('QUICK_CHECKOUT_TITLE','Quick Checkout');
+define('QUICK_CHECKOUT_DESC','Enable quick checkout module.');
+
 ?>
