@@ -552,4 +552,6 @@ define('TEXT_RSS_NEW_PRODUCTS','New products');
 define('TEXT_RSS_FEATURED_PRODUCTS','Featured products');
 define('TEXT_RSS_BEST_SELLERS','Best sellers');
 
+define('TEXT_CHECKOUT_ALTERNATIVE', 'Checkout');
+
 ?>
