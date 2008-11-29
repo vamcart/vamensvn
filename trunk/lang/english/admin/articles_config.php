@@ -89,4 +89,7 @@ define('ARTICLE_MANAGER_WYSIWYG_FONT_COLOUR_DESC', 'White, Black, C0C0C0, Red, F
 define('ARTICLE_MANAGER_WYSIWYG_BG_COLOUR_DESC', 'White, Black, C0C0C0, Red, FFFFFF, Yellow, Pink, Blue, Gray, 000000, etc...<br>basically any colour or html colour code!<br>(not saved to content)');
 define('ARTICLE_MANAGER_WYSIWYG_DEBUG_DESC', 'Moniter Live-html, It updates as you type in a 2nd field above it.<p>Disable Debug = 0<br>Enable Debug = 1<br>Default = 0 OFF');
 
+define('MAX_DISPLAY_ARTICLES_CONTENT_TITLE' , 'Short description');
+define('MAX_DISPLAY_ARTICLES_CONTENT_DESC' , 'Number of symbols displayed in article preview.');
+
 ?>
