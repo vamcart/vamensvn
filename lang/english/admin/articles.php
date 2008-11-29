@@ -111,4 +111,6 @@ define('TEXT_ARTICLE_OTHER', 'Other');
 define('TEXT_ARTICLE_PAGE_URL', 'Article SEO URL:');
 define('TEXT_TOPIC_PAGE_URL', 'Topic SEO URL:');
 
+define('TEXT_ARTICLE_SORT_ORDER', 'Sort Order:');
+
 ?>
