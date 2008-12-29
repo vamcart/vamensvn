@@ -17,25 +17,25 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_TITLE', 'Яндекс-деньги (Через ЯД Мерчант)');
-  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_PUBLIC_TITLE', 'Яндекс-деньги (Через ЯД Мерчант)');
-  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
+  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_TITLE', 'Yandex Money (ProChange Merchant)');
+  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_PUBLIC_TITLE', 'Yandex Money (ProChange Merchant)');
+  define('MODULE_PAYMENT_PROCHANGE_MERCHANT_TEXT_DESCRIPTION', '');
   
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_STATUS_TITLE' , 'Разрешить модуль Яндекс-деньги');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_STATUS_DESC' , 'Вы хотите разрешить использование модуля при оформлении заказов?');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ALLOWED_TITLE' , 'Разрешённые страны');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ALLOWED_DESC' , 'Укажите коды стран, для которых будет доступен данный модуль (например RU,DE (оставьте поле пустым, если хотите что б модуль был доступен покупателям из любых стран))');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_CLIENT_TITLE' , 'Идентификатор клиента №1:');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_CLIENT_DESC' , 'Укажите Ваш идентификатор номер 1. Присваивается после регистрации на http://www.prochange.ru/merchant.html');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_RA_TITLE' , 'Идентификатор клиента №2:');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_RA_DESC' , 'Укажите Ваш идентификатор номер 2. Присваивается после регистрации на http://www.prochange.ru/merchant.html');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_TITLE' , 'Порядок сортировки');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_DESC' , 'Порядок сортировки модуля.');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_TITLE' , 'Зона');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_DESC' , 'Если выбрана зона, то данный модуль оплаты будет виден только покупателям из выбранной зоны.');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_TITLE' , 'Укажите статус заказа, ожидающий оплаты');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_DESC' , 'Укажите статус заказа, ожидающий оплаты.');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_TITLE' , 'Укажите оплаченный статус заказа');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_DESC' , 'Укажите оплаченный статус заказа.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_STATUS_TITLE' , 'Enable Yandex Money Module');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_STATUS_DESC' , 'Do you want to accept Yandex Money as payments?');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ALLOWED_TITLE' , 'Allowed zones');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ALLOWED_DESC' , 'Please enter the zones <b>separately</b> which should be allowed to use this modul (e. g. AT,DE (leave empty if you want to allow all zones))');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_CLIENT_TITLE' , 'ID #1:');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_CLIENT_DESC' , 'Your ID #1.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_RA_TITLE' , 'ID #2:');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PRO_RA_DESC' , 'Your ID#2');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_TITLE' , 'Sort order of display');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_DESC' , 'Sort order of display. Lowest is displayed first.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_TITLE' , 'Payment Zone');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_DESC' , 'If a zone is selected, only enable this payment method for that zone.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_TITLE' , 'Prepare order status');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_DESC' , 'Prepare order status.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_TITLE' , 'Confirmed order status');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_DESC' , 'Confirmed order status.');
   
 ?>
