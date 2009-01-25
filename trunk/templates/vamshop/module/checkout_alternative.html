@@ -9,7 +9,7 @@
 <span class="Requirement">{#text_must#}</span>
 <br />
 <br />
-<!-- form -->
+<!-- форма -->
 <fieldset class="form">
 <legend>{#title_personal#}</legend>
 {if $gender=='1'} 
@@ -59,10 +59,16 @@
 {/foreach}
 </fieldset>
 {/if}
-<!-- /form -->
+<fieldset class="form">
+<legend>{#title_password#}</legend>
+<p><label for="pass" title="{$ENTRY_PASSWORD_ERROR}">{#text_password#}</label> {$INPUT_PASSWORD}</p>
+<p><label for="confirmation" title="{$ENTRY_PASSWORD_ERROR_NOT_MATCHING}">{#text_confirmation#}</label> {$INPUT_CONFIRMATION}</p>
+</fieldset>
+<!-- /форма -->
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
+
 
 
 {if $virtual=='false'} 
