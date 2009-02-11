@@ -8,7 +8,7 @@
 
 <body onload="window.print()">
 
-<!-- Order info -->
+<!-- Информация о товаре -->
 <div class="page">
 
 <p>
@@ -65,8 +65,16 @@
 </p>
 <!-- desc eof -->
 
+<p>
+{if $extra_fields_data}
+{foreach name=aussen item=extra_fields from=$extra_fields_data} 
+{$extra_fields.NAME}: {$extra_fields.VALUE}<br /> 
+{/foreach}
+{/if}
+</p>
+
 </div>
-<!-- /Order info -->
+<!-- /Информация о товаре -->
 
 </body>
 </html>
