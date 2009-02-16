@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: webmoney_merchant.php 998 2007/02/07 13:24:46 VaM $
+   $Id: webmoney_merchant.php 998 2009/02/07 13:24:46 VaM $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -19,6 +19,7 @@
 
   define('MODULE_PAYMENT_WEBMONEY_MERCHANT_TEXT_TITLE', 'WebMoney Merchant');
   define('MODULE_PAYMENT_WEBMONEY_MERCHANT_TEXT_PUBLIC_TITLE', 'WebMoney Merchant');
+  define('MODULE_PAYMENT_WEBMONEY_MERCHANT_TEXT_ADMIN_DESCRIPTION', '');
   define('MODULE_PAYMENT_WEBMONEY_MERCHANT_TEXT_DESCRIPTION', '');
   
   define('MODULE_PAYMENT_WEBMONEYMERCHANT_TEXT_TYPE','Payment Type:');
