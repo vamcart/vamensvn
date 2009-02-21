@@ -33,8 +33,8 @@ define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_TITLE' , 'Sort order of dis
 define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SORT_ORDER_DESC' , 'Sort order of display. Lowest is displayed first.');
 define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_TITLE' , 'Payment Zone');
 define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ZONE_DESC' , 'If a zone is selected, only enable this payment method for that zone.');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_TITLE' , 'Prepare order status');
-define('MODULE_PAYMENT_PROCHANGE_MERCHANT_PREPARE_ORDER_STATUS_ID_DESC' , 'Prepare order status.');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SECRET_KEY_TITLE' , 'Secret Key');
+define('MODULE_PAYMENT_PROCHANGE_MERCHANT_SECRET_KEY_DESC' , 'Secret Key Value.');
 define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_TITLE' , 'Confirmed order status');
 define('MODULE_PAYMENT_PROCHANGE_MERCHANT_ORDER_STATUS_ID_DESC' , 'Confirmed order status.');
   
