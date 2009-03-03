@@ -60,7 +60,7 @@ define('EASY_IMPORT_TEMP_DIR', 'Import from Temp Dir ');
 define('EASY_LABEL_DOWNLOAD', 'Download');
 define('EASY_LABEL_COMPLETE', 'Complete');
 define('EASY_LABEL_TAB', 'tab-delimited .txt file to edit');
-define('EASY_LABEL_MPQ', 'Model/Name/Price/Qty');
+define('EASY_LABEL_MPQ', 'Model/Image/Name/Price/Qty');
 define('EASY_LABEL_EP_MC', 'Model/Category');
 define('EASY_LABEL_EP_FROGGLE', 'Froogle');
 define('EASY_LABEL_EP_ATTRIB', 'Attributes');
