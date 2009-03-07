@@ -214,6 +214,7 @@ define('CATEGORY_CONTACT', 'Contact');
 define('CATEGORY_COMPANY', 'Company');
 define('CATEGORY_OPTIONS', 'More Options');
 
+define('ENTRY_SECOND_NAME', 'Second Name:');
 define('ENTRY_GENDER', 'Gender:');
 define('ENTRY_GENDER_ERROR', '&nbsp;<span class="errorText">required</span>');
 define('ENTRY_FIRST_NAME', 'First Name:');
