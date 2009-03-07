@@ -97,6 +97,7 @@ define('ENTRY_GENDER_ERROR', 'Please select your gender.');
 define('ENTRY_GENDER_TEXT', '*');
 define('ENTRY_FIRST_NAME_ERROR', 'Your firstname must consist of at least  ' . ENTRY_FIRST_NAME_MIN_LENGTH . ' characters.');
 define('ENTRY_FIRST_NAME_TEXT', '*');
+define('ENTRY_SECOND_NAME_TEXT', '');
 define('ENTRY_LAST_NAME_ERROR', 'Your e-mail address must consist of at least ' . ENTRY_LAST_NAME_MIN_LENGTH . ' characters.');
 define('ENTRY_LAST_NAME_TEXT', '*');
 define('ENTRY_DATE_OF_BIRTH_ERROR', 'Your date of birth has to be entered in the following form DD.MM.YYYY (e.g. 21.05.1970) ');
