@@ -309,6 +309,8 @@ define('CATEGORIES_IMAGE_THUMBNAIL_MOTION_BLUR_DESC' , 'Category Images: Motion-
 define('IMAGE_MANIPULATOR_TITLE','GDlib processing');
 define('IMAGE_MANIPULATOR_DESC','Image Manipulator for GD2 or GD1');
 
+define('ACCOUNT_SECOND_NAME_TITLE' , 'Second Name');
+define('ACCOUNT_SECOND_NAME_DESC' , 'Display second name in the customers account');
 define('ACCOUNT_GENDER_TITLE' , 'Gender');
 define('ACCOUNT_GENDER_DESC' , 'Display gender in the customers account');
 define('ACCOUNT_DOB_TITLE' , 'Date of Birth');
