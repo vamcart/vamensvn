@@ -834,6 +834,7 @@ define('CG_QUICK_PRICE_UPDATES_TITLE', 'Quick Price Updates');
 define('CG_CIP_MANAGER_TITLE', 'Contrib Installer');
 define('CG_MAINTENANCE_TITLE', 'Site Maintenance');
 define('CG_AFFILIATE_PROGRAM_TITLE', 'Affiliate Program');
+define('CG_BOXES_TITLE', 'Boxes');
 define('_TITLE', 'Other');
 
 define('STORE_TELEPHONE_TITLE','Telephone');

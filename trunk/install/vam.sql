@@ -2130,7 +2130,8 @@ INSERT INTO configuration_group VALUES ('24', 'CG_QUICK_PRICE_UPDATES', 'Изм�
 INSERT INTO configuration_group VALUES ('25', 'CG_CIP_MANAGER', 'Установка модулей', 'Настройки модуля', '25', '1');
 INSERT INTO configuration_group VALUES ('27', 'CG_MAINTENANCE', 'Site Maintenance', 'Site Maintenance', '27', '1');
 
-INSERT INTO configuration_group VALUES ('28', 'CG_AFFILIATE_PROGRAM', 'Affiliate program', 'Affiliate program settings', '50', '1');
+INSERT INTO configuration_group VALUES ('28', 'CG_AFFILIATE_PROGRAM', 'Affiliate program', 'Affiliate program settings', '28', '1');
+INSERT INTO configuration_group VALUES ('29', 'CG_BOXES', 'Boxes', 'Boxes', '29', '1');
 
 INSERT INTO countries VALUES (1,'Afghanistan','AF','AFG','1','1');
 INSERT INTO countries VALUES (2,'Albania','AL','ALB','1','1');

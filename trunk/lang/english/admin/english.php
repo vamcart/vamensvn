@@ -94,7 +94,8 @@ define('BOX_CONFIGURATION_23', 'Yandex-Market');
 define('BOX_CONFIGURATION_24', 'Quick Price Updates');
 define('BOX_CONFIGURATION_25', 'Contribution Installer');
 define('BOX_CONFIGURATION_27', 'Site Maintenance');
- 
+define('BOX_CONFIGURATION_29', 'Boxes');
+
 define('BOX_MODULES', 'Payment-/Shipping-/Billing-Modules');
 define('BOX_PAYMENT', 'Payment Systems');
 define('BOX_SHIPPING', 'Shipping Methods');
