@@ -19,7 +19,7 @@
 	define("AJAX_QUICKSEARCH_DROPDOWN_SIZE", 5);
 	define("AJAX_QUICKSEARCH_LIMIT", 15);
 
-	$q = addslashes(preg_replace("%[^0-9a-zA-Zа-яА-Я]%", "", $_REQUEST['keywords']) );
+	$q = addslashes(preg_replace("%[^0-9a-zA-Zа-яА-Я]\w%iu", "", $_REQUEST['keywords']) );
 
 	$out = "";
 	if(isset($q) && vam_not_null($q)) {
