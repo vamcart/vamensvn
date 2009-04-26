@@ -65,4 +65,6 @@ define('ORDER_SUBTOTAL','<b>Sub-Total:</b>');
 
 define('CATEGORY_EXTRA_FIELDS','Additional information');
 
+define('PULL_DOWN_DEFAULT','Select');
+
 ?>
