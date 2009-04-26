@@ -36,4 +36,6 @@ define('ENTRY_SHIPPING_UNALLOWED','Unallowed shippingmodules:');
 
 define('CATEGORY_EXTRA_FIELDS','Additional information');
 
+define('PULL_DOWN_DEFAULT','Select');
+
 ?>
