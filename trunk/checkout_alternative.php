@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: checkout_alternative.php 993 2008-11-29 19:20:03 VaM $
+   $Id: checkout_alternative.php 993 2009-11-29 19:20:03 VaM $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -80,6 +80,10 @@ $vamTemplate->assign('virtual', 'true');
 $process = false;
 if (isset ($_POST['action']) && ($_POST['action'] == 'process')) {
 	$process = true;
+
+if (isset($_POST['conditions'])) {
+	$_SESSION['conditions'] = true;
+}
 
 $_SESSION['comments'] = vam_db_prepare_input($_POST['comments']);
 
