@@ -19,6 +19,10 @@
 
 include ('includes/application_top.php');
 
+if (isset ($_SESSION['customer_id'])) {
+		vam_redirect(vam_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'));
+}
+
 // check if checkout is allowed
 if ($_SESSION['allow_checkout'] == 'false')
 	vam_redirect(vam_href_link(FILENAME_SHOPPING_CART));
@@ -891,13 +895,8 @@ $vamTemplate->assign('conditions', 'true');
 
 	$vamTemplate->assign('AGB', $conditions);
 	$vamTemplate->assign('AGB_LINK', $main->getContentLink(3, MORE_INFO));
-	// LUUPAY ZAHLUNGSMODUL
-	if (isset ($_GET['step']) && $_GET['step'] == 'step2') {
-		$vamTemplate->assign('AGB_checkbox', '<input type="checkbox" value="conditions" name="conditions" checked />');
-	} else {
-		$vamTemplate->assign('AGB_checkbox', '<input type="checkbox" value="conditions" name="conditions" />');
-	}
-	// LUUPAY END
+
+   $vamTemplate->assign('AGB_checkbox', '<input type="checkbox" value="conditions" name="conditions" checked />');
 
 }
 $vamTemplate->assign('BUTTON_CONTINUE', vam_image_submit('button_continue.gif', IMAGE_BUTTON_CONTINUE));
