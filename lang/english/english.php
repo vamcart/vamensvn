@@ -556,5 +556,6 @@ define('TEXT_RSS_BEST_SELLERS','Best sellers');
 define('TEXT_CHECKOUT_ALTERNATIVE', 'Checkout');
 
 define('TEXT_PRODUCT_COMPARE','Compare');
+define('TEXT_PRODUCT_FILTER','Filter');
 
 ?>
