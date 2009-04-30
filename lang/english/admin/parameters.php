@@ -23,7 +23,7 @@ define('SEARCH_TITLE', 'Search');
 define('INTERVALS_TITLE', 'Intervals');
 define('NAMEINTITLE_TITLE', 'Name');
 define('SUFFINTITLE_TITLE', 'Suffix');
-define('DESC_TITLE', 'Description');
+define('DESC_TITLE', 'Show in product listing');
 define('DCLICK_TITLE', 'double click for edit');
 define('ONECLICK_TITLE', 'one click for select, ');
 define('CLICK_TITLE', 'click for edit');
