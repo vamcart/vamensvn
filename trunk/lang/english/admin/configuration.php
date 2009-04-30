@@ -848,6 +848,8 @@ define('QUICK_CHECKOUT_TITLE','Quick Checkout');
 define('QUICK_CHECKOUT_DESC','Enable quick checkout module.');
 
 define('SET_BOX_CATEGORIES_TITLE', 'Categories');
+define('SET_BOX_FILTERS_TITLE', 'Filters');
+define('SET_BOX_FILTERS_LIST_TITLE', 'Selected filters');
 define('SET_BOX_CONTENT_TITLE', 'More about');
 define('SET_BOX_INFORMATION_TITLE', 'Informations');
 define('SET_BOX_ADD_QUICKIE_TITLE', 'Quick purchase');
@@ -876,6 +878,8 @@ define('SET_BOX_MANUFACTURERS_INFO_TITLE', 'Information about manufacturer');
 define('SET_BOX_FAQ_TITLE', 'FAQ');
 
 define('SET_BOX_CATEGORIES_DESC', 'Enable/Disable box.');
+define('SET_BOX_FILTERS_DESC', 'Enable/Disable box.');
+define('SET_BOX_FILTERS_LIST_DESC', 'Enable/Disable box.');
 define('SET_BOX_CONTENT_DESC', 'Enable/Disable box.');
 define('SET_BOX_INFORMATION_DESC', 'Enable/Disable box.');
 define('SET_BOX_ADD_QUICKIE_DESC', 'Enable/Disable box.');
