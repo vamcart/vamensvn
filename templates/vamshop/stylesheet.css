@@ -539,44 +539,6 @@ div#navigation
 
 /*- /Filters box */
 
-/*- Selected filters box */
-#boxFiltersList
-   {
-     text-align: left;
-     margin-bottom: 0.2em;
-     margin-top: 0.2em;
-     margin-right: 0.2em; 
-     padding-bottom: 0.4em; 
-  	  border-bottom-width: 1px;
-	  border-bottom-style: dashed;
-     border-bottom-color: #67748B;
-   }
-
-/*- Selected filters box header */
-#boxFiltersList h5 
-   {
-     display: block;
-     font: 12px Tahoma, Verdana, Arial, sans-serif;
-     font-weight: bold;
-     color: #CC0000;
-     border-bottom: 2px #e5e5e5 solid;
-     background: url(img/box.gif) no-repeat left center;
-     margin: 0 0 .4em .3em;
-     padding: .1em 0 0 16px;
-  }
-/*- /Selected filters box header */
-
-/*- Selected filters box content */
-#boxFiltersListContent 
-   {
-     padding-left: 1em;
-     text-align: left;
-  }
-
-/*- /Selected filters box content */
-
-/*- /Selected filters box */
-
 /*- Content box */
 #boxContent
    {
