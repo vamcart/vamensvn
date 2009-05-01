@@ -55,4 +55,8 @@ define('SAVE_BUTTON_TITLE', 'Save');
 define('CANCEL_BUTTON_TITLE', 'Cancel');
 define('SET_INTERVALS_BUTTON_TITLE', 'Set');
 define('SET_INTERVALS_ADDINTERVAL_BUTTON_TITLE', 'Add');
+
+define('BUTTON_UPDATE_PARAMETERS','Update parameters');
+define('TEXT_UPDATE_PARAMETERS','Use update parameters button for re-indexing parameters in catalog.');
+
 ?>
