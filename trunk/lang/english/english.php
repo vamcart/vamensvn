@@ -558,4 +558,6 @@ define('TEXT_CHECKOUT_ALTERNATIVE', 'Checkout');
 define('TEXT_PRODUCT_COMPARE','Compare');
 define('TEXT_PRODUCT_FILTER','Filter');
 
+define('TXT_FREE','<span class="Requirement"><strong>free</strong></span>');
+
 ?>
