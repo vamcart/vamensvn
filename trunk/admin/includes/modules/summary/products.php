@@ -21,8 +21,7 @@ require_once (DIR_WS_CLASSES.'currencies.php');
 $currencies = new currencies();
 
 ?>
-          <tr>
-            <td valign="top"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+<table border="0" width="100%" cellspacing="0" cellpadding="2">
 				  <tr> 
 				    <td colspan="3" class="pageHeading" width="100%">
 
@@ -46,7 +45,7 @@ $currencies = new currencies();
         p.products_price, 
         p.products_date_added, 
         p.products_last_modified 
-        FROM " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd WHERE p.products_id = pd.products_id and pd.language_id = '" . (int)$_SESSION['languages_id'] . "' order by p.products_date_added desc limit 20");
+        FROM " . TABLE_PRODUCTS . " p, " . TABLE_PRODUCTS_DESCRIPTION . " pd WHERE p.products_id = pd.products_id AND pd.language_id = '" . (int)$_SESSION['languages_id'] . "' order by p.products_date_added desc limit 20");
 
 	while ($products = vam_db_fetch_array($products_query_raw)) {
 
@@ -64,5 +63,4 @@ $currencies = new currencies();
 	}
 ?>
 
-                </table></td>
-              </tr>
+                </table>
