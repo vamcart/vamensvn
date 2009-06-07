@@ -494,4 +494,6 @@ define('VAMSHOP_SUPPORT_KEY',(file_exists(DIR_FS_CATALOG .'vamshop.key') ? implo
 define('BOX_PARAMETERS', 'Parameters');
 define('BOX_PARAMETERS_EXPORT', 'Parameters import/export');
 
+define('TEXT_ACCESS_FORBIDDEN','Access forbidden');
+
 ?>
