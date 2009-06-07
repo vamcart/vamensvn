@@ -43,6 +43,7 @@ define('TITLE', PROJECT_VERSION);
 // header text in includes/header.php
 define('HEADER_TITLE_TOP', 'Administration');
 define('HEADER_TITLE_SUPPORT_SITE', 'Support Site');
+define('HEADER_TITLE_DOCS', 'Manual');
 define('HEADER_TITLE_ONLINE_CATALOG', 'Online Catalog');
 define('HEADER_TITLE_ADMINISTRATION', 'Administration');
 
