@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: parameters_export.php 1167 2009-04-29 11:13:01Z VaM $   
+   $Id: parameters_export.php 1167 2009-05-29 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
