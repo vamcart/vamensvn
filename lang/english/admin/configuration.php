@@ -358,6 +358,8 @@ define('SHIPPING_INFOS_TITLE' , 'Group ID');
 
 define('PRODUCT_LIST_FILTER_TITLE' , 'Display Category/Manufacturer Filter (0=disable; 1=enable)');
 define('PRODUCT_LIST_FILTER_DESC' , 'Do you want to display the Category/Manufacturer Filter?');
+define('PRODUCT_LIST_RECURSIVE_TITLE' , 'Display all subcategories products in top category');
+define('PRODUCT_LIST_RECURSIVE_DESC', 'Display products recursive');
 
 define('STOCK_CHECK_TITLE' , 'Check stock level');
 define('STOCK_CHECK_DESC' , 'Check to see if sufficent stock is available');
