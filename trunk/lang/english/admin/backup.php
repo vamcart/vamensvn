@@ -78,4 +78,6 @@ define('TEXT_DUMPER_FORBIDDEN', 'Permission error');
 define('TEXT_DUMPER_DB_CONNECT', 'DB connection error');
 define('TEXT_DUMPER_DB_ERROR', 'Error!');
 
+define('HEADING_TITLE','Backup');
+
 ?>
