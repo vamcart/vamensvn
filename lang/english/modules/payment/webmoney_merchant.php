@@ -32,8 +32,6 @@ define('MODULE_PAYMENT_WEBMONEY_MERCHANT_ALLOWED_TITLE' , 'Allowed zones');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_ALLOWED_DESC' , 'Please enter the zones <b>separately</b> which should be allowed to use this modul (e. g. AT,DE (leave empty if you want to allow all zones))');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_ID_TITLE' , 'WM ID:');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_ID_DESC' , 'Your WM ID');
-define('MODULE_PAYMENT_WEBMONEY_MERCHANT_WMZ_TITLE' , 'Your WMZ number:');
-define('MODULE_PAYMENT_WEBMONEY_MERCHANT_WMZ_DESC' , 'Your WMZ number');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_WMR_TITLE' , 'Your WMR number:');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_WMR_DESC' , 'Your WMR number');
 define('MODULE_PAYMENT_WEBMONEY_MERCHANT_SORT_ORDER_TITLE' , 'Sort order of display');
