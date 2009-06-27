@@ -65,8 +65,8 @@ define('BOX_MANUFACTURER_INFO_OTHER_PRODUCTS', 'More products');
 define('BOX_HEADING_ADD_PRODUCT_ID','Add To Cart');
   
 define('BOX_LOGINBOX_STATUS','Customer group:');     
-define('BOX_LOGINBOX_DISCOUNT','Product discount');
-define('BOX_LOGINBOX_DISCOUNT_TEXT','Discount');
+define('BOX_LOGINBOX_DISCOUNT','Personal (group) discount');
+define('BOX_LOGINBOX_DISCOUNT_TEXT','Order total discount');
 define('BOX_LOGINBOX_DISCOUNT_OT','');
 
 // reviews box text in includes/boxes/reviews.php
