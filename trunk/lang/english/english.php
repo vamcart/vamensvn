@@ -429,8 +429,6 @@ define('TEXT_COUPON_HELP_PRODUCTS', 'Product');
 // VAT ID
 define('ENTRY_VAT_TEXT','* for Germany and EU-Countries only');
 define('ENTRY_VAT_ERROR', 'The chosen VatID is not valid or not proofable at this moment! Please fill in a valid ID or leave the field empty.');
-define('MSRP','MSRP');
-define('YOUR_PRICE','your price ');
 define('ONLY',' only ');
 define('FROM',' ');
 define('YOU_SAVE','you save ');
@@ -441,6 +439,15 @@ define('TAX_INFO_EXCL','excl. %s Tax');
 define('TAX_INFO_ADD','plus. %s Tax');
 define('SHIPPING_EXCL','excl.');
 define('SHIPPING_COSTS','Shipping costs');
+define('MSRP','MSRP');
+define('YOUR_PRICE','your price ');
+define('YOUR_SPECIAL_PRICE','Special price ');
+define('YOUR_GRADUATED_PRICE','Special graduated price ');
+define('RETAIL_PRICE','Your price ');
+define('GROUP_PRICE','Group price');
+define('MANUFACTURER_DISCOUNT','Personal manufacturer disocunt ');
+define('PRODUCT_DISCOUNT','Product discount ');
+define('PERSONAL_DISCOUNT','Personal (group) discount ');
 
 // Сборка VaM
 
