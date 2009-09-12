@@ -41,6 +41,7 @@ define('TABLE_HEADING_STATUS', 'Status');
 define('TABLE_HEADING_MANUFACTURERS', 'Manufacturers');
 define('TABLE_HEADING_IMAGE', 'Image');
 define('TABLE_HEADING_XML', 'XML');
+define('TABLE_HEADING_START_PAGE', 'Start Page');
 define('TABLE_HEADING_SORT', 'Sort');
 define('DISPLAY_CATEGORIES', 'Select category:');
 define('DISPLAY_MANUFACTURERS', 'Select manufacturer');
