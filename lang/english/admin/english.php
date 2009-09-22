@@ -44,7 +44,7 @@ define('TITLE', PROJECT_VERSION);
 define('HEADER_TITLE_TOP', 'Administration');
 define('HEADER_TITLE_SUPPORT_SITE', 'Support Site');
 define('HEADER_TITLE_DOCS', 'Manual');
-define('HEADER_TITLE_ONLINE_CATALOG', 'Site');
+define('HEADER_TITLE_ONLINE_CATALOG', 'Store');
 define('HEADER_TITLE_ADMINISTRATION', 'Administration');
 
 // text for gender
