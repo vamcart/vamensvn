@@ -849,6 +849,9 @@ define('STORE_SKYPE_DESC','Store Skype.');
 define('QUICK_CHECKOUT_TITLE','Quick Checkout');
 define('QUICK_CHECKOUT_DESC','Enable quick checkout module.');
 
+define('XSELL_CART_TITLE','Show Cross-Sells Products on Shopping Cart');
+define('XSELL_CART_DESC','Show Cross-Sells Products on Shopping Cart');
+
 define('SET_BOX_CATEGORIES_TITLE', 'Categories');
 define('SET_BOX_FILTERS_TITLE', 'Filters');
 define('SET_BOX_CONTENT_TITLE', 'More about');
