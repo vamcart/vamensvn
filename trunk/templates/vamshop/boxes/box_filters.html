@@ -1,6 +1,6 @@
 {config_load file="$language/lang_$language.conf" section="boxes"}
 {if $filterParams}
-<!-- Filters box -->
+<!-- Бокс фильтры -->
 <div id="boxFilters">
 <h5>{#heading_filters#}</h5>
 
@@ -29,10 +29,13 @@ function open_hide_values(obj, a)
 
 {if $is_params_selected}
 	{foreach name=aussen1 item=selectedParam from=$selectedParamsFilters}
-		{$selectedParam.name}<br />
+<div class="close">
+		{$selectedParam.name}
 		{foreach name=aussen2 item=selectedItem from=$selectedParam.list}
-			 <a href='{$selectedItem.url}'>{$selectedItem.parameters_value}</a><br />
+		<div class="content"><span class="name">{$selectedItem.parameters_value}</span><span class="close"><a href='{$selectedItem.url}'>X</a></span></div>
 		{/foreach}
+<div class="clear"></div>
+</div>
 	{/foreach}
 {/if}
 
@@ -50,6 +53,7 @@ function open_hide_values(obj, a)
 	{/if}
 {/foreach}
 
+{if $is_params_selected}
 <br />
 
   <form action="{$priceForm}" method="get">
@@ -58,9 +62,10 @@ function open_hide_values(obj, a)
   {#text_filters_price#}:
   {#text_filters_price_from#}: <input type="text" size="3" name="price_min" value="{$price_min}" /> {#text_filters_price_to#}: <input type="text" size="3" name="price_max" value="{$price_max}" /> {$BUTTON_FILTER}
   </form>
+{/if}
 
 </div>
 
 </div>
-<!-- /Filters box -->
+<!-- /Бокс фильтры -->
 {/if}
