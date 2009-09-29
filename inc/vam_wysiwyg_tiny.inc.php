@@ -40,7 +40,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -83,7 +83,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -108,6 +108,7 @@ function toggleHTMLEditor(id) {
                         break;
 
                 // WYSIWYG editor latest news textarea named articles_description
+                case 'articles_description':
                         $val ='<script type="text/javascript" src="'.$js_src.'"></script>
                         <script type="text/javascript" src="'.$js_browser_src.'"></script>
                         	   <script type="text/javascript">
@@ -125,7 +126,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -168,7 +169,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -211,7 +212,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -254,7 +255,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -297,7 +298,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -340,7 +341,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -383,7 +384,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -426,7 +427,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
@@ -469,7 +470,7 @@ tinyMCE.init({
 
 	file_browser_callback : "tinyBrowser",
 
-	spellchecker_languages : "+English=en,Russian=ru",
+	spellchecker_languages : "+Russian=ru,English=en",
 	spellchecker_rpc_url : "'.HTTP_SERVER . DIR_WS_CATALOG.'admin/includes/javascript/tiny_mce/plugins/spellchecker/rpc_proxy.php",
 
 	// Theme options
