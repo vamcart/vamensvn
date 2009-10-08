@@ -222,9 +222,12 @@ define('TEXT_YANDEX_MARKET','<br />Yandex-market options:<br />');
 define('TEXT_YANDEX_MARKET_BID','Bid:');
 define('TEXT_YANDEX_MARKET_CBID','Cbid:');
 
-// Categiries/Products URL begin
+// Categories/Products URL begin
 define('TEXT_EDIT_CATEGORY_URL', 'Categories SEO URL:');
 define('TEXT_PRODUCTS_PAGE_URL', 'Products page SEO URL:');
-// Categiries/Products URL end
+// Categories/Products URL end
+
+define('TEXT_PRODUCTS_QUANTITY_MIN', 'Min. quantity to order:');
+define('TEXT_PRODUCTS_QUANTITY_MAX', 'Max. quantity to order:');
 
 ?>
