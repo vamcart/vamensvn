@@ -35,6 +35,10 @@ define('MODULE_SHIPPING_FREEAMOUNT_DISPLAY_TITLE' , 'Enable Display');
 define('MODULE_SHIPPING_FREEAMOUNT_DISPLAY_DESC' , 'Do you want to display text way if the minimum amount is not reached?');
 define('MODULE_SHIPPING_FREEAMOUNT_AMOUNT_TITLE' , 'Minimum Cost');
 define('MODULE_SHIPPING_FREEAMOUNT_AMOUNT_DESC' , 'Minimum order amount purchased before shipping is free?');
+define('MODULE_SHIPPING_FREEAMOUNT_TAX_CLASS_TITLE' , 'Tax Class');
+define('MODULE_SHIPPING_FREEAMOUNT_TAX_CLASS_DESC' , 'Use the following tax class on the shipping fee.');
+define('MODULE_SHIPPING_FREEAMOUNT_ZONE_TITLE' , 'Shipping Zone');
+define('MODULE_SHIPPING_FREEAMOUNT_ZONE_DESC' , 'If a zone is selected, only enable this shipping method for that zone.');
 define('MODULE_SHIPPING_FREEAMOUNT_SORT_ORDER_TITLE' , 'Display order');
 define('MODULE_SHIPPING_FREEAMOUNT_SORT_ORDER_DESC' , 'Lowest will be displayed first.');
 ?>
