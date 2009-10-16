@@ -910,4 +910,7 @@ define('SET_BOX_MANUFACTURERS_DESC', 'Enable/Disable box.');
 define('SET_BOX_MANUFACTURERS_INFO_DESC', 'Enable/Disable box.');
 define('SET_BOX_FAQ_DESC', 'Enable/Disable box.');
 
+define('DISPLAY_START_PAGE_TITLE', 'Show start page column');
+define('DISPLAY_START_PAGE_DESC', 'Show start page column.');
+
 ?>
