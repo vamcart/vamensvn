@@ -647,6 +647,7 @@ define('YML_REFERER_TITLE' , 'Referer');
 define('YML_STRIP_TAGS_TITLE' , 'Strip tags');
 define('YML_UTF8_TITLE' , 'Encode to windows-1251');
 define('YML_USE_CDATA_TITLE' , 'Use CDATA');
+define('YML_SALES_NOTES_TITLE' , 'sales_notes tag');
 
 define('YML_NAME_DESC' , 'Store name for Yandex-Market. STORE_NAME used if this field empty.');
 define('YML_COMPANY_DESC' , 'Store owner for Yandex-Market. STORE_OWNER used if this field empty.');
@@ -658,6 +659,7 @@ define('YML_REFERER_DESC' , 'Add referer to product link (ip or user agent)?');
 define('YML_STRIP_TAGS_DESC' , 'Strip html tags?');
 define('YML_UTF8_DESC' , 'Encode to UTF-8?');
 define('YML_USE_CDATA_DESC' , 'Use CDATA for product name and description?');
+define('YML_SALES_NOTES_DESC' , 'sales_notes tag value');
 
 // Изменение цен
 
