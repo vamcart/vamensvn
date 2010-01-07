@@ -42,4 +42,6 @@ define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
 define('EMPTY_CATEGORY', 'No faq');
 define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No faq at this moment');
 
+define('TEXT_FAQ_PAGE_URL', 'SEO URL FAQ');
+
 ?>
