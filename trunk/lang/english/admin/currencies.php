@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: currencies.php 899 2010-02-07 17:36:57 VaM $
+   $Id: currencies.php 899 2010-02-07 17:36:58 VaM $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
