@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: orders.php 1193 2007-10-07 17:36:57 VaM $
+   $Id: orders.php 1193 2010-10-07 17:36:57 VaM $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -150,6 +150,6 @@ define('TEXT_QTY','stock: ');
 define('TEXT_UNITS','');
 
 define('TEXT_ORDER_MAP','Map');
-define('MAP_API_KEY_ERROR','Get your API KEY at <a href=\"http://api.yandex.ru/maps/form.xml\" target=\"_blank\">http://api.yandex.ru/maps/form.xml</a> and set your key in Admin - Configuration - Specialmodules. <br /> Error:');
+define('MAP_API_KEY_ERROR','Get your API KEY at <a href=\"http://api.yandex.ru/maps/form.xml\" target=\"_blank\">http://api.yandex.ru/maps/form.xml</a> and set your key in Admin - Configuration - Specialmodules - Yandex Maps API Key. <br /> Error:');
 
 ?>
