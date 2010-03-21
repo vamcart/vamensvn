@@ -915,6 +915,8 @@ define('SET_BOX_FAQ_DESC', 'Enable/Disable box.');
 define('DISPLAY_START_PAGE_TITLE', 'Show start page column');
 define('DISPLAY_START_PAGE_DESC', 'Show start page column.');
 
+define('ENABLE_MAP_TAB_TITLE','Show map tab at order info page');
+define('ENABLE_MAP_TAB_DESC','');
 define('MAP_API_KEY_TITLE','Yandex Maps API Key');
 define('MAP_API_KEY_DESC','Your API Key.');
 
