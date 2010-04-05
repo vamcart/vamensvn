@@ -519,4 +519,6 @@ define('MANUAL_LINK_BACKUP','http://vamshop.ru/manual/ch12s06.html');
 
 define('TXT_FREE','<span class="Requirement"><strong>free</strong></span>');
 
+define('TEXT_PRINT_EAN','EAN');
+
 ?>
