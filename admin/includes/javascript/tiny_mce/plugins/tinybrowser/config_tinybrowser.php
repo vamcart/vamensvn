@@ -34,13 +34,13 @@ $tinybrowser = array();
 $tinybrowser['obfuscate'] = 's0123imerand0mjunk!!!111';
 
 // Set default language (ISO 639-1 code)
-$tinybrowser['language'] = 'en';
+$tinybrowser['language'] = 'ru';
 
 // Set the integration type (TinyMCE is default)
 $tinybrowser['integration'] = 'tinymce'; // Possible values: 'tinymce', 'fckeditor'
 
 // Default is rtrim($_SERVER['DOCUMENT_ROOT'],'/') (suitable when using absolute paths, but can be set to '' if using relative paths)
-$tinybrowser['docroot'] = rtrim($_SERVER['DOCUMENT_ROOT'],'/');
+$tinybrowser['docroot'] = rtrim(__DIR__,'/');
 
 // Folder permissions for Unix servers only
 $tinybrowser['unixpermissions'] = 0777;
