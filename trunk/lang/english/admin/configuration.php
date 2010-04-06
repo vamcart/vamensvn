@@ -920,4 +920,7 @@ define('ENABLE_MAP_TAB_DESC','');
 define('MAP_API_KEY_TITLE','Yandex Maps API Key');
 define('MAP_API_KEY_DESC','Your API Key.');
 
+define('AUTOMATIC_SEO_URL_TITLE','Automatically SEO URL');
+define('AUTOMATIC_SEO_URL_DESC','Enable/Disable Automatically SEO URL.');
+
 ?>
