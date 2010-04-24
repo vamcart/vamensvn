@@ -40,7 +40,7 @@
 
 <?php if (ADMIN_DROP_DOWN_NAVIGATION == 'true') { ?>
 
-          <table width="99%" align="center" border="0" cellspacing="0" cellpadding="0">
+          <table width="100%"  border="0" cellspacing="0" cellpadding="0">
             <tr>
               <td>
               
@@ -465,7 +465,7 @@
 				</div>
 				<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 				</li>
-				<li class="level1"><a href="<?php echo HTTP_SERVER . DIR_WS_CATALOG; ?>" target="_blank"><b><?php echo HEADER_TITLE_ONLINE_CATALOG; ?></b></a></li>
+				<li class="level1"><a href="<?php echo HTTP_SERVER . DIR_WS_CATALOG; ?>"  target="_blank"><b><?php echo HEADER_TITLE_ONLINE_CATALOG; ?></b></a></li>
 				<li class="level1"><a href="<?php echo vam_href_link(FILENAME_LOGOUT, '', 'NONSSL'); ?>"><b><?php echo BOX_HEADING_LOGOFF; ?></b></a></li>
 			</ul>
 		</div>
