@@ -581,4 +581,6 @@ define('text_trillions', 'trillions');
 define('text_one_trillion', 'one trillion');
 define('text_two_trillion', 'two trillion');
 
+define('BOX_YML_IMPORT','YML import/export');
+
 ?>
