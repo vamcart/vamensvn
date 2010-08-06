@@ -20,5 +20,7 @@ define('TEXT_YML_ERROR', 'File not uploaded');
 define('TEXT_YML_MAX_SIZE', 'Max file size:');
 define('TEXT_YML_IMPORT', 'Import');
 define('TEXT_YML_EXPORT', 'Export');
+define('TEXT_YML_CAT_ADDED','Categories Added: ');
+define('TEXT_YML_CAT_UPDATED','Categories Updated: ');
 
 ?>
