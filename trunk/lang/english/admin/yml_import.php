@@ -13,9 +13,9 @@
 
 define('HEADING_TITLE', 'YML Import/Export');
 
-define('TEXT_YML_UPDATED', 'Updated ');
-define('TEXT_YML_CHANGED', 'Not changed ');
-define('TEXT_YML_ADDED','Added ');
+define('TEXT_YML_UPDATED', 'Updated: ');
+define('TEXT_YML_CHANGED', 'Not changed: ');
+define('TEXT_YML_ADDED','Added: ');
 define('TEXT_YML_ERROR', 'File not uploaded');
 define('TEXT_YML_MAX_SIZE', 'Max file size:');
 define('TEXT_YML_IMPORT', 'Import');
