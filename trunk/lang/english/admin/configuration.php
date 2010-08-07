@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: configuration.php 1286 2010-07-13 17:36:59 VaM $
+   $Id: configuration.php 1286 2010-08-13 17:36:59 VaM $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
