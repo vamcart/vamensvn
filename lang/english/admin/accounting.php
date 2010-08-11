@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: accounting.php 1125 2007-03-09 11:13:01Z VaM $   
+   $Id: accounting.php 1125 2010-03-09 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -108,5 +108,6 @@ define('ACCESS_PARAMETERS','');
 define('ACCESS_PARAMETERS_EXPORT','');
 define('ACCESS_SELECT_FEATURED','');
 define('ACCESS_SELECT_SPECIAL','');
+define('ACCESS_YML_IMPORT','');
 
 ?>
