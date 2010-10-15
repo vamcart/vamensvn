@@ -141,7 +141,7 @@ define('HEADING_PRICES_OPTIONS','<b>Price options</b>');
 define('HEADING_PRODUCT_IMAGES','<b>Products Images</b>');
 define('TEXT_PRODUCTS_WEIGHT_INFO','<small>(kg)</small>');
 define('TEXT_PRODUCTS_SHORT_DESCRIPTION','Short description:');
-define('TEXT_PRODUCTS_KEYWORDS', 'Extra words for Search:');
+define('TEXT_PRODUCTS_KEYWORDS', 'Tags:');
 define('TXT_STK','Pcs: ');
 define('TXT_PRICE','a :');
 define('TXT_NETTO','Net price: ');
