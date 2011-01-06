@@ -32,4 +32,28 @@ Description: <b>{$COUPON_DESC}</b> <br>
 <br>
 To use the coupon enter the redeem code which is {$COUPON_CODE} during checkout while making a purchase {/if} </font></p></td>
   </tr>
+  
+{if $LINK}
+<table  width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
+  <tr>
+    <td><p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><b>Thank
+        you for subscribing our newsletter. <br>
+        Please you click on the activation link to activate this service. If you
+        should <br>
+        not have registered yourselves in newsletter and/or the receipt of the
+        Newsletters <br>
+        is not wanted, we wish you to do nothing. Your address is then deleted
+        automatically <br>
+        with the next actualization of the data base.
+      <table width="100%"  border="0" bgcolor="f1f1f1">
+    <tr>
+          <td><b>Your activation-link:<br>
+            </b>><a href="{$LINK}">{$LINK}</a>
+      </td>
+    </tr>
+  </table></font></td>
+  </tr>
+</table>
+{/if}
+  
 </table>
