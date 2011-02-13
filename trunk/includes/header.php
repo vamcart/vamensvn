@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: header.php 1140 2010-02-06 20:14:56 VaM $   
+   $Id: header.php 1140 2011-02-06 20:14:56 VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -107,6 +107,7 @@ if (strstr($PHP_SELF, FILENAME_PRODUCT_INFO)) {
 <?php
  }
 ?>
+<script type="text/javascript" src="jscript/jquery/jquery.js"></script>
 <script type="text/javascript" src="jscript/jscript_JsHttpRequest.js"></script>
 <script type="text/javascript" src="jscript/jscript_ajax.js"></script>
 <?php
