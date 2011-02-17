@@ -80,6 +80,10 @@ define('TEXT_EASYPOPULATE_LABEL_SORT','sort order');
 define('TEXT_EASYPOPULATE_LABEL_PAGE_URL','page seo url');
 define('TEXT_EASYPOPULATE_LABEL_SHORT_DESCRIPTION','short description');
 define('TEXT_EASYPOPULATE_LABEL_KEYWORDS','product tags');
+define('TEXT_EASYPOPULATE_LABEL_DISCOUNT_ALLOWED','max allowed discount');
+define('TEXT_EASYPOPULATE_LABEL_STARTPAGE','show on start page');
+define('TEXT_EASYPOPULATE_LABEL_STARTPAGE_SORT','start page sort order');
+define('TEXT_EASYPOPULATE_LABEL_XML','products xml');
 
 define('TEXT_EASYPOPULATE_FILTER_BY','Filter by: ');
 define('TEXT_EASYPOPULATE_FILTER_CATEGORY','- Category -');
