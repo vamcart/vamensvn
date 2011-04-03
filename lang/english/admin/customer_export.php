@@ -17,23 +17,23 @@
    Released under the GNU General Public License 
    --------------------------------------------------------------*/
 
-define('HEADING_TITLE', 'Выгрузка клиентов');
-define('TABLE_HEADING_CUSTOMER_EXPORT', 'Выгрузка и сохранение клиентской базы на локальный компьютер');
-define('TEXT_CUSTOMER_EXPORT_ALL','Все записи по клиентам будут сохранены в один файл');
-define('TEXT_CUSTOMER_EXPORT','Выгрузка');
-define('TEXT_CUSTOMER_EXPORT_SEPARATOR','Разделение');
-define('TABLE_HEADING_FIRSTNAME', 'Имя');
-define('TABLE_HEADING_LASTNAME', 'Фамилия');
+define('HEADING_TITLE', 'Customers export');
+define('TABLE_HEADING_CUSTOMER_EXPORT', 'Customers export');
+define('TEXT_CUSTOMER_EXPORT_ALL','Export all');
+define('TEXT_CUSTOMER_EXPORT','Export');
+define('TEXT_CUSTOMER_EXPORT_SEPARATOR','Separator');
+define('TABLE_HEADING_FIRSTNAME', 'First name');
+define('TABLE_HEADING_LASTNAME', 'Last name');
 define('TABLE_HEADING_EMAIL', 'Email:');
-define('TABLE_HEADING_GENDER', 'Пол');
-define('TABLE_HEADING_LOCATION', 'Регион');
-define('TABLE_HEADING_TELEPHONE', 'Телефон');
-define('TABLE_HEADING_DOB', 'Д.Р.');
-define('TABLE_HEADING_COUNTRY', 'Страна');
-define('TABLE_HEADING_COMPANY', 'Компания');
-define('TABLE_HEADING_STREET', 'Адрес');
-define('TABLE_HEADING_ZIP', 'Индекс');
-define('TABLE_HEADING_CITY', 'Город');
-define('TABLE_HEADING_SUBURB', 'Район');
-define('TABLE_HEADING_FAX', 'Факс');
+define('TABLE_HEADING_GENDER', 'Gender');
+define('TABLE_HEADING_LOCATION', 'Location');
+define('TABLE_HEADING_TELEPHONE', 'Telephone');
+define('TABLE_HEADING_DOB', 'Date of birth');
+define('TABLE_HEADING_COUNTRY', 'Country');
+define('TABLE_HEADING_COMPANY', 'Company');
+define('TABLE_HEADING_STREET', 'Street Address');
+define('TABLE_HEADING_ZIP', 'Postcode');
+define('TABLE_HEADING_CITY', 'City');
+define('TABLE_HEADING_SUBURB', 'Suburb');
+define('TABLE_HEADING_FAX', 'Fax');
 ?>

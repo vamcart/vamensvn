@@ -17,10 +17,10 @@
    Released under the GNU General Public License 
    --------------------------------------------------------------*/
 
-define('HEADING_TITLE', 'Выгрузка заказов в excel');
+define('HEADING_TITLE', 'Orders export');
 
-define('INPUT_START', 'От номера');
-define('INPUT_END', 'До номера');
-define('INPUT_VALID', 'Сохранить в .xls');
-define('INPUT_DESC', 'Выберите номера заказов для экспорта. Чтобы сохранить ВСЕ заказы оставьте оба поля пустыми. Оставьте одно поле пустым, чтобы сохранить заказы до- или после- заказа такого-то.');
+define('INPUT_START', 'From #');
+define('INPUT_END', 'To');
+define('INPUT_VALID', 'Save to .xls');
+define('INPUT_DESC', '');
 ?>
