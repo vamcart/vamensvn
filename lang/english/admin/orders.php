@@ -152,4 +152,6 @@ define('TEXT_UNITS','');
 define('TEXT_ORDER_MAP','Map');
 define('MAP_API_KEY_ERROR','Get your API KEY at <a href=\"http://api.yandex.ru/maps/form.xml\" target=\"_blank\">http://api.yandex.ru/maps/form.xml</a> and set your key in Admin - Configuration - Specialmodules - Yandex Maps API Key. <br /> Error:');
 
+define('BUTTON_ORDERS_EXPORT','Orders Export');
+
 ?>
