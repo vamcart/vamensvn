@@ -7,6 +7,11 @@ You successful created your Customer Account, now you got following featues in o
 -Previous orders  - you can check  your previous orders at any time.
 -Opinions about products- tell zour oppinion about our products to other customers
 
+Login information:
+
+E-mail: {$EMAIL_ADDRESS}
+Password: {$PASSWORD}
+
 If you have questions to our customer-service, contact us directly:{$content.MAIL_REPLY_ADDRESS}
 
 Caution: This eMail-address was announced to us by a customer. If you did not announce yourself, please send an eMail to: {$content.MAIL_REPLY_ADDRESS}
