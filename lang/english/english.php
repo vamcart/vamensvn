@@ -632,4 +632,6 @@ define('text_trillions', 'trillions');
 define('text_one_trillion', 'one trillion');
 define('text_two_trillion', 'two trillion');
 
+define('PIN_NOT_AVAILABLE', 'Products out of stock during checkout. Personnel notified.');
+
 ?>
