@@ -583,4 +583,7 @@ define('text_two_trillion', 'two trillion');
 
 define('BOX_YML_IMPORT','YML import/export');
 
+define('TABLE_TEXT_IS_PIN','Is PIN code');
+define('BOX_CATALOG_PIN_LOADER','PIN loader');
+
 ?>

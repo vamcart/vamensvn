@@ -111,5 +111,6 @@ define('ACCESS_SELECT_SPECIAL','');
 define('ACCESS_YML_IMPORT','');
 define('ACCESS_CUSTOMER_EXPORT','');
 define('ACCESS_EXPORTORDERS','');
+define('ACCESS_PIN_LOADER','');
 
 ?>
