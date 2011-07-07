@@ -829,7 +829,7 @@ define('CG_MY_GZIP_TITLE', 'GZip Compression');
 define('CG_MY_SESSIONS_TITLE', 'Sessions');
 define('CG_META_TAGS_TITLE', 'Meta Tags');
 define('CG_VAT_ID_TITLE', 'Vat');
-define('CG_GOOGLE_TITLE', 'Google Analytics');
+define('CG_GOOGLE_TITLE', 'Counters');
 define('CG_IMPORT_EXPORT_TITLE', 'Import/Export');
 define('CG_AFTER_BUY_TITLE', 'Afterbuy');
 define('CG_SEARCH_TITLE', 'Search Options');
