@@ -606,10 +606,11 @@ define('DEFAULT_CUSTOMERS_VAT_STATUS_ID_LOCAL_DESC','Customers-group for custome
 // Google Conversion
 define('GOOGLE_CONVERSION_TITLE','Enable Google Analytics');
 define('GOOGLE_CONVERSION_DESC','Track the Conversion Keywords at orders');
-define('GOOGLE_CONVERSION_ID_TITLE','Your ID');
+define('GOOGLE_CONVERSION_ID_TITLE','Your Google Analytics ID');
 define('GOOGLE_CONVERSION_ID_DESC','Your Google Analytics ID (like UA-XXXXXX-X)');
 define('GOOGLE_LANG_TITLE','Shop Language');
 define('GOOGLE_LANG_DESC','ISO Code of used Language');
+define('YANDEX_METRIKA_ID_TITLE','Your Yandex Metrika ID');define('YANDEX_METRIKA_ID_DESC','Your Yandex Metrika ID.');define('YANDEX_METRIKA_TITLE','Enable Yandex Metrika');define('YANDEX_METRIKA_DESC','Enable Yandex Metrika.');
 
 // Afterbuy
 define('AFTERBUY_ACTIVATED_TITLE','Activ');
