@@ -1,7 +1,7 @@
 {config_load file="$language/lang_$language.conf" section="boxes"}
-{config_load file="$language/lang_$language.conf" section="boxes"}
+{config_load file="$language/lang_$language.conf" section="index"}
 {if $deny_cart neq 'true'}
-<!-- Shopping cart box -->
+<!-- Бокс корзина -->
 <script type="text/javascript" src="jscript/jscript_ajax_cart.js"></script>
 <div id="divShoppingCart">
 <div id="boxCart">
@@ -15,7 +15,7 @@
 {foreach name=aussen item=products_data from=$products}
 
 {if $smarty.const.AJAX_CART == 'true'}
-<form class="cart_quantity" action="{$products_data.LINK}/action/update_product" method="post" onsubmit="doDelProduct(this); return false;">{$products_data.PRODUCTS_QTY}
+<form id="update_cart" class="cart_quantity" action="{$products_data.LINK}/action/update_product" method="post" onsubmit="doDelProduct(this); return false;">{$products_data.PRODUCTS_QTY}
 {/if}
 
 {$products_data.QTY}&nbsp;x&nbsp;&nbsp;<a href="{$products_data.LINK}" title="{$products_data.NAME}">{$products_data.NAME|vam_truncate:$smarty.const.MAX_DISPLAY_CART:"...":true}</a>&nbsp;
@@ -45,7 +45,7 @@
 <p class="CartContentCenter">
 <a href="{$LINK_CHECKOUT}">{#text_checkout#}</a>
 </p>
-{else} <!-- Empty cart --> 
+{else} <!-- Пустая корзина --> 
 <p>
 {#text_empty_cart#}
 </p>
@@ -55,5 +55,5 @@
 <b class="bottom"><b class="b5b"></b><b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b></b>
 </div>
 </div>
-<!-- /Shopping cart box -->
+<!-- /Бокс корзина -->
 {/if}
