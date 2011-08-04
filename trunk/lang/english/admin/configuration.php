@@ -925,6 +925,8 @@ define('AUTOMATIC_SEO_URL_TITLE','Automatically SEO URL');
 define('AUTOMATIC_SEO_URL_DESC','Enable/Disable Automatically SEO URL.');
 
 define('CG_EDIT_ORDERS', 'Order Editor');
+define('CG_EDIT_ORDERS_TITLE', 'Order Editor');
+define('CG_EDIT_ORDERS_DESC', '');
 
 define('ORDER_EDITOR_PAYMENT_DROPDOWN_TITLE','Display the Payment Method dropdown?');
 define('ORDER_EDITOR_PAYMENT_DROPDOWN_DESC','Based on this selection Order Editor will display the payment method as a dropdown menu (true) or as an input field (false).');
