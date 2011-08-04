@@ -924,4 +924,15 @@ define('MAP_API_KEY_DESC','Your API Key.');
 define('AUTOMATIC_SEO_URL_TITLE','Automatically SEO URL');
 define('AUTOMATIC_SEO_URL_DESC','Enable/Disable Automatically SEO URL.');
 
+define('CG_EDIT_ORDERS', 'Order Editor');
+
+define('ORDER_EDITOR_PAYMENT_DROPDOWN_TITLE','Display the Payment Method dropdown?');
+define('ORDER_EDITOR_PAYMENT_DROPDOWN_DESC','Based on this selection Order Editor will display the payment method as a dropdown menu (true) or as an input field (false).');
+define('ORDER_EDITOR_USE_SPPC_TITLE','Use prices from Separate Pricing Per Customer?');
+define('ORDER_EDITOR_USE_SPPC_DESC','This should be set to true only if SPPC is installed.');
+define('ORDER_EDITOR_USE_AJAX_TITLE','Allow the use of AJAX to update order information?');
+define('ORDER_EDITOR_USE_AJAX_DESC','This must be set to false if using a browser on which JavaScript is disabled or not available.');
+define('ORDER_EDITOR_CREDIT_CARD_TITLE','Select your credit card payment method');
+define('ORDER_EDITOR_CREDIT_CARD_DESC','Order Editor will display the credit card fields when this payment method is selected.');
+
 ?>
