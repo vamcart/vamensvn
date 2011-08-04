@@ -605,8 +605,13 @@ define('TABLE_SPSR_ZONES', 'spsr_zones');
   
 define('FILENAME_CUSTOMERS_EXPORT', 'customer_export.php');
 define('FILENAME_EXPORTORDERS', 'exportorders.php');
-  
+
 define('TABLE_PRODUCTS_PINS', 'products_pins');
 define('FILENAME_PIN_LOADER', 'pin_loader.php');
 
+define('ORDER_EDITOR_PAYMENT_DROPDOWN', 'true');
+define('ORDER_EDITOR_USE_SPPC', 'false');
+define('ORDER_EDITOR_USE_AJAX', 'true');
+define('ORDER_EDITOR_CREDIT_CARD', 'cc');
+  
 ?>
