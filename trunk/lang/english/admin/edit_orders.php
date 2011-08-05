@@ -276,4 +276,7 @@ define('EDIT_ORDER_TAB_PAYMENT','Payment');
 define('EDIT_ORDER_TAB_PRODUCTS','Products/Shipping');
 define('EDIT_ORDER_TAB_COMMENTS','Comments');
 
+define('BUTTON_BACK_TO_ORDER','Back to Order');
+define('BUTTON_BACK_TO_ORDERS_LIST','Back to Orders List');
+
 ?>
