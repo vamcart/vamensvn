@@ -271,4 +271,9 @@ define('BOX_HEADING_MANUAL_ORDER', 'Manual Orders');
 define('BOX_MANUAL_ORDER_CREATE_ACCOUNT', 'Create Account');
 define('BOX_MANUAL_ORDER_CREATE_ORDER', 'Create Order');
 
+define('EDIT_ORDER_TAB_CUSTOMER','Customer');
+define('EDIT_ORDER_TAB_PAYMENT','Payment');
+define('EDIT_ORDER_TAB_PRODUCTS','Products/Shipping');
+define('EDIT_ORDER_TAB_COMMENTS','Comments');
+
 ?>
