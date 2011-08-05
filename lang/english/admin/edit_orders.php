@@ -106,7 +106,7 @@ define('EMAIL_TEXT_COMMENTS_UPDATE', 'The comments for your order are' . "\n\n%s
 define('ERROR_ORDER_DOES_NOT_EXIST', 'Error: Order %s does not exist.');
 define('SUCCESS_ORDER_UPDATED', 'Success: Order has been successfully updated.');
 define('SUCCESS_EMAIL_SENT', 'Completed: The order was updated and an email with the new information was sent.');
-
+	
 //the hints
 define('HINT_UPDATE_TO_CC', 'Set payment method to ' . ORDER_EDITOR_CREDIT_CARD . ' and the other fields will be displayed automatically.  CC fields are hidden if any other payment method is selected.  The name of the payment method that, when selected, will display the CC fields is configurable in the Order Editor area of the Configuration section of the Administration panel.');
 define('HINT_UPDATE_CURRENCY', 'Changing the currency will cause the shipping quotes and order totals to recalculate and reload.');
