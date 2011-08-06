@@ -937,4 +937,77 @@ define('ORDER_EDITOR_USE_AJAX_DESC','This must be set to false if using a browse
 define('ORDER_EDITOR_CREDIT_CARD_TITLE','Select your credit card payment method');
 define('ORDER_EDITOR_CREDIT_CARD_DESC','Order Editor will display the credit card fields when this payment method is selected.');
 
+define('CG_PRODUCTS_SPECIFICATIONS', 'Products Specifications');
+
+//Products Specifications
+
+define('SPECIFICATIONS_PRODUCTS_HEAD_TITLE', '<b>Products Info Page</b>');
+define('SPECIFICATIONS_PRODUCTS_HEAD_DESC', 'Products Comparison page');
+define('SPECIFICATIONS_MINIMUM_PRODUCTS_TITLE', 'Minimum Spec Products');
+define('SPECIFICATIONS_MINIMUM_PRODUCTS_DESC', 'The minimum number of specifications needed to have the Specifications box show up on the Product Info page');
+define('SPECIFICATIONS_SHOW_NAME_PRODUCTS_TITLE', 'Show Specification Name');
+define('SPECIFICATIONS_SHOW_NAME_PRODUCTS_DESC', 'Show the name of the specification in the box');
+define('SPECIFICATIONS_SHOW_TITLE_PRODUCTS_TITLE', 'Show Spec Box Title');
+define('SPECIFICATIONS_SHOW_TITLE_PRODUCTS_DESC', 'Show the title above the Specifications box');
+define('SPECIFICATIONS_BOX_FRAME_STYLE_TITLE', 'Spec Box Frame Style');
+define('SPECIFICATIONS_BOX_FRAME_STYLE_DESC', 'Show the Specifications in a standard box (Stock), a simple outline box (Simple), no box (Plain), or a tabbed content box (Tabs)');
+define('SPECIFICATIONS_REVIEWS_TAB_TITLE', 'Show Reviews Tab');
+define('SPECIFICATIONS_REVIEWS_TAB_DESC', 'Show the Reviews tab');
+define('SPECIFICATIONS_MAX_REVIEWS_TITLE', 'Max Reviews in Tab');
+define('SPECIFICATIONS_MAX_REVIEWS_DESC', 'The maxmum number of reviews that can show in the Reviews tab');
+define('SPECIFICATIONS_QUESTION_TAB_TITLE', 'Show Question Tab');
+define('SPECIFICATIONS_QUESTION_TAB_DESC', 'Show the Ask a Question tab');
+
+define('SPECIFICATIONS_COMPARISON_HEAD_TITLE', '<b>Products Comparison Page</b>');
+define('SPECIFICATIONS_COMPARISON_HEAD_DESC', 'Products Comparison page');
+define('SPECIFICATIONS_MINIMUM_COMPARISON_TITLE', 'Minimum Spec Comparison');
+define('SPECIFICATIONS_MINIMUM_COMPARISON_DESC', 'The minimum number of products having specifications needed to have the Comparison page show up for a Category');
+define('SPECIFICATIONS_COMP_LINK_TITLE', 'Comparison Link in Index');
+define('SPECIFICATIONS_COMP_LINK_DESC', 'Show a link to the Comparison table on the Index page');
+define('SPECIFICATIONS_COMP_TABLE_ROW_TITLE', 'Comparison Row in Table');
+define('SPECIFICATIONS_COMP_TABLE_ROW_DESC', 'Show a link to the Comparison in the Products list on the Index page');
+define('SPECIFICATIONS_BOX_COMPARISON_TITLE', 'Show Comparison');
+define('SPECIFICATIONS_BOX_COMPARISON_DESC', 'Show the Comparison table in a separate page');
+define('SPECIFICATIONS_BOX_COMP_INDEX_TITLE', 'Comparison in Index');
+define('SPECIFICATIONS_BOX_COMP_INDEX_DESC', 'Show the Comparison table instead of the Products list in the Index page');
+define('SPECIFICATIONS_COMP_SUFFIX_TITLE', 'Comparison Suffix in Header');
+define('SPECIFICATIONS_COMP_SUFFIX_DESC', 'Show the Suffix in the Comparison table header (Otherwise in each field)');
+define('SPECIFICATIONS_COMPARISON_STYLE_TITLE', 'Comparison Box Style');
+define('SPECIFICATIONS_COMPARISON_STYLE_DESC', 'Show the Specifications in a standard box (Stock), a simple outline box (Simple), or no box (Plain)');
+define('SPECIFICATIONS_COMBO_MFR_TITLE', 'Spec Combo Manufacturer');
+define('SPECIFICATIONS_COMBO_MFR_DESC', 'Show the Manufacturer in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_WEIGHT_TITLE', 'Spec Combo Weight');
+define('SPECIFICATIONS_COMBO_WEIGHT_DESC', 'Show the Weight in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_PRICE_TITLE', 'Spec Combo Price');
+define('SPECIFICATIONS_COMBO_PRICE_DESC', 'Show the Price in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_MODEL_TITLE', 'Spec Combo Model');
+define('SPECIFICATIONS_COMBO_MODEL_DESC', 'Show the Model number in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_IMAGE_TITLE', 'Spec Combo Image');
+define('SPECIFICATIONS_COMBO_IMAGE_DESC', 'Show the Image in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_NAME_TITLE', 'Spec Combo Name');
+define('SPECIFICATIONS_COMBO_NAME_DESC', 'Show the Name in a special combo box (0 = No, 1-9 = Sort Order)');
+define('SPECIFICATIONS_COMBO_BUY_NOW_TITLE', 'Spec Combo Buy Now');
+define('SPECIFICATIONS_COMBO_BUY_NOW_DESC', 'Show the Buy Now in a special combo box (0 = No, 1-9 = Sort Order)');
+
+define('SPECIFICATIONS_FILTERS_HEAD_TITLE', '<b>Products Filters</b>');
+define('SPECIFICATIONS_FILTERS_HEAD_DESC', 'Products Filters');
+define('SPECIFICATIONS_FILTERS_MODULE_TITLE', 'Show Filters Module');
+define('SPECIFICATIONS_FILTERS_MODULE_DESC', 'Show the Filters module in the center column (main part of the page)');
+define('SPECIFICATIONS_FILTERS_BOX_TITLE', 'Show Filters Box');
+define('SPECIFICATIONS_FILTERS_BOX_DESC', 'Show the Filters box in the side column');
+define('SPECIFICATIONS_FILTER_MINIMUM_TITLE', 'Minimum Spec Filter');
+define('SPECIFICATIONS_FILTER_MINIMUM_DESC', 'The minimum number of filters needed to have the Filters box show up in the column');
+define('SPECIFICATIONS_FILTER_SUBCATEGORIES_TITLE', 'Filter Subcategories');
+define('SPECIFICATIONS_FILTER_SUBCATEGORIES_DESC', 'Include subcategories in the filter results');
+define('SPECIFICATIONS_FILTER_SHOW_COUNT_TITLE', 'Filter Show Count');
+define('SPECIFICATIONS_FILTER_SHOW_COUNT_DESC', 'Show the number of products that the filter would return');
+define('SPECIFICATIONS_FILTER_NO_RESULT_TITLE', 'Filter No Result');
+define('SPECIFICATIONS_FILTER_NO_RESULT_DESC', 'What to show for a filter that would return no result.');
+define('SPECIFICATIONS_FILTER_BREADCRUMB_TITLE', 'Filter Show Breadcrumb');
+define('SPECIFICATIONS_FILTER_BREADCRUMB_DESC', 'Show currently applied filters in the Breadcrumb trail with option to remove');
+define('SPECIFICATIONS_FILTER_IMAGE_WIDTH_TITLE', 'Filter Image Width');
+define('SPECIFICATIONS_FILTER_IMAGE_WIDTH_DESC', 'Set the width of the images displayed as filters in the filter box.');
+define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_TITLE', 'Filter Image Height');
+define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_DESC', 'Set the height of the images displayed as filters in the filter box.');
+
 ?>
