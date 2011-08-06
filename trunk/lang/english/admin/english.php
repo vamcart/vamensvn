@@ -588,4 +588,7 @@ define('BOX_YML_IMPORT','YML import/export');
 define('TABLE_TEXT_IS_PIN','Is PIN code');
 define('BOX_CATALOG_PIN_LOADER','PIN loader');
 
+// Products Specifications
+define('BOX_CATALOG_PRODUCTS_SPECIFICATIONS', 'Products Specifications');
+
 ?>
