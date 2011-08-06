@@ -96,6 +96,8 @@ define('BOX_CONFIGURATION_24', 'Quick Price Updates');
 define('BOX_CONFIGURATION_25', 'Contribution Installer');
 define('BOX_CONFIGURATION_27', 'Site Maintenance');
 define('BOX_CONFIGURATION_29', 'Boxes');
+define('BOX_CONFIGURATION_72', 'Order Editor');
+define('BOX_CONFIGURATION_1610', 'Products Specifications');
 
 define('BOX_MODULES', 'Payment-/Shipping-/Billing-Modules');
 define('BOX_PAYMENT', 'Payment Systems');
