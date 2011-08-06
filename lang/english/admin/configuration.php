@@ -938,6 +938,8 @@ define('ORDER_EDITOR_CREDIT_CARD_TITLE','Select your credit card payment method'
 define('ORDER_EDITOR_CREDIT_CARD_DESC','Order Editor will display the credit card fields when this payment method is selected.');
 
 define('CG_PRODUCTS_SPECIFICATIONS', 'Products Specifications');
+define('CG_PRODUCTS_SPECIFICATIONS_TITLE', 'Products Specifications');
+define('CG_PRODUCTS_SPECIFICATIONS_DESC', '');
 
 //Products Specifications
 
