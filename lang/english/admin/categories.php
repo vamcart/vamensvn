@@ -230,4 +230,23 @@ define('TEXT_PRODUCTS_PAGE_URL', 'Products page SEO URL:');
 define('TEXT_PRODUCTS_QUANTITY_MIN', 'Min. quantity to order:');
 define('TEXT_PRODUCTS_QUANTITY_MAX', 'Max. quantity to order:');
 
+// Start Products Specifications
+  define ('TEXT_TAB_DESCRIPTION', 'Description');
+  define ('TEXT_TAB_SPECIFICATIONS', 'Specifications');
+  define ('TEXT_TAB_1', 'Manuals');
+  define ('TEXT_TAB_2', 'Video');
+  define ('TEXT_TAB_3', 'Accessories');
+  define ('TEXT_TAB_4', 'Reviews');
+  define ('TEXT_TAB_5', 'Warranty');
+  define ('TEXT_TAB_6', 'Shipping');
+  define ('TEXT_TITLE_1', 'Manuals');
+  define ('TEXT_TITLE_2', 'Video');
+  define ('TEXT_TITLE_3', 'Accessories');
+  define ('TEXT_TITLE_4', 'Reviews');
+  define ('TEXT_TITLE_5', 'Warranty');
+  define ('TEXT_TITLE_6', 'Shipping');
+  define ('SPECIFICATION_TITLE_PRODUCTS', '&nbsp;Specifications:');
+  define ('SPECIFICATIONS_TEXT_ALL', 'All');
+// End Products Specifications
+
 ?>
