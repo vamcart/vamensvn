@@ -257,6 +257,7 @@ define('IMAGE_NEW_FILTER','New Filter');
 define('IMAGE_NEW_VALUE','New Value');
 define('IMAGE_SAVE','Save');
 define('IMAGE_DELETE','Delete');
+define('IMAGE_EDIT','Edit');
 define('IMAGE_MOVE','Move');
 define('IMAGE_COPY','Copy');
 define('IMAGE_LINK','Link');
