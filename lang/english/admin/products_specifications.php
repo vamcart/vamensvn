@@ -249,4 +249,21 @@
   define ('TEXT_MULTI_IMAGE', 'Multi-image');
   define ('TEXT_FINAL_PRICE', 'Final Price');
 
+define('IMAGE_NEW_SPECIFICATION_GROUP','Новая группа спецификаций');
+define('IMAGE_BACK','Вернуться');
+define('IMAGE_CANCEL','Отменить');
+define('IMAGE_NEW_PRODUCT','Новая спецификация');
+define('IMAGE_NEW_FILTER','Новый фильтр');
+define('IMAGE_NEW_VALUE','Новое значение');
+define('IMAGE_SAVE','Сохранить');
+define('IMAGE_DELETE','Удалить');
+define('IMAGE_MOVE','Переместить');
+define('IMAGE_COPY','Копировать');
+define('IMAGE_LINK','Привязать к категории');
+define('IMAGE_LINK_ALL','Привязать ко всем категориям');
+define('IMAGE_UNLINK','Снять с категории');
+define('IMAGE_UNLINK_ALL','Снять со всех категорий');
+define('IMAGE_SORT','Сортировать');
+define('IMAGE_IMPORT_MANUFACTURERS','Импорт производителей');
+
 ?>
