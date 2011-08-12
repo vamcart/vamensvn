@@ -591,4 +591,7 @@ define('BOX_CATALOG_PIN_LOADER','PIN loader');
 // Products Specifications
 define('BOX_CATALOG_PRODUCTS_SPECIFICATIONS', 'Products Specifications');
 
+define('BOX_HEADING_ORDERS','Orders');
+define('BUTTON_ORDERS_EXPORT','Orders Export');
+
 ?>
