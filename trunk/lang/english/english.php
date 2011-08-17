@@ -634,4 +634,14 @@ define('text_two_trillion', 'two trillion');
 
 define('PIN_NOT_AVAILABLE', 'Products out of stock during checkout. Personnel notified.');
 
+// Start Products Specifications
+// Products Filter box text in includes/boxes/products_filter.php
+define('BOX_HEADING_PRODUCTS_FILTER', 'Filter Products');
+define('TEXT_SHOW_ALL', 'Show All');
+define('TEXT_FIND_PRODUCTS', 'Find Matching Products');
+// End Products Specifications
+
+// Products Specifications
+define('TEXT_NOT_AVAILABLE', 'N/A');
+
 ?>
