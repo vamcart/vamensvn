@@ -1,12 +1,12 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: english.php 1213 2008-02-26 13:12:58 VaM $  
+   $Id: english.php 1213 2011-02-26 13:12:58 VaM $  
 
-   VaM Shop - open source ecommerce solution
+   VamShop - open source ecommerce solution
    http://vamshop.ru
    http://vamshop.com
 
-   Copyright (c) 2007 VaM Shop
+   Copyright (c) 2007 VamShop
    --------------------------------------------------------------
    based on:
    (c) 2003	 nextcommerce (english.php,v 1.8 2003/08/13); www.nextcommerce.org
@@ -77,14 +77,14 @@ define('PULL_DOWN_DEFAULT','Please select a Country!');
 // index.php
 define('TITLE_SELECT_LANGUAGE','Select your language!');
 
-define('TEXT_WELCOME_INDEX','<b>Welcome to VaM Shop</b><br /><br />VaM Shop is an open source e-commerce solution under on going development by the VaM Shop Team and its community.<br /> Its feature packed out-of-the-box installation allows store owners to setup, run, and maintain their online stores with minimum effort and with no costs involved.<br /> VaM Shop combines open source solutions to provide a free and open development platform, which includes the powerful PHP web scripting language, the stable Apache web server, and the fast MySQL database server.<br /><br />With no restrictions or special requirements, VaM Shop can be installed on any PHP4 enabled web server, on any environment that PHP and MySQL supports, which includes GNU/Linux, Solaris, BSD, and Microsoft Windows environments.');
+define('TEXT_WELCOME_INDEX','<b>Welcome to VamShop</b><br /><br />VamShop is an open source e-commerce solution under on going development by the VamShop Team and its community.<br /> Its feature packed out-of-the-box installation allows store owners to setup, run, and maintain their online stores with minimum effort and with no costs involved.<br /> VamShop combines open source solutions to provide a free and open development platform, which includes the powerful PHP web scripting language, the stable Apache web server, and the fast MySQL database server.<br /><br />With no restrictions or special requirements, VamShop can be installed on any PHP4 enabled web server, on any environment that PHP and MySQL supports, which includes GNU/Linux, Solaris, BSD, and Microsoft Windows environments.');
 define('TEXT_WELCOME_STEP1','<b>Main database and webserver settings</b><br /><br />Please enter your Database and webserver settings.<br />');
-define('TEXT_WELCOME_STEP2','<b>Install database</b><br /><br />The VaM Shop installer will automatically install the VaM Shop database.');
+define('TEXT_WELCOME_STEP2','<b>Install database</b><br /><br />The VamShop installer will automatically install the VamShop database.');
 define('TEXT_WELCOME_STEP3','<b>Database import.</b><br /><br />');
-define('TEXT_WELCOME_STEP4','<b>Configure VaM Shop main files</b><br /><br /><b>If there are old configure files from a further installation, VaM Shop wiill delete them</b><br /><br />The installer will set up the configuration files with the main parameters for database and file structur.<br /><br />You can choose between different session handling systems.');
+define('TEXT_WELCOME_STEP4','<b>Configure VamShop main files</b><br /><br /><b>If there are old configure files from a further installation, VamShop wiill delete them</b><br /><br />The installer will set up the configuration files with the main parameters for database and file structur.<br /><br />You can choose between different session handling systems.');
 define('TEXT_WELCOME_STEP5','<b>Webserver Configuration</b><br /><br />');
 define('TEXT_WELCOME_STEP6','<b>Basic shop configuration</b><br /><br />The installer will create the admin account and will perform some db actions.<br /> The given informations for <b>Country</b> and <b>Post Code</b> are used for shipping and tax callculations.');
-define('TEXT_WELCOME_STEP7','<b>Guest and default customers setup</b><br /><br />The VaM Shop group- and pricesystem got nearly infinite possibilities of different prices.<br /><br />
+define('TEXT_WELCOME_STEP7','<b>Guest and default customers setup</b><br /><br />The VamShop group- and pricesystem got nearly infinite possibilities of different prices.<br /><br />
 <b>% discount on single product</b><br />
 %max can be set for every single product, and single customers group<br />
 if %max at product = 10.00% and %max for group = 5% -> 5% discount on product<br />
@@ -99,34 +99,34 @@ user group 2 -> 10% discount on product Y<br />
 user group 3 -> a special group price on product Y<br />
 user group 4 -> netto price on product Y<br />
 ');
-define('TEXT_WELCOME_FINISHED','<b>VaM Shop installation successful!</b>');
+define('TEXT_WELCOME_FINISHED','<b>VamShop installation successful!</b>');
 // step1.php
 
 define('TITLE_CUSTOM_SETTINGS','Custom Settings');
-define('TEXT_IMPORT_DB','Import VaM Shop Database');
-define('TEXT_IMPORT_DB_LONG','Import the VaM Shop database structure which includes tables and sample data.');
+define('TEXT_IMPORT_DB','Import VamShop Database');
+define('TEXT_IMPORT_DB_LONG','Import the VamShop database structure which includes tables and sample data.');
 define('TEXT_AUTOMATIC','Automatic Configuration');
-define('TEXT_AUTOMATIC_LONG','The information you submit regarding the web server and database server will be automatically saved into both VaM Shop Shop and Administration Tool configuration files.');
+define('TEXT_AUTOMATIC_LONG','The information you submit regarding the web server and database server will be automatically saved into both VamShop Shop and Administration Tool configuration files.');
 define('TITLE_DATABASE_SETTINGS','Database Settings');
 define('TEXT_DATABASE_SERVER','Database Server');
 define('TEXT_DATABASE_SERVER_LONG','The database server can be in the form of a hostname, such as <i>db1.myserver.com</i>, or as an IP address, such as <i>192.168.0.1</i>.');
 define('TEXT_USERNAME','Username');
-define('TEXT_USERNAME_LONG','The username is used to connect to the database server. An example username is <i>mysql_10</i>.<br /><br />Note: If the VaM Shop Database is to be imported (selected above), the account used to connect to the database server needs to have Create and Drop permissions.');
+define('TEXT_USERNAME_LONG','The username is used to connect to the database server. An example username is <i>mysql_10</i>.<br /><br />Note: If the VamShop Database is to be imported (selected above), the account used to connect to the database server needs to have Create and Drop permissions.');
 define('TEXT_PASSWORD','Password:');
 define('TEXT_PASSWORD_LONG','The password is used together with the username, which forms the database user account.');
 define('TEXT_DATABASE','Database');
-define('TEXT_DATABASE_LONG','The database used to hold the catalog data. An example database name is <i>vamshop</i>.<br /><b>ATTENTION:</b> VaM Shop need an empty Database to perform Installation.');
+define('TEXT_DATABASE_LONG','The database used to hold the catalog data. An example database name is <i>vamshop</i>.<br /><b>ATTENTION:</b> VamShop need an empty Database to perform Installation.');
 define('TITLE_WEBSERVER_SETTINGS','Webserver Settings');
 define('TEXT_WS_ROOT','Webserver Root Directory');
 define('TEXT_WS_ROOT_LONG','The directory where your web pages are being served from, usually <i>/home/myname/public_html</i>.');
-define('TEXT_WS_XTC','Webserver "VaM Shop" Directory');
+define('TEXT_WS_XTC','Webserver "VamShop" Directory');
 define('TEXT_WS_vam_LONG','The directory where your catalog pages are being served from (from the webserver root directory), usually <i>/home/myname/public_html<b>/vamshop/</b></i>.');
 define('TEXT_WS_ADMIN','Webserver Administration Tool Directory');
 define('TEXT_WS_ADMIN_LONG','The directory where your administration tool pages are being served from (from the webserver root directory), usually <i>/home/myname/public_html<b>/vamshop/admin/</b></i>.');
 define('TEXT_WS_CATALOG','WWW Catalog Directory');
-define('TEXT_WS_CATALOG_LONG','The virtual directory where the VaM Shop Catalog module resides, usually <i>/vamshop/</i>.');
+define('TEXT_WS_CATALOG_LONG','The virtual directory where the VamShop Catalog module resides, usually <i>/vamshop/</i>.');
 define('TEXT_WS_ADMINTOOL','WWW Administration Tool Directory');
-define('TEXT_WS_ADMINTOOL_LONG','The virtual directory where the VaM Shop Administration Tool resides, usually <i>/vamshop/admin/</i>');
+define('TEXT_WS_ADMINTOOL_LONG','The virtual directory where the VamShop Administration Tool resides, usually <i>/vamshop/admin/</i>');
 
 define('TEXT_WWW','Shop URL');
 
@@ -165,7 +165,7 @@ define('TEXT_SESS_LONG','The location to store PHPs sessions files.');
 
 // step5.php
 
-define('TEXT_WS_CONFIGURATION_SUCCESS','<strong>VaM Shop</strong> Webserver configuration was successful');
+define('TEXT_WS_CONFIGURATION_SUCCESS','<strong>VamShop</strong> Webserver configuration was successful');
 
 // step6.php
 
@@ -191,7 +191,7 @@ define('TEXT_EMAIL_FROM','E-Mail From:');
 define('TEXT_EMAIL_FROM_LONG','(The e-mail adress used in (sent) e-mails)');
 define('TITLE_ZONE_CONFIG','Zone configuration');
 define('TEXT_ZONE','Set up zones for EU?');
-define('TITLE_ZONE_CONFIG_NOTE','*Note; VaM Shop can automatically setup the right Zone-Setup if your store is located within the EU.');
+define('TITLE_ZONE_CONFIG_NOTE','*Note; VamShop can automatically setup the right Zone-Setup if your store is located within the EU.');
 define('TITLE_SHOP_CONFIG_NOTE','*Note; Information for basic Shop configuration');
 define('TITLE_ADMIN_CONFIG_NOTE','*Note; Information for Admin/Superuser');
 define('TEXT_ZONE_NO','No');
@@ -222,7 +222,7 @@ define('TEXT_STATUS_SHOW_TAX_LONG','Display prices with tax included (Yes) or wi
 define('TITLE_CHMOD','Setting rights on files');
 // fnished.php
 
-define('TEXT_SHOP_CONFIG_SUCCESS','<strong>VaM Shop</strong> Shop configuration was successful.');
+define('TEXT_SHOP_CONFIG_SUCCESS','<strong>VamShop</strong> Shop configuration was successful.');
 define('TEXT_TEAM','');
 
 // Сборка VaM
@@ -237,30 +237,30 @@ define('TEXT_RUSSIAN','Russian');
 define('TEXT_ENGLISH','English');
 define('TEXT_CHECKING','Checking:');
 define('TEXT_ATTENTION','Attention:');
-define('TITLE_INDEX','VaM Shop Installer - Welcome');
-define('TITLE_STEP1','VaM Shop Installer - STEP 1 / Settings');
-define('TITLE_STEP2','VaM Shop Installer - STEP 2 / DB Connection');
-define('TITLE_STEP3','VaM Shop Installer - STEP 3 / DB Import');
-define('TITLE_STEP4','VaM Shop Installer - STEP 4 / Webserver Configuration');
-define('TITLE_STEP5','VaM Shop Installer - STEP 5 / Write Config Files');
-define('TITLE_STEP6','VaM Shop Installer - STEP 6 / Create Superuser');
-define('TITLE_STEP7','VaM Shop Installer - STEP 7 / Define Pricesystem');
-define('TITLE_FINISHED','VaM Shop Installer - Finished');
+define('TITLE_INDEX','VamShop Installer - Welcome');
+define('TITLE_STEP1','VamShop Installer - STEP 1 / Settings');
+define('TITLE_STEP2','VamShop Installer - STEP 2 / DB Connection');
+define('TITLE_STEP3','VamShop Installer - STEP 3 / DB Import');
+define('TITLE_STEP4','VamShop Installer - STEP 4 / Webserver Configuration');
+define('TITLE_STEP5','VamShop Installer - STEP 5 / Write Config Files');
+define('TITLE_STEP6','VamShop Installer - STEP 6 / Create Superuser');
+define('TITLE_STEP7','VamShop Installer - STEP 7 / Define Pricesystem');
+define('TITLE_FINISHED','VamShop Installer - Finished');
 define('CHARSET','utf-8');
 define('TEXT_INSTALL','Install');
 define('ERROR_PERMISSION','WRONG PERMISSION on ');
 define('TEXT_ERROR','ERROR');
 define('TEXT_FILE_PERMISSIONS','FILE Permissions .............................. ');
 define('TEXT_FOLDER_PERMISSIONS','FOLDER Permissions .............................. ');
-define('PHP_VERSION_ERROR','<b>ATTENTION!, your PHP Version is to old, VaM Shop requires atleast PHP 4.1.3.</b><br /><br />
+define('PHP_VERSION_ERROR','<b>ATTENTION!, your PHP Version is to old, VamShop requires atleast PHP 4.1.3.</b><br /><br />
                  Your php Version: <b><?php echo phpversion(); ?></b><br /><br />
-                 VaM Shop wont work on this server, update PHP or change Server.');
+                 VamShop wont work on this server, update PHP or change Server.');
 define('TEXT_PHP_VERSION','PHP VERSION .............................. ');
 define('TEXT_GD_LIB_NOT_FOUND','ERROR NO GDLIB FOUND!');
 define('TEXT_GD_LIB_VERSION','if GDlib Version < 2+ , klick here for further instructions');
 define('TEXT_GD_LIB_VERSION1','GDlib VERSION .............................. ');
 define('TEXT_GD_LIB_GIF_SUPPORT','GDlib GIF-Support .............................. ');
-define('TEXT_GD_LIB_GIF_SUPPORT_ERROR','<b><font color="ff0000">ERROR</font></b><br />You don\'t have GIF support within your GDlib, you won\'t be able to use GIF images, and GIF overlayfunctions in VaM Shop!');
+define('TEXT_GD_LIB_GIF_SUPPORT_ERROR','<b><font color="ff0000">ERROR</font></b><br />You don\'t have GIF support within your GDlib, you won\'t be able to use GIF images, and GIF overlayfunctions in VamShop!');
 define('TEXT_OK','OK');
 
 //finished
