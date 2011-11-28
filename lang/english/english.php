@@ -644,4 +644,6 @@ define('TEXT_FIND_PRODUCTS', 'Find Matching Products');
 // Products Specifications
 define('TEXT_NOT_AVAILABLE', 'N/A');
 
+define('FREE_SHIPPING_TITLE', 'Free Shipping');
+
 ?>
