@@ -262,7 +262,7 @@ class categories {
 		// look for deeper categories and go rekursiv
 		$categories_query = vam_db_query("SELECT categories_id FROM ".TABLE_CATEGORIES." WHERE parent_id='".$categories_id."'");
 		while ($categories = vam_db_fetch_array($categories_query)) {
-			$this->set_category_recursive($categories['categories_id'], $status);
+			$this->set_category_xml_recursive($categories['categories_id'], $status);
 		}
 
 	}
