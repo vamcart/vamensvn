@@ -72,4 +72,11 @@ define('PULL_DOWN_DEFAULT','Select');
 
 define('BUTTON_CUSTOMERS_EXPORT','Customers Export');
 
+define('BUS_CUSTOMER','Customer # ');
+define('BUS_SUCCESS','updated!');
+define('BUS_WARNING','not updated!');
+define('BUS_DELETE_SUCCESS','deleted!');
+define('BUS_DELETE_WARNING','not deleted!');
+define('BUS_DELETE_CUSTOMERS','Delete checked customers');
+
 ?>
