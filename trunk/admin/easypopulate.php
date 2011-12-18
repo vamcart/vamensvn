@@ -202,7 +202,7 @@ define ('EP_EXCEL_SAFE_OUTPUT', true); // default is: true
 // parsing when quotes are used within a string. I suspect this should also resolve an issue
 // recently reported in which characters with a german "Umlaute" like ÄäÖöÜü at the Beginning 
 // of some text, they will disappear when importing some csv-file, reported by TurboTB.
-define ('EP_EXCEL_SAFE_OUTPUT_ALT_PARCE', false); // default is: false
+define ('EP_EXCEL_SAFE_OUTPUT_ALT_PARCE', true); // default is: false
 
 
 // *** Preserve Tabs, Carriage returns and Line feeds ***
@@ -1019,6 +1019,10 @@ if ( !empty($_GET['download']) && ($_GET['download'] == 'stream' or $_GET['downl
             }
         }
 
+			if ($_GET['export_charset'] == 'cp1251'){
+    			$therow = Utf8ToWin($therow);
+   		}
+
         // lop off the trailing separator, then append the end of row indicator
         $therow = substr($therow,0,strlen($therow)-1) . $endofrow;
 
@@ -1288,9 +1292,21 @@ if (!empty($_POST['localfile']) or (isset($_FILES['usrfl']) && isset($_GET['spli
             // I copied this from below:
             // now we string the entire thing together in case there were carriage returns in the data
               $newreaded = "";
-              foreach ($readed as $read){
-                $newreaded .= $read;
-              }
+
+			if ($_POST['import_charset'] == 'cp1251'){
+        
+        foreach ($readed as $read){
+        $newreaded .= CP1251toUTF8($read);
+        }
+
+			} else {
+
+        foreach ($readed as $read){
+        $newreaded .= $read;
+        }
+
+			}
+
               // now newreaded has the entire file together without the carriage returns.
               // if for some reason excel put qoutes around our EOREOR, remove them then split into rows
               $newreaded = str_replace('"EOREOR"', 'EOREOR', $newreaded);
@@ -1338,9 +1354,20 @@ if (!empty($_POST['localfile']) or (isset($_FILES['usrfl']) && isset($_GET['spli
       // do normal EP input
       // now we string the entire thing together in case there were carriage returns in the data
       $newreaded = "";
-      foreach ($readed as $read){
+
+			if ($_POST['import_charset'] == 'cp1251'){
+        
+        foreach ($readed as $read){
+        $newreaded .= CP1251toUTF8($read);
+        }
+
+			} else {
+
+        foreach ($readed as $read){
         $newreaded .= $read;
-      }
+        }
+
+			}
 
       // now newreaded has the entire file together without the carriage returns.
       // if for some reason excel put qoutes around our EOREOR, remove them then split into rows
@@ -1490,6 +1517,10 @@ if (!empty($_POST['localfile']) or (isset($_FILES['usrfl']) && isset($_GET['spli
                       <option value="update"><?php echo TEXT_EASYPOPULATE_UPDATE; ?></option>
                       <option value="delete"><?php echo TEXT_EASYPOPULATE_DELETE; ?></option>
                   </select>
+                  <select name="import_charset">
+                      <option selected value ="cp1251" size="5">cp1251</option>
+                      <option value="utf8" size="5">utf8</option>
+                  </select>
                   <span class="button"><button type="submit" name="buttoninsert" value="<?php echo EASY_INSERT;?>"><?php echo vam_image(DIR_WS_IMAGES . 'icons/buttons/submit.png', '', '12', '12'); ?>&nbsp;<?php echo EASY_INSERT; ?></button></span>
                 <br />
                 </p>
@@ -1564,6 +1595,12 @@ if (!empty($_POST['localfile']) or (isset($_FILES['usrfl']) && isset($_GET['spli
           
           echo vam_draw_pull_down_menu('download',array( 0 => array( "id" => 'activestream', 'text' => TEXT_EASYPOPULATE_ON_THE_FLY), 1 => array( "id" => 'stream', 'text' => TEXT_EASYPOPULATE_CREATE_THEN_DOWNLOAD), 2 => array( "id" => 'tempfile', 'text' => TEXT_EASYPOPULATE_CREATE_IN_TEMP)));
           echo '&nbsp;' . TEXT_EASYPOPULATE_TYPE . '&nbsp;' . vam_draw_pull_down_menu('dltype',array( 0 => array( "id" => 'full', 'text' => TEXT_EASYPOPULATE_COMPLETE), 1 => array( "id" => 'custom', 'text' => TEXT_EASYPOPULATE_CUSTOM), 2 => array( "id" => 'priceqty', 'text' => TEXT_EASYPOPULATE_PRICE_QTY), 3 => array( "id" => 'category', 'text' => TEXT_EASYPOPULATE_CATEGORIES), 4 => array( "id" => 'attrib', 'text' => TEXT_EASYPOPULATE_ATTRIBUTES), 5 => array( "id" => 'froogle', 'text' => TEXT_EASYPOPULATE_FROOGLE)),'custom','onChange="return switchForm(this);"');
+          
+          echo '<select name="export_charset">
+			<option selected value ="cp1251" size="5">cp1251</option>
+			<option value="utf8" size="5">utf8</option>
+			</select>';
+			
           echo '&nbsp;' . ((EP_EXCEL_SAFE_OUTPUT == true)?".csv":".txt") . TEXT_EASYPOPULATE_FILE_FORMAT; 
 
           $cells = array();
