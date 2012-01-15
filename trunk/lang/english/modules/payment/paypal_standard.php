@@ -1,6 +1,6 @@
 <?php
 /*
-  $Id: paypal_standard.php 1778 2008-01-09 23:37:44Z hpdl $
+  $Id: paypal_standard.php 1778 2012-01-09 23:37:44Z hpdl $
 
   osCommerce, Open Source E-Commerce Solutions
   http://www.oscommerce.com
