@@ -1,5 +1,5 @@
 {config_load file="$language/lang_$language.conf" section="account"}<h1>{#heading_account#}</h1>
-<!-- Greeting -->
+<!-- Приветствие -->
 {$error_message}
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
@@ -18,9 +18,9 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Greeting -->
+<!-- /Приветствие -->
 
-<!-- Personal info -->
+<!-- Личные данные -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -35,10 +35,10 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Personal info -->
+<!-- /Личные данные -->
 
 {if $order_content}
-<!-- Orders -->
+<!-- Заказы -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -53,10 +53,10 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Orders -->
+<!-- /Заказы -->
 {/if}
 
-<!-- Notifications -->
+<!-- Уведомления -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -69,10 +69,10 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Notifications -->
+<!-- /Уведомления -->
 
 {if $products_history}
-<!-- Viewed products -->
+<!-- Просмотренные товары -->
 <div class="page">
 <p>
 {#title_viewed_products#}
@@ -113,5 +113,5 @@
 
 </div>
 <div class="clear"></div>
-<!-- /Viewed products -->
+<!-- /Просмотренные товары -->
 {/if}

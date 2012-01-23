@@ -2,13 +2,13 @@
 {config_load file="$language/lang_$language.conf" section="print_order"}
 {config_load file="$language/lang_$language.conf" section="product_info"}
 {if $downloads_content neq ''}
-<!-- Files -->
+<!-- Файлы -->
 {$downloads_content}
-<!-- /Files -->
+<!-- /Файлы -->
 {/if}
 
 <h1>{#heading_history_info#}</h1>
-<!-- Order info -->
+<!-- Информация о заказе -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -21,7 +21,7 @@
 <span class="bold">{#text_date#}</span> {$ORDER_DATE}
 </p>
 
-<!-- Shipping address -->
+<!-- Адрес доставки -->
 <dl class="ordersAddress">
 <dt class="ordersAddress">
 </dt>
@@ -35,10 +35,10 @@
 </dd>
 
 </dl>
-<!-- /Shipping address -->
+<!-- /Адрес доставки -->
 
 {if $BILLING_LABEL}
-<!-- Billing address -->
+<!-- Адрес клиента -->
 <dl class="ordersAddress">
 <dt class="ordersAddress">
 </dt>
@@ -52,7 +52,7 @@
 </dd>
 
 </dl>
-<!-- /Billing address -->
+<!-- /Адрес клиента -->
 {/if}
 <div class="clear"></div>
 
@@ -87,9 +87,9 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Order info -->
+<!-- /Информация о заказе -->
 
-<!-- Order history -->
+<!-- История заказа -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -103,9 +103,9 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Order history -->
+<!-- /История заказа -->
 
-<!-- Products -->
+<!-- Заказанные товары -->
 <div class="page">
 <b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
 <div class="pagecontent">
@@ -145,7 +145,7 @@
 </div>
 <b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 </div>
-<!-- /Products -->
+<!-- /Заказанные товары -->
 
 <div class="clear"></div>
 <div class="navigation">
