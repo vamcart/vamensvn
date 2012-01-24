@@ -1,12 +1,12 @@
 
 
-Уважаемый покупатель!
+Dear Customer ,
 
-Мы зарегистрировали Вас в нашем интернет-магазине.
+We created an account for you.
 
-{if $COMMENTS}Комментарии:{$COMMENTS}{/if}
+{if $COMMENTS}Comments:{$COMMENTS}{/if}
 
-Данные для входа:
+Login with following account/password:
 
-Email:{$EMAIL}
-Пароль: {$PASSWORD}
+mail:{$EMAIL}
+password: {$PASSWORD}

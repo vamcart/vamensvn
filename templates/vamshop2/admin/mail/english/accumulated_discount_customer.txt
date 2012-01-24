@@ -1,5 +1,5 @@
-Поздравляем, Вы получили новую накопительную скидку. Все детали ниже:
+Congratulations, you have new discount. All details below:
 
-Достигнутый предел: {$ACCUMULATED_LIMIT}
-Новая группа: {$GROUPNAME}
-Новая скидка: {$GROUPDISCOUNT}%
+Reached limit: {$ACCUMULATED_LIMIT}
+New group: {$GROUPNAME}
+New discount: {$GROUPDISCOUNT}%

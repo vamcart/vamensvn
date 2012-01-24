@@ -1,9 +1,9 @@
-Вопрос о товаре {$PRODUCTS_NAME}
+Ask question {$PRODUCTS_NAME}
 
-Отправитель: {$TEXT_EMAIL}
-Имя: {$TEXT_FIRSTNAME}
-Фамилия: {$TEXT_LASTNAME}
-Товар: {$PRODUCT_LINK}
+Sender email: {$TEXT_EMAIL}
+First name: {$TEXT_FIRSTNAME}
+Last name: {$TEXT_LASTNAME}
+Product name: {$PRODUCT_LINK}
 
-Сообщение:
+Message:
 {$TEXT_MESSAGE}
