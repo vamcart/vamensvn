@@ -1,13 +1,13 @@
 
 ---------------------------------------------------------------------------------------- 
-Поздравляем, Вы получили подарочный сертификат на сумму: {$AMMOUNT}! 
+Gratulation, you received a gift voucher over : {$AMMOUNT} ! 
 ----------------------------------------------------------------------------------------
 
-Отправитель подарочного сертификата: {$FROM_NAME},
-Сообщение: 
+This gift voucher is from: {$FROM_NAME},
+Message: 
 
 {$MESSAGE}
 
-Ваш персональный код сертификата: {$GIFT_CODE}. 
-Вы можете активировать подарочный сертификат в процессе оформления заказа в нашем магазине,
-либо перейдя по следующей ссылке {$GIFT_LINK}
+Your personal gift voucher code is: {$GIFT_CODE}. 
+You can redeem this gift voucher during your order in our store,
+or with a click on the following link {$GIFT_LINK}
