@@ -646,4 +646,8 @@ define('TEXT_NOT_AVAILABLE', 'N/A');
 
 define('FREE_SHIPPING_TITLE', 'Free Shipping');
 
+define('BUTTON_PRINT_SCHET', 'Print Invoice');
+define('BUTTON_PRINT_PACKINGSLIP', 'Print Packingslip');
+define('BUTTON_PRINT_KVITANCIA', 'Print Kvitancia');
+
 ?>
