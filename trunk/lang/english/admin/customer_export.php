@@ -36,4 +36,7 @@ define('TABLE_HEADING_ZIP', 'Postcode');
 define('TABLE_HEADING_CITY', 'City');
 define('TABLE_HEADING_SUBURB', 'Suburb');
 define('TABLE_HEADING_FAX', 'Fax');
+
+define('HEADING_TITLE_STATUS','Customer Groups:');
+define('TEXT_ALL_CUSTOMERS','All Groups');
 ?>
