@@ -23,7 +23,7 @@
   require_once(DIR_FS_INC.'vam_redirect.inc.php');
   require_once(DIR_FS_INC.'vam_href_link.inc.php');
   
-  include('language/english.php');
+  include('language/russian.php');
 
 
  define('HTTP_SERVER','');
@@ -42,7 +42,7 @@
     $error = false;
 
 
-      if ( ($_SESSION['language'] != 'english') ) {
+      if ( ($_SESSION['language'] != 'russian') ) {
         $error = true;
 
         $messageStack->add('index', SELECT_LANGUAGE_ERROR);
@@ -178,7 +178,7 @@
     $folder_flag=true;
     $message .= '<div class="error">' . ERROR_PERMISSION . '' . DIR_FS_CATALOG . 'images/</div>';
  }
- 
+
      if (!is_writeable(DIR_FS_CATALOG . 'images/attribute_images/')) {
     $error_flag=true;
     $folder_flag=true;
@@ -301,7 +301,7 @@ if ($ok_message!='') {
 
 <form name="language" method="post" action="index.php">
 <p>
-<?php echo TEXT_ENGLISH; ?>  <?php echo vam_draw_radio_field_installer('LANGUAGE', 'english'); ?>
+<?php echo TEXT_RUSSIAN; ?>  <?php echo vam_draw_radio_field_installer('LANGUAGE', 'russian', true); ?>
 </p>
 
 <input type="hidden" name="action" value="process" />
@@ -347,7 +347,7 @@ if ($ok_message!='') {
 </div>
 <!-- /Контейнер -->
 
-<div id="copyright">Powered by <a href="http://vamshop.com" target="_blank">VamShop</a></div>
+<div id="copyright">Powered by <a href="http://vamshop.ru" target="_blank">VamShop</a></div>
 
 </body>
 </html>
