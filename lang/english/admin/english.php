@@ -591,4 +591,6 @@ define('BOX_CATALOG_PRODUCTS_SPECIFICATIONS', 'Products Specifications');
 define('BOX_HEADING_ORDERS','Orders');
 define('BUTTON_ORDERS_EXPORT','Orders Export');
 
+define('BOX_ATTRIBUTES_MANAGER_CATEGORIES','Attributes for category');
+
 ?>
