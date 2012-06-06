@@ -593,4 +593,6 @@ define('BUTTON_ORDERS_EXPORT','Orders Export');
 
 define('BOX_ATTRIBUTES_MANAGER_CATEGORIES','Attributes for category');
 
+define('TEXT_PRODUCTS_ATTRIBUTES','Product Attributes');
+
 ?>
