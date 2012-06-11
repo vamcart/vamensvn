@@ -650,7 +650,8 @@ define('BUTTON_PRINT_SCHET', 'Print Invoice');
 define('BUTTON_PRINT_PACKINGSLIP', 'Print Packingslip');
 define('BUTTON_PRINT_KVITANCIA', 'Print Kvitancia');
 
-define('TEXT_NO_COMPARISON_AVAILABLE', 'No Comparison Available.');
+define('TEXT_NO_PRODUCTS_AVAILABLE', 'No Comparison Available.');
+define('TEXT_NO_COMPARISON_AVAILABLE', 'No Specifications To Compare Available.');
 define('TEXT_COMPARE','Comparison');
 
 ?>
