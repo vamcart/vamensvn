@@ -651,5 +651,6 @@ define('BUTTON_PRINT_PACKINGSLIP', 'Print Packingslip');
 define('BUTTON_PRINT_KVITANCIA', 'Print Kvitancia');
 
 define('TEXT_NO_COMPARISON_AVAILABLE', 'No Comparison Available.');
+define('TEXT_COMPARE','Comparison');
 
 ?>
