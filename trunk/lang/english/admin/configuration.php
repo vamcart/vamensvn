@@ -1011,5 +1011,7 @@ define('SPECIFICATIONS_FILTER_IMAGE_WIDTH_TITLE', 'Filter Image Width');
 define('SPECIFICATIONS_FILTER_IMAGE_WIDTH_DESC', 'Set the width of the images displayed as filters in the filter box.');
 define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_TITLE', 'Filter Image Height');
 define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_DESC', 'Set the height of the images displayed as filters in the filter box.');
+define('FILTERS_MAIN_PAGE_TITLE', 'Show Filters on the Main Page');
+define('FILTERS_MAIN_PAGE_DESC', '');
 
 ?>
