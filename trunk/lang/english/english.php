@@ -81,6 +81,7 @@ define('JS_ERROR', 'Missing necessary information!\nPlease fill in correctly.\n\
 
 define('JS_REVIEW_TEXT', '* The text must consist at least of ' . REVIEW_TEXT_MIN_LENGTH . ' alphabetic characters.\n');
 define('JS_REVIEW_RATING', '* Enter your review.\n');
+define('JS_REVIEW_CAPTCHA', '* Enter captcha.\n');
 define('JS_ERROR_NO_PAYMENT_MODULE_SELECTED', '* Please choose a method of payment for your order.\n');
 define('JS_ERROR_SUBMITTED', 'This page has already been confirmed. Please click okay and wait until the process has finished.');
 define('ERROR_NO_PAYMENT_MODULE_SELECTED', 'Please choose a method of payment for your order.');
