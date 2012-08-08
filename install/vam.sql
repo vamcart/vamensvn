@@ -1,5 +1,5 @@
 # -----------------------------------------------------------------------------------------
-#  $Id: vamshop.sql,v 1.62 2009/04/26 20:24:16 VaM Exp $
+#  $Id: vamshop.sql,v 1.62 2012/04/26 20:24:17 VaM Exp $
 #
 #  VamShop - open source ecommerce solution
 #  http://vamshop.com 
@@ -1678,141 +1678,27 @@ INSERT INTO cm_file_flags (file_flag, file_flag_name) VALUES ('0', 'information'
 INSERT INTO cm_file_flags (file_flag, file_flag_name) VALUES ('1', 'content');
 INSERT INTO cm_file_flags VALUES ('2', 'affiliate');
 
-INSERT INTO affiliate_payment_status VALUES (0, 1, 'Ожидает оплаты');
-INSERT INTO affiliate_payment_status VALUES (1, 1, 'Оплачен');
+INSERT INTO affiliate_payment_status VALUES (0, 1, 'Processing');
+INSERT INTO affiliate_payment_status VALUES (1, 1, 'Payed');
 
-INSERT INTO shipping_status VALUES (1, 1, '3-4 дня', '');
-INSERT INTO shipping_status VALUES (2, 1, '1 неделя', '');
-INSERT INTO shipping_status VALUES (3, 1, '2 недели', '');
+INSERT INTO shipping_status VALUES (1, 1, '3-4 Days', '');
+INSERT INTO shipping_status VALUES (2, 1, '1 Week', '');
+INSERT INTO shipping_status VALUES (3, 1, '2 Weeks', '');
 
 # data
 
-INSERT INTO `content_manager` VALUES (1, 0, 0, '', 1, 'Доставка', 'Доставка', 'Условия доставки.', '', 0, 1, '', 1, 1, 0,'','','','');
-INSERT INTO `content_manager` VALUES (2, 0, 0, '', 1, 'Безопасность магазина', 'Безопасность магазина', 'Ваш текст.', '', 0, 1, '', 1, 2, 0,'','','','');
-INSERT INTO `content_manager` VALUES (3, 0, 0, '', 1, 'Условия использования', 'Условия использования', 'Ваш текст', '', 0, 1, '', 1, 3, 0,'','','','');
-INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Информация о магазине', 'Информация о магазине', 'Текст страницы информация о магазине.', '', 0, 1, '', 1, 4, 0,'','','','');
-INSERT INTO `content_manager` VALUES (5, 0, 0, '', 1, 'Главная страница', 'Добро пожаловать', 'Вы установили интернет-магазин VamShop<br /><br />Данный текст можно изменить в Админке - Разное - Инструменты - Информационные страницы<br /><br />', '', 0, 1, '', 0, 5, 0,'','','','');
-INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Пример страницы', 'Пример страницы', 'Текст страницы', '', 0, 1, '', 0, 6, 1,'','','','');
-INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Свяжитесь с нами', 'Свяжитесь с нами', 'Форма обратной связи', '', 0, 1, '', 1, 7, 0,'','','','');
-INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Карта сайта', 'Карта сайта', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','');
+INSERT INTO `content_manager` VALUES (1, 0, 0, '', 1, 'Shipping & Returns', 'Shipping & Returns', 'Put here your Shipping & Returns information.', '', 0, 1, '', 1, 1, 0,'','','','');
+INSERT INTO `content_manager` VALUES (2, 0, 0, '', 1, 'Privacy Notice', 'Privacy Notice', 'Put here your Privacy Notice information.', '', 0, 1, '', 1, 2, 0,'','','','');
+INSERT INTO `content_manager` VALUES (3, 0, 0, '', 1, 'Conditions of Use', 'Conditions of Use', 'Conditions of Use<br />Put here your Conditions of Use information. <br />1. Validity<br />2. Offers<br />3. Price<br />4. Dispatch and passage of the risk<br />5. Delivery<br />6. Terms of payment<br />7. Retention of title<br />8. Notices of defect, guarantee and compensation<br />9. Fair trading cancelling / non-acceptance<br />10. Place of delivery and area of jurisdiction<br />11. Final clauses', '', 0, 1, '', 1, 3, 0,'','','','');
+INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Impressum', 'Impressum', 'Put here your Company information.', '', 0, 1, '', 1, 4, 0,'','','','');
+INSERT INTO `content_manager` VALUES (5, 0, 0, '', 1, 'Main page', 'Welcome', 'Sample text.<br /><br /> You can change it in Admin - Other - Tools - Content manager<br /><br />', '', 0, 1, '', 0, 5, 0,'','','','');
+INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Sample page', 'Sample page', 'Sample text', '', 0, 1, '', 0, 6, 1,'','','','');
+INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','');
+INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Sitemap', 'Sitemap', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','');
 
-INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Правила партнёрской программы', 'Правила и условия партнёрской программы', '<b>1. Участники партнёрской программы.</b>
-<br />
-Участниками партнёрской программы могут быть физические лица. Под физическими лицами понимаются граждане РФ, иностранные граждане, лица без гражданства, а так же предприниматели без образования юридического лица.
-<br />
-<br />
-<b>2. Оплата услуг партнёра.</b>
-<br />
-Мы будем выплачивать Вам комиссию, установленную в размере <b>15%</b> от стоимости <b>оплаченного</b> заказа.
-<br />
-<br />
-<b>3. Способы оплаты.</b>
-<br />
-Все партнёрские выплаты производятся в доларах США через электронную платёжную систему <b>WebMoney</b>, Вы можете ознакомиться с данной системой по адресу <b><a href="http://www.webmoney.ru" target="_blank">http://www.webmoney.ru</a></b>
-<br />
-<br />
-<b>4. Минимальная сумма к оплате.</b>
-<br />
-Минимальная сумма к оплате установлена в размере <b>30$</b>. В случае, если заработанная Вами партнёрская комиссия не превышает <b>30$</b>, деньги остаются на Вашем аккаунте до тех пор, пока сумма комиссии не достигнет по крайней мере <b>30$</b>. Оплата партнёрских комиссий производится каждые <b>2 недели</b>.
-<br />
-<br />
-<b>5. Партнёрская комиссия.</b>
-<br />
-Партнёрская комиссия будет выплачена только если заказ оформлен и оплачен покупателем, которого привели Вы.
-<br /><br />
-Партнёрская комиссия начисляется только за <b>оплаченные заказы.</b>
-<br /><br />
-Партнёрская комиссия не будет выплачена, если:
-<br />
-&nbsp;<b>а)</b> Посетитель, пришедший с Вашего сайта не будет учтён нашей системой по техническим причинам (отключены "Cookies" и т.д.).
-<br />
-&nbsp;<b>б)</b> Посетитель перешёл в магазин по партнёрской ссылке другого партнёра.
-<br />
-&nbsp;<b>в)</b> Посетиитель, оформивший заказ через Вашу партнёрскую ссылку не оплатил его.
-<br />
-<br />
-<b>6. Условия.</b>
-<br />
-Покупатели, совершающие заказы через партнёров считаются нашими покупателями и подчиняются правилам нашего магазина. Правила работы магазина могут быть изменены нами без предварительного уведомления.
-<br />
-<br />
-<b>7. Разногласия</b>
-<br />
-В случае возникновения разногласий, стороны будут стремиться урегулировать возникшие разногласия путем переговоров. В случае, если стороны не придут к соглашению, то спор подлежит рассмотрению в суде РФ.
-<br />
-<br />', '', 0, 2, '', 1, 9, 0,'','','','');
-INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Информация', 'Информация о партнёрской программе', '<b>1. Участники партнёрской программы.</b>
-<br />
-Участниками партнёрской программы могут быть физические лица. Под физическими лицами понимаются граждане РФ, иностранные граждане, лица без гражданства, а так же предприниматели без образования юридического лица.
-<br />
-<br />
-<b>2. Оплата услуг партнёра.</b>
-<br />
-Мы будем выплачивать Вам комиссию, установленную в размере <b>15%</b> от стоимости <b>оплаченного</b> заказа.
-<br />
-<br />
-<b>3. Способы оплаты.</b>
-<br />
-Все партнёрские выплаты производятся в доларах США через электронную платёжную систему <b>WebMoney</b>, Вы можете ознакомиться с данной системой по адресу <b><a href="http://www.webmoney.ru" target="_blank">http://www.webmoney.ru</a></b>
-<br />
-<br />
-<b>4. Минимальная сумма к оплате.</b>
-<br />
-Минимальная сумма к оплате установлена в размере <b>30$</b>. В случае, если заработанная Вами партнёрская комиссия не превышает <b>30$</b>, деньги остаются на Вашем аккаунте до тех пор, пока сумма комиссии не достигнет по крайней мере <b>30$</b>. Оплата партнёрских комиссий производится каждые <b>2 недели</b>.
-<br />
-<br />
-<b>5. Партнёрская комиссия.</b>
-<br />
-Партнёрская комиссия будет выплачена только если заказ оформлен и оплачен покупателем, которого привели Вы.
-<br /><br />
-Партнёрская комиссия начисляется только за <b>оплаченные заказы.</b>
-<br /><br />
-Партнёрская комиссия не будет выплачена, если:
-<br />
-&nbsp;<b>а)</b> Посетитель, пришедший с Вашего сайта не будет учтён нашей системой по техническим причинам (отключены "Cookies" и т.д.).
-<br />
-&nbsp;<b>б)</b> Посетитель перешёл в магазин по партнёрской ссылке другого партнёра.
-<br />
-&nbsp;<b>в)</b> Посетиитель, оформивший заказ через Вашу партнёрскую ссылку не оплатил его.
-<br />
-<br />
-<b>6. Условия.</b>
-<br />
-Покупатели, совершающие заказы через партнёров считаются нашими покупателями и подчиняются правилам нашего магазина. Правила работы магазина могут быть изменены нами без предварительного уведомления.
-<br />
-<br />
-<b>7. Разногласия</b>
-<br />
-В случае возникновения разногласий, стороны будут стремиться урегулировать возникшие разногласия путем переговоров. В случае, если стороны не придут к соглашению, то спор подлежит рассмотрению в суде РФ.
-<br />
-<br />', '', 0, 2, '', 1, 10, 0,'','','','');
-INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Вопросы и ответы', 'Вопросы и ответы', 'Список частозадаваемых вопросов по партнёрской программе.<br>
-<br>
-<ul>
-<li>Как мне получить заработанные у вас деньги?</a>
-<li>Как и в каком месте лучше всего рамещать партнёрские ссылки?</a>
-<li>Могу ли я изменять HTML-код, который мне нужно ставить на сайт?</a>
-<li>Что будет если покупатель, который пришёл с моего сайте не оплатит заказ?</a>
-</ul>
-<hr width="90%">
-<BR>
-<FONT COLOR="#000000" size="4"><B><U>FAQ</U></B></FONT>
-<p style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"><font color="maroon">Как мне получить заработанные у вас деньги?</font><br>
-Чтобы получить выплату партнёрской комиссии, на Вашем аккаунте должно быть как минимум <b>30$</b>. В случае, если заработанная Вами партнёрская комиссия не превышает <b>30$</b>, деньги остаются на Вашем аккаунте до тех пор, пока сумма комиссии не достигнет по крайней мере <b>30$</b>. Оплата партнёрских комиссий производится каждые <b>2 недели</b>. Выплаты производятся на Ваш кошелёк в системе WebMoney.</p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"></p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0">&nbsp;</p>
-<p style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"><font color="maroon">Как и в каком месте лучше всего рамещать партнёрские ссылки?</font><a name="2"></a><br>
-Лучше всего размещать партнёрские ссылки сразу на всех страницах Вашего сайта, в ниболее заметных местах, используйте различные партнёрские ссылки: баннеры, ссылки на конкретные товары и т.д. Размещать рекламу в верхней части страниц всегда эффективнее, чем в нижней. Вы можете размещать партнёрские ссылки не только у себя на сайте, а так же в баннеробменных сетях, почтовых рассылках и т.д.</p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"></p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0">&nbsp;</p>
-<p style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"><font color="maroon">Могу ли я изменять HTML-код, который мне нужно ставить на сайт?</font><a name="3"></a><br>
-Да, Вы можете изменять HTML-код по своему усмотрению, можете создавать свои ссылки самостоятельно на разные страницы нашего магазина, главное чтобы в адресе ссылки был указан ваш Партнёрский ID. Например: <b>http://адресмагазина/?ref=yourid</b>, где <b>yourid</b> это Ваш партнёрский номер.</p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"></p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0">&nbsp;</p>
-<p style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"><font color="maroon">Что будет если покупатель, который пришёл с моего сайта не оплатит заказ?</font><a name="4"></a><br>
-Вы не получите свою комиссию, т.к. комиссия начисляется только за <b>оплаченные</b> заказы.</p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0"></p>
-<p align="right" style="line-height: 100%; word-spacing: 0; text-indent: 0; margin: 0">&nbsp;</p>', '', 0, 2, '', 1, 11, 0,'','','','');
+INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliate terms', 'Affiliate terms', '', 0, 2, '', 1, 9, 0,'','','','');
+INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Affiliate info', 'Affiliate info', 'Affiliate info', '', 0, 2, '', 1, 10, 0,'','','','');
+INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Affiliate faq', 'Affiliate faq', 'Affiliate faq', '', 0, 2, '', 1, 11, 0,'','','','');
 
 # 1 - Default, 2 - USA, 3 - Spain, 4 - Singapore, 5 - Germany
 INSERT INTO address_format VALUES (1, '$firstname $secondname $lastname$cr$streets$cr$city, $postcode$cr$statecomma$country','$city / $country');
@@ -1832,7 +1718,7 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_ICQ', '', 1, 3, NULL, '', NULL, 'vam_cfg_textarea(');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_SKYPE', '', 1, 3, NULL, '', NULL, 'vam_cfg_textarea(');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_FROM', 'VamShop owner@your-shop.com',  1, 4, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_COUNTRY', '176',  1, 6, NULL, '', 'vam_get_country_name', 'vam_cfg_pull_down_country_list(');
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_COUNTRY', '223',  1, 6, NULL, '', 'vam_get_country_name', 'vam_cfg_pull_down_country_list(');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('STORE_ZONE', '98', 1, 7, NULL, '', 'vam_cfg_get_zone_name', 'vam_cfg_pull_down_zone_list(');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EXPECTED_PRODUCTS_SORT', 'desc',  1, 8, NULL, '', NULL, 'vam_cfg_select_option(array(\'asc\', \'desc\'),');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EXPECTED_PRODUCTS_FIELD', 'date_expected',  1, 9, NULL, '', NULL, 'vam_cfg_select_option(array(\'products_name\', \'date_expected\'),');
@@ -1989,8 +1875,8 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('MODULE_PAYMENT_INSTALLED', '', 6, 0, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('MODULE_ORDER_TOTAL_INSTALLED', 'ot_subtotal.php;ot_shipping.php;ot_tax.php;ot_total.php', 6, 0, '2003-07-18 03:31:55', '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('MODULE_SHIPPING_INSTALLED', '',  6, 0, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_CURRENCY', 'RUR',  6, 0, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_LANGUAGE', 'ru',  6, 0, NULL, '', NULL, NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_CURRENCY', 'USD',  6, 0, NULL, '', NULL, NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_LANGUAGE', 'en',  6, 0, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_ORDERS_STATUS_ID', '1',  6, 0, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_PRODUCTS_VPE_ID', '',  6, 0, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DEFAULT_SHIPPING_STATUS_ID', '1',  6, 0, NULL, '', NULL, NULL);
@@ -2082,9 +1968,9 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_NAME', 'Mail send by billing systems',  12, 33, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_REPLY_ADDRESS',  '', 12, 34, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_REPLY_ADDRESS_NAME',  '', 12, 35, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_SUBJECT',  'Ваш заказ номер {$nr}', 12, 36, NULL, '', NULL, NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_SUBJECT',  'Order number {$nr}', 12, 36, NULL, '', NULL, NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_FORWARDING_STRING',  '', 12, 37, NULL, '', NULL, NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_SUBJECT_ORDER',  'Ваш заказ номер {$nr}', 12, 38, NULL, '', NULL, NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('EMAIL_BILLING_SUBJECT_ORDER',  'Order number {$nr}', 12, 38, NULL, '', NULL, NULL);
 
 # configuration_group_id 13
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('DOWNLOAD_ENABLED', 'false',  13, 1, NULL, '', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
@@ -2146,7 +2032,7 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 
 #configuration_group_id 19
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('GOOGLE_CONVERSION_ID', 'UA-XXXXXX-X', '19', '2', NULL , '0000-00-00 00:00:00', NULL , NULL);
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('GOOGLE_LANG', 'ru', '19', '3', NULL , '0000-00-00 00:00:00', NULL , NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('GOOGLE_LANG', 'en', '19', '3', NULL , '0000-00-00 00:00:00', NULL , NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('GOOGLE_CONVERSION', 'false', '19', '0', NULL , '0000-00-00 00:00:00', NULL , 'vam_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('YANDEX_METRIKA_ID', '', '19', '4', NULL , '0000-00-00 00:00:00', NULL , NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('YANDEX_METRIKA', 'false', '19', '5', NULL , '0000-00-00 00:00:00', NULL , 'vam_cfg_select_option(array(\'true\', \'false\'),');
@@ -2210,7 +2096,7 @@ INSERT INTO configuration (configuration_key, configuration_value, configuration
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('ALLOW_FILES_BACKUP', 'true', '25', '4', NULL, '0000-00-00 00:00:00', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('ALLOW_FILES_RESTORE', 'false', '25', '5', NULL, '0000-00-00 00:00:00', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('ALLOW_OVERWRITE_MODIFIED', 'false', '25', '6', NULL, '0000-00-00 00:00:00', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
-INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('TEXT_LINK_FORUM', 'http://vamshop.ru/forum/index.php?topic=', '25', '7', NULL , '0000-00-00 00:00:00', NULL , NULL);
+INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('TEXT_LINK_FORUM', 'http://vamshop.com/forum/index.php?topic=', '25', '7', NULL , '0000-00-00 00:00:00', NULL , NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('TEXT_LINK_CONTR', 'http://vamshop.ru/product_info.php?products_id=', '25', '8', NULL , '0000-00-00 00:00:00', NULL , NULL);
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('ALWAYS_DISPLAY_REMOVE_BUTTON', 'false', '25', '9', NULL, '0000-00-00 00:00:00', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
 INSERT INTO configuration (configuration_key, configuration_value, configuration_group_id, sort_order, last_modified, date_added, use_function, set_function) VALUES ('ALWAYS_DISPLAY_INSTALL_BUTTON', 'false', '25', '10', NULL, '0000-00-00 00:00:00', NULL, 'vam_cfg_select_option(array(\'true\', \'false\'),');
@@ -2319,584 +2205,265 @@ INSERT INTO configuration_group VALUES ('24', 'CG_QUICK_PRICE_UPDATES', 'Изм�
 INSERT INTO configuration_group VALUES ('25', 'CG_CIP_MANAGER', 'Установка модулей', 'Настройки модуля', '25', '1');
 INSERT INTO configuration_group VALUES ('27', 'CG_MAINTENANCE', 'Site Maintenance', 'Site Maintenance', '27', '1');
 
-INSERT INTO configuration_group VALUES ('28', 'CG_AFFILIATE_PROGRAM', 'Партнёрская программа', 'Настройки партнёрской программы', '28', '1');
-INSERT INTO configuration_group VALUES ('29', 'CG_BOXES', 'Боксы', 'Боксы', '29', '1');
+INSERT INTO configuration_group VALUES ('28', 'CG_AFFILIATE_PROGRAM', 'Affiliate program', 'Affiliate program settings', '28', '1');
+INSERT INTO configuration_group VALUES ('29', 'CG_BOXES', 'Boxes', 'Boxes', '29', '1');
 
 INSERT INTO configuration_group VALUES ('72', 'CG_EDIT_ORDERS', 'Order Editor', 'Order Editor Settings', '1', '1');
 
-INSERT INTO countries VALUES (1,'Afghanistan','AF','AFG','1','0');
-INSERT INTO countries VALUES (2,'Albania','AL','ALB','1','0');
-INSERT INTO countries VALUES (3,'Algeria','DZ','DZA','1','0');
-INSERT INTO countries VALUES (4,'American Samoa','AS','ASM','1','0');
-INSERT INTO countries VALUES (5,'Andorra','AD','AND','1','0');
-INSERT INTO countries VALUES (6,'Angola','AO','AGO','1','0');
-INSERT INTO countries VALUES (7,'Anguilla','AI','AIA','1','0');
-INSERT INTO countries VALUES (8,'Antarctica','AQ','ATA','1','0');
-INSERT INTO countries VALUES (9,'Antigua and Barbuda','AG','ATG','1','0');
-INSERT INTO countries VALUES (10,'Argentina','AR','ARG','1','0');
-INSERT INTO countries VALUES (11, 'Армения', 'AM', 'ARM', '1','1');
-INSERT INTO countries VALUES (12,'Aruba','AW','ABW','1','0');
-INSERT INTO countries VALUES (13,'Australia','AU','AUS','1','0');
-INSERT INTO countries VALUES (14,'Austria','AT','AUT','5','0');
-INSERT INTO countries VALUES (15, 'Азербайджан', 'AZ', 'AZE', '1','1');
-INSERT INTO countries VALUES (16,'Bahamas','BS','BHS','1','0');
-INSERT INTO countries VALUES (17,'Bahrain','BH','BHR','1','0');
-INSERT INTO countries VALUES (18,'Bangladesh','BD','BGD','1','0');
-INSERT INTO countries VALUES (19,'Barbados','BB','BRB','1','0');
-INSERT INTO countries VALUES (20, 'Белоруссия', 'BY', 'BLR', '1','1');
-INSERT INTO countries VALUES (21,'Belgium','BE','BEL','1','0');
-INSERT INTO countries VALUES (22,'Belize','BZ','BLZ','1','0');
-INSERT INTO countries VALUES (23,'Benin','BJ','BEN','1','0');
-INSERT INTO countries VALUES (24,'Bermuda','BM','BMU','1','0');
-INSERT INTO countries VALUES (25,'Bhutan','BT','BTN','1','0');
-INSERT INTO countries VALUES (26,'Bolivia','BO','BOL','1','0');
-INSERT INTO countries VALUES (27,'Bosnia and Herzegowina','BA','BIH','1','0');
-INSERT INTO countries VALUES (28,'Botswana','BW','BWA','1','0');
-INSERT INTO countries VALUES (29,'Bouvet Island','BV','BVT','1','0');
-INSERT INTO countries VALUES (30,'Brazil','BR','BRA','1','0');
-INSERT INTO countries VALUES (31,'British Indian Ocean Territory','IO','IOT','1','0');
-INSERT INTO countries VALUES (32,'Brunei Darussalam','BN','BRN','1','0');
-INSERT INTO countries VALUES (33,'Bulgaria','BG','BGR','1','0');
-INSERT INTO countries VALUES (34,'Burkina Faso','BF','BFA','1','0');
-INSERT INTO countries VALUES (35,'Burundi','BI','BDI','1','0');
-INSERT INTO countries VALUES (36,'Cambodia','KH','KHM','1','0');
-INSERT INTO countries VALUES (37,'Cameroon','CM','CMR','1','0');
-INSERT INTO countries VALUES (38,'Canada','CA','CAN','1','0');
-INSERT INTO countries VALUES (39,'Cape Verde','CV','CPV','1','0');
-INSERT INTO countries VALUES (40,'Cayman Islands','KY','CYM','1','0');
-INSERT INTO countries VALUES (41,'Central African Republic','CF','CAF','1','0');
-INSERT INTO countries VALUES (42,'Chad','TD','TCD','1','0');
-INSERT INTO countries VALUES (43,'Chile','CL','CHL','1','0');
-INSERT INTO countries VALUES (44,'China','CN','CHN','1','0');
-INSERT INTO countries VALUES (45,'Christmas Island','CX','CXR','1','0');
-INSERT INTO countries VALUES (46,'Cocos (Keeling) Islands','CC','CCK','1','0');
-INSERT INTO countries VALUES (47,'Colombia','CO','COL','1','0');
-INSERT INTO countries VALUES (48,'Comoros','KM','COM','1','0');
-INSERT INTO countries VALUES (49,'Congo','CG','COG','1','0');
-INSERT INTO countries VALUES (50,'Cook Islands','CK','COK','1','0');
-INSERT INTO countries VALUES (51,'Costa Rica','CR','CRI','1','0');
-INSERT INTO countries VALUES (52,'Cote D\'Ivoire','CI','CIV','1','0');
-INSERT INTO countries VALUES (53,'Croatia','HR','HRV','1','0');
-INSERT INTO countries VALUES (54,'Cuba','CU','CUB','1','0');
-INSERT INTO countries VALUES (55,'Cyprus','CY','CYP','1','0');
-INSERT INTO countries VALUES (56,'Czech Republic','CZ','CZE','1','0');
-INSERT INTO countries VALUES (57,'Denmark','DK','DNK','1','0');
-INSERT INTO countries VALUES (58,'Djibouti','DJ','DJI','1','0');
-INSERT INTO countries VALUES (59,'Dominica','DM','DMA','1','0');
-INSERT INTO countries VALUES (60,'Dominican Republic','DO','DOM','1','0');
-INSERT INTO countries VALUES (61,'East Timor','TP','TMP','1','0');
-INSERT INTO countries VALUES (62,'Ecuador','EC','ECU','1','0');
-INSERT INTO countries VALUES (63,'Egypt','EG','EGY','1','0');
-INSERT INTO countries VALUES (64,'El Salvador','SV','SLV','1','0');
-INSERT INTO countries VALUES (65,'Equatorial Guinea','GQ','GNQ','1','0');
-INSERT INTO countries VALUES (66,'Eritrea','ER','ERI','1','0');
-INSERT INTO countries VALUES (67, 'Эстония', 'EE', 'EST', '1','1');
-INSERT INTO countries VALUES (68,'Ethiopia','ET','ETH','1','0');
-INSERT INTO countries VALUES (69,'Falkland Islands (Malvinas)','FK','FLK','1','0');
-INSERT INTO countries VALUES (70,'Faroe Islands','FO','FRO','1','0');
-INSERT INTO countries VALUES (71,'Fiji','FJ','FJI','1','0');
-INSERT INTO countries VALUES (72,'Finland','FI','FIN','1','0');
-INSERT INTO countries VALUES (73,'France','FR','FRA','1','0');
-INSERT INTO countries VALUES (74,'France, Metropolitan','FX','FXX','1','0');
-INSERT INTO countries VALUES (75,'French Guiana','GF','GUF','1','0');
-INSERT INTO countries VALUES (76,'French Polynesia','PF','PYF','1','0');
-INSERT INTO countries VALUES (77,'French Southern Territories','TF','ATF','1','0');
-INSERT INTO countries VALUES (78,'Gabon','GA','GAB','1','0');
-INSERT INTO countries VALUES (79,'Gambia','GM','GMB','1','0');
-INSERT INTO countries VALUES (80, 'Грузия', 'GE', 'GEO', '1','1');
-INSERT INTO countries VALUES (81,'Germany','DE','DEU','5','0');
-INSERT INTO countries VALUES (82,'Ghana','GH','GHA','1','0');
-INSERT INTO countries VALUES (83,'Gibraltar','GI','GIB','1','0');
-INSERT INTO countries VALUES (84,'Greece','GR','GRC','1','0');
-INSERT INTO countries VALUES (85,'Greenland','GL','GRL','1','0');
-INSERT INTO countries VALUES (86,'Grenada','GD','GRD','1','0');
-INSERT INTO countries VALUES (87,'Guadeloupe','GP','GLP','1','0');
-INSERT INTO countries VALUES (88,'Guam','GU','GUM','1','0');
-INSERT INTO countries VALUES (89,'Guatemala','GT','GTM','1','0');
-INSERT INTO countries VALUES (90,'Guinea','GN','GIN','1','0');
-INSERT INTO countries VALUES (91,'Guinea-bissau','GW','GNB','1','0');
-INSERT INTO countries VALUES (92,'Guyana','GY','GUY','1','0');
-INSERT INTO countries VALUES (93,'Haiti','HT','HTI','1','0');
-INSERT INTO countries VALUES (94,'Heard and Mc Donald Islands','HM','HMD','1','0');
-INSERT INTO countries VALUES (95,'Honduras','HN','HND','1','0');
-INSERT INTO countries VALUES (96,'Hong Kong','HK','HKG','1','0');
-INSERT INTO countries VALUES (97,'Hungary','HU','HUN','1','0');
-INSERT INTO countries VALUES (98,'Iceland','IS','ISL','1','0');
-INSERT INTO countries VALUES (99,'India','IN','IND','1','0');
-INSERT INTO countries VALUES (100,'Indonesia','ID','IDN','1','0');
-INSERT INTO countries VALUES (101,'Iran (Islamic Republic of)','IR','IRN','1','0');
-INSERT INTO countries VALUES (102,'Iraq','IQ','IRQ','1','0');
-INSERT INTO countries VALUES (103,'Ireland','IE','IRL','1','0');
-INSERT INTO countries VALUES (104,'Israel','IL','ISR','1','0');
-INSERT INTO countries VALUES (105,'Italy','IT','ITA','1','0');
-INSERT INTO countries VALUES (106,'Jamaica','JM','JAM','1','0');
-INSERT INTO countries VALUES (107,'Japan','JP','JPN','1','0');
-INSERT INTO countries VALUES (108,'Jordan','JO','JOR','1','0');
-INSERT INTO countries VALUES (109, 'Казахстан', 'KZ', 'KAZ', '1','1');
-INSERT INTO countries VALUES (110,'Kenya','KE','KEN','1','0');
-INSERT INTO countries VALUES (111,'Kiribati','KI','KIR','1','0');
-INSERT INTO countries VALUES (112,'Korea, Democratic People\'s Republic of','KP','PRK','1','0');
-INSERT INTO countries VALUES (113,'Korea, Republic of','KR','KOR','1','0');
-INSERT INTO countries VALUES (114,'Kuwait','KW','KWT','1','0');
-INSERT INTO countries VALUES (115, 'Кыргызстан', 'KG', 'KGZ', '1','1');
-INSERT INTO countries VALUES (116,'Lao People\'s Democratic Republic','LA','LAO','1','0');
-INSERT INTO countries VALUES (117, 'Латвия', 'LV', 'LVA', '1','1');
-INSERT INTO countries VALUES (118,'Lebanon','LB','LBN','1','0');
-INSERT INTO countries VALUES (119,'Lesotho','LS','LSO','1','0');
-INSERT INTO countries VALUES (120,'Liberia','LR','LBR','1','0');
-INSERT INTO countries VALUES (121,'Libyan Arab Jamahiriya','LY','LBY','1','0');
-INSERT INTO countries VALUES (122,'Liechtenstein','LI','LIE','1','0');
-INSERT INTO countries VALUES (123, 'Литва', 'LT', 'LTU', '1','1');
-INSERT INTO countries VALUES (124,'Luxembourg','LU','LUX','1','0');
-INSERT INTO countries VALUES (125,'Macau','MO','MAC','1','0');
-INSERT INTO countries VALUES (126,'Macedonia, The Former Yugoslav Republic of','MK','MKD','1','0');
-INSERT INTO countries VALUES (127,'Madagascar','MG','MDG','1','0');
-INSERT INTO countries VALUES (128,'Malawi','MW','MWI','1','0');
-INSERT INTO countries VALUES (129,'Malaysia','MY','MYS','1','0');
-INSERT INTO countries VALUES (130,'Maldives','MV','MDV','1','0');
-INSERT INTO countries VALUES (131,'Mali','ML','MLI','1','0');
-INSERT INTO countries VALUES (132,'Malta','MT','MLT','1','0');
-INSERT INTO countries VALUES (133,'Marshall Islands','MH','MHL','1','0');
-INSERT INTO countries VALUES (134,'Martinique','MQ','MTQ','1','0');
-INSERT INTO countries VALUES (135,'Mauritania','MR','MRT','1','0');
-INSERT INTO countries VALUES (136,'Mauritius','MU','MUS','1','0');
-INSERT INTO countries VALUES (137,'Mayotte','YT','MYT','1','0');
-INSERT INTO countries VALUES (138,'Mexico','MX','MEX','1','0');
-INSERT INTO countries VALUES (139,'Micronesia, Federated States of','FM','FSM','1','0');
-INSERT INTO countries VALUES (140, 'Молдавия', 'MD', 'MDA', '1','1');
-INSERT INTO countries VALUES (141,'Monaco','MC','MCO','1','0');
-INSERT INTO countries VALUES (142,'Mongolia','MN','MNG','1','0');
-INSERT INTO countries VALUES (143,'Montserrat','MS','MSR','1','0');
-INSERT INTO countries VALUES (144,'Morocco','MA','MAR','1','0');
-INSERT INTO countries VALUES (145,'Mozambique','MZ','MOZ','1','0');
-INSERT INTO countries VALUES (146,'Myanmar','MM','MMR','1','0');
-INSERT INTO countries VALUES (147,'Namibia','NA','NAM','1','0');
-INSERT INTO countries VALUES (148,'Nauru','NR','NRU','1','0');
-INSERT INTO countries VALUES (149,'Nepal','NP','NPL','1','0');
-INSERT INTO countries VALUES (150,'Netherlands','NL','NLD','1','0');
-INSERT INTO countries VALUES (151,'Netherlands Antilles','AN','ANT','1','0');
-INSERT INTO countries VALUES (152,'New Caledonia','NC','NCL','1','0');
-INSERT INTO countries VALUES (153,'New Zealand','NZ','NZL','1','0');
-INSERT INTO countries VALUES (154,'Nicaragua','NI','NIC','1','0');
-INSERT INTO countries VALUES (155,'Niger','NE','NER','1','0');
-INSERT INTO countries VALUES (156,'Nigeria','NG','NGA','1','0');
-INSERT INTO countries VALUES (157,'Niue','NU','NIU','1','0');
-INSERT INTO countries VALUES (158,'Norfolk Island','NF','NFK','1','0');
-INSERT INTO countries VALUES (159,'Northern Mariana Islands','MP','MNP','1','0');
-INSERT INTO countries VALUES (160,'Norway','NO','NOR','1','0');
-INSERT INTO countries VALUES (161,'Oman','OM','OMN','1','0');
-INSERT INTO countries VALUES (162,'Pakistan','PK','PAK','1','0');
-INSERT INTO countries VALUES (163,'Palau','PW','PLW','1','0');
-INSERT INTO countries VALUES (164,'Panama','PA','PAN','1','0');
-INSERT INTO countries VALUES (165,'Papua New Guinea','PG','PNG','1','0');
-INSERT INTO countries VALUES (166,'Paraguay','PY','PRY','1','0');
-INSERT INTO countries VALUES (167,'Peru','PE','PER','1','0');
-INSERT INTO countries VALUES (168,'Philippines','PH','PHL','1','0');
-INSERT INTO countries VALUES (169,'Pitcairn','PN','PCN','1','0');
-INSERT INTO countries VALUES (170,'Poland','PL','POL','1','0');
-INSERT INTO countries VALUES (171,'Portugal','PT','PRT','1','0');
-INSERT INTO countries VALUES (172,'Puerto Rico','PR','PRI','1','0');
-INSERT INTO countries VALUES (173,'Qatar','QA','QAT','1','0');
-INSERT INTO countries VALUES (174,'Reunion','RE','REU','1','0');
-INSERT INTO countries VALUES (175,'Romania','RO','ROM','1','0');
-INSERT INTO countries VALUES (176, 'Российская Федерация', 'RU', 'RUS', '1','1');
-INSERT INTO countries VALUES (177,'Rwanda','RW','RWA','1','0');
-INSERT INTO countries VALUES (178,'Saint Kitts and Nevis','KN','KNA','1','0');
-INSERT INTO countries VALUES (179,'Saint Lucia','LC','LCA','1','0');
-INSERT INTO countries VALUES (180,'Saint Vincent and the Grenadines','VC','VCT','1','0');
-INSERT INTO countries VALUES (181,'Samoa','WS','WSM','1','0');
-INSERT INTO countries VALUES (182,'San Marino','SM','SMR','1','0');
-INSERT INTO countries VALUES (183,'Sao Tome and Principe','ST','STP','1','0');
-INSERT INTO countries VALUES (184,'Saudi Arabia','SA','SAU','1','0');
-INSERT INTO countries VALUES (185,'Senegal','SN','SEN','1','0');
-INSERT INTO countries VALUES (186,'Seychelles','SC','SYC','1','0');
-INSERT INTO countries VALUES (187,'Sierra Leone','SL','SLE','1','0');
-INSERT INTO countries VALUES (188,'Singapore','SG','SGP', '4','0');
-INSERT INTO countries VALUES (189,'Slovakia (Slovak Republic)','SK','SVK','1','0');
-INSERT INTO countries VALUES (190,'Slovenia','SI','SVN','1','0');
-INSERT INTO countries VALUES (191,'Solomon Islands','SB','SLB','1','0');
-INSERT INTO countries VALUES (192,'Somalia','SO','SOM','1','0');
-INSERT INTO countries VALUES (193,'South Africa','ZA','ZAF','1','0');
-INSERT INTO countries VALUES (194,'South Georgia and the South Sandwich Islands','GS','SGS','1','0');
-INSERT INTO countries VALUES (195,'Spain','ES','ESP','3','0');
-INSERT INTO countries VALUES (196,'Sri Lanka','LK','LKA','1','0');
-INSERT INTO countries VALUES (197,'St. Helena','SH','SHN','1','0');
-INSERT INTO countries VALUES (198,'St. Pierre and Miquelon','PM','SPM','1','0');
-INSERT INTO countries VALUES (199,'Sudan','SD','SDN','1','0');
-INSERT INTO countries VALUES (200,'Suriname','SR','SUR','1','0');
-INSERT INTO countries VALUES (201,'Svalbard and Jan Mayen Islands','SJ','SJM','1','0');
-INSERT INTO countries VALUES (202,'Swaziland','SZ','SWZ','1','0');
-INSERT INTO countries VALUES (203,'Sweden','SE','SWE','1','0');
-INSERT INTO countries VALUES (204,'Switzerland','CH','CHE','1','0');
-INSERT INTO countries VALUES (205,'Syrian Arab Republic','SY','SYR','1','0');
-INSERT INTO countries VALUES (206,'Taiwan','TW','TWN','1','0');
-INSERT INTO countries VALUES (207, 'Таджикистан', 'TJ', 'TJK', '1','1');
-INSERT INTO countries VALUES (208,'Tanzania, United Republic of','TZ','TZA','1','0');
-INSERT INTO countries VALUES (209,'Thailand','TH','THA','1','0');
-INSERT INTO countries VALUES (210,'Togo','TG','TGO','1','0');
-INSERT INTO countries VALUES (211,'Tokelau','TK','TKL','1','0');
-INSERT INTO countries VALUES (212,'Tonga','TO','TON','1','0');
-INSERT INTO countries VALUES (213,'Trinidad and Tobago','TT','TTO','1','0');
-INSERT INTO countries VALUES (214,'Tunisia','TN','TUN','1','0');
-INSERT INTO countries VALUES (215,'Turkey','TR','TUR','1','0');
-INSERT INTO countries VALUES (216, 'Туркменистан', 'TM', 'TKM', '1','1');
-INSERT INTO countries VALUES (217,'Turks and Caicos Islands','TC','TCA','1','0');
-INSERT INTO countries VALUES (218,'Tuvalu','TV','TUV','1','0');
-INSERT INTO countries VALUES (219,'Uganda','UG','UGA','1','0');
-INSERT INTO countries VALUES (220, 'Украина', 'UA', 'UKR', '1','1');
-INSERT INTO countries VALUES (221,'United Arab Emirates','AE','ARE','1','0');
-INSERT INTO countries VALUES (222,'United Kingdom','GB','GBR','1','0');
-INSERT INTO countries VALUES (223,'United States','US','USA', '2','0');
-INSERT INTO countries VALUES (224,'United States Minor Outlying Islands','UM','UMI','1','0');
-INSERT INTO countries VALUES (225,'Uruguay','UY','URY','1','0');
-INSERT INTO countries VALUES (226, 'Узбекистан', 'UZ', 'UZB', '1','1');
-INSERT INTO countries VALUES (227,'Vanuatu','VU','VUT','1','0');
-INSERT INTO countries VALUES (228,'Vatican City State (Holy See)','VA','VAT','1','0');
-INSERT INTO countries VALUES (229,'Venezuela','VE','VEN','1','0');
-INSERT INTO countries VALUES (230,'Viet Nam','VN','VNM','1','0');
-INSERT INTO countries VALUES (231,'Virgin Islands (British)','VG','VGB','1','0');
-INSERT INTO countries VALUES (232,'Virgin Islands (U.S.)','VI','VIR','1','0');
-INSERT INTO countries VALUES (233,'Wallis and Futuna Islands','WF','WLF','1','0');
-INSERT INTO countries VALUES (234,'Western Sahara','EH','ESH','1','0');
-INSERT INTO countries VALUES (235,'Yemen','YE','YEM','1','0');
-INSERT INTO countries VALUES (236,'Yugoslavia','YU','YUG','1','0');
-INSERT INTO countries VALUES (237,'Zaire','ZR','ZAR','1','0');
-INSERT INTO countries VALUES (238,'Zambia','ZM','ZMB','1','0');
-INSERT INTO countries VALUES (239,'Zimbabwe','ZW','ZWE','1','0');
+INSERT INTO countries VALUES (1,'Afghanistan','AF','AFG','1','1');
+INSERT INTO countries VALUES (2,'Albania','AL','ALB','1','1');
+INSERT INTO countries VALUES (3,'Algeria','DZ','DZA','1','1');
+INSERT INTO countries VALUES (4,'American Samoa','AS','ASM','1','1');
+INSERT INTO countries VALUES (5,'Andorra','AD','AND','1','1');
+INSERT INTO countries VALUES (6,'Angola','AO','AGO','1','1');
+INSERT INTO countries VALUES (7,'Anguilla','AI','AIA','1','1');
+INSERT INTO countries VALUES (8,'Antarctica','AQ','ATA','1','1');
+INSERT INTO countries VALUES (9,'Antigua and Barbuda','AG','ATG','1','1');
+INSERT INTO countries VALUES (10,'Argentina','AR','ARG','1','1');
+INSERT INTO countries VALUES (11,'Armenia','AM','ARM','1','1');
+INSERT INTO countries VALUES (12,'Aruba','AW','ABW','1','1');
+INSERT INTO countries VALUES (13,'Australia','AU','AUS','1','1');
+INSERT INTO countries VALUES (14,'Austria','AT','AUT','5','1');
+INSERT INTO countries VALUES (15,'Azerbaijan','AZ','AZE','1','1');
+INSERT INTO countries VALUES (16,'Bahamas','BS','BHS','1','1');
+INSERT INTO countries VALUES (17,'Bahrain','BH','BHR','1','1');
+INSERT INTO countries VALUES (18,'Bangladesh','BD','BGD','1','1');
+INSERT INTO countries VALUES (19,'Barbados','BB','BRB','1','1');
+INSERT INTO countries VALUES (20,'Belarus','BY','BLR','1','1');
+INSERT INTO countries VALUES (21,'Belgium','BE','BEL','1','1');
+INSERT INTO countries VALUES (22,'Belize','BZ','BLZ','1','1');
+INSERT INTO countries VALUES (23,'Benin','BJ','BEN','1','1');
+INSERT INTO countries VALUES (24,'Bermuda','BM','BMU','1','1');
+INSERT INTO countries VALUES (25,'Bhutan','BT','BTN','1','1');
+INSERT INTO countries VALUES (26,'Bolivia','BO','BOL','1','1');
+INSERT INTO countries VALUES (27,'Bosnia and Herzegowina','BA','BIH','1','1');
+INSERT INTO countries VALUES (28,'Botswana','BW','BWA','1','1');
+INSERT INTO countries VALUES (29,'Bouvet Island','BV','BVT','1','1');
+INSERT INTO countries VALUES (30,'Brazil','BR','BRA','1','1');
+INSERT INTO countries VALUES (31,'British Indian Ocean Territory','IO','IOT','1','1');
+INSERT INTO countries VALUES (32,'Brunei Darussalam','BN','BRN','1','1');
+INSERT INTO countries VALUES (33,'Bulgaria','BG','BGR','1','1');
+INSERT INTO countries VALUES (34,'Burkina Faso','BF','BFA','1','1');
+INSERT INTO countries VALUES (35,'Burundi','BI','BDI','1','1');
+INSERT INTO countries VALUES (36,'Cambodia','KH','KHM','1','1');
+INSERT INTO countries VALUES (37,'Cameroon','CM','CMR','1','1');
+INSERT INTO countries VALUES (38,'Canada','CA','CAN','1','1');
+INSERT INTO countries VALUES (39,'Cape Verde','CV','CPV','1','1');
+INSERT INTO countries VALUES (40,'Cayman Islands','KY','CYM','1','1');
+INSERT INTO countries VALUES (41,'Central African Republic','CF','CAF','1','1');
+INSERT INTO countries VALUES (42,'Chad','TD','TCD','1','1');
+INSERT INTO countries VALUES (43,'Chile','CL','CHL','1','1');
+INSERT INTO countries VALUES (44,'China','CN','CHN','1','1');
+INSERT INTO countries VALUES (45,'Christmas Island','CX','CXR','1','1');
+INSERT INTO countries VALUES (46,'Cocos (Keeling) Islands','CC','CCK','1','1');
+INSERT INTO countries VALUES (47,'Colombia','CO','COL','1','1');
+INSERT INTO countries VALUES (48,'Comoros','KM','COM','1','1');
+INSERT INTO countries VALUES (49,'Congo','CG','COG','1','1');
+INSERT INTO countries VALUES (50,'Cook Islands','CK','COK','1','1');
+INSERT INTO countries VALUES (51,'Costa Rica','CR','CRI','1','1');
+INSERT INTO countries VALUES (52,'Cote D\'Ivoire','CI','CIV','1','1');
+INSERT INTO countries VALUES (53,'Croatia','HR','HRV','1','1');
+INSERT INTO countries VALUES (54,'Cuba','CU','CUB','1','1');
+INSERT INTO countries VALUES (55,'Cyprus','CY','CYP','1','1');
+INSERT INTO countries VALUES (56,'Czech Republic','CZ','CZE','1','1');
+INSERT INTO countries VALUES (57,'Denmark','DK','DNK','1','1');
+INSERT INTO countries VALUES (58,'Djibouti','DJ','DJI','1','1');
+INSERT INTO countries VALUES (59,'Dominica','DM','DMA','1','1');
+INSERT INTO countries VALUES (60,'Dominican Republic','DO','DOM','1','1');
+INSERT INTO countries VALUES (61,'East Timor','TP','TMP','1','1');
+INSERT INTO countries VALUES (62,'Ecuador','EC','ECU','1','1');
+INSERT INTO countries VALUES (63,'Egypt','EG','EGY','1','1');
+INSERT INTO countries VALUES (64,'El Salvador','SV','SLV','1','1');
+INSERT INTO countries VALUES (65,'Equatorial Guinea','GQ','GNQ','1','1');
+INSERT INTO countries VALUES (66,'Eritrea','ER','ERI','1','1');
+INSERT INTO countries VALUES (67,'Estonia','EE','EST','1','1');
+INSERT INTO countries VALUES (68,'Ethiopia','ET','ETH','1','1');
+INSERT INTO countries VALUES (69,'Falkland Islands (Malvinas)','FK','FLK','1','1');
+INSERT INTO countries VALUES (70,'Faroe Islands','FO','FRO','1','1');
+INSERT INTO countries VALUES (71,'Fiji','FJ','FJI','1','1');
+INSERT INTO countries VALUES (72,'Finland','FI','FIN','1','1');
+INSERT INTO countries VALUES (73,'France','FR','FRA','1','1');
+INSERT INTO countries VALUES (74,'France, Metropolitan','FX','FXX','1','1');
+INSERT INTO countries VALUES (75,'French Guiana','GF','GUF','1','1');
+INSERT INTO countries VALUES (76,'French Polynesia','PF','PYF','1','1');
+INSERT INTO countries VALUES (77,'French Southern Territories','TF','ATF','1','1');
+INSERT INTO countries VALUES (78,'Gabon','GA','GAB','1','1');
+INSERT INTO countries VALUES (79,'Gambia','GM','GMB','1','1');
+INSERT INTO countries VALUES (80,'Georgia','GE','GEO','1','1');
+INSERT INTO countries VALUES (81,'Germany','DE','DEU','5','1');
+INSERT INTO countries VALUES (82,'Ghana','GH','GHA','1','1');
+INSERT INTO countries VALUES (83,'Gibraltar','GI','GIB','1','1');
+INSERT INTO countries VALUES (84,'Greece','GR','GRC','1','1');
+INSERT INTO countries VALUES (85,'Greenland','GL','GRL','1','1');
+INSERT INTO countries VALUES (86,'Grenada','GD','GRD','1','1');
+INSERT INTO countries VALUES (87,'Guadeloupe','GP','GLP','1','1');
+INSERT INTO countries VALUES (88,'Guam','GU','GUM','1','1');
+INSERT INTO countries VALUES (89,'Guatemala','GT','GTM','1','1');
+INSERT INTO countries VALUES (90,'Guinea','GN','GIN','1','1');
+INSERT INTO countries VALUES (91,'Guinea-bissau','GW','GNB','1','1');
+INSERT INTO countries VALUES (92,'Guyana','GY','GUY','1','1');
+INSERT INTO countries VALUES (93,'Haiti','HT','HTI','1','1');
+INSERT INTO countries VALUES (94,'Heard and Mc Donald Islands','HM','HMD','1','1');
+INSERT INTO countries VALUES (95,'Honduras','HN','HND','1','1');
+INSERT INTO countries VALUES (96,'Hong Kong','HK','HKG','1','1');
+INSERT INTO countries VALUES (97,'Hungary','HU','HUN','1','1');
+INSERT INTO countries VALUES (98,'Iceland','IS','ISL','1','1');
+INSERT INTO countries VALUES (99,'India','IN','IND','1','1');
+INSERT INTO countries VALUES (100,'Indonesia','ID','IDN','1','1');
+INSERT INTO countries VALUES (101,'Iran (Islamic Republic of)','IR','IRN','1','1');
+INSERT INTO countries VALUES (102,'Iraq','IQ','IRQ','1','1');
+INSERT INTO countries VALUES (103,'Ireland','IE','IRL','1','1');
+INSERT INTO countries VALUES (104,'Israel','IL','ISR','1','1');
+INSERT INTO countries VALUES (105,'Italy','IT','ITA','1','1');
+INSERT INTO countries VALUES (106,'Jamaica','JM','JAM','1','1');
+INSERT INTO countries VALUES (107,'Japan','JP','JPN','1','1');
+INSERT INTO countries VALUES (108,'Jordan','JO','JOR','1','1');
+INSERT INTO countries VALUES (109,'Kazakhstan','KZ','KAZ','1','1');
+INSERT INTO countries VALUES (110,'Kenya','KE','KEN','1','1');
+INSERT INTO countries VALUES (111,'Kiribati','KI','KIR','1','1');
+INSERT INTO countries VALUES (112,'Korea, Democratic People\'s Republic of','KP','PRK','1','1');
+INSERT INTO countries VALUES (113,'Korea, Republic of','KR','KOR','1','1');
+INSERT INTO countries VALUES (114,'Kuwait','KW','KWT','1','1');
+INSERT INTO countries VALUES (115,'Kyrgyzstan','KG','KGZ','1','1');
+INSERT INTO countries VALUES (116,'Lao People\'s Democratic Republic','LA','LAO','1','1');
+INSERT INTO countries VALUES (117,'Latvia','LV','LVA','1','1');
+INSERT INTO countries VALUES (118,'Lebanon','LB','LBN','1','1');
+INSERT INTO countries VALUES (119,'Lesotho','LS','LSO','1','1');
+INSERT INTO countries VALUES (120,'Liberia','LR','LBR','1','1');
+INSERT INTO countries VALUES (121,'Libyan Arab Jamahiriya','LY','LBY','1','1');
+INSERT INTO countries VALUES (122,'Liechtenstein','LI','LIE','1','1');
+INSERT INTO countries VALUES (123,'Lithuania','LT','LTU','1','1');
+INSERT INTO countries VALUES (124,'Luxembourg','LU','LUX','1','1');
+INSERT INTO countries VALUES (125,'Macau','MO','MAC','1','1');
+INSERT INTO countries VALUES (126,'Macedonia, The Former Yugoslav Republic of','MK','MKD','1','1');
+INSERT INTO countries VALUES (127,'Madagascar','MG','MDG','1','1');
+INSERT INTO countries VALUES (128,'Malawi','MW','MWI','1','1');
+INSERT INTO countries VALUES (129,'Malaysia','MY','MYS','1','1');
+INSERT INTO countries VALUES (130,'Maldives','MV','MDV','1','1');
+INSERT INTO countries VALUES (131,'Mali','ML','MLI','1','1');
+INSERT INTO countries VALUES (132,'Malta','MT','MLT','1','1');
+INSERT INTO countries VALUES (133,'Marshall Islands','MH','MHL','1','1');
+INSERT INTO countries VALUES (134,'Martinique','MQ','MTQ','1','1');
+INSERT INTO countries VALUES (135,'Mauritania','MR','MRT','1','1');
+INSERT INTO countries VALUES (136,'Mauritius','MU','MUS','1','1');
+INSERT INTO countries VALUES (137,'Mayotte','YT','MYT','1','1');
+INSERT INTO countries VALUES (138,'Mexico','MX','MEX','1','1');
+INSERT INTO countries VALUES (139,'Micronesia, Federated States of','FM','FSM','1','1');
+INSERT INTO countries VALUES (140,'Moldova, Republic of','MD','MDA','1','1');
+INSERT INTO countries VALUES (141,'Monaco','MC','MCO','1','1');
+INSERT INTO countries VALUES (142,'Mongolia','MN','MNG','1','1');
+INSERT INTO countries VALUES (143,'Montserrat','MS','MSR','1','1');
+INSERT INTO countries VALUES (144,'Morocco','MA','MAR','1','1');
+INSERT INTO countries VALUES (145,'Mozambique','MZ','MOZ','1','1');
+INSERT INTO countries VALUES (146,'Myanmar','MM','MMR','1','1');
+INSERT INTO countries VALUES (147,'Namibia','NA','NAM','1','1');
+INSERT INTO countries VALUES (148,'Nauru','NR','NRU','1','1');
+INSERT INTO countries VALUES (149,'Nepal','NP','NPL','1','1');
+INSERT INTO countries VALUES (150,'Netherlands','NL','NLD','1','1');
+INSERT INTO countries VALUES (151,'Netherlands Antilles','AN','ANT','1','1');
+INSERT INTO countries VALUES (152,'New Caledonia','NC','NCL','1','1');
+INSERT INTO countries VALUES (153,'New Zealand','NZ','NZL','1','1');
+INSERT INTO countries VALUES (154,'Nicaragua','NI','NIC','1','1');
+INSERT INTO countries VALUES (155,'Niger','NE','NER','1','1');
+INSERT INTO countries VALUES (156,'Nigeria','NG','NGA','1','1');
+INSERT INTO countries VALUES (157,'Niue','NU','NIU','1','1');
+INSERT INTO countries VALUES (158,'Norfolk Island','NF','NFK','1','1');
+INSERT INTO countries VALUES (159,'Northern Mariana Islands','MP','MNP','1','1');
+INSERT INTO countries VALUES (160,'Norway','NO','NOR','1','1');
+INSERT INTO countries VALUES (161,'Oman','OM','OMN','1','1');
+INSERT INTO countries VALUES (162,'Pakistan','PK','PAK','1','1');
+INSERT INTO countries VALUES (163,'Palau','PW','PLW','1','1');
+INSERT INTO countries VALUES (164,'Panama','PA','PAN','1','1');
+INSERT INTO countries VALUES (165,'Papua New Guinea','PG','PNG','1','1');
+INSERT INTO countries VALUES (166,'Paraguay','PY','PRY','1','1');
+INSERT INTO countries VALUES (167,'Peru','PE','PER','1','1');
+INSERT INTO countries VALUES (168,'Philippines','PH','PHL','1','1');
+INSERT INTO countries VALUES (169,'Pitcairn','PN','PCN','1','1');
+INSERT INTO countries VALUES (170,'Poland','PL','POL','1','1');
+INSERT INTO countries VALUES (171,'Portugal','PT','PRT','1','1');
+INSERT INTO countries VALUES (172,'Puerto Rico','PR','PRI','1','1');
+INSERT INTO countries VALUES (173,'Qatar','QA','QAT','1','1');
+INSERT INTO countries VALUES (174,'Reunion','RE','REU','1','1');
+INSERT INTO countries VALUES (175,'Romania','RO','ROM','1','1');
+INSERT INTO countries VALUES (176,'Russian Federation','RU','RUS','1','1');
+INSERT INTO countries VALUES (177,'Rwanda','RW','RWA','1','1');
+INSERT INTO countries VALUES (178,'Saint Kitts and Nevis','KN','KNA','1','1');
+INSERT INTO countries VALUES (179,'Saint Lucia','LC','LCA','1','1');
+INSERT INTO countries VALUES (180,'Saint Vincent and the Grenadines','VC','VCT','1','1');
+INSERT INTO countries VALUES (181,'Samoa','WS','WSM','1','1');
+INSERT INTO countries VALUES (182,'San Marino','SM','SMR','1','1');
+INSERT INTO countries VALUES (183,'Sao Tome and Principe','ST','STP','1','1');
+INSERT INTO countries VALUES (184,'Saudi Arabia','SA','SAU','1','1');
+INSERT INTO countries VALUES (185,'Senegal','SN','SEN','1','1');
+INSERT INTO countries VALUES (186,'Seychelles','SC','SYC','1','1');
+INSERT INTO countries VALUES (187,'Sierra Leone','SL','SLE','1','1');
+INSERT INTO countries VALUES (188,'Singapore','SG','SGP', '4','1');
+INSERT INTO countries VALUES (189,'Slovakia (Slovak Republic)','SK','SVK','1','1');
+INSERT INTO countries VALUES (190,'Slovenia','SI','SVN','1','1');
+INSERT INTO countries VALUES (191,'Solomon Islands','SB','SLB','1','1');
+INSERT INTO countries VALUES (192,'Somalia','SO','SOM','1','1');
+INSERT INTO countries VALUES (193,'South Africa','ZA','ZAF','1','1');
+INSERT INTO countries VALUES (194,'South Georgia and the South Sandwich Islands','GS','SGS','1','1');
+INSERT INTO countries VALUES (195,'Spain','ES','ESP','3','1');
+INSERT INTO countries VALUES (196,'Sri Lanka','LK','LKA','1','1');
+INSERT INTO countries VALUES (197,'St. Helena','SH','SHN','1','1');
+INSERT INTO countries VALUES (198,'St. Pierre and Miquelon','PM','SPM','1','1');
+INSERT INTO countries VALUES (199,'Sudan','SD','SDN','1','1');
+INSERT INTO countries VALUES (200,'Suriname','SR','SUR','1','1');
+INSERT INTO countries VALUES (201,'Svalbard and Jan Mayen Islands','SJ','SJM','1','1');
+INSERT INTO countries VALUES (202,'Swaziland','SZ','SWZ','1','1');
+INSERT INTO countries VALUES (203,'Sweden','SE','SWE','1','1');
+INSERT INTO countries VALUES (204,'Switzerland','CH','CHE','1','1');
+INSERT INTO countries VALUES (205,'Syrian Arab Republic','SY','SYR','1','1');
+INSERT INTO countries VALUES (206,'Taiwan','TW','TWN','1','1');
+INSERT INTO countries VALUES (207,'Tajikistan','TJ','TJK','1','1');
+INSERT INTO countries VALUES (208,'Tanzania, United Republic of','TZ','TZA','1','1');
+INSERT INTO countries VALUES (209,'Thailand','TH','THA','1','1');
+INSERT INTO countries VALUES (210,'Togo','TG','TGO','1','1');
+INSERT INTO countries VALUES (211,'Tokelau','TK','TKL','1','1');
+INSERT INTO countries VALUES (212,'Tonga','TO','TON','1','1');
+INSERT INTO countries VALUES (213,'Trinidad and Tobago','TT','TTO','1','1');
+INSERT INTO countries VALUES (214,'Tunisia','TN','TUN','1','1');
+INSERT INTO countries VALUES (215,'Turkey','TR','TUR','1','1');
+INSERT INTO countries VALUES (216,'Turkmenistan','TM','TKM','1','1');
+INSERT INTO countries VALUES (217,'Turks and Caicos Islands','TC','TCA','1','1');
+INSERT INTO countries VALUES (218,'Tuvalu','TV','TUV','1','1');
+INSERT INTO countries VALUES (219,'Uganda','UG','UGA','1','1');
+INSERT INTO countries VALUES (220,'Ukraine','UA','UKR','1','1');
+INSERT INTO countries VALUES (221,'United Arab Emirates','AE','ARE','1','1');
+INSERT INTO countries VALUES (222,'United Kingdom','GB','GBR','1','1');
+INSERT INTO countries VALUES (223,'United States','US','USA', '2','1');
+INSERT INTO countries VALUES (224,'United States Minor Outlying Islands','UM','UMI','1','1');
+INSERT INTO countries VALUES (225,'Uruguay','UY','URY','1','1');
+INSERT INTO countries VALUES (226,'Uzbekistan','UZ','UZB','1','1');
+INSERT INTO countries VALUES (227,'Vanuatu','VU','VUT','1','1');
+INSERT INTO countries VALUES (228,'Vatican City State (Holy See)','VA','VAT','1','1');
+INSERT INTO countries VALUES (229,'Venezuela','VE','VEN','1','1');
+INSERT INTO countries VALUES (230,'Viet Nam','VN','VNM','1','1');
+INSERT INTO countries VALUES (231,'Virgin Islands (British)','VG','VGB','1','1');
+INSERT INTO countries VALUES (232,'Virgin Islands (U.S.)','VI','VIR','1','1');
+INSERT INTO countries VALUES (233,'Wallis and Futuna Islands','WF','WLF','1','1');
+INSERT INTO countries VALUES (234,'Western Sahara','EH','ESH','1','1');
+INSERT INTO countries VALUES (235,'Yemen','YE','YEM','1','1');
+INSERT INTO countries VALUES (236,'Yugoslavia','YU','YUG','1','1');
+INSERT INTO countries VALUES (237,'Zaire','ZR','ZAR','1','1');
+INSERT INTO countries VALUES (238,'Zambia','ZM','ZMB','1','1');
+INSERT INTO countries VALUES (239,'Zimbabwe','ZW','ZWE','1','1');
 
-INSERT INTO currencies VALUES (1,'Рубль','RUR','','руб.',',','.','2','1.0000', now());
-
-
-INSERT INTO languages VALUES (1,'Русский','ru','icon.gif','russian',1,'utf-8');
+INSERT INTO currencies VALUES (1,'USA Dollar','USD','$','',',','.','2','1.0000', now());
 
 
-INSERT INTO orders_status VALUES ( '1', '1', 'Ожидает проверки');
-INSERT INTO orders_status VALUES ( '2', '1', 'Ждём оплаты');
-INSERT INTO orders_status VALUES ( '3', '1', 'Отменён');
-INSERT INTO orders_status VALUES ( '4', '1', 'Выполняется');
-INSERT INTO orders_status VALUES ( '5', '1', 'Доставляется');
-INSERT INTO orders_status VALUES ( '6', '1', 'Доставлен');
+INSERT INTO languages VALUES (1,'English','en','icon.gif','english',2,'utf-8');
 
 
+INSERT INTO orders_status VALUES ( '1', '1', 'Pending');
+INSERT INTO orders_status VALUES ( '2', '1', 'Waiting approval');
+INSERT INTO orders_status VALUES ( '3', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '4', '1', 'Processing');
+INSERT INTO orders_status VALUES ( '5', '1', 'Delivering');
+INSERT INTO orders_status VALUES ( '6', '1', 'Delivered');
 
-INSERT INTO zones VALUES ('1', '109', 'Акмолинская область', 'Акмолинская область');
-INSERT INTO zones VALUES ('2', '109', 'Актюбинская область', 'Актюбинская область');
-INSERT INTO zones VALUES ('3', '109', 'Алматинская область', 'Алматинская область');
-INSERT INTO zones VALUES ('4', '109', 'Атырауская область', 'Атырауская область');
-INSERT INTO zones VALUES ('5', '109', 'Восточно-Казахстанская область', 'Восточно-Казахстанская область');
-INSERT INTO zones VALUES ('6', '109', 'Жамбылская область', 'Жамбылская область');
-INSERT INTO zones VALUES ('7', '109', 'Западно-Казахстанская область', 'Западно-Казахстанская область');
-INSERT INTO zones VALUES ('8', '109', 'Карагандинская область', 'Карагандинская область');
-INSERT INTO zones VALUES ('9', '109', 'Кзылординская область', 'Кзылординская область');
-INSERT INTO zones VALUES ('10', '109', 'Костанайская область', 'Костанайская область');
-INSERT INTO zones VALUES ('11', '109', 'Мангистауская область', 'Мангистауская область');
-INSERT INTO zones VALUES ('12', '109', 'Павлодарская область', 'Павлодарская область');
-INSERT INTO zones VALUES ('13', '109', 'Северо-Казахстанская область', 'Северо-Казахстанская область');
-INSERT INTO zones VALUES ('14', '109', 'Южно-Казахстанская область', 'Южно-Казахстанская область');
-INSERT INTO zones VALUES ('15', '115', 'Баткенская область', 'Баткенская область');
-INSERT INTO zones VALUES ('16', '115', 'Джалал-Абадская область', 'Джалал-Абадская область');
-INSERT INTO zones VALUES ('17', '115', 'Иссык-Кульская область', 'Иссык-Кульская область');
-INSERT INTO zones VALUES ('18', '115', 'Таласская область', 'Таласская область');
-INSERT INTO zones VALUES ('19', '115', 'Нарынская область', 'Нарынская область');
-INSERT INTO zones VALUES ('20', '115', 'Ошская область', 'Ошская область');
-INSERT INTO zones VALUES ('21', '115', 'Чуйская область', 'Чуйская область');
-INSERT INTO zones VALUES ('22', '176', 'Адыгея', 'Адыгея');
-INSERT INTO zones VALUES ('23', '176', 'Башкирия', 'Башкирия');
-INSERT INTO zones VALUES ('24', '176', 'Бурятия', 'Бурятия');
-INSERT INTO zones VALUES ('25', '176', 'Горный Алтай', 'Горный Алтай');
-INSERT INTO zones VALUES ('26', '176', 'Дагестан', 'Дагестан');
-INSERT INTO zones VALUES ('27', '176', 'Ингушетия', 'Ингушетия');
-INSERT INTO zones VALUES ('28', '176', 'Кабардино-Балкария', 'Кабардино-Балкария');
-INSERT INTO zones VALUES ('29', '176', 'Калмыкия', 'Калмыкия');
-INSERT INTO zones VALUES ('30', '176', 'Карачаево-Черкесия', 'Карачаево-Черкесия');
-INSERT INTO zones VALUES ('31', '176', 'Карелия', 'Карелия');
-INSERT INTO zones VALUES ('32', '176', 'Коми', 'Коми');
-INSERT INTO zones VALUES ('33', '176', 'Марийская Республика', 'Марийская Республика');
-INSERT INTO zones VALUES ('34', '176', 'Мордовская Республика', 'Мордовская Республика');
-INSERT INTO zones VALUES ('35', '176', 'Якутия', 'Якутия');
-INSERT INTO zones VALUES ('36', '176', 'Северная Осетия', 'Северная Осетия');
-INSERT INTO zones VALUES ('37', '176', 'Татарстан', 'Татарстан');
-INSERT INTO zones VALUES ('38', '176', 'Тува', 'Тува');
-INSERT INTO zones VALUES ('39', '176', 'Удмуртия', 'Удмуртия');
-INSERT INTO zones VALUES ('40', '176', 'Хакасия', 'Хакасия');
-INSERT INTO zones VALUES ('41', '176', 'Чечня', 'Чечня');
-INSERT INTO zones VALUES ('42', '176', 'Чувашия', 'Чувашия');
-INSERT INTO zones VALUES ('43', '176', 'Алтайский край', 'Алтайский край');
-INSERT INTO zones VALUES ('44', '176', 'Краснодарский край', 'Краснодарский край');
-INSERT INTO zones VALUES ('45', '176', 'Красноярский край', 'Красноярский край');
-INSERT INTO zones VALUES ('46', '176', 'Приморский край', 'Приморский край');
-INSERT INTO zones VALUES ('47', '176', 'Ставропольский край', 'Ставропольский край');
-INSERT INTO zones VALUES ('48', '176', 'Хабаровский край', 'Хабаровский край');
-INSERT INTO zones VALUES ('49', '176', 'Амурская область', 'Амурская область');
-INSERT INTO zones VALUES ('50', '176', 'Архангельская область', 'Архангельская область');
-INSERT INTO zones VALUES ('51', '176', 'Астраханская область', 'Астраханская область');
-INSERT INTO zones VALUES ('52', '176', 'Белгородская область', 'Белгородская область');
-INSERT INTO zones VALUES ('53', '176', 'Брянская область', 'Брянская область');
-INSERT INTO zones VALUES ('54', '176', 'Владимирская область', 'Владимирская область');
-INSERT INTO zones VALUES ('55', '176', 'Волгоградская область', 'Волгоградская область');
-INSERT INTO zones VALUES ('56', '176', 'Вологодская область', 'Вологодская область');
-INSERT INTO zones VALUES ('57', '176', 'Воронежская область', 'Воронежская область');
-INSERT INTO zones VALUES ('58', '176', 'Ивановская область', 'Ивановская область');
-INSERT INTO zones VALUES ('59', '176', 'Иркутская область', 'Иркутская область');
-INSERT INTO zones VALUES ('60', '176', 'Калининградская область', 'Калининградская область');
-INSERT INTO zones VALUES ('61', '176', 'Калужская область', 'Калужская область');
-INSERT INTO zones VALUES ('62', '176', 'Камчатский край', 'Камчатский край');
-INSERT INTO zones VALUES ('63', '176', 'Кемеровская область', 'Кемеровская область');
-INSERT INTO zones VALUES ('64', '176', 'Кировская область', 'Кировская область');
-INSERT INTO zones VALUES ('65', '176', 'Костромская область', 'Костромская область');
-INSERT INTO zones VALUES ('66', '176', 'Курганская область', 'Курганская область');
-INSERT INTO zones VALUES ('67', '176', 'Курская область', 'Курская область');
-INSERT INTO zones VALUES ('68', '176', 'Ленинградская область', 'Ленинградская область');
-INSERT INTO zones VALUES ('69', '176', 'Липецкая область', 'Липецкая область');
-INSERT INTO zones VALUES ('70', '176', 'Магаданская область', 'Магаданская область');
-INSERT INTO zones VALUES ('71', '176', 'Московская область', 'Московская область');
-INSERT INTO zones VALUES ('72', '176', 'Мурманская область', 'Мурманская область');
-INSERT INTO zones VALUES ('73', '176', 'Нижегородская область', 'Нижегородская область');
-INSERT INTO zones VALUES ('74', '176', 'Новгородская область', 'Новгородская область');
-INSERT INTO zones VALUES ('75', '176', 'Новосибирская область', 'Новосибирская область');
-INSERT INTO zones VALUES ('76', '176', 'Омская область', 'Омская область');
-INSERT INTO zones VALUES ('77', '176', 'Оренбургская область', 'Оренбургская область');
-INSERT INTO zones VALUES ('78', '176', 'Орловская область', 'Орловская область');
-INSERT INTO zones VALUES ('79', '176', 'Пензенская область', 'Пензенская область');
-INSERT INTO zones VALUES ('80', '176', 'Пермский край', 'Пермский край');
-INSERT INTO zones VALUES ('81', '176', 'Псковская область', 'Псковская область');
-INSERT INTO zones VALUES ('82', '176', 'Ростовская область', 'Ростовская область');
-INSERT INTO zones VALUES ('83', '176', 'Рязанская область', 'Рязанская область');
-INSERT INTO zones VALUES ('84', '176', 'Самарская область', 'Самарская область');
-INSERT INTO zones VALUES ('85', '176', 'Саратовская область', 'Саратовская область');
-INSERT INTO zones VALUES ('86', '176', 'Сахалинская область', 'Сахалинская область');
-INSERT INTO zones VALUES ('87', '176', 'Свердловская область', 'Свердловская область');
-INSERT INTO zones VALUES ('88', '176', 'Смоленская область', 'Смоленская область');
-INSERT INTO zones VALUES ('89', '176', 'Тамбовская область', 'Тамбовская область');
-INSERT INTO zones VALUES ('90', '176', 'Тверская область', 'Тверская область');
-INSERT INTO zones VALUES ('91', '176', 'Томская область', 'Томская область');
-INSERT INTO zones VALUES ('92', '176', 'Тульская область', 'Тульская область');
-INSERT INTO zones VALUES ('93', '176', 'Тюменская область', 'Тюменская область');
-INSERT INTO zones VALUES ('94', '176', 'Ульяновская область', 'Ульяновская область');
-INSERT INTO zones VALUES ('95', '176', 'Челябинская область', 'Челябинская область');
-INSERT INTO zones VALUES ('96', '176', 'Читинская область', 'Читинская область');
-INSERT INTO zones VALUES ('97', '176', 'Ярославская область', 'Ярославская область');
-INSERT INTO zones VALUES ('98', '176', 'Москва', 'Москва');
-INSERT INTO zones VALUES ('99', '176', 'Санкт-Петербург', 'Санкт-Петербург');
-INSERT INTO zones VALUES ('100', '176', 'Еврейская автономная область', 'Еврейская автономная область');
-INSERT INTO zones VALUES ('101', '176', 'Агинский Бурятский АО', 'Агинский Бурятский АО');
-INSERT INTO zones VALUES ('104', '176', 'Ненецкий АО', 'Ненецкий АО');
-INSERT INTO zones VALUES ('105', '176', 'Таймырский АО', 'Таймырский АО');
-INSERT INTO zones VALUES ('106', '176', 'Усть-Ордынский Бурятский АО', 'Усть-Ордынский Бурятский АО');
-INSERT INTO zones VALUES ('107', '176', 'Ханты-Мансийский АО', 'Ханты-Мансийский АО');
-INSERT INTO zones VALUES ('108', '176', 'Чукотский АО', 'Чукотский АО');
-INSERT INTO zones VALUES ('109', '176', 'Эвенкийский АО', 'Эвенкийский АО');
-INSERT INTO zones VALUES ('110', '176', 'Ямало-Ненецкий АО', 'Ямало-Ненецкий АО');
-INSERT INTO zones VALUES ('111', '207', 'Мухтори-Кухистони-Бадахшони', 'Мухтори-Кухистони-Бадахшони');
-INSERT INTO zones VALUES ('112', '207', 'Хатлонская область', 'Хатлонская область');
-INSERT INTO zones VALUES ('113', '207', 'Ленинабадская область', 'Ленинабадская область');
-INSERT INTO zones VALUES ('114', '216', 'Ахал', 'Ахал');
-INSERT INTO zones VALUES ('115', '216', 'Балкан', 'Балкан');
-INSERT INTO zones VALUES ('116', '216', 'Дашховуз', 'Дашховуз');
-INSERT INTO zones VALUES ('117', '216', 'Лебап', 'Лебап');
-INSERT INTO zones VALUES ('118', '216', 'Мары', 'Мары');
-INSERT INTO zones VALUES ('119', '220', 'Республика Крым', 'Республика Крым');
-INSERT INTO zones VALUES ('120', '220', 'Винницкая область', 'Винницкая область');
-INSERT INTO zones VALUES ('121', '220', 'Волынская область', 'Волынская область');
-INSERT INTO zones VALUES ('122', '220', 'Днепропетровская область', 'Днепропетровская область');
-INSERT INTO zones VALUES ('123', '220', 'Донецкая область', 'Донецкая область');
-INSERT INTO zones VALUES ('124', '220', 'Житомирская область', 'Житомирская область');
-INSERT INTO zones VALUES ('125', '220', 'Закарпатская область', 'Закарпатская область');
-INSERT INTO zones VALUES ('126', '220', 'Запорожская область', 'Запорожская область');
-INSERT INTO zones VALUES ('127', '220', 'Ивано-Франковская область', 'Ивано-Франковская область');
-INSERT INTO zones VALUES ('128', '220', 'Киевская область', 'Киевская область');
-INSERT INTO zones VALUES ('129', '220', 'Кировоградская область', 'Кировоградская область');
-INSERT INTO zones VALUES ('130', '220', 'Луганская область', 'Луганская область');
-INSERT INTO zones VALUES ('131', '220', 'Львовская область', 'Львовская область');
-INSERT INTO zones VALUES ('132', '220', 'Николаевская область', 'Николаевская область');
-INSERT INTO zones VALUES ('133', '220', 'Одесская область', 'Одесская область');
-INSERT INTO zones VALUES ('134', '220', 'Полтавская область', 'Полтавская область');
-INSERT INTO zones VALUES ('135', '220', 'Ровенская область', 'Ровенская область');
-INSERT INTO zones VALUES ('136', '220', 'Сумская область', 'Сумская область');
-INSERT INTO zones VALUES ('137', '220', 'Тернопольская область', 'Тернопольская область');
-INSERT INTO zones VALUES ('138', '220', 'Харьковская область', 'Харьковская область');
-INSERT INTO zones VALUES ('139', '220', 'Херсонская область', 'Херсонская область');
-INSERT INTO zones VALUES ('140', '220', 'Хмельницкая область', 'Хмельницкая область');
-INSERT INTO zones VALUES ('141', '220', 'Черкасская область', 'Черкасская область');
-INSERT INTO zones VALUES ('142', '220', 'Черниговская область', 'Черниговская область');
-INSERT INTO zones VALUES ('143', '220', 'Черновицкая область', 'Черновицкая область');
-INSERT INTO zones VALUES ('144', '226', 'Андижанский', 'Андижанский');
-INSERT INTO zones VALUES ('145', '226', 'Бухарский', 'Бухарский');
-INSERT INTO zones VALUES ('146', '226', 'Джизакский', 'Джизакский');
-INSERT INTO zones VALUES ('147', '226', 'Каракалпакия', 'Каракалпакия');
-INSERT INTO zones VALUES ('148', '226', 'Кашкадарьинский', 'Кашкадарьинский');
-INSERT INTO zones VALUES ('149', '226', 'Навоийский', 'Навоийский');
-INSERT INTO zones VALUES ('150', '226', 'Наманганский', 'Наманганский');
-INSERT INTO zones VALUES ('151', '226', 'Самаркандский', 'Самаркандский');
-INSERT INTO zones VALUES ('152', '226', 'Сурхандарьинский', 'Сурхандарьинский');
-INSERT INTO zones VALUES ('153', '226', 'Сырдарьинский', 'Сырдарьинский');
-INSERT INTO zones VALUES ('154', '226', 'Ташкентский', 'Ташкентский');
-INSERT INTO zones VALUES ('155', '226', 'Ферганский', 'Ферганский');
-INSERT INTO zones VALUES ('156', '226', 'Хорезмский', 'Хорезмский');
-INSERT INTO zones VALUES ('157', '15', 'Апшеронский район', 'Апшеронский район');
-INSERT INTO zones VALUES ('158', '15', 'Агдамский район', 'Агдамский район');
-INSERT INTO zones VALUES ('159', '15', 'Агдашский район', 'Агдашский район');
-INSERT INTO zones VALUES ('160', '15', 'Агджабединский район', 'Агджабединский район');
-INSERT INTO zones VALUES ('161', '15', 'Акстафинский район', 'Акстафинский район');
-INSERT INTO zones VALUES ('162', '15', 'Агсуинский район', 'Агсуинский район');
-INSERT INTO zones VALUES ('163', '15', 'Астаринский район', 'Астаринский район');
-INSERT INTO zones VALUES ('164', '15', 'Балакенский район', 'Балакенский район');
-INSERT INTO zones VALUES ('165', '15', 'Бейлаганский район', 'Бейлаганский район');
-INSERT INTO zones VALUES ('166', '15', 'Бардинский район', 'Бардинский район');
-INSERT INTO zones VALUES ('167', '15', 'Билясуварский район', 'Билясуварский район');
-INSERT INTO zones VALUES ('168', '15', 'Джебраильский район', 'Джебраильский район');
-INSERT INTO zones VALUES ('169', '15', 'Джалилабадский район', 'Джалилабадский район');
-INSERT INTO zones VALUES ('170', '15', 'Дашкесанский район', 'Дашкесанский район');
-INSERT INTO zones VALUES ('171', '15', 'Дивичинский район', 'Дивичинский район');
-INSERT INTO zones VALUES ('172', '15', 'Физулинский район', 'Физулинский район');
-INSERT INTO zones VALUES ('173', '15', 'Кедабекский район', 'Кедабекский район');
-INSERT INTO zones VALUES ('174', '15', 'Геранбойский район', 'Геранбойский район');
-INSERT INTO zones VALUES ('175', '15', 'Геокчайский район', 'Геокчайский район');
-INSERT INTO zones VALUES ('176', '15', 'Гаджигабульский район', 'Гаджигабульский район');
-INSERT INTO zones VALUES ('177', '15', 'Хачмазский район', 'Хачмазский район');
-INSERT INTO zones VALUES ('178', '15', 'Ханларский район', 'Ханларский район');
-INSERT INTO zones VALUES ('179', '15', 'Хызынский район', 'Хызынский район');
-INSERT INTO zones VALUES ('180', '15', 'Ходжавендский район', 'Ходжавендский район');
-INSERT INTO zones VALUES ('181', '15', 'Ходжалинский район', 'Ходжалинский район');
-INSERT INTO zones VALUES ('182', '15', 'Имишлинский район', 'Имишлинский район');
-INSERT INTO zones VALUES ('183', '15', 'Исмаиллинский район', 'Исмаиллинский район');
-INSERT INTO zones VALUES ('184', '15', 'Кельбаджарский район', 'Кельбаджарский район');
-INSERT INTO zones VALUES ('185', '15', 'Кюрдамирский район', 'Кюрдамирский район');
-INSERT INTO zones VALUES ('186', '15', 'Гахский район', 'Гахский район');
-INSERT INTO zones VALUES ('187', '15', 'Газахский район', 'Газахский район');
-INSERT INTO zones VALUES ('188', '15', 'Габалинский район', 'Габалинский район');
-INSERT INTO zones VALUES ('189', '15', 'Гобустанский район', 'Гобустанский район');
-INSERT INTO zones VALUES ('190', '15', 'Губинский район', 'Губинский район');
-INSERT INTO zones VALUES ('191', '15', 'Губадлинский район', 'Губадлинский район');
-INSERT INTO zones VALUES ('192', '15', 'Гусарский район', 'Гусарский район');
-INSERT INTO zones VALUES ('193', '15', 'Лачинский район', 'Лачинский район');
-INSERT INTO zones VALUES ('194', '15', 'Ленкоранский район', 'Ленкоранский район');
-INSERT INTO zones VALUES ('195', '15', 'Лерикский район', 'Лерикский район');
-INSERT INTO zones VALUES ('196', '15', 'Масаллинский район', 'Масаллинский район');
-INSERT INTO zones VALUES ('197', '15', 'Нефтчалинский район', 'Нефтчалинский район');
-INSERT INTO zones VALUES ('198', '15', 'Огузский район', 'Огузский район');
-INSERT INTO zones VALUES ('199', '15', 'Саатлинский район', 'Саатлинский район');
-INSERT INTO zones VALUES ('200', '15', 'Сабирабадский район', 'Сабирабадский район');
-INSERT INTO zones VALUES ('201', '15', 'Сальянский район', 'Сальянский район');
-INSERT INTO zones VALUES ('202', '15', 'Самухский район', 'Самухский район');
-INSERT INTO zones VALUES ('203', '15', 'Сиязаньский район', 'Сиязаньский район');
-INSERT INTO zones VALUES ('204', '15', 'Шемахинский район', 'Шемахинский район');
-INSERT INTO zones VALUES ('205', '15', 'Шемкирский район', 'Шемкирский район');
-INSERT INTO zones VALUES ('206', '15', 'Шекинский район', 'Шекинский район');
-INSERT INTO zones VALUES ('207', '15', 'Шушинский район', 'Шушинский район');
-INSERT INTO zones VALUES ('208', '15', 'Тертерский район', 'Тертерский район');
-INSERT INTO zones VALUES ('209', '15', 'Товузский район', 'Товузский район');
-INSERT INTO zones VALUES ('210', '15', 'Уджарский район', 'Уджарский район');
-INSERT INTO zones VALUES ('211', '15', 'Ярдымлинский район', 'Ярдымлинский район');
-INSERT INTO zones VALUES ('212', '15', 'Евлахский район', 'Евлахский район');
-INSERT INTO zones VALUES ('213', '15', 'Закатальский район', 'Закатальский район');
-INSERT INTO zones VALUES ('214', '15', 'Зангеланский район', 'Зангеланский район');
-INSERT INTO zones VALUES ('215', '15', 'Зардабский район', 'Зардабский район');
-INSERT INTO zones VALUES ('216', '15', 'Нахичеванская Автономная Республика', 'Нахичеванская Автономная Республика');
-INSERT INTO zones VALUES ('217', '15', 'Бабекский район', 'Бабекский район');
-INSERT INTO zones VALUES ('218', '15', 'Джульфинский район', 'Джульфинский район');
-INSERT INTO zones VALUES ('219', '15', 'Ордубадский район', 'Ордубадский район');
-INSERT INTO zones VALUES ('220', '15', 'Садаракский район', 'Садаракский район');
-INSERT INTO zones VALUES ('221', '15', 'Шахбузский район', 'Шахбузский район');
-INSERT INTO zones VALUES ('222', '15', 'Шарурский район', 'Шарурский район');
-INSERT INTO zones VALUES ('223', '67', 'Харьюский уезд', 'Харьюский уезд');
-INSERT INTO zones VALUES ('224', '67', 'Хийумааский уезд', 'Хийумааский уезд');
-INSERT INTO zones VALUES ('225', '67', 'Ида-Вирумааский уезд', 'Ида-Вирумааский уезд');
-INSERT INTO zones VALUES ('226', '67', 'Ярвамаамааский уезд', 'Ярвамаамааский уезд');
-INSERT INTO zones VALUES ('227', '67', 'Йыгевамааский уезд', 'Йыгевамааский уезд');
-INSERT INTO zones VALUES ('228', '67', 'Ляэнемааский уезд', 'Ляэнемааский уезд');
-INSERT INTO zones VALUES ('229', '67', 'Ляэне-Вирумааский уезд', 'Ляэне-Вирумааский уезд');
-INSERT INTO zones VALUES ('230', '67', 'Пылвамааский уезд', 'Пылвамааский уезд');
-INSERT INTO zones VALUES ('231', '67', 'Пярнумааский уезд', 'Пярнумааский уезд');
-INSERT INTO zones VALUES ('232', '67', 'Рапламааский уезд', 'Рапламааский уезд');
-INSERT INTO zones VALUES ('233', '67', 'Сааремааский уезд', 'Сааремааский уезд');
-INSERT INTO zones VALUES ('234', '67', 'Тартумааский уезд', 'Тартумааский уезд');
-INSERT INTO zones VALUES ('235', '67', 'Валгамааский уезд', 'Валгамааский уезд');
-INSERT INTO zones VALUES ('236', '67', 'Вильяндимааский уезд', 'Вильяндимааский уезд');
-INSERT INTO zones VALUES ('237', '67', 'Вырумааский уезд', 'Вырумааский уезд');
-INSERT INTO zones VALUES ('238', '20', 'Витебская область', 'Витебская область');
-INSERT INTO zones VALUES ('239', '20', 'Могилевская область', 'Могилевская область');
-INSERT INTO zones VALUES ('240', '20', 'Минская область', 'Минская область');
-INSERT INTO zones VALUES ('241', '20', 'Гродненская область', 'Гродненская область');
-INSERT INTO zones VALUES ('242', '20', 'Гомельская область', 'Гомельская область');
-INSERT INTO zones VALUES ('243', '20', 'Брестская область', 'Брестская область');
-INSERT INTO zones VALUES ('244', '11', 'Область Арагацотн', 'Область Арагацотн');
-INSERT INTO zones VALUES ('245', '11', 'Араратская область', 'Араратская область');
-INSERT INTO zones VALUES ('246', '11', 'Армавирская область', 'Армавирская область');
-INSERT INTO zones VALUES ('247', '11', 'Гегаркуникская область', 'Гегаркуникская область');
-INSERT INTO zones VALUES ('248', '11', 'Ереван', 'Ереван');
-INSERT INTO zones VALUES ('249', '11', 'Лорийская область', 'Лорийская область');
-INSERT INTO zones VALUES ('250', '11', 'Котайкская область', 'Котайкская область');
-INSERT INTO zones VALUES ('251', '11', 'Ширакская область', 'Ширакская область');
-INSERT INTO zones VALUES ('252', '11', 'Сюникская область', 'Сюникская область');
-INSERT INTO zones VALUES ('253', '11', 'Область Вайоц Дзор', 'Область Вайоц Дзор');
-INSERT INTO zones VALUES ('254', '11', 'Тавушская область', 'Тавушская область');
-INSERT INTO zones VALUES ('255', '80', 'Гурия', 'Гурия');
-INSERT INTO zones VALUES ('256', '80', 'Имерети', 'Имерети');
-INSERT INTO zones VALUES ('257', '80', 'Кахети', 'Кахети');
-INSERT INTO zones VALUES ('258', '80', 'Квемо-Картли', 'Квемо-Картли');
-INSERT INTO zones VALUES ('259', '80', 'Мцхета-Тианети', 'Мцхета-Тианети');
-INSERT INTO zones VALUES ('260', '80', 'Рача-Лечхуми - Квемо Сванети', 'Рача-Лечхуми - Квемо Сванети');
-INSERT INTO zones VALUES ('261', '80', 'Самегрело - Земо-Сванети', 'Самегрело - Земо-Сванети');
-INSERT INTO zones VALUES ('262', '80', 'Самцхе-Джавахети', 'Самцхе-Джавахети');
-INSERT INTO zones VALUES ('263', '80', 'Тбилиси', 'Тбилиси');
-INSERT INTO zones VALUES ('264', '80', 'Шида - Картли', 'Шида - Картли');
-INSERT INTO zones VALUES ('265', '80', 'Аджарская автономная республика', 'Аджарская автономная республика');
-INSERT INTO zones VALUES ('266', '80', 'Абхазская автономная республика', 'Абхазская автономная республика');
-INSERT INTO zones VALUES ('267', '80', 'Республика Южная Осетия', 'Республика Южная Осетия');
-INSERT INTO zones VALUES ('268', '140', 'Балти', 'Балти');
-INSERT INTO zones VALUES ('269', '140', 'Единет', 'Единет');
-INSERT INTO zones VALUES ('270', '140', 'Кагул', 'Кагул');
-INSERT INTO zones VALUES ('271', '140', 'Кишенёв', 'Кишенёв');
-INSERT INTO zones VALUES ('272', '140', 'Лапушна', 'Лапушна');
-INSERT INTO zones VALUES ('273', '140', 'Оргей', 'Оргей');
-INSERT INTO zones VALUES ('274', '140', 'Сорока', 'Сорока');
-INSERT INTO zones VALUES ('275', '140', 'Тараклия', 'Тараклия');
-INSERT INTO zones VALUES ('276', '140', 'Тигина', 'Тигина');
-INSERT INTO zones VALUES ('277', '140', 'Унгены', 'Унгены');
-INSERT INTO zones VALUES ('278', '123', 'Алитусский уезд', 'Алитусский уезд');
-INSERT INTO zones VALUES ('279', '123', 'Каунасский уезд', 'Каунасский уезд');
-INSERT INTO zones VALUES ('280', '123', 'Kлайпедский уезд', 'Kлайпедский уезд');
-INSERT INTO zones VALUES ('281', '123', 'Maриямпольский уезд', 'Maриямпольский уезд');
-INSERT INTO zones VALUES ('282', '123', 'Панявежский уезд', 'Панявежский уезд');
-INSERT INTO zones VALUES ('283', '123', 'Шяуляйский уезд', 'Шяуляйский уезд');
-INSERT INTO zones VALUES ('284', '123', 'Таурагский уезд', 'Таурагский уезд');
-INSERT INTO zones VALUES ('285', '123', 'Tяльшяйский уезд', 'Tяльшяйский уезд');
-INSERT INTO zones VALUES ('286', '123', 'Утянский уезд', 'Утянский уезд');
-INSERT INTO zones VALUES ('287', '123', 'Вильнюсский уезд', 'Вильнюсский уезд');
-INSERT INTO zones VALUES ('288', '117', 'Аизкраукленский', 'Аизкраукленский');
-INSERT INTO zones VALUES ('289', '117', 'Алуксненский', 'Алуксненский');
-INSERT INTO zones VALUES ('290', '117', 'Балвский', 'Балвский');
-INSERT INTO zones VALUES ('291', '117', 'Бауский', 'Бауский');
-INSERT INTO zones VALUES ('292', '117', 'Валкский', 'Валкский');
-INSERT INTO zones VALUES ('293', '117', 'Валмиерский', 'Валмиерский');
-INSERT INTO zones VALUES ('294', '117', 'Вентспилсский', 'Вентспилсский');
-INSERT INTO zones VALUES ('295', '117', 'Гулбенский', 'Гулбенский');
-INSERT INTO zones VALUES ('296', '117', 'Давгавпилский', 'Давгавпилский');
-INSERT INTO zones VALUES ('297', '117', 'Добелский', 'Добелский');
-INSERT INTO zones VALUES ('298', '117', 'Екабпилский', 'Екабпилский');
-INSERT INTO zones VALUES ('299', '117', 'Елгавский', 'Елгавский');
-INSERT INTO zones VALUES ('300', '117', 'Краславский', 'Краславский');
-INSERT INTO zones VALUES ('301', '117', 'Кулдигский', 'Кулдигский');
-INSERT INTO zones VALUES ('302', '117', 'Лепайский', 'Лепайский');
-INSERT INTO zones VALUES ('303', '117', 'Лимбажский', 'Лимбажский');
-INSERT INTO zones VALUES ('304', '117', 'Ледзенский', 'Ледзенский');
-INSERT INTO zones VALUES ('305', '117', 'Мадонский', 'Мадонский');
-INSERT INTO zones VALUES ('306', '117', 'Огрский', 'Огрский');
-INSERT INTO zones VALUES ('307', '117', 'Прейльский', 'Прейльский');
-INSERT INTO zones VALUES ('308', '117', 'Резекненский', 'Резекненский');
-INSERT INTO zones VALUES ('309', '117', 'Рижский', 'Рижский');
-INSERT INTO zones VALUES ('310', '117', 'Салдуский', 'Салдуский');
-INSERT INTO zones VALUES ('311', '117', 'Талсинский', 'Талсинский');
-INSERT INTO zones VALUES ('312', '117', 'Тукумский', 'Тукумский');
-INSERT INTO zones VALUES ('313', '117', 'Цесиский', 'Цесиский');
-INSERT INTO zones VALUES ('314', '117', 'Вентспилс', 'Вентспилс');
-INSERT INTO zones VALUES ('315', '117', 'Даугавпилс', 'Даугавпилс');
-INSERT INTO zones VALUES ('316', '117', 'Елгава', 'Елгава');
-INSERT INTO zones VALUES ('317', '117', 'Лиепая', 'Лиепая');
-INSERT INTO zones VALUES ('318', '117', 'Резекне', 'Резекне');
-INSERT INTO zones VALUES ('319', '117', 'Рига', 'Рига');
-INSERT INTO zones VALUES ('320', '117', 'Юрмала', 'Юрмала');
+
 
 # USA
 INSERT INTO zones VALUES ('321','223','AL','Alabama');
@@ -2964,8 +2531,6 @@ INSERT INTO zones VALUES ('382','223','WA','Washington');
 INSERT INTO zones VALUES ('383','223','WV','West Virginia');
 INSERT INTO zones VALUES ('384','223','WI','Wisconsin');
 INSERT INTO zones VALUES ('385','223','WY','Wyoming');
-
-INSERT INTO zones VALUES ('386', '115', 'Бишкек', 'Бишкек');
 
 #
 # Dumping data for table `payment_moneybookers_countries`
@@ -3201,13 +2766,13 @@ INSERT INTO payment_moneybookers_currencies VALUES ('TWD', 'New Taiwan Dollar');
 INSERT INTO payment_moneybookers_currencies VALUES ('USD', 'US Dollar');
 INSERT INTO payment_moneybookers_currencies VALUES ('ZAR', 'South-African Rand');
 
-INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (0, 1, 'Админ', 1, NULL, NULL, 'admin_status.gif', 0.00, '1', 0.00, '1', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
+INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (0, 1, 'Admin', 1, NULL, NULL, 'admin_status.gif', 0.00, '1', 0.00, '1', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
 
-INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (1, 1, 'Посетитель', 1, NULL, NULL, 'guest_status.gif', 0.00, '0', 0.00, '0', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
+INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (1, 1, 'Guest', 1, NULL, NULL, 'guest_status.gif', 0.00, '0', 0.00, '0', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
 
-INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (2, 1, 'Покупатель', 1, NULL, NULL, 'customer_status.gif', 0.00, '0', 0.00, '1', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
+INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (2, 1, 'New customer', 1, NULL, NULL, 'customer_status.gif', 0.00, '0', 0.00, '1', 1, 1, 0, '', '', 0, 1, 1, 1, 1, 0.00);
 
-INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (3, 1, 'Оптовый покупатель', 1, NULL, NULL, 'merchant_status.gif', 0.00, '0', 0.00, '1', 1, 0, 0, '', '', 0, 1, 1, 1, 1, 0.00);
+INSERT INTO customers_status (customers_status_id, language_id, customers_status_name, customers_status_public, customers_status_min_order, customers_status_max_order, customers_status_image, customers_status_discount, customers_status_ot_discount_flag, customers_status_ot_discount, customers_status_graduated_prices, customers_status_show_price, customers_status_show_price_tax, customers_status_add_tax_ot, customers_status_payment_unallowed, customers_status_shipping_unallowed, customers_status_discount_attributes, customers_fsk18, customers_fsk18_display, customers_status_write_reviews, customers_status_read_reviews, customers_status_accumulated_limit) VALUES (3, 1, 'Merchant', 1, NULL, NULL, 'merchant_status.gif', 0.00, '0', 0.00, '1', 1, 0, 0, '', '', 0, 1, 1, 1, 1, 0.00);
 
 drop table if exists spsr_zones;
 create table spsr_zones (
