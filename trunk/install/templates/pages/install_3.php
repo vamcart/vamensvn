@@ -65,17 +65,6 @@
         <td class="inputDescription">The password to use for the administrator account.</td>
       </tr>
 
-<?php
-  if (osc_is_writable($dir_fs_document_root) && osc_is_writable($dir_fs_document_root . 'admin')) {
-?>
-      <tr>
-        <td class="inputField"><?php echo 'Administration Directory Name<br />' . osc_draw_input_field('CFG_ADMIN_DIRECTORY', 'admin', 'class="text"'); ?></td>
-        <td class="inputDescription">This is the directory where the administration section will be installed. You should change this for security reasons.</td>
-      </tr>
-<?php
-  }
-?>
-
     </table>
 
     <p align="right"><span class="button"><button type="submit"><img src="images/icons/buttons/submit.png" alt="Continue" title=" Continue " width="12" height="12" />&nbsp;Continue</button></span>&nbsp;&nbsp;<a class="button" href="index.php"><span><img src="images/icons/buttons/cancel.png" alt="Cancel" title="Cancel" width="12" height="12"  />&nbsp;Cancel</span></a></p>
