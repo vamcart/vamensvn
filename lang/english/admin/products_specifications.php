@@ -56,6 +56,7 @@
   define ('TEXT_SHOW_COMPARISON', 'Show Comparison Page:');
   define ('TEXT_SHOW_ON_PRODUCTS', 'Show on Products Info Page');
   define ('TEXT_SHOW_FILTER', 'Show Filter:');
+  define ('TEXT_SHOW_FILTER', 'Show Filter on Mainpage:');
   define ('TEXT_SHOW', 'Yes');
   define ('TEXT_DONT_SHOW', 'No');
   define ('TEXT_FILTER_CLASS', 'Filter Class');
