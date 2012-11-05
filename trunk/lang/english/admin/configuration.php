@@ -1015,4 +1015,8 @@ define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_DESC', 'Set the height of the images 
 define('AVISOSMS_EMAIL_TITLE','AvisoSMS Email');
 define('AVISOSMS_EMAIL_DESC','');
 
+define('CG_SMART_CHECKOUT', 'Smart Checkout');
+define('CG_SMART_CHECKOUT_TITLE', 'Smart Checkout');
+define('CG_SMART_CHECKOUT_DESC', '');
+
 ?>
