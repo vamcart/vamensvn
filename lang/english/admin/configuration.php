@@ -398,9 +398,6 @@ define('DB_CACHE_TITLE','If set to true, Shop can cache SELECT Queries for a per
 define('DIR_FS_CACHE_TITLE' , 'Cache Directory');
 define('DIR_FS_CACHE_DESC' , 'The directory where the cached files are saved');
 
-define('ACCOUNT_OPTIONS_TITLE','Account Options');
-define('ACCOUNT_OPTIONS_DESC','How do you want to manage the login management of your store ?<br />You can choose between Customer Accounts and "One Time Orders" without creating a Customer Account (an account will be created but the customer won\'t be informed about that)');
-
 define('EMAIL_TRANSPORT_TITLE' , 'eMail Transport Method');
 define('EMAIL_TRANSPORT_DESC' , 'Defines if this server uses a local connection to sendmail or uses an SMTP connection via TCP/IP. Servers running on Windows and MacOS should change this setting to SMTP.');
 
@@ -545,9 +542,6 @@ define('DB_CACHE_EXPIRE_DESC','Time in seconds to rebuld cached resulst.');
 
 define('PRODUCT_REVIEWS_VIEW_TITLE','Reviews in Productdetails');
 define('PRODUCT_REVIEWS_VIEW_DESC','Number of displayed reviews in the productdetails page');
-
-define('DELETE_GUEST_ACCOUNT_TITLE','Deleting Guest Accounts');
-define('DELETE_GUEST_ACCOUNT_DESC','Shold guest accounts be deleted after placing orders ? (Order data will be saved)');
 
 define('PRICE_IS_BRUTTO_TITLE','Gross Admin');
 define('PRICE_IS_BRUTTO_DESC','Usage of prices with tax in Admin');
