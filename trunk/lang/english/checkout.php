@@ -35,6 +35,81 @@ define('SC_PROGRESS_CHECKOUT_PAGE', 'Checkout');
 define('SC_PROGRESS_CONFIRMATION_PAGE', 'Order Confirmation');
 //progress bar end
 
+define('TEXT_ORIGIN_LOGIN', 'Would you like to <b><a href='.FILENAME_LOGIN.'><u> log yourself in</u></a></b>?. Or you can place your order right now, please fill form below.');
+
+define('CATEGORY_COMPANY', 'Company Details');
+define('CATEGORY_PERSONAL', 'Your Personal Details');
+define('CATEGORY_ADDRESS', 'Your Address');
+define('CATEGORY_CONTACT', 'Your Contact Information');
+define('CATEGORY_OPTIONS', 'Options');
+define('CATEGORY_PASSWORD', 'Your Password');
+
+define('ENTRY_COMPANY', 'Company Name:');
+define('ENTRY_COMPANY_ERROR', '');
+define('ENTRY_COMPANY_TEXT', '');
+define('ENTRY_GENDER', 'Gender:');
+define('ENTRY_GENDER_ERROR', 'Please select your Gender.');
+define('ENTRY_GENDER_TEXT', '*');
+define('ENTRY_FIRST_NAME', 'First Name:');
+define('ENTRY_FIRST_NAME_ERROR', 'Your First Name must contain a minimum of ' . ENTRY_FIRST_NAME_MIN_LENGTH . ' characters.');
+define('ENTRY_FIRST_NAME_TEXT', '*');
+define('ENTRY_LAST_NAME', 'Last Name:');
+define('ENTRY_LAST_NAME_ERROR', 'Your Last Name must contain a minimum of ' . ENTRY_LAST_NAME_MIN_LENGTH . ' characters.');
+define('ENTRY_LAST_NAME_TEXT', '*');
+define('ENTRY_DATE_OF_BIRTH', 'Date of Birth:');
+define('ENTRY_DATE_OF_BIRTH_ERROR', 'Your Date of Birth must be in this format: MM/DD/YYYY (eg 05/21/1970)');
+define('ENTRY_DATE_OF_BIRTH_TEXT', '* (eg. 05/21/1970)');
+define('ENTRY_EMAIL_ADDRESS', 'E-Mail Address:');
+define('ENTRY_EMAIL_ADDRESS_ERROR', 'Your E-Mail Address must contain a minimum of ' . ENTRY_EMAIL_ADDRESS_MIN_LENGTH . ' characters.');
+define('ENTRY_EMAIL_ADDRESS_CHECK_ERROR', 'Your E-Mail Address does not appear to be valid - please make any necessary corrections.');
+define('ENTRY_EMAIL_ADDRESS_ERROR_EXISTS', 'Your E-Mail Address already exists in our records - please log in with the e-mail address or create an account with a different address.');
+define('ENTRY_EMAIL_ADDRESS_TEXT', '*');
+define('ENTRY_STREET_ADDRESS', 'Street Address:');
+define('ENTRY_STREET_ADDRESS_ERROR', 'Your Street Address must contain a minimum of ' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' characters.');
+define('ENTRY_STREET_ADDRESS_TEXT', '*');
+define('ENTRY_SUBURB', 'Suburb:');
+define('ENTRY_SUBURB_ERROR', '');
+define('ENTRY_SUBURB_TEXT', '');
+define('ENTRY_POST_CODE', 'Post Code:');
+define('ENTRY_POST_CODE_ERROR', 'Your Post Code must contain a minimum of ' . ENTRY_POSTCODE_MIN_LENGTH . ' characters.');
+define('ENTRY_POST_CODE_TEXT', '*');
+define('ENTRY_CITY', 'City:');
+define('ENTRY_CITY_ERROR', 'Your City must contain a minimum of ' . ENTRY_CITY_MIN_LENGTH . ' characters.');
+define('ENTRY_CITY_TEXT', '*');
+define('ENTRY_STATE', 'State/Province:');
+define('ENTRY_STATE_ERROR', 'Your State must contain a minimum of ' . ENTRY_STATE_MIN_LENGTH . ' characters.');
+define('ENTRY_STATE_ERROR_SELECT', 'Please select a state from the States pull down menu.');
+define('ENTRY_STATE_TEXT', '*');
+define('ENTRY_COUNTRY', 'Country:');
+define('ENTRY_COUNTRY_ERROR', 'You must select a country from the Countries pull down menu.');
+define('ENTRY_COUNTRY_TEXT', '*');
+define('ENTRY_TELEPHONE_NUMBER', 'Telephone Number:');
+define('ENTRY_TELEPHONE_NUMBER_ERROR', 'Your Telephone Number must contain a minimum of ' . ENTRY_TELEPHONE_MIN_LENGTH . ' characters.');
+define('ENTRY_TELEPHONE_NUMBER_TEXT', '*');
+define('ENTRY_FAX_NUMBER', 'Fax Number:');
+define('ENTRY_FAX_NUMBER_ERROR', '');
+define('ENTRY_FAX_NUMBER_TEXT', '');
+define('ENTRY_NEWSLETTER', 'Newsletter:');
+define('ENTRY_NEWSLETTER_TEXT', '');
+define('ENTRY_NEWSLETTER_YES', 'Subscribed');
+define('ENTRY_NEWSLETTER_NO', 'Unsubscribed');
+define('ENTRY_NEWSLETTER_ERROR', '');
+define('ENTRY_PASSWORD', 'Password:');
+define('ENTRY_PASSWORD_ERROR', 'Your Password must contain a minimum of ' . ENTRY_PASSWORD_MIN_LENGTH . ' characters.');
+define('ENTRY_PASSWORD_ERROR_NOT_MATCHING', 'The Password Confirmation must match your Password.');
+define('ENTRY_PASSWORD_TEXT', '*');
+define('ENTRY_PASSWORD_CONFIRMATION', 'Password Confirmation:');
+define('ENTRY_PASSWORD_CONFIRMATION_TEXT', '*');
+define('ENTRY_PASSWORD_CURRENT', 'Current Password:');
+define('ENTRY_PASSWORD_CURRENT_TEXT', '*');
+define('ENTRY_PASSWORD_CURRENT_ERROR', 'Your Password must contain a minimum of ' . ENTRY_PASSWORD_MIN_LENGTH . ' characters.');
+define('ENTRY_PASSWORD_NEW', 'New Password:');
+define('ENTRY_PASSWORD_NEW_TEXT', '*');
+define('ENTRY_PASSWORD_NEW_ERROR', 'Your new Password must contain a minimum of ' . ENTRY_PASSWORD_MIN_LENGTH . ' characters.');
+define('ENTRY_PASSWORD_NEW_ERROR_NOT_MATCHING', 'The Password Confirmation must match your new Password.');
+define('PASSWORD_HIDDEN', '--HIDDEN--');
+
+define('FORM_REQUIRED_INFORMATION', '* Required information');
 
 //site content
 define('TEXT_SHIPPING_SAME_AS_PAYMENT', 'Billing address is the same as shipping address.');
@@ -74,67 +149,52 @@ define('EMAIL_PASSWORD', 'Your password is: ' . stripslashes($_POST['password'])
 
 // CHECKOUT_SHIPPING
 
-define('NAVBAR_TITLE_1', 'Оформление заказа');
-define('NAVBAR_TITLE_2', 'Способ доставки');
+define('TABLE_HEADING_SHIPPING_ADDRESS', 'Shipping Address');
+define('TEXT_CHOOSE_SHIPPING_DESTINATION', 'Please choose from your address book where you would like the items to be delivered to.');
+define('TITLE_SHIPPING_ADDRESS', 'Shipping Address:');
 
-define('HEADING_TITLE', 'Информация о доставке заказа');
+define('TABLE_HEADING_SHIPPING_METHOD', 'Shipping Method');
+define('TEXT_CHOOSE_SHIPPING_METHOD', 'Please select the preferred shipping method to use on this order.');
+define('TITLE_PLEASE_SELECT', 'Please Select');
+define('TEXT_ENTER_SHIPPING_INFORMATION', 'This is currently the only shipping method available to use on this order.');
 
-define('TABLE_HEADING_SHIPPING_ADDRESS', 'Адрес доставки');
-define('TEXT_CHOOSE_SHIPPING_DESTINATION', 'Если Вы хотите изменить текущий адрес доставки, нажмите кнопку Изменить адрес, если текущий адрес доставки правильный, выбирайте наиболее подходящий Вам способ доставки и продолжайте оформлять заказ.');
-define('TITLE_SHIPPING_ADDRESS', 'Текущий адрес доставки:');
+define('TABLE_HEADING_COMMENTS', 'Add Comments About Your Order');
 
-define('TABLE_HEADING_SHIPPING_METHOD', 'Способ доставки');
-define('TEXT_CHOOSE_SHIPPING_METHOD', 'Доступные способы доставки заказа.');
-define('TITLE_PLEASE_SELECT', 'Выберите');
-define('TEXT_ENTER_SHIPPING_INFORMATION', 'На данный момент доступен единственный способ доставки:');
+define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Continue Checkout Procedure');
+define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'to select the preferred payment method.');
 
-define('TABLE_HEADING_COMMENTS', 'Комментарии к Вашему заказу');
-
-define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Продолжить оформление заказа');
-define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'Далее Вам нужно будет выбрать подходящий способ оплаты заказа.');
-
-define('TEXT_ENTER_SHIPPING_NO_METHOD','Нет доступных способов доставки.');
+define('TEXT_ENTER_SHIPPING_NO_METHOD','Shipping methods not available.');
 
 // CHECKOUT_PAYMENT
 
-define('NAVBAR_TITLE_1', 'Оформление заказа');
-define('NAVBAR_TITLE_2', 'Способ оплаты заказа');
+define('TABLE_HEADING_BILLING_ADDRESS', 'Billing Address');
+define('TEXT_SELECTED_BILLING_DESTINATION', 'Please choose from your address book where you would like the invoice to be sent to.');
+define('TITLE_BILLING_ADDRESS', 'Billing Address:');
 
-define('HEADING_TITLE', 'Способ оплаты заказа');
+define('TABLE_HEADING_PAYMENT_METHOD', 'Payment Method');
+define('TEXT_SELECT_PAYMENT_METHOD', 'Please select the preferred payment method to use on this order.');
+define('TITLE_PLEASE_SELECT', 'Please Select');
+define('TEXT_ENTER_PAYMENT_INFORMATION', 'This is currently the only payment method available to use on this order.');
 
-define('TABLE_HEADING_BILLING_ADDRESS', 'Адрес покупателя');
-define('TEXT_SELECTED_BILLING_DESTINATION', 'Пожалуйста, выберите адрес из Вашей адресной книги. Адрес покупателя необходим в случае потери заказа при доставке на адрес, который Вы указали ранее.');
-define('TITLE_BILLING_ADDRESS', 'Текущий адрес:');
+define('TABLE_HEADING_COMMENTS', 'Add Comments About Your Order');
 
-define('TABLE_HEADING_PAYMENT_METHOD', 'Способ оплаты');
-define('TEXT_SELECT_PAYMENT_METHOD', 'Доступные способы оплаты заказа.');
-define('TITLE_PLEASE_SELECT', 'Выберите предпочтительный способ');
-define('TEXT_ENTER_PAYMENT_INFORMATION', 'На данный момент доступен единственный способ оплаты заказа, продолжайте оформлять заказ:');
-
-define('TABLE_HEADING_COMMENTS', 'Комментарии к Вашему заказу');
-
-define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Продолжить оформление заказа');
-define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'Далее Вам нужно будет подтвердить свой заказ.');
+define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Continue Checkout Procedure');
+define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'to confirm this order.');
 
 // CHECKOUT_CONFIRMATION
 
-define('NAVBAR_TITLE_1', 'Оформление заказа');
-define('NAVBAR_TITLE_2', 'Подтвердить');
+define('HEADING_DELIVERY_ADDRESS', 'Delivery Address');
+define('HEADING_SHIPPING_METHOD', 'Shipping Method');
+define('HEADING_PRODUCTS', 'Products');
+define('HEADING_TAX', 'Tax');
+define('HEADING_TOTAL', 'Total');
+define('HEADING_BILLING_INFORMATION', 'Billing Information');
+define('HEADING_BILLING_ADDRESS', 'Billing Address');
+define('HEADING_PAYMENT_METHOD', 'Payment Method');
+define('HEADING_PAYMENT_INFORMATION', 'Payment Information');
+define('HEADING_ORDER_COMMENTS', 'Comments About Your Order');
 
-define('HEADING_TITLE', 'Подтверждение заказа!');
+define('TEXT_EDIT', 'Edit');
 
-define('HEADING_DELIVERY_ADDRESS', 'Адрес доставки');
-define('HEADING_SHIPPING_METHOD', 'Способ доставки');
-define('HEADING_PRODUCTS', 'Товар');
-define('HEADING_TAX', 'Налоги');
-define('HEADING_TOTAL', 'Сумма');
-define('HEADING_BILLING_INFORMATION', 'Информация об оплате заказа');
-define('HEADING_BILLING_ADDRESS', 'Адрес покупателя');
-define('HEADING_PAYMENT_METHOD', 'Способ оплаты');
-define('HEADING_PAYMENT_INFORMATION', 'Информация об оплате');
-define('HEADING_ORDER_COMMENTS', 'Ваши комментарии');
-
-define('TEXT_EDIT', 'Изменить');
-
-define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Продолжить оформление заказа');
-define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'Для завершения процедуры оформления заказа, Вы должны подтвердить свой заказ.');
+define('TITLE_CONTINUE_CHECKOUT_PROCEDURE', 'Continue Checkout Procedure');
+define('TEXT_CONTINUE_CHECKOUT_PROCEDURE', 'to confirm this order.');
