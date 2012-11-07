@@ -1018,8 +1018,6 @@ define('SC_CREATE_ACCOUNT_CHECKOUT_PAGE_TITLE', 'Create Account option at checko
 define('SC_CREATE_ACCOUNT_CHECKOUT_PAGE_DESC', 'If enabled, customers have always the option to create an account at the checkout page');
 define('SC_CREATE_ACCOUNT_SUCCESS_PAGE_TITLE', 'Create Account at Success Page only');
 define('SC_CREATE_ACCOUNT_SUCCESS_PAGE_DESC', 'If enabled, customers will be asked if they want to create an account at the success page');
-define('SC_LIVE_VALIDATION_TITLE', 'Live Validation');
-define('SC_LIVE_VALIDATION_DESC', 'Do you want to enable Live Validation for the forms?');
 define('SC_CONDITIONS_TITLE', 'Conditions of Use');
 define('SC_CONDITIONS_DESC', 'If enabled, customers must check the Conditions of Use checkbox in order to proceed');
 define('SC_HIDE_SHIPPING_TITLE', 'Hide Shipping');
