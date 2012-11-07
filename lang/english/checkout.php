@@ -132,6 +132,7 @@ define('SC_CONDITION_END', ' and I agree to them: ');
 define('SC_HEADING_CONDITIONS', '<strong>Terms and Conditions Agreement</strong>');
 //End Conditions of use
 
+define('TEXT_DISCOUNT_CODE', 'Coupon code or gift voucher');
 
 //Account optional
 define('TEXT_CREATE_ACCOUNT_OPTIONAL', 'I do not want to create an account.');
