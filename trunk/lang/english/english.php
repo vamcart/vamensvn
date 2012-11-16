@@ -109,6 +109,7 @@ define('ENTRY_EMAIL_ADDRESS_ERROR_EXISTS', 'The e-mail address your entered alre
 define('ENTRY_EMAIL_ADDRESS_TEXT', '*');
 define('ENTRY_STREET_ADDRESS_ERROR', 'Street/Nr must consist of at least ' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' characters.');
 define('ENTRY_STREET_ADDRESS_TEXT', '*');
+define('ENTRY_SC_STREET_ADDRESS_TEXT', '');
 define('ENTRY_SUBURB_TEXT', '');
 define('ENTRY_POST_CODE_ERROR', 'Your zip code must consist of at least ' . ENTRY_POSTCODE_MIN_LENGTH . ' characters.');
 define('ENTRY_POST_CODE_TEXT', '*');
