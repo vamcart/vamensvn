@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: checkout.php 867 2012-11-11 19:20:03 oleg_vamsoft $
+   $Id: checkout.php 867 2012-11-16 19:20:03 oleg_vamsoft $
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
@@ -67,6 +67,7 @@ define('ENTRY_EMAIL_ADDRESS_TEXT', '*');
 define('ENTRY_STREET_ADDRESS', 'Street Address:');
 define('ENTRY_STREET_ADDRESS_ERROR', 'Your Street Address must contain a minimum of ' . ENTRY_STREET_ADDRESS_MIN_LENGTH . ' characters.');
 define('ENTRY_STREET_ADDRESS_TEXT', '*');
+define('ENTRY_SC_STREET_ADDRESS_TEXT', '');
 define('ENTRY_SUBURB', 'Suburb:');
 define('ENTRY_SUBURB_ERROR', '');
 define('ENTRY_SUBURB_TEXT', '');
