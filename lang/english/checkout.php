@@ -142,7 +142,7 @@ define('TEXT_CREATE_ACCOUNT_OPTIONAL', 'I do not want to create an account.');
 define('SC_HEADING_CREATE_ACCOUNT', 'Create account');
 define('SC_HEADING_CREATE_ACCOUNT_INFORMATION', 'Account Information');
 define('SC_TEXT_VIRTUAL_PRODUCT', 'You need to create an account in order to download virtual products!');
-define('SC_TEXT_PASSWORD_REQUIRED', 'You need to create an account in order to purchase products!');
+define('SC_TEXT_PASSWORD_REQUIRED', 'Your password will be generated automatically and will send to your email!');
 
 
 //email specific
