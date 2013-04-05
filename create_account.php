@@ -1,295 +1,322 @@
 <?php
-/* -----------------------------------------------------------------------------------------
-   $Id: create_account.php 1311 2007-02-06 19:20:03 VaM $
+/* --------------------------------------------------------------
+   $Id: create_account.php 1296 2007-02-08 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
    http://vamshop.com
 
    Copyright (c) 2007 VaM Shop
-   -----------------------------------------------------------------------------------------
+   --------------------------------------------------------------
    based on: 
    (c) 2000-2001 The Exchange Project  (earlier name of osCommerce)
-   (c) 2002-2003 osCommerce(create_account.php,v 1.63 2003/05/28); www.oscommerce.com
-   (c) 2003  nextcommerce (create_account.php,v 1.27 2003/08/24); www.nextcommerce.org 
-   (c) 2004  xt:Commerce (create_account.php,v 1.27 2003/08/24); xt-commerce.com 
+   (c) 2002-2003 osCommerce(customers.php,v 1.76 2003/05/04); www.oscommerce.com 
+   (c) 2003	 nextcommerce (create_account.php,v 1.17 2003/08/24); www.nextcommerce.org
+   (c) 2004	 xt:Commerce (create_account.php,v 1.17 2003/08/24); xt-commerce.com
 
    Released under the GNU General Public License 
-   -----------------------------------------------------------------------------------------
+   --------------------------------------------------------------
    Third Party contribution:
-
-   Credit Class/Gift Vouchers/Discount Coupons (Version 5.10)
-   http://www.oscommerce.com/community/contributions,282
-   Copyright (c) Strider | Strider@oscworks.com
-   Copyright (c  Nick Stanko of UkiDev.com, nick@ukidev.com
-   Copyright (c) Andre ambidex@gmx.net
-   Copyright (c) 2001,2002 Ian C Wilson http://www.phesis.org
-
+   Customers Status v3.x  (c) 2002-2003 Copyright Elari elari@free.fr | www.unlockgsm.com/dload-osc/ | CVS : http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/elari/?sortby=date#dirlist
 
    Released under the GNU General Public License
-   ---------------------------------------------------------------------------------------*/
+   --------------------------------------------------------------*/
 
-include ('includes/application_top.php');
-
-if (isset ($_SESSION['customer_id'])) {
-	vam_redirect(vam_href_link(FILENAME_ACCOUNT, '', 'SSL'));
-}
-
-// create template elements
-$vamTemplate = new vamTemplate;
-// include boxes
-require (DIR_FS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/source/boxes.php');
-
-// include needed functions
-require_once (DIR_FS_INC.'vam_get_country_list.inc.php');
-require_once (DIR_FS_INC.'vam_validate_email.inc.php');
+require ('includes/application_top.php');
 require_once (DIR_FS_INC.'vam_encrypt_password.inc.php');
+require_once(DIR_FS_CATALOG.'includes/external/phpmailer/class.phpmailer.php');
+require_once (DIR_FS_INC.'vam_php_mail.inc.php');
+require_once (DIR_FS_INC.'vam_create_password.inc.php');
 require_once (DIR_FS_INC.'vam_get_geo_zone_code.inc.php');
-require_once (DIR_FS_INC.'vam_get_zone_name.inc.php');
-require_once (DIR_FS_INC.'vam_write_user_info.inc.php');
-require_once (DIR_FS_INC.'vam_random_charcode.inc.php');
 
-$process = false;
-if (isset ($_POST['action']) && ($_POST['action'] == 'process')) {
-	$process = true;
 
-	if (ACCOUNT_GENDER == 'true')
-		$gender = vam_db_prepare_input($_POST['gender']);
-	$firstname = vam_db_prepare_input($_POST['firstname']);
-	if (ACCOUNT_SECOND_NAME == 'true')
-	$secondname = vam_db_prepare_input($_POST['secondname']);
-	$lastname = vam_db_prepare_input($_POST['lastname']);
-	if (ACCOUNT_DOB == 'true')
-		$dob = vam_db_prepare_input($_POST['dob']);
-	$email_address = vam_db_prepare_input($_POST['email_address']);
-	if (ACCOUNT_COMPANY == 'true')
-		$company = vam_db_prepare_input($_POST['company']);
-	if (ACCOUNT_COMPANY_VAT_CHECK == 'true')
-		$vat = vam_db_prepare_input($_POST['vat']);
-   if (ACCOUNT_STREET_ADDRESS == 'true')
-	   $street_address = vam_db_prepare_input($_POST['street_address']);
-	if (ACCOUNT_SUBURB == 'true')
-		$suburb = vam_db_prepare_input($_POST['suburb']);
-   if (ACCOUNT_POSTCODE == 'true')
-	   $postcode = vam_db_prepare_input($_POST['postcode']);
-	if (ACCOUNT_CITY == 'true')
-	   $city = vam_db_prepare_input($_POST['city']);
-	$zone_id = vam_db_prepare_input($_POST['zone_id']);
-	if (ACCOUNT_STATE == 'true')
-		$state = vam_db_prepare_input($_POST['state']);
-   if (ACCOUNT_COUNTRY == 'true') {
-	   $country = vam_db_prepare_input($_POST['country']);
-	} else {
-      $country = STORE_COUNTRY;
+// initiate template engine for mail
+$vamTemplate = new vamTemplate;
+
+$customers_statuses_array = vam_get_customers_statuses();
+if ($customers_password == '') {
+	$customers_password_encrypted =  vam_RandomString(8);
+	$customers_password = vam_encrypt_password($customers_password_encrypted);
+}
+if ($_GET['action'] == 'edit') {
+	$customers_firstname = vam_db_prepare_input($_POST['customers_firstname']);
+	$customers_secondname = vam_db_prepare_input($_POST['customers_secondname']);
+	$customers_cid = vam_db_prepare_input($_POST['csID']);
+	$customers_vat_id = vam_db_prepare_input($_POST['customers_vat_id']);
+	$customers_vat_id_status = vam_db_prepare_input($_POST['customers_vat_id_status']);
+	$customers_lastname = vam_db_prepare_input($_POST['customers_lastname']);
+	$customers_email_address = vam_db_prepare_input($_POST['customers_email_address']);
+	$customers_telephone = vam_db_prepare_input($_POST['customers_telephone']);
+	$customers_fax = vam_db_prepare_input($_POST['customers_fax']);
+	$customers_status_c = vam_db_prepare_input($_POST['status']);
+
+	$customers_gender = vam_db_prepare_input($_POST['customers_gender']);
+	$customers_dob = vam_db_prepare_input($_POST['customers_dob']);
+
+	$default_address_id = vam_db_prepare_input($_POST['default_address_id']);
+	$entry_street_address = vam_db_prepare_input($_POST['entry_street_address']);
+	$entry_suburb = vam_db_prepare_input($_POST['entry_suburb']);
+	$entry_postcode = vam_db_prepare_input($_POST['entry_postcode']);
+	$entry_city = vam_db_prepare_input($_POST['entry_city']);
+	$entry_country_id = vam_db_prepare_input($_POST['entry_country_id']);
+
+	$entry_company = vam_db_prepare_input($_POST['entry_company']);
+	$entry_state = vam_db_prepare_input($_POST['state']);
+	$entry_zone_id = vam_db_prepare_input($_POST['entry_zone_id']);
+
+	$customers_send_mail = vam_db_prepare_input($_POST['customers_mail']);
+	$customers_password_encrypted = vam_db_prepare_input($_POST['entry_password']);
+	$customers_password = vam_encrypt_password($customers_password_encrypted);
+	
+	$customers_mail_comments = vam_db_prepare_input($_POST['mail_comments']);
+
+	$payment_unallowed = vam_db_prepare_input($_POST['payment_unallowed']);
+	$shipping_unallowed = vam_db_prepare_input($_POST['shipping_unallowed']);
+
+	if ($customers_password == '') {
+		$customers_password_encrypted =  vam_RandomString(8);
+		$customers_password = vam_encrypt_password($customers_password_encrypted);
 	}
-   if (ACCOUNT_TELE == 'true')
-	   $telephone = vam_db_prepare_input($_POST['telephone']);
-   if (ACCOUNT_FAX == 'true')
-	   $fax = vam_db_prepare_input($_POST['fax']);
-	$newsletter = '0';
-	$newsletter = vam_db_prepare_input($_POST['newsletter']);
-	$password = vam_db_prepare_input($_POST['password']);
-	$confirmation = vam_db_prepare_input($_POST['confirmation']);
-
-	$error = false;
+	$error = false; // reset error flag
 
 	if (ACCOUNT_GENDER == 'true') {
-		if (($gender != 'm') && ($gender != 'f')) {
+		if (($customers_gender != 'm') && ($customers_gender != 'f')) {
 			$error = true;
-
-			$messageStack->add('create_account', ENTRY_GENDER_ERROR);
+			$entry_gender_error = true;
+		} else {
+			$entry_gender_error = false;
 		}
 	}
 
-	if (strlen($firstname) < ENTRY_FIRST_NAME_MIN_LENGTH) {
+	if (strlen($customers_password) < ENTRY_PASSWORD_MIN_LENGTH) {
 		$error = true;
-
-		$messageStack->add('create_account', ENTRY_FIRST_NAME_ERROR);
+		$entry_password_error = true;
+	} else {
+		$entry_password_error = false;
 	}
 
-	if (strlen($lastname) < ENTRY_LAST_NAME_MIN_LENGTH) {
+	if (($customers_send_mail != 'yes') && ($customers_send_mail != 'no')) {
 		$error = true;
+		$entry_mail_error = true;
+	} else {
+		$entry_mail_error = false;
+	}
 
-		$messageStack->add('create_account', ENTRY_LAST_NAME_ERROR);
+	if (strlen($customers_firstname) < ENTRY_FIRST_NAME_MIN_LENGTH) {
+		$error = true;
+		$entry_firstname_error = true;
+	} else {
+		$entry_firstname_error = false;
+	}
+
+	if (strlen($customers_lastname) < ENTRY_LAST_NAME_MIN_LENGTH) {
+		$error = true;
+		$entry_lastname_error = true;
+	} else {
+		$entry_lastname_error = false;
 	}
 
 	if (ACCOUNT_DOB == 'true') {
-		if (checkdate((int)substr(vam_date_raw($dob), 4, 2), substr((int)vam_date_raw($dob), 6, 2), substr((int)vam_date_raw($dob), 0, 4)) == false) { 
+		if (checkdate(substr(vam_date_raw($customers_dob), 4, 2), substr(vam_date_raw($customers_dob), 6, 2), substr(vam_date_raw($customers_dob), 0, 4))) {
+			$entry_date_of_birth_error = false;
+		} else {
 			$error = true;
-
-			$messageStack->add('create_account', ENTRY_DATE_OF_BIRTH_ERROR);
+			$entry_date_of_birth_error = true;
 		}
 	}
 
+	// Vat Check
+	if (vam_get_geo_zone_code($entry_country_id) != '6') {
+
+		if ($customers_vat_id != '') {
+
+			if (ACCOUNT_COMPANY_VAT_CHECK == 'true') {
+
+				$validate_vatid = validate_vatid($customers_vat_id);
+
+				if ($validate_vatid == '0') {
+					if (ACCOUNT_VAT_BLOCK_ERROR == 'true') {
+						$entry_vat_error = true;
+						$error = true;
+					}
+					$customers_vat_id_status = '0';
+				}
+
+				if ($validate_vatid == '1') {
+					$customers_vat_id_status = '1';
+				}
+
+				if ($validate_vatid == '8') {
+					if (ACCOUNT_VAT_BLOCK_ERROR == 'true') {
+						$entry_vat_error = true;
+						$error = true;
+					}
+					$customers_vat_id_status = '8';
+				}
+
+				if ($validate_vatid == '9') {
+					if (ACCOUNT_VAT_BLOCK_ERROR == 'true') {
+						$entry_vat_error = true;
+						$error = true;
+					}
+					$customers_vat_id_status = '9';
+				}
+
+			}
+
+		}
+	}
+	// Vat Check
+
 // New VAT Check
-	require_once(DIR_WS_CLASSES.'vat_validation.php');
-	$vatID = new vat_validation($vat, '', '', $country);
-	
-	$customers_vat_id_status = 0;
-	$customers_status = $vatID->vat_info['status'];
+	if (vam_get_geo_zone_code($entry_country_id) != '6') {
+	require_once(DIR_FS_CATALOG.DIR_WS_CLASSES.'vat_validation.php');
+	$vatID = new vat_validation($customers_vat_id, '', '', $entry_country_id);
+
 	$customers_vat_id_status = $vatID->vat_info['vat_id_status'];
 	$error = $vatID->vat_info['error'];
-	
+
 	if($error==1){
-	$messageStack->add('create_account', ENTRY_VAT_ERROR);
+	$entry_vat_error = true;
 	$error = true;
   }
 
+  }
 // New VAT CHECK END
-	
 
-	if (strlen($email_address) < ENTRY_EMAIL_ADDRESS_MIN_LENGTH) {
+	if (strlen($customers_email_address) < ENTRY_EMAIL_ADDRESS_MIN_LENGTH) {
 		$error = true;
-
-		$messageStack->add('create_account', ENTRY_EMAIL_ADDRESS_ERROR);
-	}
-	elseif (vam_validate_email($email_address) == false) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_EMAIL_ADDRESS_CHECK_ERROR);
+		$entry_email_address_error = true;
 	} else {
-		$check_email_query = vam_db_query("select count(*) as total from ".TABLE_CUSTOMERS." where customers_email_address = '".vam_db_input($email_address)."' and account_type = '0'");
-		$check_email = vam_db_fetch_array($check_email_query);
-		if ($check_email['total'] > 0) {
-			$error = true;
+		$entry_email_address_error = false;
+	}
 
-			$messageStack->add('create_account', ENTRY_EMAIL_ADDRESS_ERROR_EXISTS);
+	if (!vam_validate_email($customers_email_address)) {
+		$error = true;
+		$entry_email_address_check_error = true;
+	} else {
+		$entry_email_address_check_error = false;
+	}
+
+        if (ACCOUNT_STREET_ADDRESS == 'true') {
+	if (strlen($entry_street_address) < ENTRY_STREET_ADDRESS_MIN_LENGTH) {
+		$error = true;
+		$entry_street_address_error = true;
+	} else {
+		$entry_street_address_error = false;
+	}
+        }
+
+        if (ACCOUNT_POSTCODE == 'true') {
+	if (strlen($entry_postcode) < ENTRY_POSTCODE_MIN_LENGTH) {
+		$error = true;
+		$entry_post_code_error = true;
+	} else {
+		$entry_post_code_error = false;
+	}
+		  }
+
+        if (ACCOUNT_CITY == 'true') {
+	if (strlen($entry_city) < ENTRY_CITY_MIN_LENGTH) {
+		$error = true;
+		$entry_city_error = true;
+	} else {
+		$entry_city_error = false;
+	}
+        }
+
+
+		$entry_country_error = false;
+
+if (isset($_POST['country'])) { $entry_country_id = $_POST['country']; } else { $entry_country_id = STORE_COUNTRY; }
+$entry_state = $_POST['state'];
+
+	if (ACCOUNT_STATE == 'true') {
+		if ($entry_country_error == true) {
+			$entry_state_error = true;
+		} else {
+			$zone_id = 0;
+			$entry_state_error = false;
+			$check_query = vam_db_query("select count(*) as total from ".TABLE_ZONES." where zone_country_id = '".vam_db_input($entry_country_id)."'");
+			$check_value = vam_db_fetch_array($check_query);
+			$entry_state_has_zones = ($check_value['total'] > 0);
+			if ($entry_state_has_zones == true) {
+				$zone_query = vam_db_query("select zone_id from ".TABLE_ZONES." where zone_country_id = '".vam_db_input($entry_country_id)."' and zone_name = '".vam_db_input($entry_state)."'");
+				if (vam_db_num_rows($zone_query) == 1) {
+					$zone_values = vam_db_fetch_array($zone_query);
+					$entry_zone_id = $zone_values['zone_id'];
+				} else {
+					$zone_query = vam_db_query("select zone_id from ".TABLE_ZONES." where zone_country_id = '".vam_db_input($entry_country)."' and zone_code = '".vam_db_input($entry_state)."'");
+					if (vam_db_num_rows($zone_query) >= 1) {
+						$zone_values = vam_db_fetch_array($zone_query);
+						$zone_id = $zone_values['zone_id'];
+					} else {
+						$error = true;
+						$entry_state_error = true;
+					}
+				}
+			} else {
+				if ($entry_state == false) {
+					$error = true;
+					$entry_state_error = true;
+				}
+			}
 		}
 	}
 
-   if (ACCOUNT_STREET_ADDRESS == 'true') {
-	if (strlen($street_address) < ENTRY_STREET_ADDRESS_MIN_LENGTH) {
+        if (ACCOUNT_TELE == 'true') {
+	if (strlen($customers_telephone) < ENTRY_TELEPHONE_MIN_LENGTH) {
 		$error = true;
-
-		$messageStack->add('create_account', ENTRY_STREET_ADDRESS_ERROR);
+		$entry_telephone_error = true;
+	} else {
+		$entry_telephone_error = false;
 	}
-  }
-  
-   if (ACCOUNT_POSTCODE == 'true') {
-	if (strlen($postcode) < ENTRY_POSTCODE_MIN_LENGTH) {
+        }
+
+	$check_email = vam_db_query("select customers_email_address from ".TABLE_CUSTOMERS." where customers_email_address = '".vam_db_input($customers_email_address)."' and customers_id <> '".vam_db_input($customers_id)."'");
+	if (vam_db_num_rows($check_email)) {
 		$error = true;
-
-		$messageStack->add('create_account', ENTRY_POST_CODE_ERROR);
-	}
-  }
-
-   if (ACCOUNT_CITY == 'true') {
-	if (strlen($city) < ENTRY_CITY_MIN_LENGTH) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_CITY_ERROR);
-	}
-  }
-
-   if (ACCOUNT_COUNTRY == 'true') {
-	if (is_numeric($country) == false) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_COUNTRY_ERROR);
-	}
-  }
-
-	if (ACCOUNT_STATE == 'true') {		$zone_id = 0;		$check_query = vam_db_query("select count(*) as total from ".TABLE_ZONES." where zone_country_id = '".(int) $country."'");		$check = vam_db_fetch_array($check_query);		$entry_state_has_zones = ($check['total'] > 0);		if ($entry_state_has_zones == true) {			$zone_query = vam_db_query("select distinct zone_id from " . TABLE_ZONES . " where zone_country_id = '" . (int)$country . "' and zone_name = '" . vam_db_input($state) . "'");			if (vam_db_num_rows($zone_query) > 1) {				$zone_query = vam_db_query("select distinct zone_id from ".TABLE_ZONES." where zone_country_id = '".(int) $country."' and zone_name = '".vam_db_input($state)."'");			}			if (vam_db_num_rows($zone_query) >= 1) {				$zone = vam_db_fetch_array($zone_query);				$zone_id = $zone['zone_id'];			} else {				$error = true;				$messageStack->add('create_account', ENTRY_STATE_ERROR_SELECT);			}		} else {			if (strlen($state) < ENTRY_STATE_MIN_LENGTH) {				$error = true;				$messageStack->add('create_account', ENTRY_STATE_ERROR);			}		}	}
-
-   if (ACCOUNT_TELE == 'true') {
-	if (strlen($telephone) < ENTRY_TELEPHONE_MIN_LENGTH) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_TELEPHONE_NUMBER_ERROR);
-	}
-  }
-
-        $extra_fields_query = vamDBquery("select ce.fields_id, ce.fields_input_type, ce.fields_required_status, cei.fields_name, ce.fields_status, ce.fields_input_type, ce.fields_size from " . TABLE_EXTRA_FIELDS . " ce, " . TABLE_EXTRA_FIELDS_INFO . " cei where ce.fields_status=1 and ce.fields_required_status=1 and cei.fields_id=ce.fields_id and cei.languages_id =" . $_SESSION['languages_id']);
-
-   while($extra_fields = vam_db_fetch_array($extra_fields_query,true)){
-   
-    if(strlen($_POST['fields_' . $extra_fields['fields_id'] ])<$extra_fields['fields_size']){
-      $error = true;
-      $string_error=sprintf(ENTRY_EXTRA_FIELDS_ERROR,$extra_fields['fields_name'],$extra_fields['fields_size']);
-      $messageStack->add('create_account', $string_error);
-    }
-  }
-
-	if (strlen($password) < ENTRY_PASSWORD_MIN_LENGTH) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_PASSWORD_ERROR);
-	}
-	elseif ($password != $confirmation) {
-		$error = true;
-
-		$messageStack->add('create_account', ENTRY_PASSWORD_ERROR_NOT_MATCHING);
+		$entry_email_address_exists = true;
+	} else {
+		$entry_email_address_exists = false;
 	}
 
-	//don't know why, but this happens sometimes and new user becomes admin
-	if ($customers_status == 0 || !$customers_status)
-		$customers_status = DEFAULT_CUSTOMERS_STATUS_ID;
-	if (!$newsletter)
-		$newsletter = 0;
+      $extra_fields_query = vam_db_query("select ce.fields_id, ce.fields_input_type, ce.fields_required_status, cei.fields_name, ce.fields_status, ce.fields_input_type, ce.fields_size from " . TABLE_EXTRA_FIELDS . " ce, " . TABLE_EXTRA_FIELDS_INFO . " cei where ce.fields_status=1 and ce.fields_required_status=1 and cei.fields_id=ce.fields_id and cei.languages_id =" . (int)$_SESSION['languages_id']);
+      while($extra_fields = vam_db_fetch_array($extra_fields_query)){
+        if(strlen($_POST['fields_' . $extra_fields['fields_id'] ])<$extra_fields['fields_size']){
+          $error = true;
+          $string_error=sprintf(ENTRY_EXTRA_FIELDS_ERROR,$extra_fields['fields_name'],$extra_fields['fields_size']);
+          $messageStack->add($string_error);
+        }
+      }
+
 	if ($error == false) {
-		$sql_data_array = array ('customers_vat_id' => $vat, 'customers_vat_id_status' => $customers_vat_id_status, 'customers_status' => $customers_status, 'customers_firstname' => $firstname, 'customers_secondname' => $secondname, 'customers_lastname' => $lastname, 'customers_email_address' => $email_address, 'customers_telephone' => $telephone, 'customers_fax' => $fax, 'orig_reference' => $html_referer, 'customers_newsletter' => $newsletter, 'customers_password' => vam_encrypt_password($password),'customers_date_added' => 'now()','customers_last_modified' => 'now()');
+		$sql_data_array = array ('customers_status' => $customers_status_c, 'customers_cid' => $customers_cid, 'customers_vat_id' => $customers_vat_id, 'customers_vat_id_status' => $customers_vat_id_status, 'customers_firstname' => $customers_firstname, 'customers_secondname' => $customers_secondname, 'customers_lastname' => $customers_lastname, 'customers_email_address' => $customers_email_address, 'customers_telephone' => $customers_telephone, 'customers_fax' => $customers_fax, 'payment_unallowed' => $payment_unallowed, 'shipping_unallowed' => $shipping_unallowed, 'customers_password' => $customers_password,'customers_date_added' => 'now()','customers_last_modified' => 'now()');
 
 		if (ACCOUNT_GENDER == 'true')
-			$sql_data_array['customers_gender'] = $gender;
+			$sql_data_array['customers_gender'] = $customers_gender;
 		if (ACCOUNT_DOB == 'true')
-			$sql_data_array['customers_dob'] = vam_date_raw($dob);
+			$sql_data_array['customers_dob'] = vam_date_raw($customers_dob);
 
 		vam_db_perform(TABLE_CUSTOMERS, $sql_data_array);
 
-		$_SESSION['customer_id'] = vam_db_insert_id();
-		$customers_id = $_SESSION['customer_id'];
+		$cc_id = vam_db_insert_id();
 
-   	  	$extra_fields_query = vam_db_query("select ce.fields_id from " . TABLE_EXTRA_FIELDS . " ce where ce.fields_status=1 ");
-    	  while($extra_fields = vam_db_fetch_array($extra_fields_query))
-				{
-				  if(isset($_POST['fields_' . $extra_fields['fields_id']])){
-            $sql_data_array = array('customers_id' => (int)$customers_id,
-                              'fields_id' => $extra_fields['fields_id'],
-                              'value' => $_POST['fields_' . $extra_fields['fields_id']]);
-       		}
-       		else
-					{
-					  $sql_data_array = array('customers_id' => (int)$customers_id,
-                              'fields_id' => $extra_fields['fields_id'],
-                              'value' => '');
-						$is_add = false;
-						for($i = 1; $i <= $_POST['fields_' . $extra_fields['fields_id'] . '_total']; $i++)
-						{
-							if(isset($_POST['fields_' . $extra_fields['fields_id'] . '_' . $i]))
-							{
-							  if($is_add)
-							  {
-                  $sql_data_array['value'] .= "\n";
-								}
-								else
-								{
-                  $is_add = true;
-								}
-              	$sql_data_array['value'] .= $_POST['fields_' . $extra_fields['fields_id'] . '_' . $i];
-							}
-						}
-					}
-
-					vam_db_perform(TABLE_CUSTOMERS_TO_EXTRA_FIELDS, $sql_data_array);
-      	}
-
-		$user_id = vam_db_insert_id();
-		vam_write_user_info($user_id);
-		$sql_data_array = array ('customers_id' => $_SESSION['customer_id'], 'entry_firstname' => $firstname, 'entry_secondname' => $secondname, 'entry_lastname' => $lastname, 'entry_street_address' => $street_address, 'entry_postcode' => $postcode, 'entry_city' => $city, 'entry_country_id' => $country,'address_date_added' => 'now()','address_last_modified' => 'now()');
+		$sql_data_array = array ('customers_id' => $cc_id, 'entry_firstname' => $customers_firstname, 'entry_secondname' => $customers_secondname, 'entry_lastname' => $customers_lastname, 'entry_street_address' => $entry_street_address, 'entry_postcode' => $entry_postcode, 'entry_city' => $entry_city, 'entry_country_id' => $entry_country_id,'address_date_added' => 'now()','address_last_modified' => 'now()');
 
 		if (ACCOUNT_GENDER == 'true')
-			$sql_data_array['entry_gender'] = $gender;
+			$sql_data_array['entry_gender'] = $customers_gender;
 		if (ACCOUNT_COMPANY == 'true')
-			$sql_data_array['entry_company'] = $company;
+			$sql_data_array['entry_company'] = $entry_company;
 		if (ACCOUNT_SUBURB == 'true')
-			$sql_data_array['entry_suburb'] = $suburb;
+			$sql_data_array['entry_suburb'] = $entry_suburb;
 		if (ACCOUNT_STATE == 'true') {
 			if ($zone_id > 0) {
-				$sql_data_array['entry_zone_id'] = $zone_id;
+				$sql_data_array['entry_zone_id'] = $entry_zone_id;
 				$sql_data_array['entry_state'] = '';
 			} else {
 				$sql_data_array['entry_zone_id'] = '0';
-				$sql_data_array['entry_state'] = $state;
+				$sql_data_array['entry_state'] = $entry_state;
 			}
 		}
 
@@ -297,305 +324,559 @@ if (isset ($_POST['action']) && ($_POST['action'] == 'process')) {
 
 		$address_id = vam_db_insert_id();
 
-		vam_db_query("update ".TABLE_CUSTOMERS." set customers_default_address_id = '".$address_id."' where customers_id = '".(int) $_SESSION['customer_id']."'");
+		vam_db_query("update ".TABLE_CUSTOMERS." set customers_default_address_id = '".$address_id."' where customers_id = '".$cc_id."'");
 
-		vam_db_query("insert into ".TABLE_CUSTOMERS_INFO." (customers_info_id, customers_info_number_of_logons, customers_info_date_account_created) values ('".(int) $_SESSION['customer_id']."', '0', now())");
-		
-        $sql_data_array = array('login_reference' => $html_referer);
-        vam_db_perform(TABLE_CUSTOMERS, $sql_data_array, 'update', "customers_id = '" . (int) $_SESSION['customer_id'] . "'");
-        
-		if (SESSION_RECREATE == 'True') {
-			vam_session_recreate();
+		vam_db_query("insert into ".TABLE_CUSTOMERS_INFO." (customers_info_id, customers_info_number_of_logons, customers_info_date_account_created) values ('".$cc_id."', '0', now())");
+		// Create insert into admin access table if admin is created.
+		if ($customers_status_c == '0') {
+			vam_db_query("INSERT into ".TABLE_ADMIN_ACCESS." (customers_id,start) VALUES ('".$cc_id."','1')");
 		}
 
-		$_SESSION['customer_first_name'] = $firstname;
-		$_SESSION['customer_second_name'] = $secondname;
-		$_SESSION['customer_last_name'] = $lastname;
-		$_SESSION['customer_default_address_id'] = $address_id;
-		$_SESSION['customer_country_id'] = $country;
-		$_SESSION['customer_zone_id'] = $zone_id;
-		$_SESSION['customer_vat_id'] = $vat;
+		// Create eMail
+		if (($customers_send_mail == 'yes')) {
 
-		// restore cart contents
-		$_SESSION['cart']->restore_contents();
+			// assign language to template for caching
+			$vamTemplate->assign('language', $_SESSION['language']);
+			$vamTemplate->caching = false;
 
-		// build the message content
-		$name = $firstname.' '.$lastname;
+			$vamTemplate->assign('tpl_path', 'templates/'.CURRENT_TEMPLATE.'/');
+			$vamTemplate->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
 
-		// load data into array
-		$module_content = array ();
-		$module_content = array ('MAIL_NAME' => $name, 'MAIL_REPLY_ADDRESS' => EMAIL_SUPPORT_REPLY_ADDRESS, 'MAIL_GENDER' => $gender);
+			$vamTemplate->assign('NAME', $customers_lastname.' '.$customers_firstname);
+			$vamTemplate->assign('EMAIL', $customers_email_address);
+			$vamTemplate->assign('COMMENTS', $customers_mail_comments);
+			$vamTemplate->assign('PASSWORD', $customers_password_encrypted);
 
-		// assign data to template
-		$vamTemplate->assign('language', $_SESSION['language']);
-		$vamTemplate->assign('logo_path', HTTP_SERVER.DIR_WS_CATALOG.'templates/'.CURRENT_TEMPLATE.'/img/');
-		$vamTemplate->assign('content', $module_content);
-		$vamTemplate->caching = false;
+			$html_mail = $vamTemplate->fetch(CURRENT_TEMPLATE.'/admin/mail/'.$_SESSION['language'].'/create_account_mail.html');
+			$txt_mail = $vamTemplate->fetch(CURRENT_TEMPLATE.'/admin/mail/'.$_SESSION['language'].'/create_account_mail.txt');
 
-if (isset ($_SESSION['tracking']['refID'])){
-      $campaign_check_query_raw = "SELECT *
-			                            FROM ".TABLE_CAMPAIGNS." 
-			                            WHERE campaigns_refID = '".$_SESSION[tracking][refID]."'";
-			$campaign_check_query = vam_db_query($campaign_check_query_raw);
-		if (vam_db_num_rows($campaign_check_query) > 0) {
-			$campaign = vam_db_fetch_array($campaign_check_query);
-			$refID = $campaign['campaigns_id'];
-			} else {
-			$refID = 0;
-		            }
-			
-			 vam_db_query("update " . TABLE_CUSTOMERS . " set
-                                 refferers_id = '".$refID."'
-                                 where customers_id = '".(int) $_SESSION['customer_id']."'");
-			
-			$leads = $campaign['campaigns_leads'] + 1 ;
-		     vam_db_query("update " . TABLE_CAMPAIGNS . " set
-		                         campaigns_leads = '".$leads."'
-                                 where campaigns_id = '".$refID."'");		
-}
-
-
-		if (ACTIVATE_GIFT_SYSTEM == 'true') {
-			// GV Code Start
-			// ICW - CREDIT CLASS CODE BLOCK ADDED  ******************************************************* BEGIN
-			if (NEW_SIGNUP_GIFT_VOUCHER_AMOUNT > 0) {
-				$coupon_code = create_coupon_code();
-				$insert_query = vam_db_query("insert into ".TABLE_COUPONS." (coupon_code, coupon_type, coupon_amount, date_created) values ('".$coupon_code."', 'G', '".NEW_SIGNUP_GIFT_VOUCHER_AMOUNT."', now())");
-				$insert_id = vam_db_insert_id($insert_query);
-				$insert_query = vam_db_query("insert into ".TABLE_COUPON_EMAIL_TRACK." (coupon_id, customer_id_sent, sent_firstname, emailed_to, date_sent) values ('".$insert_id."', '0', 'Admin', '".$email_address."', now() )");
-
-				$vamTemplate->assign('SEND_GIFT', 'true');
-				$vamTemplate->assign('GIFT_AMMOUNT', $vamPrice->Format(NEW_SIGNUP_GIFT_VOUCHER_AMOUNT, true));
-				$vamTemplate->assign('GIFT_CODE', $coupon_code);
-				$vamTemplate->assign('GIFT_LINK', vam_href_link(FILENAME_GV_REDEEM, 'gv_no='.$coupon_code, 'NONSSL', false));
-
-			}
-			if (NEW_SIGNUP_DISCOUNT_COUPON != '') {
-				$coupon_code = NEW_SIGNUP_DISCOUNT_COUPON;
-				$coupon_query = vam_db_query("select * from ".TABLE_COUPONS." where coupon_code = '".$coupon_code."'");
-				$coupon = vam_db_fetch_array($coupon_query);
-				$coupon_id = $coupon['coupon_id'];
-				$coupon_desc_query = vam_db_query("select * from ".TABLE_COUPONS_DESCRIPTION." where coupon_id = '".$coupon_id."' and language_id = '".(int) $_SESSION['languages_id']."'");
-				$coupon_desc = vam_db_fetch_array($coupon_desc_query);
-				$insert_query = vam_db_query("insert into ".TABLE_COUPON_EMAIL_TRACK." (coupon_id, customer_id_sent, sent_firstname, emailed_to, date_sent) values ('".$coupon_id."', '0', 'Admin', '".$email_address."', now() )");
-
-				$vamTemplate->assign('SEND_COUPON', 'true');
-				$vamTemplate->assign('COUPON_DESC', $coupon_desc['coupon_description']);
-				$vamTemplate->assign('COUPON_CODE', $coupon['coupon_code']);
-
-			}
-			// ICW - CREDIT CLASS CODE BLOCK ADDED  ******************************************************* END
-			// GV Code End       // create templates
+			vam_php_mail(EMAIL_SUPPORT_ADDRESS, EMAIL_SUPPORT_NAME, $customers_email_address, $customers_lastname.' '.$customers_firstname, EMAIL_SUPPORT_FORWARDING_STRING, EMAIL_SUPPORT_REPLY_ADDRESS, EMAIL_SUPPORT_REPLY_ADDRESS_NAME, '', '', EMAIL_SUPPORT_SUBJECT, $html_mail, $txt_mail);
 		}
-		$vamTemplate->caching = 0;
-
-      $vamTemplate->assign('EMAIL_ADDRESS', $email_address);
-      $vamTemplate->assign('PASSWORD', $password);
 		
-    if ($newsletter) {
-      $vlcode = vam_random_charcode(32);
-      $link = vam_href_link(FILENAME_NEWSLETTER, 'action=activate&email='.$email_address.'&key='.$vlcode, 'NONSSL');
-      $sql_data_array = array ('customers_email_address' => vam_db_input($email_address), 'customers_id' => vam_db_input($_SESSION['customer_id']), 'customers_status' => 2, 'customers_firstname' => vam_db_input($firstname), 'customers_lastname' => vam_db_input($lastname), 'mail_status' => '1', 'mail_key' => vam_db_input($vlcode), 'date_added' => 'now()');
-      vam_db_perform(TABLE_NEWSLETTER_RECIPIENTS, $sql_data_array);
-      // assign vars
-      $vamTemplate->assign('LINK', $link);
-    } else {
-      $vamTemplate->assign('LINK', false);
-    }		
+        vam_db_query("delete from " . TABLE_CUSTOMERS_TO_EXTRA_FIELDS . " where customers_id=" . (int)$cc_id);
+        $extra_fields_query =vam_db_query("select ce.fields_id from " . TABLE_EXTRA_FIELDS . " ce where ce.fields_status=1 ");
+        while($extra_fields = vam_db_fetch_array($extra_fields_query)){
+            $sql_extra_data_array = array('customers_id' => (int)$cc_id,
+                              'fields_id' => $extra_fields['fields_id'],
+                              'value' => $_POST['fields_' . $extra_fields['fields_id'] ]);
+            vam_db_perform(TABLE_CUSTOMERS_TO_EXTRA_FIELDS, $sql_extra_data_array);
+        }
 		
-		$html_mail = $vamTemplate->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/create_account_mail.html');
-		$vamTemplate->caching = 0;
-		$txt_mail = $vamTemplate->fetch(CURRENT_TEMPLATE.'/mail/'.$_SESSION['language'].'/create_account_mail.txt');
-
-		vam_php_mail(EMAIL_SUPPORT_ADDRESS, EMAIL_SUPPORT_NAME, $email_address, $name, EMAIL_SUPPORT_FORWARDING_STRING, EMAIL_SUPPORT_REPLY_ADDRESS, EMAIL_SUPPORT_REPLY_ADDRESS_NAME, '', '', EMAIL_SUPPORT_SUBJECT, $html_mail, $txt_mail);
-
-		if (!isset ($mail_error)) {
-				if ($_SESSION['nologin']){
-				vam_redirect(vam_href_link(FILENAME_CHECKOUT_SHIPPING, '', 'SSL'));
-				}else{
-				        vam_redirect(vam_href_link(FILENAME_SHOPPING_CART, '', 'SSL'));
-				}
-		} else {
-			echo $mail_error;
-		}
+		
+		vam_redirect(vam_href_link(FILENAME_CUSTOMERS, 'cID='.$cc_id, 'SSL'));
 	}
 }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html <?php echo HTML_PARAMS; ?>>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $_SESSION['language_charset']; ?>"> 
+<title><?php echo TITLE; ?></title>
+<link rel="stylesheet" type="text/css" href="includes/stylesheet.css">
+</head>
+<body marginwidth="0" marginheight="0" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" bgcolor="#FFFFFF">
+<!-- header //-->
+<?php require(DIR_WS_INCLUDES . 'header.php'); ?>
+<!-- header_eof //-->
 
-$breadcrumb->add(NAVBAR_TITLE_CREATE_ACCOUNT, vam_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'));
-
-require (DIR_WS_INCLUDES.'header.php');
-
-if ($messageStack->size('create_account') > 0) {
-	$vamTemplate->assign('error', $messageStack->output('create_account'));
-
-}
-$vamTemplate->assign('FORM_ACTION', vam_draw_form('create_account', vam_href_link(FILENAME_CREATE_ACCOUNT, '', 'SSL'), 'post').vam_draw_hidden_field('action', 'process'));
+<!-- body //-->
+<table border="0" width="100%" cellspacing="2" cellpadding="2">
+  <tr>
+<?php if (ADMIN_DROP_DOWN_NAVIGATION == 'false') { ?>
+    <td width="<?php echo BOX_WIDTH; ?>" align="left" valign="top">
+<!-- left_navigation //-->
+<?php require(DIR_WS_INCLUDES . 'column_left.php'); ?>
+<!-- left_navigation_eof //-->
+    </td>
+<?php } ?>
+<!-- body_text //-->
+    <td class="boxCenter" valign="top">
+    
+    <h1 class="contentBoxHeading"><?php echo HEADING_TITLE; ?></h1>
+    
+    <table border="0" width="100%" cellspacing="0" cellpadding="2">
+      <tr><?php echo vam_draw_form('customers', FILENAME_CREATE_ACCOUNT, vam_get_all_get_params(array('action')) . 'action=edit', 'post', 'onSubmit="return check_form();"') . vam_draw_hidden_field('default_address_id', $customers_default_address_id); ?>
+        <td class="formAreaTitle"><?php echo CATEGORY_PERSONAL; ?></td>
+      </tr>
+      <tr>
+        <td class="formArea"><table border="0" cellspacing="2" cellpadding="2">
+<?php
 
 if (ACCOUNT_GENDER == 'true') {
-	$vamTemplate->assign('gender', '1');
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_GENDER; ?></td>
+            <td class="main"><?php
 
-	$vamTemplate->assign('INPUT_MALE', vam_draw_radio_field(array ('name' => 'gender', 'suffix' => MALE), 'm', '', 'id="gender" checked="checked"'));
-	$vamTemplate->assign('INPUT_FEMALE', vam_draw_radio_field(array ('name' => 'gender', 'suffix' => FEMALE, 'text' => (vam_not_null(ENTRY_GENDER_TEXT) ? '<span class="Requirement">'.ENTRY_GENDER_TEXT.'</span>' : '')), 'f', '', 'id="gender"'));
+	if ($error == true) {
+		if ($entry_gender_error == true) {
+			echo vam_draw_radio_field('customers_gender', 'm', false, $customers_gender).'&nbsp;&nbsp;'.MALE.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_gender', 'f', false, $customers_gender).'&nbsp;&nbsp;'.FEMALE.'&nbsp;'.ENTRY_GENDER_ERROR;
+		} else {
+			echo ($customers_gender == 'm') ? MALE : FEMALE;
+			echo vam_draw_radio_field('customers_gender', 'm', false, $customers_gender).'&nbsp;&nbsp;'.MALE.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_gender', 'f', false, $customers_gender).'&nbsp;&nbsp;'.FEMALE;
+		}
+	} else {
+		echo vam_draw_radio_field('customers_gender', 'm', false, $customers_gender).'&nbsp;&nbsp;'.MALE.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_gender', 'f', false, $customers_gender).'&nbsp;&nbsp;'.FEMALE;
+	}
+?></td>
+          </tr>
+<?php
 
+}
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_CID; ?></td>
+            <td class="main"><?php
+
+
+echo vam_draw_input_field('csID', $customers_cid, 'maxlength="32"');
+?></td>
+          </tr>
+          <tr>
+            <td class="main"><?php echo ENTRY_FIRST_NAME; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_firstname_error == true) {
+		echo vam_draw_input_field('customers_firstname', $customers_firstname, 'maxlength="32"').'&nbsp;'.ENTRY_FIRST_NAME_ERROR;
+	} else {
+		echo vam_draw_input_field('customers_firstname', $customers_firstname, 'maxlength="32"');
+	}
 } else {
-	$vamTemplate->assign('gender', '0');
+	echo vam_draw_input_field('customers_firstname', $customers_firstname, 'maxlength="32"');
 }
+?></td>
+          </tr>
+<?php
 
-$vamTemplate->assign('INPUT_FIRSTNAME', vam_draw_input_fieldNote(array ('name' => 'firstname', 'text' => '&nbsp;'. (vam_not_null(ENTRY_FIRST_NAME_TEXT) ? '<span class="Requirement">'.ENTRY_FIRST_NAME_TEXT.'</span>' : '')), '', 'id="firstname"'));
 if (ACCOUNT_SECOND_NAME == 'true') {
-	$vamTemplate->assign('secondname', '1');
-$vamTemplate->assign('INPUT_SECONDNAME', vam_draw_input_fieldNote(array ('name' => 'secondname', 'text' => '&nbsp;'. (vam_not_null(ENTRY_SECOND_NAME_TEXT) ? '<span class="Requirement">'.ENTRY_SECOND_NAME_TEXT.'</span>' : '')), '', 'id="secondname"'));
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_SECOND_NAME; ?></td>
+            <td class="main"><?php
+
+	echo vam_draw_input_field('customers_secondname', $customers_secondname, 'maxlength="32"');
+
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_LAST_NAME; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_lastname_error == true) {
+		echo vam_draw_input_field('customers_lastname', $customers_lastname, 'maxlength="32"').'&nbsp;'.ENTRY_LAST_NAME_ERROR;
+	} else {
+		echo vam_draw_input_field('customers_lastname', $customers_lastname, 'maxlength="32"');
+	}
+} else {
+	echo vam_draw_input_field('customers_lastname', $customers_lastname, 'maxlength="32"');
 }
-$vamTemplate->assign('INPUT_LASTNAME', vam_draw_input_fieldNote(array ('name' => 'lastname', 'text' => '&nbsp;'. (vam_not_null(ENTRY_LAST_NAME_TEXT) ? '<span class="Requirement">'.ENTRY_LAST_NAME_TEXT.'</span>' : '')), '', 'id="lastname"'));
+?></td>
+          </tr>
+<?php
 
 if (ACCOUNT_DOB == 'true') {
-	$vamTemplate->assign('birthdate', '1');
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_DATE_OF_BIRTH; ?></td>
+            <td class="main"><?php
 
-	$vamTemplate->assign('INPUT_DOB', vam_draw_input_fieldNote(array ('name' => 'dob', 'text' => '&nbsp;'. (vam_not_null(ENTRY_DATE_OF_BIRTH_TEXT) ? '<span class="Requirement">'.ENTRY_DATE_OF_BIRTH_TEXT.'</span>' : '')), '', 'id="dob"'));
+	if ($error == true) {
+		if ($entry_date_of_birth_error == true) {
+			echo vam_draw_input_field('customers_dob', vam_date_short($customers_dob), 'maxlength="10"').'&nbsp;'.ENTRY_DATE_OF_BIRTH_ERROR;
+		} else {
+			echo vam_draw_input_field('customers_dob', vam_date_short($customers_dob), 'maxlength="10"');
+		}
+	} else {
+		echo vam_draw_input_field('customers_dob', vam_date_short($customers_dob), 'maxlength="10"');
+	}
+?></td>
+          </tr>
+<?php
 
-} else {
-	$vamTemplate->assign('birthdate', '0');
 }
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_EMAIL_ADDRESS; ?></td>
+            <td class="main"><?php
 
-$vamTemplate->assign('INPUT_EMAIL', vam_draw_input_fieldNote(array ('name' => 'email_address', 'text' => '&nbsp;'. (vam_not_null(ENTRY_EMAIL_ADDRESS_TEXT) ? '<span class="Requirement">'.ENTRY_EMAIL_ADDRESS_TEXT.'</span>' : '')), '', 'id="email_address"'));
-
-$vamTemplate->assign('INPUT_NEWSLETTER', vam_draw_checkbox_field('newsletter', '1', true));
+if ($error == true) {
+	if ($entry_email_address_error == true) {
+		echo vam_draw_input_field('customers_email_address', $customers_email_address, 'maxlength="96"').'&nbsp;'.ENTRY_EMAIL_ADDRESS_ERROR;
+	}
+	elseif ($entry_email_address_check_error == true) {
+		echo vam_draw_input_field('customers_email_address', $customers_email_address, 'maxlength="96"').'&nbsp;'.ENTRY_EMAIL_ADDRESS_CHECK_ERROR;
+	}
+	elseif ($entry_email_address_exists == true) {
+		echo vam_draw_input_field('customers_email_address', $customers_email_address, 'maxlength="96"').'&nbsp;'.ENTRY_EMAIL_ADDRESS_ERROR_EXISTS;
+	} else {
+		echo vam_draw_input_field('customers_email_address', $customers_email_address, 'maxlength="96"');
+	}
+} else {
+	echo vam_draw_input_field('customers_email_address', $customers_email_address, 'maxlength="96"');
+}
+?></td>
+          </tr>
+        </table></td>
+      </tr>
+<?php
 
 if (ACCOUNT_COMPANY == 'true') {
-	$vamTemplate->assign('company', '1');
-	$vamTemplate->assign('INPUT_COMPANY', vam_draw_input_fieldNote(array ('name' => 'company', 'text' => '&nbsp;'. (vam_not_null(ENTRY_COMPANY_TEXT) ? '<span class="Requirement">'.ENTRY_COMPANY_TEXT.'</span>' : ''))));
-} else {
-	$vamTemplate->assign('company', '0');
-}
+?>
+      <tr>
+        <td><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
+      </tr>
+      <tr>
+        <td class="formAreaTitle"><?php echo CATEGORY_COMPANY; ?></td>
+      </tr>
+      <tr>
+        <td class="formArea"><table border="0" cellspacing="2" cellpadding="2">
+          <tr>
+            <td class="main"><?php echo ENTRY_COMPANY; ?></td>
+            <td class="main"><?php
 
-if (ACCOUNT_COMPANY_VAT_CHECK == 'true') {
-	$vamTemplate->assign('vat', '1');
-	$vamTemplate->assign('INPUT_VAT', vam_draw_input_fieldNote(array ('name' => 'vat', 'text' => '&nbsp;'. (vam_not_null(ENTRY_VAT_TEXT) ? '<span class="Requirement">'.ENTRY_VAT_TEXT.'</span>' : ''))));
-} else {
-	$vamTemplate->assign('vat', '0');
-}
+	if ($error == true) {
+		if ($entry_company_error == true) {
+			echo vam_draw_input_field('entry_company', $entry_company, 'maxlength="32"').'&nbsp;'.ENTRY_COMPANY_ERROR;
+		} else {
+			echo vam_draw_input_field('entry_company', $entry_company, 'maxlength="32"');
+		}
+	} else {
+		echo vam_draw_input_field('entry_company', $entry_company, 'maxlength="32"');
+	}
+?></td>
+          </tr>
+<?php
 
-if (ACCOUNT_STREET_ADDRESS == 'true') {
-   $vamTemplate->assign('street_address', '1');
-   $vamTemplate->assign('INPUT_STREET', vam_draw_input_fieldNote(array ('name' => 'street_address', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STREET_ADDRESS_TEXT) ? '<span class="Requirement">'.ENTRY_STREET_ADDRESS_TEXT.'</span>' : '')), '', 'id="street_address"'));
-} else {
-	$vamTemplate->assign('street_address', '0');
+	if (ACCOUNT_COMPANY_VAT_CHECK == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_VAT_ID; ?></td>
+            <td class="main"><?php
+
+		if ($error == true) {
+			if ($entry_vat_error == true) {
+				echo vam_draw_input_field('customers_vat_id', $customers_vat_id, 'maxlength="32"').'&nbsp;'.ENTRY_VAT_ERROR;
+			} else {
+				echo vam_draw_input_field('customers_vat_id', $customers_vat_id, 'maxlength="32"');
+			}
+		} else {
+			echo vam_draw_input_field('customers_vat_id', $customers_vat_id, 'maxlength="32"');
+		}
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+
+        </table></td>
+      </tr>
+<?php
+
 }
+?>
+      <tr>
+        <td><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
+      </tr>
+<?php
+
+	if (ACCOUNT_STREET_ADDRESS == 'true') {
+?>
+      <tr>
+        <td class="formAreaTitle"><?php echo CATEGORY_ADDRESS; ?></td>
+      </tr>
+<?php
+
+	}
+?>
+      <tr>
+        <td class="formArea"><table border="0" cellspacing="2" cellpadding="2">
+<?php
+
+	if (ACCOUNT_STREET_ADDRESS == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_STREET_ADDRESS; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_street_address_error == true) {
+		echo vam_draw_input_field('entry_street_address', $entry_street_address, 'maxlength="64"').'&nbsp;'.ENTRY_STREET_ADDRESS_ERROR;
+	} else {
+		echo vam_draw_input_field('entry_street_address', $entry_street_address, 'maxlength="64"');
+	}
+} else {
+	echo vam_draw_input_field('entry_street_address', $entry_street_address, 'maxlength="64"');
+}
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+<?php
 
 if (ACCOUNT_SUBURB == 'true') {
-	$vamTemplate->assign('suburb', '1');
-	$vamTemplate->assign('INPUT_SUBURB', vam_draw_input_fieldNote(array ('name' => 'suburb', 'text' => '&nbsp;'. (vam_not_null(ENTRY_SUBURB_TEXT) ? '<span class="Requirement">'.ENTRY_SUBURB_TEXT.'</span>' : ''))));
-
-} else {
-	$vamTemplate->assign('suburb', '0');
-}
-
-if (ACCOUNT_POSTCODE == 'true') {
-	$vamTemplate->assign('postcode', '1');
-   $vamTemplate->assign('INPUT_CODE', vam_draw_input_fieldNote(array ('name' => 'postcode', 'text' => '&nbsp;'. (vam_not_null(ENTRY_POST_CODE_TEXT) ? '<span class="Requirement">'.ENTRY_POST_CODE_TEXT.'</span>' : '')), '', 'id="postcode"'));
-
-} else {
-	$vamTemplate->assign('postcode', '0');
-}
-
-if (ACCOUNT_CITY == 'true') {
-	$vamTemplate->assign('city', '1');
-   $vamTemplate->assign('INPUT_CITY', vam_draw_input_fieldNote(array ('name' => 'city', 'text' => '&nbsp;'. (vam_not_null(ENTRY_CITY_TEXT) ? '<span class="Requirement">'.ENTRY_CITY_TEXT.'</span>' : '')), '', 'id="city"'));
-} else {
-	$vamTemplate->assign('city', '0');
-}
-
-if (ACCOUNT_STATE == 'true') {
-	$vamTemplate->assign('state', '1');
-
-//	if ($process == true) {
-
-//    if ($process != true) {
-	    $country = (isset($_POST['country']) ? vam_db_prepare_input($_POST['country']) : STORE_COUNTRY);
-	    $zone_id = 0;
-		 $check_query = vam_db_query("select count(*) as total from ".TABLE_ZONES." where zone_country_id = '".(int) $country."'");
-		 $check = vam_db_fetch_array($check_query);
-		 $entry_state_has_zones = ($check['total'] > 0);
-		 if ($entry_state_has_zones == true) {
-			$zones_array = array ();
-			$zones_query = vam_db_query("select zone_name from ".TABLE_ZONES." where zone_country_id = '".(int) $country."' order by zone_name");
-			while ($zones_values = vam_db_fetch_array($zones_query)) {
-				$zones_array[] = array ('id' => $zones_values['zone_name'], 'text' => $zones_values['zone_name']);
-			}
-
-		}
-//	}
-
-      if ($entry_state_has_zones == true) {
-        $state_input = vam_draw_pull_down_menuNote(array ('name' => 'state', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STATE_TEXT) ? '<span class="Requirement">'.ENTRY_STATE_TEXT.'</span>' : '')), $zones_array, ($process == true) ? $state : vam_get_zone_name(STORE_COUNTRY, STORE_ZONE,''), 'id="state"');
-//        $state_input = vam_draw_pull_down_menu('state', $zones_array, $zone_name . ' id="state"');
-      } else {
-		$state_input = vam_draw_input_fieldNote(array ('name' => 'state', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STATE_TEXT) ? '<span class="Requirement">'.ENTRY_STATE_TEXT.'</span>' : '')), '', 'id="state"');
-//        $state_input = vam_draw_input_field('state', '', ' id="state"');
-      }
-		
-			
-//			$state_input = vam_draw_pull_down_menuNote(array ('name' => 'state', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STATE_TEXT) ? '<span class="inputRequirement">'.ENTRY_STATE_TEXT.'</span>' : '')), $zones_array);
-//		} else {
-//			$state_input = vam_draw_input_fieldNote(array ('name' => 'state', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STATE_TEXT) ? '<span class="inputRequirement">'.ENTRY_STATE_TEXT.'</span>' : '')));
-//		}
-//	} else {
-//		$state_input = vam_draw_input_fieldNote(array ('name' => 'state', 'text' => '&nbsp;'. (vam_not_null(ENTRY_STATE_TEXT) ? '<span class="inputRequirement">'.ENTRY_STATE_TEXT.'</span>' : '')));
-//	}
-
-	$vamTemplate->assign('INPUT_STATE', $state_input);
-} else {
-	$vamTemplate->assign('state', '0');
-}
-
-if ($_POST['country']) {
-	$selected = $_POST['country'];
-} else {
-	$selected = STORE_COUNTRY;
-}
-
-if (ACCOUNT_COUNTRY == 'true') {
-	$vamTemplate->assign('country', '1');
-//   $vamTemplate->assign('SELECT_COUNTRY', vam_get_country_list(array ('name' => 'country', 'text' => '&nbsp;'. (vam_not_null(ENTRY_COUNTRY_TEXT) ? '<span class="inputRequirement">'.ENTRY_COUNTRY_TEXT.'</span>' : '')), $selected));
-
-   $vamTemplate->assign('SELECT_COUNTRY', vam_get_country_list(array ('name' => 'country', 'text' => '&nbsp;'. (vam_not_null(ENTRY_COUNTRY_TEXT) ? '<span class="Requirement">'.ENTRY_COUNTRY_TEXT.'</span>' : '')), $selected, 'id="country"'));
-   
-//   $vamTemplate->assign('SELECT_COUNTRY_NOSCRIPT', '<noscript><br />' . vam_image_submit('button_update.gif', IMAGE_BUTTON_UPDATE, 'name=loadStateXML') . '<br />' . ENTRY_STATE_RELOAD . '</noscript>');
-
-} else {
-	$vamTemplate->assign('country', '0');
-}
-
-if (ACCOUNT_TELE == 'true') {
-	$vamTemplate->assign('telephone', '1');
-   $vamTemplate->assign('INPUT_TEL', vam_draw_input_fieldNote(array ('name' => 'telephone', 'text' => '&nbsp;'. (vam_not_null(ENTRY_TELEPHONE_NUMBER_TEXT) ? '<span class="Requirement">'.ENTRY_TELEPHONE_NUMBER_TEXT.'</span>' : '')), '', 'id="telephone"'));
-} else {
-	$vamTemplate->assign('telephone', '0');
-}
-
-if (ACCOUNT_FAX == 'true') {
-	$vamTemplate->assign('fax', '1');
-   $vamTemplate->assign('INPUT_FAX', vam_draw_input_fieldNote(array ('name' => 'fax', 'text' => '&nbsp;'. (vam_not_null(ENTRY_FAX_NUMBER_TEXT) ? '<span class="Requirement">'.ENTRY_FAX_NUMBER_TEXT.'</span>' : ''))));
-} else {
-	$vamTemplate->assign('fax', '0');
-}
-
-	$vamTemplate->assign('customers_extra_fileds', '1');
-   $vamTemplate->assign('INPUT_CUSTOMERS_EXTRA_FIELDS', vam_get_extra_fields($_SESSION['customer_id'],$_SESSION['languages_id']));
-
-$vamTemplate->assign('INPUT_PASSWORD', vam_draw_password_fieldNote(array ('name' => 'password', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_TEXT.'</span>' : '')), '', 'id="pass"'));
-$vamTemplate->assign('INPUT_CONFIRMATION', vam_draw_password_fieldNote(array ('name' => 'confirmation', 'text' => '&nbsp;'. (vam_not_null(ENTRY_PASSWORD_CONFIRMATION_TEXT) ? '<span class="Requirement">'.ENTRY_PASSWORD_CONFIRMATION_TEXT.'</span>' : '')), '', 'id="confirmation"'));
-$vamTemplate->assign('FORM_END', '</form>');
-$vamTemplate->assign('language', $_SESSION['language']);
-$vamTemplate->caching = 0;
-$vamTemplate->assign('BUTTON_SUBMIT', vam_image_submit('submit.png',  IMAGE_BUTTON_CONTINUE));
-$main_content = $vamTemplate->fetch(CURRENT_TEMPLATE.'/module/create_account.html');
-
-$vamTemplate->assign('language', $_SESSION['language']);
-$vamTemplate->assign('main_content', $main_content);
-$vamTemplate->caching = 0;
-if (!defined(RM)) $vamTemplate->load_filter('output', 'note');
-$template = (file_exists('templates/'.CURRENT_TEMPLATE.'/'.FILENAME_CREATE_ACCOUNT.'.html') ? CURRENT_TEMPLATE.'/'.FILENAME_CREATE_ACCOUNT.'.html' : CURRENT_TEMPLATE.'/index.html');
-$vamTemplate->display($template);
-include ('includes/application_bottom.php');
 ?>
+          <tr>
+            <td class="main"><?php echo ENTRY_SUBURB; ?></td>
+            <td class="main"><?php
+
+	if ($error == true) {
+		if ($entry_suburb_error == true) {
+			echo vam_draw_input_field('suburb', $entry_suburb, 'maxlength="32"').'&nbsp;'.ENTRY_SUBURB_ERROR;
+		} else {
+			echo vam_draw_input_field('entry_suburb', $entry_suburb, 'maxlength="32"');
+		}
+	} else {
+		echo vam_draw_input_field('entry_suburb', $entry_suburb, 'maxlength="32"');
+	}
+?></td>
+          </tr>
+<?php
+
+}
+?>
+<?php
+
+	if (ACCOUNT_POSTCODE == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_POST_CODE; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_post_code_error == true) {
+		echo vam_draw_input_field('entry_postcode', $entry_postcode, 'maxlength="8"').'&nbsp;'.ENTRY_POST_CODE_ERROR;
+	} else {
+		echo vam_draw_input_field('entry_postcode', $entry_postcode, 'maxlength="8"');
+	}
+} else {
+	echo vam_draw_input_field('entry_postcode', $entry_postcode, 'maxlength="8"');
+}
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+<?php
+
+	if (ACCOUNT_CITY == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_CITY; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_city_error == true) {
+		echo vam_draw_input_field('entry_city', $entry_city, 'maxlength="32"').'&nbsp;'.ENTRY_CITY_ERROR;
+	} else {
+		echo vam_draw_input_field('entry_city', $entry_city, 'maxlength="32"');
+	}
+} else {
+	echo vam_draw_input_field('entry_city', $entry_city, 'maxlength="32"');
+}
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+<?php
+  if (ACCOUNT_COUNTRY == 'true') {
+?>
+              <tr>
+                <td class="main"><?php echo ENTRY_COUNTRY; ?></td>
+                <td class="main"><?php echo vam_get_country_list('country',STORE_COUNTRY, 'onChange="changeselect();"') . '&nbsp;' . (defined(ENTRY_COUNTRY_TEXT) ? '<span class="inputRequirement">' . ENTRY_COUNTRY_TEXT . '</span>': ''); ?></td>
+              </tr>
+<?php
+  }
+?>
+<?php
+if (ACCOUNT_STATE == 'true') {
+?>
+             <tr>
+               <td class="main"><?php echo ENTRY_STATE;?></td>
+               <td class="main">
+<script language="javascript">
+<!--
+function changeselect(reg) {
+//clear select
+    document.customers.state.length=0;
+    var j=0;
+    for (var i=0;i<zones.length;i++) {
+      if (zones[i][0]==document.customers.country.value) {
+   document.customers.state.options[j]=new Option(zones[i][1],zones[i][1]);
+   j++;
+   }
+      }
+    if (j==0) {
+      document.customers.state.options[0]=new Option('-','-');
+      }
+    if (reg) { document.customers.state.value = reg; }
+}
+   var zones = new Array(
+   <?php
+       $zones_query = vam_db_query("select zone_country_id,zone_name from " . TABLE_ZONES . " order by zone_name asc");
+       $mas=array();
+       while ($zones_values = vam_db_fetch_array($zones_query)) {
+         $zones[] = 'new Array('.$zones_values['zone_country_id'].',"'.$zones_values['zone_name'].'")';
+       }
+       echo implode(',',$zones);
+       ?>
+       );
+document.write('<SELECT NAME="state">');
+document.write('</SELECT>');
+changeselect("<?php echo vam_db_prepare_input($_POST['state']); ?>");
+-->
+</script>
+          </td>
+             </tr>
+<?php
+}
+?>
+        </table></td>
+      </tr>
+      <tr>
+        <td><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
+      </tr>
+<?php
+
+	if (ACCOUNT_TELE == 'true') {
+?>
+      <tr>
+        <td class="formAreaTitle"><?php echo CATEGORY_CONTACT; ?></td>
+      </tr>
+<?php
+
+	}
+?>
+      <tr>
+        <td class="formArea"><table border="0" cellspacing="2" cellpadding="2">
+<?php
+
+	if (ACCOUNT_TELE == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_TELEPHONE_NUMBER; ?></td>
+            <td class="main"><?php
+
+if ($error == true) {
+	if ($entry_telephone_error == true) {
+		echo vam_draw_input_field('customers_telephone', $customers_telephone).'&nbsp;'.ENTRY_TELEPHONE_NUMBER_ERROR;
+	} else {
+		echo vam_draw_input_field('customers_telephone', $customers_telephone);
+	}
+} else {
+	echo vam_draw_input_field('customers_telephone', $customers_telephone);
+}
+?></td>
+          </tr>
+<?php
+
+	}
+?>
+<?php
+
+	if (ACCOUNT_FAX == 'true') {
+?>
+          <tr>
+            <td class="main"><?php echo ENTRY_FAX_NUMBER; ?></td>
+            <td class="main"><?php echo vam_draw_input_field('customers_fax'); ?></td>
+          </tr>
+<?php
+
+	}
+?>
+        </table></td>
+      </tr>
+      <tr>
+        <td><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
+      </tr>
+      <?php echo vam_get_extra_fields($_GET['cID'],$_SESSION['languages_id']); ?>
+      <tr>
+        <td class="formAreaTitle"><?php echo CATEGORY_OPTIONS; ?></td>
+      </tr>
+      <tr>
+        <td class="formArea"><table border="0" cellspacing="2" cellpadding="2">
+          <tr>
+            <td class="main"><?php echo ENTRY_CUSTOMERS_STATUS; ?></td>
+            <td class="main"><?php
+
+if ($processed == true) {
+	echo vam_draw_hidden_field('status');
+} else {
+	echo vam_draw_pull_down_menu('status', $customers_statuses_array, 2);
+}
+?></td>
+          </tr>
+          <tr>
+            <td class="main"><?php echo ENTRY_MAIL; ?></td>
+            <td class="main">
+<?php
+
+if ($error == true) {
+	if ($entry_mail_error == true) {
+		echo vam_draw_radio_field('customers_mail', 'yes', true, $customers_send_mail).'&nbsp;&nbsp;'.YES.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_mail', 'no', false, $customers_send_mail).'&nbsp;&nbsp;'.NO.'&nbsp;'.ENTRY_MAIL_ERROR;
+	} else {
+		echo vam_draw_radio_field('customers_mail', 'yes', true, $customers_send_mail).'&nbsp;&nbsp;'.YES.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_mail', 'no', false, $customers_send_mail).'&nbsp;&nbsp;'.NO;
+	}
+} else {
+	echo vam_draw_radio_field('customers_mail', 'yes', true, $customers_send_mail).'&nbsp;&nbsp;'.YES.'&nbsp;&nbsp;'.vam_draw_radio_field('customers_mail', 'no', false, $customers_send_mail).'&nbsp;&nbsp;'.NO;
+}
+?></td>
+          </tr>
+          <tr>
+            <td class="main"><?php echo ENTRY_PAYMENT_UNALLOWED; ?></td>
+            <td class="main"><?php echo vam_draw_input_field('payment_unallowed'); ?></td>
+          </tr>
+           <tr>
+            <td class="main"><?php echo ENTRY_SHIPPING_UNALLOWED; ?></td>
+            <td class="main"><?php echo vam_draw_input_field('shipping_unallowed'); ?></td>
+          </tr>
+            <td class="main" bgcolor="#FFCC33"><?php echo ENTRY_PASSWORD; ?></td>
+            <td class="main" bgcolor="#FFCC33"><?php
+
+if ($error == true) {
+	if ($entry_password_error == true) {
+		echo vam_draw_password_field('entry_password', $customers_password_encrypted).'&nbsp;'.ENTRY_PASSWORD_ERROR;
+	} else {
+		echo vam_draw_password_field('entry_password', $customers_password_encrypted);
+	}
+} else {
+	echo vam_draw_password_field('entry_password', $customers_password_encrypted);
+}
+?></td>
+          </tr>
+            <td class="main" valign="top"><?php echo ENTRY_MAIL_COMMENTS; ?></td>
+            <td class="main"><?php echo vam_draw_textarea_field('mail_comments', 'soft', '60', '5', $mail_comments); ?></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
+      </tr>
+      <tr>
+        <td align="right" class="main"><?php echo '<span class="button"><button type="submit" value="' . BUTTON_INSERT . '">' . vam_image(DIR_WS_IMAGES . 'icons/buttons/submit.png', '', '12', '12') . '&nbsp;' . BUTTON_INSERT . '</button></span> <a class="button" href="' . vam_href_link(FILENAME_CUSTOMERS, vam_get_all_get_params(array('action'))) .'"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/cancel.png', '', '12', '12') . '&nbsp;' . BUTTON_CANCEL . '</span></a>'; ?></td>
+      </tr></form>
+      </table></td>
+      </tr>
+    </table></td>
+<!-- body_text_eof //-->
+  </tr>
+</table>
+<!-- body_eof //-->
+
+<!-- footer //-->
+<?php require(DIR_WS_INCLUDES . 'footer.php'); ?>
+<!-- footer_eof //-->
+</body>
+</html>
+<?php require(DIR_WS_INCLUDES . 'application_bottom.php'); ?>
