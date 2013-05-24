@@ -249,4 +249,6 @@ define('TEXT_PRODUCTS_QUANTITY_MAX', 'Max. quantity to order:');
   define ('SPECIFICATIONS_TEXT_ALL', 'All');
 // End Products Specifications
 
+  define ('TEXT_IMAGE_DESCRIPTION', 'Image Description: ');
+
 ?>
