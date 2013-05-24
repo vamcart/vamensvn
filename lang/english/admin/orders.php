@@ -154,4 +154,6 @@ define('MAP_API_KEY_ERROR','Get your API KEY at <a href=\"http://api.yandex.ru/m
 
 define('BUTTON_ORDERS_EXPORT','Orders Export');
 
+define('ENTRY_ANSWER_TEMPLATE', 'Answer Template:');
+
 ?>
