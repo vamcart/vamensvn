@@ -14,23 +14,23 @@
    Released under the GNU General Public License 
    --------------------------------------------------------------*/
 
-define('HEADING_TITLE', 'News');
+define('HEADING_TITLE', 'Answer Templates');
 
-define('TABLE_HEADING_LATEST_NEWS_HEADLINE', 'Headline');
+define('TABLE_HEADING_LATEST_NEWS_NAME', 'Name');
 define('TABLE_HEADING_LATEST_NEWS_ACTION', 'Action');
 define('TABLE_HEADING_LATEST_NEWS_STATUS', 'Status');
 
-define('TEXT_NEWS_ITEMS', 'Number of news:');
-define('TEXT_INFO_HEADING_DELETE_ITEM', 'Delete news');
+define('TEXT_NEWS_ITEMS', 'Number of templates:');
+define('TEXT_INFO_HEADING_DELETE_ITEM', 'Delete template');
 define('TEXT_DELETE_ITEM_INTRO', 'Are you sure?');
 
-define('TEXT_LATEST_NEWS_HEADLINE', 'Headline');
-define('TEXT_LATEST_NEWS_CONTENT', 'Content');
+define('TEXT_ANSWER_TEMPLATES_NAME', 'Name');
+define('TEXT_ANSWER_TEMPLATES_CONTENT', 'Content');
 
-define('IMAGE_NEW_NEWS_ITEM', 'Add news');
-define('IMAGE_EDIT_NEWS_ITEM', 'Edit news');
-define('TEXT_LATEST_NEWS_LANGUAGE', 'Language');
-define('TEXT_LATEST_NEWS_DATE', 'Date');
+define('IMAGE_NEW_NEWS_ITEM', 'Add template');
+define('IMAGE_EDIT_NEWS_ITEM', 'Edit template');
+define('TEXT_ANSWER_TEMPLATES_LANGUAGE', 'Language');
+define('TEXT_ANSWER_TEMPLATES_DATE', 'Date');
 
 // Сборка VaM
 
@@ -39,9 +39,7 @@ define('IMAGE_ICON_STATUS_GREEN_LIGHT', 'Set Active');
 define('IMAGE_ICON_STATUS_RED', 'Inactive');
 define('IMAGE_ICON_STATUS_RED_LIGHT', 'Set Inactive');
 
-define('EMPTY_CATEGORY', 'No news');
-define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No news at this moment');
-
-define('TEXT_NEWS_PAGE_URL', 'News SEO URL');
+define('EMPTY_CATEGORY', 'No templates');
+define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No templates at this moment');
 
 ?>
