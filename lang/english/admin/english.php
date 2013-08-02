@@ -38,7 +38,7 @@ define('DATE_TIME_FORMAT', DATE_FORMAT_SHORT . ' %H:%M:%S');
 define('HTML_PARAMS','dir="ltr" lang="en"');
 
 // page title
-define('TITLE', PROJECT_VERSION);
+define('TITLE', 'Admin Panel - '. PROJECT_VERSION .' - '.STORE_NAME);
 
 // header text in includes/header.php
 define('HEADER_TITLE_TOP', 'Administration');
