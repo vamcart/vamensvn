@@ -655,4 +655,6 @@ define('TEXT_NO_PRODUCTS_AVAILABLE', 'No Comparison Available.');
 define('TEXT_NO_COMPARISON_AVAILABLE', 'No Specifications To Compare Available.');
 define('TEXT_COMPARE','Comparison');
 
+define('TEXT_BUY_BUTTON', 'Add To Cart');
+
 ?>
