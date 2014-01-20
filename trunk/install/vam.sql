@@ -1270,7 +1270,36 @@ CREATE TABLE products_images (
   image_name VARCHAR( 254 ) NOT NULL ,
   image_description VARCHAR( 254 ) NOT NULL ,
   PRIMARY KEY ( image_id )
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+INSERT INTO `products_images` VALUES
+(18, 1, 3, '1_3.jpg', ''),
+(17, 1, 2, '1_2.jpg', ''),
+(16, 1, 1, '1_1.jpg', ''),
+(21, 2, 3, '2_3.jpg', ''),
+(20, 2, 2, '2_2.jpg', ''),
+(19, 2, 1, '2_1.jpg', ''),
+(13, 3, 1, '3_1.jpg', ''),
+(14, 3, 2, '3_2.jpg', ''),
+(15, 3, 3, '3_3.jpg', ''),
+(22, 4, 1, '4_1.jpg', ''),
+(23, 4, 2, '4_2.jpg', ''),
+(24, 4, 3, '4_3.jpg', ''),
+(25, 5, 1, '5_1.jpg', ''),
+(26, 5, 2, '5_2.jpg', ''),
+(27, 5, 3, '5_3.jpg', ''),
+(28, 6, 1, '6_1.jpg', ''),
+(29, 6, 2, '6_2.jpg', ''),
+(30, 6, 3, '6_3.jpg', ''),
+(31, 7, 1, '7_1.jpg', ''),
+(32, 7, 2, '7_2.jpg', ''),
+(33, 7, 3, '7_3.jpg', ''),
+(34, 8, 1, '8_1.jpg', ''),
+(35, 8, 2, '8_2.jpg', ''),
+(36, 8, 3, '8_3.jpg', ''),
+(37, 9, 1, '9_1.jpg', ''),
+(38, 9, 2, '9_2.jpg', ''),
+(39, 9, 3, '9_3.jpg', '');
 
 DROP TABLE IF EXISTS products_notifications;
 CREATE TABLE products_notifications (
@@ -2995,6 +3024,10 @@ CREATE TABLE IF NOT EXISTS `specification_groups_to_categories` (
   PRIMARY KEY (`specification_group_id`,`categories_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+INSERT INTO `specification_groups_to_categories` VALUES
+(1, 1),
+(2, 2),
+(3, 3);
 
 ##
 ## Table structure for table `specification_groups`
@@ -3010,7 +3043,12 @@ CREATE TABLE IF NOT EXISTS `specification_groups` (
   `show_filter` set('True','False') NOT NULL DEFAULT 'True',
   `show_filter_mainpage` set('True','False') NOT NULL DEFAULT 'True',
   PRIMARY KEY (`specification_group_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+
+INSERT INTO `specification_groups` VALUES
+(1, 'Notebook', 'True', 'True', 'True', 'False'),
+(2, 'Tablet', 'True', 'True', 'True', 'False'),
+(3, 'Smartphone', 'True', 'True', 'True', 'False');
 
 ##
 ## Table structure for table `specifications`
@@ -3033,8 +3071,24 @@ CREATE TABLE IF NOT EXISTS `specifications` (
   `enter_values` set('pulldown','multi','checkbox','radio','links','text','image','multiimage') NOT NULL DEFAULT 'text',
   PRIMARY KEY (`specifications_id`),
   KEY `specification_group_id` (`specification_group_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+INSERT INTO `specifications` VALUES
+(1, 1, 0, 'True', 'True', 'True', 'False', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(2, 1, 0, 'True', 'True', 'True', 'False', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(3, 1, 0, 'True', 'True', 'True', 'False', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(4, 1, 0, 'True', 'True', 'True', 'False', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(5, 1, 0, 'True', 'True', 'True', 'False', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(6, 2, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(7, 2, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(8, 2, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(9, 2, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(10, 2, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(11, 3, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(12, 3, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(13, 3, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(14, 3, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio'),
+(15, 3, 0, 'True', 'True', 'True', 'True', '', 'Left', 'exact', 'radio', 'True', 'radio');
 
 ##
 ## Table structure for table `specification_description`
@@ -3053,8 +3107,24 @@ CREATE TABLE IF NOT EXISTS `specification_description` (
   `specification_suffix` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`specification_description_id`,`language_id`),
   KEY `specifications_id` (`specifications_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+INSERT INTO `specification_description` VALUES
+(1, 1, 1, 'Display', '', '', ''),
+(2, 2, 1, 'Battery', '', '', ''),
+(3, 3, 1, 'Weight', '', '', ''),
+(4, 4, 1, 'Storage', '', '', ''),
+(5, 5, 1, 'Dimensions', '', '', ''),
+(6, 6, 1, 'Display', '', '', ''),
+(7, 7, 1, 'Battery', '', '', ''),
+(8, 8, 1, 'Weight', '', '', ''),
+(9, 9, 1, 'Storage', '', '', ''),
+(10, 10, 1, 'Dimensions', '', '', ''),
+(11, 11, 1, 'Display', '', '', ''),
+(12, 12, 1, 'Battery', '', '', ''),
+(13, 13, 1, 'Weight', '', '', ''),
+(14, 14, 1, 'Storage', '', '', ''),
+(15, 15, 1, 'Dimensions', '', '', '');
 
 ##
 ## Table structure for table `specification_filters`
@@ -3067,8 +3137,53 @@ CREATE TABLE IF NOT EXISTS `specification_filters` (
   `filter_sort_order` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`specification_filters_id`),
   KEY `specifications_id` (`specifications_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+INSERT INTO `specification_filters` VALUES
+(1, 1, 0),
+(2, 1, 0),
+(3, 1, 0),
+(4, 2, 0),
+(5, 2, 0),
+(6, 2, 0),
+(7, 5, 0),
+(8, 5, 0),
+(9, 5, 0),
+(10, 3, 0),
+(11, 3, 0),
+(12, 3, 0),
+(13, 4, 0),
+(14, 4, 0),
+(15, 4, 0),
+(16, 7, 0),
+(17, 7, 0),
+(18, 7, 0),
+(19, 10, 0),
+(20, 10, 0),
+(21, 10, 0),
+(22, 8, 0),
+(23, 8, 0),
+(24, 8, 0),
+(25, 9, 0),
+(26, 9, 0),
+(27, 6, 0),
+(28, 6, 0),
+(29, 6, 0),
+(30, 11, 0),
+(31, 11, 0),
+(32, 11, 0),
+(33, 12, 0),
+(34, 12, 0),
+(35, 12, 0),
+(36, 15, 0),
+(37, 15, 0),
+(38, 15, 0),
+(39, 13, 0),
+(40, 13, 0),
+(41, 13, 0),
+(42, 14, 0),
+(43, 14, 0),
+(44, 14, 0);
 
 ##
 ## Table structure for table `specification_filters_description`
@@ -3083,8 +3198,53 @@ CREATE TABLE IF NOT EXISTS `specification_filters_description` (
   PRIMARY KEY (`specification_filters_description_id`),
   KEY `language_id` (`language_id`),
   KEY `specification_filters_id` (`specification_filters_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
+INSERT INTO `specification_filters_description` VALUES
+(1, 1, 1, '15,0in 1600 x 900'),
+(2, 2, 1, '11,6in 1366 x 768'),
+(3, 3, 1, '15,6in 1366 x 768'),
+(4, 4, 1, '8 ячеек, 62 Вт*ч'),
+(5, 5, 1, '2 ячейки, 30 Вт*ч'),
+(6, 6, 1, '3 ячейки, 43 Вт*ч'),
+(7, 7, 1, '356,9 x 237,0 x 14,9 mm'),
+(8, 8, 1, '304,0 x 189,4 x 9,9 mm'),
+(9, 9, 1, '376,0 x 248,0 x 22,9 mm'),
+(10, 10, 1, '1,65 кg.'),
+(11, 11, 1, '0,744 кg.'),
+(12, 12, 1, '1,99 кg.'),
+(13, 13, 1, '256 Gb SSD'),
+(14, 14, 1, '64 Gb SSD'),
+(15, 15, 1, '500 Gb HDD'),
+(16, 16, 1, '6 800 mAh'),
+(17, 17, 1, '8 220 mAh'),
+(18, 18, 1, '4 600 mAh'),
+(19, 19, 1, '176,10 x 243,10 x 7,95 mm'),
+(20, 20, 1, '171,4 х 243,1 х 7,9 mm'),
+(21, 21, 1, '135,90 x 210,80 x 7,95 mm'),
+(22, 22, 1, '512 g.'),
+(23, 23, 1, '547 g.'),
+(24, 24, 1, '345 g.'),
+(25, 25, 1, '32 Gb'),
+(26, 26, 1, '16 Gb'),
+(27, 27, 1, '10.1in 1280 x 800'),
+(28, 28, 1, '10.1in 2560 х 1600'),
+(29, 29, 1, '8.0in 1280 x 800'),
+(30, 30, 1, '5.7in 1920 x 1080'),
+(31, 31, 1, '5in 1920 x 1080'),
+(32, 32, 1, '4in 800 x 480'),
+(33, 33, 1, '3200 mAh'),
+(34, 34, 1, '2600 mAh'),
+(35, 35, 1, '1500 mAh'),
+(36, 36, 1, '151,2 х 79,2 х 8,3 mm'),
+(37, 37, 1, '136,6 x 69,8 x 7,9 mm'),
+(38, 38, 1, '121,20 x 62,70 x 9,79 mm'),
+(39, 39, 1, '168 g.'),
+(40, 40, 1, '130 g.'),
+(41, 41, 1, '115 g.'),
+(42, 42, 1, '32 Gb'),
+(43, 43, 1, '16 Gb'),
+(44, 44, 1, '4 Gb');
 
 ##
 ## Table structure for table `specification_values`
