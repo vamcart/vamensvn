@@ -1787,10 +1787,10 @@ INSERT INTO shipping_status VALUES (3, 1, '2 Weeks', '');
 INSERT INTO `content_manager` VALUES (1, 0, 0, '', 1, 'Shipping & Returns', 'Shipping & Returns', 'Put here your Shipping & Returns information.', '', 0, 1, '', 1, 1, 0,'','','','');
 INSERT INTO `content_manager` VALUES (2, 0, 0, '', 1, 'Privacy Notice', 'Privacy Notice', 'Put here your Privacy Notice information.', '', 0, 1, '', 1, 2, 0,'','','','');
 INSERT INTO `content_manager` VALUES (3, 0, 0, '', 1, 'Conditions of Use', 'Conditions of Use', 'Conditions of Use<br />Put here your Conditions of Use information. <br />1. Validity<br />2. Offers<br />3. Price<br />4. Dispatch and passage of the risk<br />5. Delivery<br />6. Terms of payment<br />7. Retention of title<br />8. Notices of defect, guarantee and compensation<br />9. Fair trading cancelling / non-acceptance<br />10. Place of delivery and area of jurisdiction<br />11. Final clauses', '', 0, 1, '', 1, 3, 0,'','','','');
-INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Impressum', 'Impressum', 'Put here your Company information.', '', 0, 1, '', 1, 4, 0,'','','','');
+INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Impressum', 'Impressum', 'Put here your Company information.', '', 0, 1, '', 1, 4, 0,'','','','about_us.html');
 INSERT INTO `content_manager` VALUES (5, 0, 0, '', 1, 'Main page', 'Welcome', 'Sample text.<br /><br /> You can change it in Admin - Other - Tools - Content manager<br /><br />', '', 0, 1, '', 0, 5, 0,'','','','');
 INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Sample page', 'Sample page', 'Sample text', '', 0, 1, '', 0, 6, 1,'','','','');
-INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','');
+INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','contact_us.html');
 INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Sitemap', 'Sitemap', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','');
 
 INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliate terms', 'Affiliate terms', '', 0, 2, '', 1, 9, 0,'','','','');
