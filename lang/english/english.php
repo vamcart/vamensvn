@@ -659,5 +659,6 @@ define('TEXT_BUY_BUTTON', 'Add To Cart');
 
 define('TEXT_BEST_BUY', 'best buy!');
 define('TEXT_READ_MORE', 'read more');
+define('TEXT_VIEW_PRODUCTS', 'view products');
 
 ?>
