@@ -661,4 +661,8 @@ define('TEXT_BEST_BUY', 'best buy!');
 define('TEXT_READ_MORE', 'read more');
 define('TEXT_VIEW_PRODUCTS', 'view products');
 
+define('TEXT_PRODUCT_DESCRIPTION', 'Description');
+define('TEXT_PRODUCT_REVIEWS', 'Reviews');
+define('TEXT_PRODUCT_QTY', 'Qty:');
+
 ?>
