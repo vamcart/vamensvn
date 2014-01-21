@@ -440,11 +440,11 @@ define('TAX_INFO_EXCL','excl. %s Tax');
 define('TAX_INFO_ADD','plus. %s Tax');
 define('SHIPPING_EXCL','excl.');
 define('SHIPPING_COSTS','Shipping costs');
-define('MSRP','MSRP');
-define('YOUR_PRICE','your price ');
-define('YOUR_SPECIAL_PRICE','Special price ');
-define('YOUR_GRADUATED_PRICE','Special graduated price ');
-define('RETAIL_PRICE','Your price ');
+define('MSRP','');
+define('YOUR_PRICE','');
+define('YOUR_SPECIAL_PRICE','');
+define('YOUR_GRADUATED_PRICE','');
+define('RETAIL_PRICE','');
 define('GROUP_PRICE','Group price');
 define('MANUFACTURER_DISCOUNT','Personal manufacturer disocunt ');
 define('PRODUCT_DISCOUNT','Product discount ');
@@ -656,5 +656,8 @@ define('TEXT_NO_COMPARISON_AVAILABLE', 'No Specifications To Compare Available.'
 define('TEXT_COMPARE','Comparison');
 
 define('TEXT_BUY_BUTTON', 'Add To Cart');
+
+define('TEXT_BEST_BUY', 'best buy!');
+define('TEXT_READ_MORE', 'read more');
 
 ?>
