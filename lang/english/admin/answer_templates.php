@@ -47,7 +47,6 @@ define('TEXT_NAME', '{$NAME} - Customers name.');
 define('TEXT_ORDER_NR', '{$ORDER_NR} - Order number.');
 define('TEXT_ORDER_LINK', '{$ORDER_LINK} - Order link.');
 define('TEXT_ORDER_DATE', '{$ORDER_DATE} - Order date.');
-define('TEXT_NOTIFY_COMMENTS', '{$NOTIFY_COMMENTS} - Notify comments.');
 define('TEXT_ORDER_STATUS', '{$ORDER_STATUS} - Order Status.');
 define('TEXT_DELIVERY_NAME', '{$DELIVERY_NAME} - Delivery Name.');
 define('TEXT_DELIVERY_STREET_ADDRESS', '{$DELIVERY_STREET_ADDRESS} - Delivery Street Address.');
