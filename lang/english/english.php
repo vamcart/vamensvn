@@ -567,7 +567,7 @@ define('TEXT_CHECKOUT_ALTERNATIVE', 'Checkout');
 define('TEXT_PRODUCT_COMPARE','Compare');
 define('TEXT_PRODUCT_FILTER','Filter');
 
-define('TXT_FREE','<span class="Requirement"><strong>free</strong></span>');
+define('TXT_FREE','free');
 
 define('PRODUCTS_ORDER_QTY_MIN_TEXT_INFO','Minimum quantity to order: ');define('PRODUCTS_ORDER_QTY_MAX_TEXT_INFO','Maximum quantity to order: ');
 
