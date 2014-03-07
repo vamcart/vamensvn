@@ -1,6 +1,6 @@
 <?php
 /*
-  $Id: ask_a_question.php,v 1.42 2003/06/11 17:35:01 hpdl Exp $
+  $Id: ask_a_question.php,v 1.42 2014/06/11 17:35:01 hpdl Exp $
 
   osCommerce, Open Source E-Commerce Solutions
   http://www.oscommerce.com
