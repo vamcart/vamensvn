@@ -1003,7 +1003,7 @@ define('SPECIFICATIONS_FILTER_IMAGE_WIDTH_DESC', 'Set the width of the images di
 define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_TITLE', 'Filter Image Height');
 define('SPECIFICATIONS_FILTER_IMAGE_HEIGHT_DESC', 'Set the height of the images displayed as filters in the filter box.');
 
-define('AVISOSMS_EMAIL_TITLE','AvisoSMS Email');
+define('AVISOSMS_EMAIL_TITLE','MainSMS Email');
 define('AVISOSMS_EMAIL_DESC','');
 
 define('CG_SMART_CHECKOUT', 'Smart Checkout');
