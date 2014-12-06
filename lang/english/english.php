@@ -665,4 +665,6 @@ define('TEXT_PRODUCT_DESCRIPTION', 'Description');
 define('TEXT_PRODUCT_REVIEWS', 'Reviews');
 define('TEXT_PRODUCT_QTY', 'Qty:');
 
+define('TEXT_PAGE_IN_CAT', 'Page');
+
 ?>
