@@ -1,6 +1,6 @@
 <?php
 /* -----------------------------------------------------------------------------------------
-   $Id: metatags.php 1140 2007-02-06 20:41:56 VaM $   
+   $Id: metatags.php 1140 2007-02-06 20:41:57 VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
