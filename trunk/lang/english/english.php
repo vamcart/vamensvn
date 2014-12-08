@@ -663,6 +663,7 @@ define('TEXT_VIEW_PRODUCTS', 'view products');
 
 define('TEXT_PRODUCT_DESCRIPTION', 'Description');
 define('TEXT_PRODUCT_REVIEWS', 'Reviews');
+define('TEXT_PAGE_PRODUCT_REVIEWS', 'Reviews');
 define('TEXT_PRODUCT_QTY', 'Qty:');
 
 define('TEXT_PAGE_IN_CAT', 'Page');
