@@ -44,6 +44,7 @@ define('TITLE', 'Admin Panel - '. PROJECT_VERSION .' - '.STORE_NAME);
 define('HEADER_TITLE_TOP', 'Administration');
 define('HEADER_TITLE_SUPPORT_SITE', 'Support Site');
 define('HEADER_TITLE_DOCS', 'Manual');
+define('HEADER_TITLE_ASK_A_QUESTION', 'Ask a question');
 define('HEADER_TITLE_ONLINE_CATALOG', 'Store');
 define('HEADER_TITLE_ADMINISTRATION', 'Administration');
 
