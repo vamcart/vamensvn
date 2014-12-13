@@ -112,6 +112,7 @@ define('TEXT_PRODUCTS_DATE_AVAILABLE', 'Date Available:');
 define('TEXT_PRODUCT_AVAILABLE', 'In Stock');
 define('TEXT_PRODUCT_NOT_AVAILABLE', 'Out of Stock');
 define('TEXT_PRODUCTS_MANUFACTURER', 'Products Manufacturer:');
+define('TEXT_PRODUCTS_LABEL', 'Products Label:');
 define('TEXT_PRODUCTS_NAME', 'Products Name:');
 define('TEXT_PRODUCTS_DESCRIPTION', 'Products Description:');
 define('TEXT_PRODUCTS_QUANTITY', 'Products Quantity:');
