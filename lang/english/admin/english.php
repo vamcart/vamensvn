@@ -599,5 +599,6 @@ define('BOX_ATTRIBUTES_MANAGER_CATEGORIES','Attributes for category');
 define('TEXT_PRODUCTS_ATTRIBUTES','Product Attributes');
 
 define('BOX_ANSWER_TEMPLATES','Answer Templates');
+define('BOX_PRODUCT_LABELS','Product labels');
 
 ?>
