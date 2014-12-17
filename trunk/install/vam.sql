@@ -1839,6 +1839,8 @@ INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliat
 INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Affiliate info', 'Affiliate info', 'Affiliate info', '', 0, 2, '', 1, 10, 0,'','','','');
 INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Affiliate faq', 'Affiliate faq', 'Affiliate faq', '', 0, 2, '', 1, 11, 0,'','','','');
 
+INSERT INTO content_manager VALUES (12, 0, 0, '', 1, '404', '404', 'Products not found.\r\n\r\n<form name="new_find" id="new_find" action="advanced_search_result.php" method="get">\r\n<span class="bold">Search form!</span>\r\n<br />\r\n<br />\r\n<!-- form -->\r\n<fieldset class="form">\r\n<legend>Keywords:</legend>\r\n<p><input type="text" name="keywords" size="30" maxlength="30" /></p>\r\n<p><span class="button"><button type="submit"><img src="images/icons/buttons/search.png" alt="Search" title=" Search " width="12" height="12" /> Search</button></span></p>\r\n</fieldset>\r\n<!-- /form -->\r\n</form>', '', 0, 0, '', 0, 12, 1, '', '', '', '404.html');
+
 # 1 - Default, 2 - USA, 3 - Spain, 4 - Singapore, 5 - Germany
 INSERT INTO address_format VALUES (1, '$firstname $secondname $lastname$cr$streets$cr$city, $postcode$cr$statecomma$country','$city / $country');
 INSERT INTO address_format VALUES (2, '$firstname $secondname $lastname$cr$streets$cr$city, $state    $postcode$cr$country','$city, $state / $country');
