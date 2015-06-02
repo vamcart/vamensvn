@@ -668,4 +668,7 @@ define('TEXT_PRODUCT_QTY', 'Qty:');
 
 define('TEXT_PAGE_IN_CAT', 'Page');
 
+define('TEXT_TOTAL_REVIEWS', 'Отзывы');
+define('TEXT_REVIEWS_RATING', 'Рейтинг');
+
 ?>
