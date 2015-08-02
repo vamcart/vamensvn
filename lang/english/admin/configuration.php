@@ -1030,4 +1030,7 @@ define('SC_CONFIRMATION_PAGE_DESC', 'Do you want to show extra confirmation page
 define('DADATA_API_KEY_TITLE', 'DaData.Ru API Key');
 define('DADATA_API_KEY_DESC', '');
 
+define('PHONE_MASK_TITLE', 'Phone Mask');
+define('PHONE_MASK_DESC', '');
+
 ?>
