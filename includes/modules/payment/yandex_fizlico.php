@@ -32,6 +32,7 @@
       $this->sort_order = MODULE_PAYMENT_YANDEX_FIZLICO_SORT_ORDER;
       $this->enabled = ((MODULE_PAYMENT_YANDEX_FIZLICO_STATUS == 'True') ? true : false);
 		
+		//$this->form_action_url = 'https://w.qiwi.com/order/external/main.action?shop='.MODULE_PAYMENT_YANDEX_FIZLICO_ID.'&transaction='.$insert_id.'&successUrl='.vam_href_link(FILENAME_CHECKOUT_PROCESS, '', 'SSL').'&failUrl='.vam_href_link(FILENAME_CHECKOUT, '', 'SSL');
 		$this->form_action_url = vam_href_link(FILENAME_CHECKOUT_PROCESS, '', 'SSL');
 		
 		
@@ -93,6 +94,9 @@
 
     public function pre_confirmation_check() {
       global $cartID, $cart;
+
+        $this->name = vam_db_prepare_input($_SESSION['kvit_name']);
+        $this->phone = vam_db_prepare_input($_SESSION['qiwi_telephone']);
 
       if (empty($_SESSION['cart']->cartID)) {
         $_SESSION['cartID'] = $_SESSION['cart']->cartID = $_SESSION['cart']->generate_cart_id();
@@ -328,9 +332,15 @@ if ($_SERVER["HTTP_X_FORWARDED_FOR"]) {
           $_SESSION['cart_yandex_fizlico_id'] = $cartID . '-' . $insert_id;
         }
 
-      }
+// Выписываем qiwi счёт для покупателя
 
-// Переход на яндекс деньги
+        if ($insert_order == true) {
+
+	      vam_db_query("INSERT INTO ".TABLE_PERSONS." (orders_id, name, address) VALUES ('" . vam_db_prepare_input((int)substr($_SESSION['cart_yandex_fizlico_id'], strpos($_SESSION['cart_yandex_fizlico_id'], '-')+1)) . "', '" . vam_db_prepare_input($_SESSION['kvit_name']) . "', '" . vam_db_prepare_input($_SESSION['qiwi_telephone']) ."')");
+
+        }
+
+      }
 
 		vam_redirect('https://money.yandex.ru/embed/shop.xml?account='.MODULE_PAYMENT_YANDEX_FIZLICO_SHOP_ID.'&quickpay=shop&payment-type-choice=on&mobile-payment-type-choice=on&writer=seller&label='.substr($_SESSION['cart_yandex_fizlico_id'], strpos($_SESSION['cart_yandex_fizlico_id'], '-')+1).'&targets=Заказ №'.substr($_SESSION['cart_yandex_fizlico_id'], strpos($_SESSION['cart_yandex_fizlico_id'], '-')+1).'&targets-hint=&default-sum='.$order->info['total'].'&button-text=01&hint=&successURL='.vam_href_link(FILENAME_CHECKOUT_PROCESS, '', 'SSL').'');
 
@@ -338,7 +348,15 @@ if ($_SERVER["HTTP_X_FORWARDED_FOR"]) {
     }
 
 	function process_button() {
-		return false;
+
+      $process_button_string = vam_draw_hidden_field('kvit_name', $this->name) .
+                               vam_draw_hidden_field('qiwi_telephone', $this->phone);
+
+		//vam_redirect('https://w.qiwi.com/order/external/main.action?shop='.MODULE_PAYMENT_YANDEX_FIZLICO_ID.'&transaction='.substr($_SESSION['cart_yandex_fizlico_id'], strpos($_SESSION['cart_yandex_fizlico_id'], '-')+1).'&successUrl='.vam_href_link(FILENAME_CHECKOUT_PROCESS, '', 'SSL').'&failUrl='.vam_href_link(FILENAME_CHECKOUT, '', 'SSL'));
+
+
+      return $process_button_string;
+
 	}
 	
     public function before_process() {
