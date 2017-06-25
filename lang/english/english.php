@@ -676,7 +676,6 @@ define('TEXT_CHECKOUT_PROCESS_PAYMENT', 'Continue');
 define('TEXT_MY_ORDERS', 'My Orders');
 define('TEXT_BACK', 'Back');
 
-define('PRIVACY_TEXT','By clicking Checkout button you are agree to our <a href="shop_content.php?coID=3">policy.</a>');
-define('PRIVACY_TEXT_REGISTER','By clicking Continue button you are agree to our <a href="shop_content.php?coID=3">policy.</a>');
+define('PRIVACY_TEXT','By clicking button you are agree to our <a href="shop_content.php?coID=3">policy.</a>');
 
 ?>
