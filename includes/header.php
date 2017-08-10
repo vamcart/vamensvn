@@ -36,7 +36,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo $_SESSION['language_charset']; ?>" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+<meta name="viewport" content="initial-scale=1.0, width=device-width">
 
 <link rel="shortcut icon" href="favicon.ico"/>
 
@@ -294,13 +294,13 @@ function checkForm() {
 <?php
 }
 ?>
-</head>
-<body>
 <?php
 if (!strstr($PHP_SELF, FILENAME_CHECKOUT_SUCCESS)) {
 require(DIR_WS_INCLUDES.'google_conversiontracking.js.php');
 }
 ?>
+</head>
+<body>
 <?php
 
   // include needed functions
