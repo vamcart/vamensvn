@@ -122,6 +122,10 @@ define('TEXT_PRODUCTS_URL', 'Products URL:');
 define('TEXT_PRODUCTS_URL_WITHOUT_HTTP', '<small>(without http://)</small>');
 define('TEXT_PRODUCTS_PRICE', 'Products Price:');
 define('TEXT_PRODUCTS_WEIGHT', 'Products Weight:');
+define('TEXT_PRODUCTS_LENGTH', 'Products Length:');
+define('TEXT_PRODUCTS_WIDTH', 'Products Width:');
+define('TEXT_PRODUCTS_HEIGHT', 'Products Height:');
+define('TEXT_PRODUCTS_VOLUME', 'Products Volume:');
 define('TEXT_PRODUCTS_EAN','Barcode/EAN');
 define('TEXT_PRODUCT_LINKED_TO','Linked to:');
 
