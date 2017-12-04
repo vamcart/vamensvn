@@ -28,6 +28,7 @@ define('TEXT_ARTICLE_BY', 'Article by ');
 define('TEXT_MORE_INFORMATION', 'For more information, please visit this authors <a href="http://%s" target="_blank">web page</a>.');
 
 define('TEXT_AUTHORS', 'Authors:');
+define('TEXT_AUTHORS_IMAGE', 'Image:');
 define('TEXT_DATE_ADDED', 'Date Added:');
 define('TEXT_LAST_MODIFIED', 'Last Modified:');
 define('TEXT_ARTICLES', 'Articles:');
