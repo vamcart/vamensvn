@@ -444,6 +444,8 @@ define('BOX_TOPICS_ARTICLES', 'Topics/Articles');
 define('BOX_ARTICLES_CONFIG', 'Configuration');
 define('BOX_ARTICLES_AUTHORS', 'Authors');
 define('BOX_ARTICLES_REVIEWS', 'Reviews'); 
+define('BOX_ARTICLE_REVIEWS', 'Articles Reviews'); 
+define('BOX_AUTHOR_REVIEWS', 'Authors Reviews'); 
 define('BOX_ARTICLES_XSELL', 'Cross-Sell Articles');
 define('IMAGE_NEW_TOPIC', 'New Topic');
 define('IMAGE_NEW_ARTICLE', 'New Article');
