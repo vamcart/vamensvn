@@ -113,4 +113,8 @@ define('TEXT_TOPIC_PAGE_URL', 'Topic SEO URL:');
 
 define('TEXT_ARTICLE_SORT_ORDER', 'Sort Order:');
 
+define('TEXT_ARTICLE_IMAGE', 'Article Image:');
+
+define('TEXT_ARTICLE_KEYWORDS', 'Keywords (comma separated):');
+
 ?>
