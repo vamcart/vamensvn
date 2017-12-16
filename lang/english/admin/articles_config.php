@@ -92,4 +92,7 @@ define('ARTICLE_MANAGER_WYSIWYG_DEBUG_DESC', 'Moniter Live-html, It updates as y
 define('MAX_DISPLAY_ARTICLES_CONTENT_TITLE' , 'Short description');
 define('MAX_DISPLAY_ARTICLES_CONTENT_DESC' , 'Number of symbols displayed in article preview.');
 
+define('TAGS_BLACKLIST_TITLE', 'Tags blacklist (comma separated):');
+define('TAGS_BLACKLIST_DESC', '');
+
 ?>
