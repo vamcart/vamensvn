@@ -240,10 +240,6 @@
         } else {
           if (isset($_GET['aID'])) $articles_id = vam_db_prepare_input($_GET['aID']);
           $articles_date_available = vam_db_prepare_input($_POST['articles_date_available']);
-          $articles_date_added = vam_db_prepare_input($_POST['articles_date_added']);
-          $articles_date_modified = $articles_date_added;
-
-          $articles_keywords = vam_db_prepare_input($_POST['articles_keywords']);
 
           $articles_date_available = (date('Y-m-d') < $articles_date_available) ? $articles_date_available : 'null';
 
@@ -256,18 +252,15 @@
 					} else {
 						
                 $articles_page_url = $_POST['articles_page_url'];
-					}    
-					
+					}      
+
           $sql_data_array = array('articles_date_available' => $articles_date_available,
                                   'articles_status' => vam_db_prepare_input($_POST['articles_status']),
                                   'articles_page_url' => vam_db_prepare_input($articles_page_url),
-                                  'articles_keywords' => vam_db_prepare_input($articles_keywords),
                                   'sort_order' => vam_db_prepare_input($_POST['sort_order']),
-                                  'articles_image' => vam_db_prepare_input($_POST['articles_image']),
                                   'authors_id' => vam_db_prepare_input($_POST['authors_id']));
 
           if ($action == 'insert_article') {
-
             // If expected article then articles_date _added becomes articles_date_available
             if (isset($_POST['articles_date_available']) && vam_not_null($_POST['articles_date_available'])) {
               $insert_sql_data = array('articles_date_added' => vam_db_prepare_input($_POST['articles_date_available']));
@@ -286,8 +279,6 @@
             if (isset($_POST['articles_date_available']) && vam_not_null($_POST['articles_date_available'])) {
               $update_sql_data = array('articles_date_added' => vam_db_prepare_input($_POST['articles_date_available']));
             }
-
-              $update_sql_data = array('articles_date_added' => vam_db_prepare_input($_POST['articles_date_added']));
 
             $sql_data_array = array_merge($sql_data_array, $update_sql_data);
 
@@ -340,10 +331,10 @@
               $messageStack->add_session(ERROR_CANNOT_LINK_TO_SAME_TOPIC, 'error');
             }
           } elseif ($_POST['copy_as'] == 'duplicate') {
-            $article_query = vam_db_query("select articles_date_available, authors_id, authors_keywords, articles_page_url, sort_order from " . TABLE_ARTICLES . " where articles_id = '" . (int)$articles_id . "'");
+            $article_query = vam_db_query("select articles_date_available, authors_id, articles_page_url, sort_order from " . TABLE_ARTICLES . " where articles_id = '" . (int)$articles_id . "'");
             $article = vam_db_fetch_array($article_query);
 
-            vam_db_query("insert into " . TABLE_ARTICLES . " (articles_date_added, articles_date_available, articles_status, authors_id, authors_keywords, articles_page_url, sort_order) values (now(), '" . vam_db_input($article['articles_date_available']) . "', '0', '" . (int)$article['authors_id'] . "', '" . (int)$article['articles_page_url'] . "', '" . (int)$article['sort_order'] . "')");
+            vam_db_query("insert into " . TABLE_ARTICLES . " (articles_date_added, articles_date_available, articles_status, authors_id, articles_page_url, sort_order) values (now(), '" . vam_db_input($article['articles_date_available']) . "', '0', '" . (int)$article['authors_id'] . "', '" . (int)$article['articles_page_url'] . "', '" . (int)$article['sort_order'] . "')");
             $dup_articles_id = vam_db_insert_id();
 
             $description_query = vam_db_query("select language_id, articles_name, articles_description, articles_url, articles_head_title_tag, articles_head_desc_tag, articles_head_keywords_tag from " . TABLE_ARTICLES_DESCRIPTION . " where articles_id = '" . (int)$articles_id . "'");
@@ -671,13 +662,12 @@ $manual_link = 'add-topic';
                        'articles_status' => '',
                        'authors_id' => '',
                        'articles_page_url' => '',
-                       'articles_keywords' => '',
                        'sort_order' => '');
 
     $aInfo = new objectInfo($parameters);
 
     if (isset($_GET['aID']) && empty($_POST)) {
-      $article_query = vam_db_query("select ad.articles_name, ad.articles_description, ad.articles_url, ad.articles_head_title_tag, ad.articles_head_desc_tag, ad.articles_head_keywords_tag, a.articles_id, a.articles_keywords, a.articles_date_added, a.articles_last_modified, date_format(a.articles_date_available, '%Y-%m-%d') as articles_date_available, a.articles_status, a.articles_page_url, a.articles_image, a.sort_order, a.authors_id from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad where a.articles_id = '" . (int)$_GET['aID'] . "' and a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "'");
+      $article_query = vam_db_query("select ad.articles_name, ad.articles_description, ad.articles_url, ad.articles_head_title_tag, ad.articles_head_desc_tag, ad.articles_head_keywords_tag, a.articles_id, a.articles_date_added, a.articles_last_modified, date_format(a.articles_date_available, '%Y-%m-%d') as articles_date_available, a.articles_status, a.articles_page_url, a.sort_order, a.authors_id from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad where a.articles_id = '" . (int)$_GET['aID'] . "' and a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "'");
       $article = vam_db_fetch_array($article_query);
 
       $aInfo->objectInfo($article);
@@ -765,34 +755,7 @@ $manual_link = 'edit-article';
 
           <tr>
             <td class="main"><?php echo TEXT_ARTICLES_HEAD_TITLE_TAG; ?></td>
-            <td class="main"><?php echo vam_draw_textarea_field('articles_head_title_tag[' . $languages[$i]['id'] . ']', 'soft', '70', '5', (isset($articles_head_title_tag[$languages[$i]['id']]) ? $articles_head_title_tag[$languages[$i]['id']] : vam_get_articles_head_title_tag($aInfo->articles_id, $languages[$i]['id'])),'class="notinymce"'); ?>
-				<div id="title-result"></div>            
-<script>
-				function wordCount( val ){
-    var wom = val.match(/\S+/g);
-    return {
-        charactersNoSpaces : val.replace(/\s+/g, '').length,
-        characters         : val.length,
-        words              : wom ? wom.length : 0,
-        lines              : val.split(/\r*\n/).length
-    };
-}
-
-
-var textarea = document.getElementById("articles_head_title_tag[1]");
-var result_title   = document.getElementById("title-result");
-
-textarea.addEventListener("input", function(){
-  var v = wordCount( this.value );
-  result_title.innerHTML = (
-      //"<br>Characters (no spaces):  "+ v.charactersNoSpaces +
-      + v.characters
-      //"<br>Words: "+ v.words +
-      //"<br>Lines: "+ v.lines
-  );
-}, false);
-</script>
-            </td>
+            <td class="main"><?php echo vam_draw_input_field('articles_head_title_tag[' . $languages[$i]['id'] . ']', (isset($articles_head_title_tag[$languages[$i]['id']]) ? $articles_head_title_tag[$languages[$i]['id']] : vam_get_articles_head_title_tag($aInfo->articles_id, $languages[$i]['id'])), 'size="35"'); ?></td>
           </tr>
 
           <tr>
@@ -805,23 +768,7 @@ textarea.addEventListener("input", function(){
               <tr>
                 <td class="main"><?php echo vam_draw_textarea_field('articles_head_desc_tag[' . $languages[$i]['id'] . ']', 'soft', '70', '5', (isset($articles_head_desc_tag[$languages[$i]['id']]) ? $articles_head_desc_tag[$languages[$i]['id']] : vam_get_articles_head_desc_tag($aInfo->articles_id, $languages[$i]['id'])),'class="notinymce"'); ?></td>
               </tr>
-            </table>
-				<div id="desc-result"></div>            
-<script>
-var textarea = document.getElementById("articles_head_desc_tag[1]");
-var result_desc   = document.getElementById("desc-result");
-
-textarea.addEventListener("input", function(){
-  var v = wordCount( this.value );
-  result_desc.innerHTML = (
-      //"<br>Characters (no spaces):  "+ v.charactersNoSpaces +
-      + v.characters
-      //"<br>Words: "+ v.words +
-      //"<br>Lines: "+ v.lines
-  );
-}, false);
-</script>
-            </td>            
+            </table></td>
           </tr>
 
           <tr>
@@ -834,23 +781,7 @@ textarea.addEventListener("input", function(){
               <tr>
                 <td class="main"><?php echo vam_draw_textarea_field('articles_head_keywords_tag[' . $languages[$i]['id'] . ']', 'soft', '70', '5', (isset($articles_head_keywords_tag[$languages[$i]['id']]) ? $articles_head_keywords_tag[$languages[$i]['id']] : vam_get_articles_head_keywords_tag($aInfo->articles_id, $languages[$i]['id'])),'class="notinymce"'); ?></td>
               </tr>
-            </table>
-				<div id="key-result"></div>            
-<script>
-var textarea = document.getElementById("articles_head_keywords_tag[1]");
-var result_key   = document.getElementById("key-result");
-
-textarea.addEventListener("input", function(){
-  var v = wordCount( this.value );
-  result_key.innerHTML = (
-      //"<br>Characters (no spaces):  "+ v.charactersNoSpaces +
-      + v.characters
-      //"<br>Words: "+ v.words +
-      //"<br>Lines: "+ v.lines
-  );
-}, false);
-</script>
-            </td>             
+            </table></td>
           </tr>
 
           <tr>
@@ -887,33 +818,11 @@ textarea.addEventListener("input", function(){
           </div>
 <?php
     }
-
-$image_field = '';
-if ($aInfo->articles_image != '') {
-//$image_field = vam_draw_input_field('articles_image', $aInfo->articles_image, 'disabled size="20"');	
-$image_field .= vam_draw_input_field('articles_image_name', $aInfo->articles_image, 'size="20"');	
-$image_field .= vam_draw_file_field('articles_image',$aInfo->articles_image);	
-} else {
-$image_field = vam_draw_file_field('articles_image');	
-}
 ?>
+
         <div id="other">
           <table border="0">
-          <tr>
-            <td class="smallText"><?php echo TEXT_ARTICLE_IMAGE; ?></td>
-            <td><?php echo $image_field; ?></td>
-          </tr>
-          <tr>
-            <td colspan="2"><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
-          </tr>
 
-          <tr>
-            <td class="main"><?php echo TEXT_ARTICLE_KEYWORDS; ?></td>
-            <td class="main"><?php echo vam_draw_input_field('articles_keywords', $aInfo->articles_keywords, ''); ?></td>
-          </tr>
-          <tr>
-            <td colspan="2"><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
-          </tr>
           <tr>
             <td class="main"><?php echo TEXT_ARTICLE_PAGE_URL; ?></td>
             <td class="main"><?php echo vam_draw_input_field('articles_page_url', $aInfo->articles_page_url, ''); ?></td>
@@ -930,14 +839,7 @@ $image_field = vam_draw_file_field('articles_image');
           </tr>
           <tr>
             <td class="main"><?php echo TEXT_ARTICLES_DATE_AVAILABLE; ?><br><small>(YYYY-MM-DD)</small></td>
-            <td class="main"><?php echo vam_draw_input_field('articles_date_available', $aInfo->articles_date_available, 'size="20" class="format-y-m-d dividor-slash"'); ?></td>
-          </tr>
-          <tr>
-            <td colspan="2"><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
-          </tr>
-          <tr>
-            <td class="main"><?php echo TEXT_DATE_ADDED; ?><br><small>(YYYY-MM-DD)</small></td>
-            <td class="main"><?php echo vam_draw_input_field('articles_date_added', $aInfo->articles_date_added, 'size="20" class="format-y-m-d dividor-slash"'); ?></td>
+            <td class="main"><?php echo vam_draw_input_field('articles_date_available', $aInfo->articles_date_available, 'size="10" class="format-y-m-d dividor-slash"'); ?></td>
           </tr>
           <tr>
             <td colspan="2"><?php echo vam_draw_separator('pixel_trans.gif', '1', '10'); ?></td>
@@ -968,14 +870,13 @@ $image_field = vam_draw_file_field('articles_image');
     if (vam_not_null($_POST)) {
       $aInfo = new objectInfo($_POST);
       $articles_name = $_POST['articles_name'];
-      $articles_image = $_POST['articles_image'];
       $articles_description = $_POST['articles_description'];
       $articles_url = $_POST['articles_url'];
       $articles_head_title_tag = $_POST['articles_head_title_tag'];
       $articles_head_desc_tag = $_POST['articles_head_desc_tag'];
       $articles_head_keywords_tag = $_POST['articles_head_keywords_tag'];
     } else {
-      $article_query = vam_db_query("select a.articles_id, a.articles_image, ad.language_id, ad.articles_name, ad.articles_description, ad.articles_url, ad.articles_head_title_tag, ad.articles_head_desc_tag, ad.articles_head_keywords_tag, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status, a.authors_id  from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad where a.articles_id = ad.articles_id and a.articles_id = '" . (int)$_GET['aID'] . "'");
+      $article_query = vam_db_query("select a.articles_id, ad.language_id, ad.articles_name, ad.articles_description, ad.articles_url, ad.articles_head_title_tag, ad.articles_head_desc_tag, ad.articles_head_keywords_tag, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status, a.authors_id  from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad where a.articles_id = ad.articles_id and a.articles_id = '" . (int)$_GET['aID'] . "'");
       $article = vam_db_fetch_array($article_query);
 
       $aInfo = new objectInfo($article);
@@ -983,21 +884,18 @@ $image_field = vam_draw_file_field('articles_image');
 
     $form_action = (isset($_GET['aID'])) ? 'update_article' : 'insert_article';
 
-
     echo vam_draw_form($form_action, FILENAME_ARTICLES, 'tPath=' . $tPath . (isset($_GET['aID']) ? '&aID=' . $_GET['aID'] : '') . '&action=' . $form_action, 'post', 'enctype="multipart/form-data"');
 
     $languages = vam_get_languages();
     for ($i=0, $n=sizeof($languages); $i<$n; $i++) {
       if (isset($_GET['read']) && ($_GET['read'] == 'only')) {
         $aInfo->articles_name = vam_get_articles_name($aInfo->articles_id, $languages[$i]['id']);
-        $aInfo->articles_image = $aInfo->articles_image;
         $aInfo->articles_description = vam_get_articles_description($aInfo->articles_id, $languages[$i]['id']);
         $aInfo->articles_url = vam_get_articles_url($aInfo->articles_id, $languages[$i]['id']);
         $aInfo->articles_head_title_tag = vam_get_articles_head_title_tag($aInfo->articles_id, $languages[$i]['id']);
         $aInfo->articles_head_desc_tag = vam_get_articles_head_desc_tag($aInfo->articles_id, $languages[$i]['id']);
         $aInfo->articles_head_keywords_tag = vam_get_articles_head_keywords_tag($aInfo->articles_id, $languages[$i]['id']);
       } else {
-        $aInfo->articles_image = vam_db_prepare_input($articles_image);
         $aInfo->articles_name = vam_db_prepare_input($articles_name[$languages[$i]['id']]);
         $aInfo->articles_description = vam_db_prepare_input($articles_description[$languages[$i]['id']]);
         $aInfo->articles_url = vam_db_prepare_input($articles_url[$languages[$i]['id']]);
@@ -1086,41 +984,6 @@ $image_field = vam_draw_file_field('articles_image');
       <tr>
         <td align="right" class="smallText">
 <?php
-
-
-if ($form_action == "insert_article") {
-	
-        $articles_img = '';
-        $articles_image = new upload('articles_image');
-        $articles_image->set_destination(DIR_FS_CATALOG_IMAGES .'articles/');
-
-        if ($articles_image->parse() && $articles_image->save()) {
-            $articles_img = vam_db_input($articles_image->filename);
-        }
-
-        if ($articles_img != '') echo vam_draw_hidden_field('articles_image', htmlspecialchars(stripslashes($articles_img)));
-
-}
-
-if ($form_action == "update_article") {
-        
-        $articles_img = '';
-        $articles_image = new upload('articles_image');
-        $articles_image->set_destination(DIR_FS_CATALOG_IMAGES .'articles/');
-
-        if ($articles_image->parse() && $articles_image->save()) {
-            $articles_img = vam_db_input($articles_image->filename);
-        }
-
-			if ($articles_img != '') {
-        echo vam_draw_hidden_field('articles_image', $articles_img);
-        } else {
-        echo vam_draw_hidden_field('articles_image', $_POST['articles_image_name']);
-        }
-        
-}
-
-
 /* Re-Post all POST'ed variables */
       reset($_POST);
       while (list($key, $value) = each($_POST)) {
@@ -1128,8 +991,6 @@ if ($form_action == "update_article") {
           echo vam_draw_hidden_field($key, htmlspecialchars(stripslashes($value)));
         }
       }
-        //echo vam_draw_hidden_field('articles_image', htmlspecialchars(stripslashes($articles_image)));
-
       $languages = vam_get_languages();
       for ($i=0, $n=sizeof($languages); $i<$n; $i++) {
         echo vam_draw_hidden_field('articles_name[' . $languages[$i]['id'] . ']', htmlspecialchars(stripslashes($articles_name[$languages[$i]['id']])));
@@ -1215,7 +1076,6 @@ $manual_link = 'copy-article';
             <td valign="top"><table border="0" width="100%" cellspacing="2" cellpadding="0" class="contentListingTable">
               <tr class="dataTableHeadingRow">
                 <td class="dataTableHeadingContent"><?php echo TABLE_HEADING_TOPICS_ARTICLES; ?></td>
-                <td class="dataTableHeadingContent"><?php echo TABLE_HEADING_ID; ?></td>
                 <td class="dataTableHeadingContent" align="center"><?php echo TABLE_HEADING_STATUS; ?></td>
                 <td class="dataTableHeadingContent" align="right"><?php echo TABLE_HEADING_ACTION; ?>&nbsp;</td>
               </tr>
@@ -1251,7 +1111,6 @@ $manual_link = 'copy-article';
       }
 ?>
                 <td class="dataTableContent"><?php echo '<a href="' . vam_href_link(FILENAME_ARTICLES, vam_get_topic_path($topics['topics_id'])) . '">' . vam_image(DIR_WS_ICONS . 'folder.gif', ICON_FOLDER) . '</a>&nbsp;<b>' . $topics['topics_name'] . '</b>'; ?></td>
-                <td class="dataTableContent" align="center"><?php echo $topics['topics_id']; ?></td>
                 <td class="dataTableContent" align="center">&nbsp;</td>
                 <td class="dataTableContent" align="right"><?php if (isset($tInfo) && is_object($tInfo) && ($topics['topics_id'] == $tInfo->topics_id) ) { echo vam_image(DIR_WS_IMAGES . 'icon_arrow_right.gif', ''); } else { echo '<a href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&tID=' . $topics['topics_id']) . '">' . vam_image(DIR_WS_IMAGES . 'icon_info.gif', IMAGE_ICON_INFO) . '</a>'; } ?>&nbsp;</td>
               </tr>
@@ -1260,8 +1119,9 @@ $manual_link = 'copy-article';
 
     $articles_count = 0;
     if (isset($_GET['search'])) {
-      $articles_query = vam_db_query("select a.articles_id, a.articles_image, ad.articles_name, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status, a2t.topics_id from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad, " . TABLE_ARTICLES_TO_TOPICS . " a2t where a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "' and a.articles_id = a2t.articles_id and ad.articles_name like '%" . vam_db_input($search) . "%' order by a.articles_id DESC");    } else {
-      $articles_query = vam_db_query("select a.articles_id, a.articles_image, ad.articles_name, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad, " . TABLE_ARTICLES_TO_TOPICS . " a2t where a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "' and a.articles_id = a2t.articles_id and a2t.topics_id = '" . (int)$current_topic_id . "' order by a.articles_id DESC");
+      $articles_query = vam_db_query("select a.articles_id, ad.articles_name, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status, a2t.topics_id from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad, " . TABLE_ARTICLES_TO_TOPICS . " a2t where a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "' and a.articles_id = a2t.articles_id and ad.articles_name like '%" . vam_db_input($search) . "%' order by ad.articles_name");
+    } else {
+      $articles_query = vam_db_query("select a.articles_id, ad.articles_name, a.articles_date_added, a.articles_last_modified, a.articles_date_available, a.articles_status from " . TABLE_ARTICLES . " a, " . TABLE_ARTICLES_DESCRIPTION . " ad, " . TABLE_ARTICLES_TO_TOPICS . " a2t where a.articles_id = ad.articles_id and ad.language_id = '" . (int)$_SESSION['languages_id'] . "' and a.articles_id = a2t.articles_id and a2t.topics_id = '" . (int)$current_topic_id . "' order by ad.articles_name");
     }
     while ($articles = vam_db_fetch_array($articles_query)) {
       $articles_count++;
@@ -1281,8 +1141,7 @@ $manual_link = 'copy-article';
         echo '              <tr class="dataTableRow" onmouseover="rowOverEffect(this)" onmouseout="rowOutEffect(this)" onclick="document.location.href=\'' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $articles['articles_id']) . '\'">' . "\n";
       }
 ?>
-                <td class="dataTableContent"><?php echo '<a href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $articles['articles_id'] . '&action=article_preview&read=only') . '">' . vam_image(DIR_WS_ICONS . 'preview.gif', ICON_PREVIEW) . '</a>' . '&nbsp;' . $articles['articles_name']; ?></td>
-                <td class="dataTableContent" align="center"><?php echo $articles['articles_id']; ?></td>
+                <td class="dataTableContent"><?php echo '<a href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $articles['articles_id'] . '&action=article_preview&read=only') . '">' . vam_image(DIR_WS_ICONS . 'preview.gif', ICON_PREVIEW) . '</a>&nbsp;' . $articles['articles_name']; ?></td>
                 <td class="dataTableContent" align="center">
 <?php
       if ($articles['articles_status'] == '1') {
@@ -1310,7 +1169,7 @@ $manual_link = 'copy-article';
     $tPath_back = (vam_not_null($tPath_back)) ? 'tPath=' . $tPath_back . '&' : '';
 ?>
               <tr>
-                <td colspan="4"><table border="0" width="100%" cellspacing="0" cellpadding="2">
+                <td colspan="3"><table border="0" width="100%" cellspacing="0" cellpadding="2">
                   <tr>
                     <td class="smallText"><?php echo TEXT_TOPICS . '&nbsp;' . $topics_count . '<br>' . TEXT_ARTICLES . '&nbsp;' . $articles_count; ?></td>
                     <td align="right" class="smallText"><?php if (sizeof($tPath_array) > 0) echo '<a class="button" href="' . vam_href_link(FILENAME_ARTICLES, $tPath_back . 'tID=' . $current_topic_id) . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/back.png', '', '12', '12') . '&nbsp;' . BUTTON_BACK . '</span></a>&nbsp;'; if (!isset($_GET['search'])) echo '<a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&action=new_topic') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/categories.png', '', '12', '12') . '&nbsp;' . BUTTON_NEW_TOPIC . '</span></a>&nbsp;<a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&action=new_article') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/products.png', '', '12', '12') . '&nbsp;' . BUTTON_NEW_ARTICLE . '</span></a>'; ?>&nbsp;</td>
@@ -1427,7 +1286,6 @@ $manual_link = 'copy-article';
             $heading[] = array('text' => '<b>' . vam_get_articles_name($aInfo->articles_id, $_SESSION['languages_id']) . '</b>');
 
             $contents[] = array('align' => 'center', 'text' => '<a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $aInfo->articles_id . '&action=new_article') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/edit.png', '', '12', '12') . '&nbsp;' . BUTTON_EDIT . '</span></a> <a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $aInfo->articles_id . '&action=delete_article') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/delete.png', '', '12', '12') . '&nbsp;' . BUTTON_DELETE . '</span></a> <a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $aInfo->articles_id . '&action=move_article') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/move.png', '', '12', '12') . '&nbsp;' . BUTTON_MOVE . '</span></a> <a class="button" href="' . vam_href_link(FILENAME_ARTICLES, 'tPath=' . $tPath . '&aID=' . $aInfo->articles_id . '&action=copy_to') . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/copy.png', '', '12', '12') . '&nbsp;' . BUTTON_COPY_TO . '</span></a>');            $contents[] = array('text' => '<br>' . TEXT_DATE_ADDED . ' ' . vam_date_short($aInfo->articles_date_added));
-            if ($aInfo->articles_image != '') $contents[] = array('text' => '<br>' . vam_image(DIR_WS_CATALOG.DIR_WS_IMAGES . 'articles/'.$aInfo->articles_image, 200, 300));
             if (vam_not_null($aInfo->articles_last_modified)) $contents[] = array('text' => TEXT_LAST_MODIFIED . ' ' . vam_date_short($aInfo->articles_last_modified));
             if (date('Y-m-d') < $aInfo->articles_date_available) $contents[] = array('text' => TEXT_DATE_AVAILABLE . ' ' . vam_date_short($aInfo->articles_date_available));
             $contents[] = array('text' => '<br>' . TEXT_ARTICLES_AVERAGE_RATING . ' ' . number_format($aInfo->average_rating, 2) . '%');
