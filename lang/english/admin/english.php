@@ -603,4 +603,10 @@ define('TEXT_PRODUCTS_ATTRIBUTES','Product Attributes');
 define('BOX_ANSWER_TEMPLATES','Answer Templates');
 define('BOX_PRODUCT_LABELS','Product labels');
 
+define('BOX_COMPANY_REVIEWS', 'Manufacturers reviews');
+
+define('BOX_SITE_REVIEWS', 'Site reviews');
+
+define('TEXT_ADD_REVIEW', 'Add Review');
+
 ?>
