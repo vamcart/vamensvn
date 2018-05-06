@@ -3569,3 +3569,4 @@ CREATE TABLE `site_reviews_description` (
   `reviews_text` text,
   PRIMARY KEY (reviews_id, languages_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
