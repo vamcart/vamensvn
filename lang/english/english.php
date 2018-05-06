@@ -663,6 +663,8 @@ define('TEXT_VIEW_PRODUCTS', 'view products');
 
 define('TEXT_PRODUCT_DESCRIPTION', 'Description');
 define('TEXT_PRODUCT_REVIEWS', 'Reviews');
+define('NAVBAR_TITLE_SITE_REVIEW', 'Review');
+define('NAVBAR_TITLE_SITE_REVIEWS','Store reviews');
 define('TEXT_PAGE_PRODUCT_REVIEWS', 'Reviews');
 define('TEXT_PRODUCT_QTY', 'Qty:');
 
