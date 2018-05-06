@@ -32,7 +32,7 @@ if (!CacheCheck()) {
 	$cache_id = $_SESSION['language'].$_SESSION['customers_status']['customers_status_id'];
 }
 
-if (!$box->is_cached(CURRENT_TEMPLATE.'/boxes/box_information.html', $cache_id) || !$cache) {
+if (!$box->isCached(CURRENT_TEMPLATE.'/boxes/box_information.html', $cache_id) || !$cache) {
 	$box->assign('tpl_path', 'templates/'.CURRENT_TEMPLATE.'/');
 
 	if (GROUP_CHECK == 'true') {
@@ -65,6 +65,8 @@ if ($content_data['content_url'] != '') {
 
 		$content_string .= $link.$content_data['content_title'].'</a></li>' . "\n";
 	}
+
+		$content_string .= '<li><a href="'.vam_href_link(FILENAME_SITE_REVIEWS).'">'.NAVBAR_TITLE_SITE_REVIEWS.'</a></li>' . "\n";
 
 	if ($content_string != '')
 		$box->assign('BOX_CONTENT', $content_string);
