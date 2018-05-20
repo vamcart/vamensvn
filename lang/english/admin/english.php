@@ -609,4 +609,7 @@ define('BOX_SITE_REVIEWS', 'Site reviews');
 
 define('TEXT_ADD_REVIEW', 'Add Review');
 
+define('TEXT_CATEGORY_DISCOUNT', 'Specials By Categories');
+define('TEXT_MANUFACTURER_DISCOUNT', 'Specials By Brands');
+
 ?>
