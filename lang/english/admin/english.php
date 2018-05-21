@@ -611,5 +611,6 @@ define('TEXT_ADD_REVIEW', 'Add Review');
 
 define('TEXT_CATEGORY_DISCOUNT', 'Specials By Categories');
 define('TEXT_MANUFACTURER_DISCOUNT', 'Specials By Brands');
+define('TEXT_DISPLAY_NUMBER_OF_SPECIAL_MANUFACTURER', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> Special Brands)');
 
 ?>
