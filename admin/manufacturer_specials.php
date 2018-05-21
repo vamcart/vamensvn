@@ -1,6 +1,6 @@
 <?php
 /* --------------------------------------------------------------
-   $Id: category_specials.php 1125 2008-02-26 11:13:01Z VaM $   
+   $Id: category_specials.php 1126 2008-02-26 11:13:01Z VaM $   
 
    VaM Shop - open source ecommerce solution
    http://vamshop.ru
