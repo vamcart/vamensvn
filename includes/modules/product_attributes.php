@@ -153,8 +153,6 @@ $module->assign('image_dir', (($request_type == 'SSL') ? HTTPS_SERVER : HTTP_SER
 $module->assign('language', $_SESSION['language']);
 $module->assign('options', $products_options_data);
 
-echo var_dump($products_options_data);
-
 // set cache ID
 
 	$module->caching = 0;
