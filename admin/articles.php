@@ -160,7 +160,7 @@
             vam_remove_topic($topics[$i]['id']);
           }
 
-          foreach ($articles as $key => $value) {
+          foreach ($articles_delete as $key => $value) {
             vam_remove_article($key);
           }
         }
@@ -326,9 +326,9 @@ $authorsImg = $_POST['articles_image'];
             $sql_data_array = array('articles_name' => vam_db_prepare_input($_POST['articles_name'][$language_id]),
                                     'articles_description' => vam_db_prepare_input($_POST['articles_description'][$language_id]),
                                     'articles_url' => vam_db_prepare_input($_POST['articles_url'][$language_id]),
-                                    'articles_head_title_tag' => vam_db_prepare_input($articles_head_title_tag),
-                                    'articles_head_desc_tag' => vam_db_prepare_input($articles_head_desc_tag),
-                                    'articles_head_keywords_tag' => vam_db_prepare_input($articles_head_keywords_tag));
+                                    'articles_head_title_tag' => vam_db_prepare_input($_POST['articles_head_title_tag'][$language_id]),
+                                    'articles_head_desc_tag' => vam_db_prepare_input($_POST['articles_head_desc_tag'][$language_id]),
+                                    'articles_head_keywords_tag' => vam_db_prepare_input($_POST['articles_head_keywords_tag'][$language_id]));
 
             if ($action == 'insert_article') {
               $insert_sql_data = array('articles_id' => $articles_id,
