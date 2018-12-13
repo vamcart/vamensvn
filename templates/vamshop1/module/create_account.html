@@ -73,7 +73,7 @@ function join(arr /*, separator */) {
 function showSelected(suggestion) {
   var address = suggestion.data;
   $("#postcode").val(address.postal_code);
-  if (address.region == "Москва" || address.region == "Санкт-Петербург") {
+  if (address.region == "Москва" || address.region == "Санкт-Петербург" || address.region == "Севастополь") {
   $("#state").val(address.region);
   } else {
   $("#state").val(join([
@@ -184,7 +184,7 @@ function showSelected(suggestion) {
 
 <br />
 <div>
-{$smarty.const.PRIVACY_TEXT_REGISTER}
+{$smarty.const.PRIVACY_TEXT}
 </div>
 
 {$FORM_END}
