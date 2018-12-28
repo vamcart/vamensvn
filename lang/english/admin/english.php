@@ -179,6 +179,7 @@ define('BOX_HEADING_TOOLS', 'Tools');
 define('BOX_HEADING_LOCATION_AND_TAXES', 'Location / Tax');
 define('BOX_HEADING_CUSTOMERS', 'Customers');
 define('BOX_HEADING_CATALOG', 'Catalog');
+define('BOX_HEADING_MARKETING', 'Marketing');
 define('BOX_MODULE_NEWSLETTER','Newsletter');
 
 // javascript messages
