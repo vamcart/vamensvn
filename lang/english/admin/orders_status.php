@@ -20,6 +20,8 @@
 define('HEADING_TITLE', 'Orders Status');
 
 define('TABLE_HEADING_ORDERS_STATUS', 'Orders Status');
+define('TABLE_HEADING_ANSWER_TEMPLATE', 'Answer Template');
+define('TABLE_HEADING_RESTOCK', 'Stock Status');
 define('TABLE_HEADING_ACTION', 'Action');
 
 define('TEXT_INFO_EDIT_INTRO', 'Please make any necessary changes');
@@ -33,4 +35,10 @@ define('TEXT_INFO_HEADING_DELETE_ORDERS_STATUS', 'Delete Orders Status');
 define('ERROR_REMOVE_DEFAULT_ORDER_STATUS', 'Error: The default order status can not be removed. Please set another order status as default, and try again.');
 define('ERROR_STATUS_USED_IN_ORDERS', 'Error: This order status is currently used in orders.');
 define('ERROR_STATUS_USED_IN_HISTORY', 'Error: This order status is currently used in the order status history.');
+
+define('ENTRY_ANSWER_TEMPLATE', 'Answer Template:');
+define('ENTRY_RESTOCK', 'Stock Status:');
+define('ENTRY_RESTOCK_0', 'Deduct from warehouse');
+define('ENTRY_RESTOCK_1', 'Add to warehouse');
+
 ?>

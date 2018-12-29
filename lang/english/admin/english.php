@@ -264,6 +264,8 @@ define('SAVE_ENTRY','Save changes?');
 define('TEXT_CHOOSE_INFO_TEMPLATE','Template for product details');
 define('TEXT_CHOOSE_OPTIONS_TEMPLATE','Template for product options');
 define('TEXT_SELECT','-- Please Select --');
+define('TEXT_RESTOCK_0','Deduct from warehouse');
+define('TEXT_RESTOCK_1','Add to warehouse');
 
 // Icons
 define('ICON_CROSS', 'False');
