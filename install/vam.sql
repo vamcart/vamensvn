@@ -1100,6 +1100,8 @@ CREATE TABLE orders_products (
 DROP TABLE IF EXISTS orders_status;
 CREATE TABLE orders_status (
   orders_status_id int DEFAULT '0' NOT NULL,
+  answer_templates_id int DEFAULT NULL,
+  restock int DEFAULT '0' NOT NULL,
   language_id int DEFAULT '1' NOT NULL,
   orders_status_name varchar(255) NOT NULL,
   PRIMARY KEY (orders_status_id, language_id),
@@ -2641,12 +2643,12 @@ INSERT INTO currencies VALUES (1,'USA Dollar','USD','$','',',','.','2','1.0000',
 INSERT INTO languages VALUES (1,'English','en','icon.gif','english',2,'utf-8');
 
 
-INSERT INTO orders_status VALUES ( '1', '1', 'Pending');
-INSERT INTO orders_status VALUES ( '2', '1', 'Waiting approval');
-INSERT INTO orders_status VALUES ( '3', '1', 'Canceled');
-INSERT INTO orders_status VALUES ( '4', '1', 'Processing');
-INSERT INTO orders_status VALUES ( '5', '1', 'Delivering');
-INSERT INTO orders_status VALUES ( '6', '1', 'Delivered');
+INSERT INTO orders_status VALUES ( '1', NULL, '0', '1', 'Pending');
+INSERT INTO orders_status VALUES ( '2', NULL, '0', '1', 'Waiting approval');
+INSERT INTO orders_status VALUES ( '3', NULL, '0', '1', 'Canceled');
+INSERT INTO orders_status VALUES ( '4', NULL, '0', '1', 'Processing');
+INSERT INTO orders_status VALUES ( '5', NULL, '0', '1', 'Delivering');
+INSERT INTO orders_status VALUES ( '6', NULL, '0', '1', 'Delivered');
 
 
 
