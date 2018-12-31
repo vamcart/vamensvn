@@ -87,8 +87,6 @@ define('MAIL_AFFILIATE_HEADER', 'Dear Affiliate Partner
 Thank you for your registration at our affiliate program.
 
 Your account information:
-**************************
-
 ');
 define('MAIL_AFFILIATE_ID', 'Your Affiliate-ID is: ');
 define('MAIL_AFFILIATE_USERNAME', 'Your Username is: ');
