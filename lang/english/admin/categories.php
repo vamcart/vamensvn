@@ -268,4 +268,6 @@ define('ENTRY_AVAILABLE_SEPARATELY', 'This product is available for individual s
 define('ENTRY_IN_BUNDLE_ONLY', 'This product is available for sale only as a part of a bundle.');
 define('TEXT_SOLD_IN_BUNDLE', 'This product may be purchased only as a part of the following bundle(s):');
 
+define ('TEXT_TAB_BUNDLES', 'Bundles');
+
 ?>
