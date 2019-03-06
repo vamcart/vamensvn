@@ -27,6 +27,10 @@ define('TEXT_DELETE_ITEM_INTRO', 'Are you sure?');
 define('TEXT_LATEST_NEWS_HEADLINE', 'Headline');
 define('TEXT_LATEST_NEWS_CONTENT', 'Content');
 
+define('TEXT_LATEST_NEWS_META_TITLE', 'Meta Title');
+define('TEXT_LATEST_NEWS_META_DESCRIPTION', 'Meta Description');
+define('TEXT_LATEST_NEWS_META_KEYWORDS', 'Meta Keywords');
+
 define('IMAGE_NEW_NEWS_ITEM', 'Add news');
 define('IMAGE_EDIT_NEWS_ITEM', 'Edit news');
 define('TEXT_LATEST_NEWS_LANGUAGE', 'Language');
