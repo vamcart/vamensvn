@@ -1,5 +1,0 @@
-Congratulations, you have new discount. All details below:
-
-Reached limit: {$ACCUMULATED_LIMIT}
-New group: {$GROUPNAME}
-New discount: {$GROUPDISCOUNT}%
