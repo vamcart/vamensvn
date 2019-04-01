@@ -6,6 +6,9 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/stylesheet.css'; ?>" />
 -->
+
+<link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/all.css.php'; ?>" />
+
 <?php
 if (strstr($PHP_SELF, FILENAME_PRODUCT_INFO)) {
 ?>

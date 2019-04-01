@@ -8,26 +8,9 @@
     <!-- Bootstrap core CSS -->
 <link href="{$tpl_path}css/bootstrap.min.css" rel="stylesheet">
 <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="jscript/jquery/plugins/owl/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="jscript/jquery/plugins/owl/assets/owl.theme.default.min.css">
 
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-    <!-- Custom styles for this template -->
-    <link href="{$tpl_path}css/album.css" rel="stylesheet">
   </head>
   <body>
 
@@ -47,7 +30,7 @@
 
 <div id="wrapper" onclick="">
 
-<header>
+<header class="pt-2 bg-light">
 <div class="container">
   <div class="row">
     <div class="col-auto mr-auto"><i class="fas fa-map-marker-alt"></i> Ставрополь</div>
@@ -90,10 +73,10 @@
     <div class="right-side d-flex">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="account.php"><i class="fas fa-user"></i> Мои заказы <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-dark" href="account.php"><i class="fas fa-user"></i> Мои заказы <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="shopping_cart.php"><i class="fas fa-shopping-cart"></i> Корзина</a>
+        <a class="nav-link text-dark" href="shopping_cart.php"><i class="fas fa-shopping-cart"></i> Корзина</a>
       </li>
     </ul>
     </div>
@@ -102,7 +85,7 @@
   </div>
 </nav>
 
-<main role="main">
+<main class="pt-3">
 
 <div class="container">
 
@@ -262,7 +245,7 @@
 
 </main>
 
-<footer class="md-5">
+<footer class="p-3 bg-secondary">
   <div class="container">
   <div class="row">
     <div class="col-12 col-md">
@@ -444,6 +427,9 @@
 <script src="{$tpl_path}javascript/jquery-3.3.1.slim.min.js"></script>
 <script src="{$tpl_path}javascript/popper.min.js"></script>
 <script src="{$tpl_path}javascript/bootstrap.min.js"></script>
+
+<script src="jscript/jquery/plugins/owl/owl.carousel.min.js"></script>
+
 
 </body>
 </html>

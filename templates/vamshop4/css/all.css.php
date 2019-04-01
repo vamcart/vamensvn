@@ -1,3 +1,4 @@
+<?php echo 'test';?>
 .sn_menu_open {cursor:pointer;margin:0;} 
 #sn_menu_icon {display:block; width:30px; height:30px; background:#000; position:absolute; right:20px; top:20px; z-index:100020;}
 #sn_menu_panel {width:100%; height:100%; position:fixed; left:-100%; top:0; z-index:100010; transition:0.5s 0.1s; 
@@ -68,26 +69,6 @@ transform:rotate(-45deg);
 }
 
 
-
-main {
-	padding-top: 16px; 
-}
-
-header
-{ 
-
-padding: 8px 0;
-background: #f8f9fa;
-
-}
-
-footer
-{ 
-
-padding: 1em;
-background: #6c757d;
-
-}
 
 
 
