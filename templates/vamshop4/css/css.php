@@ -7,7 +7,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/stylesheet.css'; ?>" />
 -->
 
-<link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/all.css.php'; ?>" />
+<link href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/css/bootstrap.min.css'; ?>" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="jscript/jquery/plugins/owl/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="jscript/jquery/plugins/owl/assets/owl.theme.default.min.css">
+
+<link rel="stylesheet" type="text/css" href="<?php echo 'templates/'.CURRENT_TEMPLATE.'/css/all.css.php'; ?>" />
 
 <?php
 if (strstr($PHP_SELF, FILENAME_PRODUCT_INFO)) {

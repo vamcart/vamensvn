@@ -1,4 +1,7 @@
-<?php echo 'test';?>
+<?php 
+header('Content-Type: text/css');
+?>
+
 .sn_menu_open {cursor:pointer;margin:0;} 
 #sn_menu_icon {display:block; width:30px; height:30px; background:#000; position:absolute; right:20px; top:20px; z-index:100020;}
 #sn_menu_panel {width:100%; height:100%; position:fixed; left:-100%; top:0; z-index:100010; transition:0.5s 0.1s; 
@@ -76,3 +79,13 @@ body {
   background: linear-gradient(-183deg, #6c757d 234px, #fff 235px) no-repeat;
 
 }
+
+
+
+
+.owl-carousel .item {
+    height: 10rem;
+    background: #4DC7A0;
+    padding: 1rem;
+}
+

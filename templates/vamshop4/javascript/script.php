@@ -7,6 +7,11 @@
 <script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/vamshop.js'; ?>"></script>
 -->
 
+<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/jquery-3.3.1.slim.min.js'; ?>"></script>
+<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/popper.min.js'; ?>"></script>
+<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/bootstrap.min.js'; ?>"></script>
+
+<script src="jscript/jquery/plugins/owl/owl.carousel.min.js"></script>
 
 <script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/all.js.php'; ?>"></script>
 

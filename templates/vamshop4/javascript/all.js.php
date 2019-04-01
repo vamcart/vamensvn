@@ -1,5 +1,7 @@
+<?php 
+header('Content-Type: application/javascript');
+?>
 $(document).ready(function(){
-	
 $(".owl-carousel").owlCarousel({
     loop:true,
     margin:10,
@@ -9,16 +11,24 @@ $(".owl-carousel").owlCarousel({
             items:1,
             nav:true
         },
-        600:{
+        576:{
+            items:2,
+            nav:false
+        },
+        768:{
             items:3,
             nav:false
         },
-        1000:{
-            items:5,
+        992:{
+            items:4,
+            nav:true,
+            loop:false
+        },
+        1200:{
+            items:6,
             nav:true,
             loop:false
         }
     }
 })
-
-})
+});
