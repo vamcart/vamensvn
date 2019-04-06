@@ -26,6 +26,7 @@ define('TABLE_HEADING_STATUS', 'Status');
 define('TABLE_HEADING_ACTION', 'Action');
 
 define('TEXT_BANNERS_TITLE', 'Banner Title:');
+define('TEXT_BANNERS_DESCRIPTION', 'Banner Description:');
 define('TEXT_BANNERS_URL', 'Banner URL:');
 define('TEXT_BANNERS_GROUP', 'Banner Group:');
 define('TEXT_BANNERS_NEW_GROUP', ', or enter a new banner group below');
@@ -62,6 +63,7 @@ define('SUCCESS_BANNER_REMOVED', 'Success: The banner has been removed.');
 define('SUCCESS_BANNER_STATUS_UPDATED', 'Success: The status of the banner has been updated.');
 
 define('ERROR_BANNER_TITLE_REQUIRED', 'Error: Banner title required.');
+define('ERROR_BANNER_DSCRIPTION_REQUIRED', 'Error: Banner description required.');
 define('ERROR_BANNER_GROUP_REQUIRED', 'Error: Banner group required.');
 define('ERROR_IMAGE_DIRECTORY_DOES_NOT_EXIST', 'Error: Target directory does not exist: %s');
 define('ERROR_IMAGE_DIRECTORY_NOT_WRITEABLE', 'Error: Target directory is not writeable: %s');
