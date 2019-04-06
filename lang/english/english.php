@@ -695,5 +695,7 @@ define('TEXT_POPUP_CART_ADD','Product added to the cart!');
 define('TEXT_POPUP_CART_CONTINUE','Continue shopping');
 define('TEXT_POPUP_CART_CART', 'Go to shopping cart');
 
+define('TITLE_SPECIALS_DEFAULT', 'Special offers');
+define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
 
 ?>
