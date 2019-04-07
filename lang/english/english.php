@@ -146,6 +146,8 @@ define('TEXT_DISPLAY_NUMBER_OF_REVIEWS', 'Show <span class="bold">%d</span> to <
 define('TEXT_DISPLAY_NUMBER_OF_PRODUCTS_NEW', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> new products)');
 define('TEXT_DISPLAY_NUMBER_OF_SPECIALS', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> special offers)');
 define('TEXT_DISPLAY_NUMBER_OF_FEATURED', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> featured products)');
+define('TEXT_DISPLAY_NUMBER_OF_MANUFACTURERS', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> manufacturers)');
+define('TEXT_DISPLAY_NUMBER_OF_BEST_SELLERS', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> best sellers)');
 
 /*
  *
