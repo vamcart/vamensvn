@@ -699,5 +699,9 @@ define('TEXT_POPUP_CART_CART', 'Go to shopping cart');
 
 define('TITLE_SPECIALS_DEFAULT', 'Special offers');
 define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
+define('TITLE_BEST_SELLERS_DEFAULT', 'Best Sellers');
+define('TITLE_NEW_PRODUCTS_DEFAULT', 'New Products');
+define('TITLE_FEATURED_DEFAULT', 'Featured Products');
+define('TITLE_SPECIALS_DEFAULT', 'Specials');
 
 ?>
