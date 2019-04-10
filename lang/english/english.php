@@ -660,8 +660,12 @@ define('TEXT_COMPARE','Comparison');
 define('TEXT_BUY_BUTTON', 'Add To Cart');
 
 define('TEXT_BEST_BUY', 'best buy!');
+define('TEXT_BEST_BUY_UP', 'Best buy!');
 define('TEXT_READ_MORE', 'read more');
+define('TEXT_READ_MORE_UP', 'Read more');
 define('TEXT_VIEW_PRODUCTS', 'view products');
+define('TEXT_VIEW_PRODUCTS_UP', 'View products');
+define('TEXT_VIEW_PRODUCTS_GO', 'Go');
 
 define('TEXT_PRODUCT_DESCRIPTION', 'Description');
 define('TEXT_PRODUCT_REVIEWS', 'Reviews');
