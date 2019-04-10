@@ -1052,4 +1052,7 @@ define('COMPANY_PAYMENT_3_MASK_DESC', '');
 define('COMPANY_PAYMENT_4_MASK_TITLE', 'Шаблон для безналичной оплаты');
 define('COMPANY_PAYMENT_4_MASK_DESC', '');
 
+define('DEFAULT_SLIDER_TITLE', 'Default Slider');
+define('DEFAULT_SLIDER_DESC', 'Select default slider.');
+
 ?>
