@@ -701,7 +701,8 @@ define('TEXT_POPUP_CART_ADD','Product added to the cart!');
 define('TEXT_POPUP_CART_CONTINUE','Continue shopping');
 define('TEXT_POPUP_CART_CART', 'Go to shopping cart');
 
-define('TITLE_SPECIALS_DEFAULT', 'Special offers');
+define('TITLE_DEFAULT_PAGE', 'Mainpage');
+define('TITLE_SPECIALS_DEFAULT', 'Special Offers');
 define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
 define('TITLE_BEST_SELLERS_DEFAULT', 'Best Sellers');
 define('TITLE_NEW_PRODUCTS_DEFAULT', 'New Products');
