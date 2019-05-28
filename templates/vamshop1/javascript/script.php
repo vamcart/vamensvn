@@ -1,33 +1,14 @@
 <script src="jscript/jquery/jquery.js"></script>
-
-<!--<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/jquery-3.3.1.slim.min.js'; ?>"></script>-->
-<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/popper.min.js'; ?>"></script>
-<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/bootstrap.min.js'; ?>"></script>
-
-<script src="jscript/jquery/plugins/owl/owl.carousel.min.js"></script>
-<script src="jscript/jquery/plugins/scrollup/jquery.scrollup.min.js"></script>
-
-<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/vamshop4.js.php'; ?>"></script>
-
+<script src="jscript/bootstrap/bootstrap.min.js"></script>
+<script src="jscript/jquery/plugins/easing/jquery.easing.1.3.js"></script>
+<script src="jscript/jquery/plugins/jpushmenu/jpushmenu.js"></script>
+<script src="jscript/jquery/plugins/jpushmenu/v2p.js"></script>
+<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/vamshop.js'; ?>"></script>
 
 <?php if (AJAX_CART == 'true') { ?>
 <script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/jscript_ajax_cart.js'; ?>"></script>
-<script>
-function cartPopupOn(){ 
-$('body').append('<div id="load_status_bg"></div><div class="cart_popup"><div class="cart_popuptext"><?php echo TEXT_POPUP_CART_ADD; ?></div><div class="cart_popuplink"><a href="checkout.php" class="button"><span><img src="<?php echo DIR_WS_CATALOG; ?>images/icons/buttons/buy.png" alt="" title="" width="12" height="12" />&nbsp;<?php echo TEXT_POPUP_CART_CHECKOUT; ?></span></a><br /><br /><a href="javascript:cartPopupOff()" class="button"><span><img src="<?php echo DIR_WS_CATALOG; ?>images/icons/buttons/back.png" alt="" title="" width="12" height="12" />&nbsp;<?php echo TEXT_POPUP_CART_CONTINUE; ?></span></a></div></div>'); 
-$('#load_status_bg').show().css({'filter' : 'alpha(opacity=80)'}); 
-$('.cart_popup').show(); 
-$(document).click(function (){
-cartPopupOff();
-});
-};
-
-function cartPopupOff(){ 
-$('.cart_popup').hide(); 
-$('#load_status_bg').remove('#load_status_bg'); 
-};
-</script>
 <?php } ?>
+
 <?php
 if (strstr($PHP_SELF, FILENAME_PRODUCT_INFO)) {
 ?>
@@ -66,6 +47,10 @@ $(document).ready(function(){
  }
 ?>
 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="<?php echo 'templates/'.CURRENT_TEMPLATE.'/javascript/html5.js'; ?>"></script>
+<![endif]-->
 <?php
-if (file_exists(dirname($_SERVER['SCRIPT_FILENAME']) . '/templates/'.CURRENT_TEMPLATE.'/javascript/local.js.php')) include('templates/'.CURRENT_TEMPLATE.'/javascript/local.js.php');
+if (file_exists(dirname(__FILE__) . '/local.js.php')) include('local.js.php');
 ?>
