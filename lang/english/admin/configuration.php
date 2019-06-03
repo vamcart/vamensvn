@@ -1055,4 +1055,7 @@ define('COMPANY_PAYMENT_4_MASK_DESC', '');
 define('DEFAULT_SLIDER_TITLE', 'Default Slider');
 define('DEFAULT_SLIDER_DESC', 'Select default slider.');
 
+define('ENABLE_SERVICE_WORKER_TITLE', 'Enable Service Worker');
+define('ENABLE_SERVICE_WORKER_DESC', 'Enable Service Worker Installation in the browser.');
+
 ?>
