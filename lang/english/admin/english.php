@@ -634,4 +634,8 @@ define('BOX_MERKETING_14', 'Coupons');
 define('BOX_MERKETING_15', 'Gift vouchers');
 define('BOX_MERKETING_16', 'Affiliate program');
 
+// pull down default text
+define('PULL_DOWN_DEFAULT', 'Please choose');
+define('TEXT_NOT_FOUND', 'Not found.');
+
 ?>
