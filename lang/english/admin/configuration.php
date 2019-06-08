@@ -1058,4 +1058,23 @@ define('DEFAULT_SLIDER_DESC', 'Select default slider.');
 define('ENABLE_SERVICE_WORKER_TITLE', 'Enable Service Worker');
 define('ENABLE_SERVICE_WORKER_DESC', 'Enable Service Worker Installation in the browser.');
 
+define('CG_SOCIAL_NETWORKS', 'Social Networks');
+define('CG_SOCIAL_NETWORKS_TITLE', 'Social Networks');
+define('CG_SOCIAL_NETWORKS_DESC', '');
+
+define('GOOGLE_OAUTH_CLIENT_ID_TITLE', 'Google OAuth Client ID');
+define('GOOGLE_OAUTH_CLIENT_ID_DESC', '');
+define('GOOGLE_OAUTH_SECRET_KEY_TITLE', 'Google OAuth Secret Key');
+define('GOOGLE_OAUTH_SECRET_KEY_DESC', '');
+define('VK_OAUTH_CLIENT_ID_TITLE', 'VK OAuth Client ID');
+define('VK_OAUTH_CLIENT_ID_DESC', '');
+define('VK_OAUTH_SECRET_KEY_TITLE', 'VK OAuth Secret Key');
+define('VK_OAUTH_SECRET_KEY_DESC', '');
+define('VK_OAUTH_SERVICE_KEY_TITLE', 'VK OAuth Service Key');
+define('VK_OAUTH_SERVICE_KEY_DESC', '');
+define('FACEBOOK_OAUTH_CLIENT_ID_TITLE', 'Facebook OAuth App ID');
+define('FACEBOOK_OAUTH_CLIENT_ID_DESC', '');
+define('FACEBOOK_OAUTH_SECRET_KEY_TITLE', 'Facebook OAuth App Secret Key');
+define('FACEBOOK_OAUTH_SECRET_KEY_DESC', '');
+
 ?>
