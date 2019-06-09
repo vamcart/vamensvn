@@ -712,4 +712,9 @@ define('TITLE_SPECIALS_DEFAULT', 'Specials');
 
 define('TEXT_NOT_FOUND', 'Not found.');
 
+define('TEXT_SOCIAL_LOGIN', 'Social Login');
+define('TEXT_SOCIAL_LOGIN_GOOGLE', 'Google');
+define('TEXT_SOCIAL_LOGIN_FACEBOOK', 'Facebook');
+define('TEXT_SOCIAL_LOGIN_VK', 'VK');
+
 ?>
