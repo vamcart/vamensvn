@@ -31,7 +31,7 @@
 
 include ('includes/application_top.php');
 
-if (isset ($_SESSION['customer_id'])) {
+if (isset ($_SESSION['customer_id']) && !isset($_GET['social_login'])) {
 	vam_redirect(vam_href_link(FILENAME_ACCOUNT, '', 'SSL'));
 }
 
@@ -442,7 +442,7 @@ if (isset ($_SESSION['tracking']['refID'])){
 // Social Login
 
 if (isset ($_GET['social_login']) && ($_GET['social_login'] == 'vk')) {
-
+	
 		$provider = 'vk';
 		
 		$clientId = VK_OAUTH_CLIENT_ID; //ID Приложения
@@ -456,7 +456,7 @@ if (isset ($_GET['social_login']) && ($_GET['social_login'] == 'vk')) {
 			
 		    $params = array(
 		        'client_id' => $clientId,
-		        'client_secret' => $clientServiceKey,
+		        'client_secret' => $clientSecret,
 		        'code' => $_REQUEST['code'],
 		        'redirect_uri' => $redirectUrl
 		    );
@@ -538,15 +538,19 @@ if (isset ($_GET['social_login']) && ($_GET['social_login'] == 'vk')) {
 	
 	);
 
+	$check_email_query = vam_db_query("select * from ".TABLE_CUSTOMERS." where customers_email_address = '".vam_db_input($email_address)."' and account_type = '0' order by customers_id DESC");
+	$check_email = vam_db_fetch_array($check_email_query);
+
+	if (vam_db_num_rows($check_email_query) > 0 && $check_email['customers_status'] != 0) {
+
+	$_SESSION['customer_id'] = $check_email['customers_id'];
+	vam_db_perform(TABLE_CUSTOMERS, $sql_data_array, 'update', "customers_id = '" . (int) $_SESSION['customer_id'] . "'");
+
+	} else {
 
 	vam_db_perform(TABLE_CUSTOMERS, $sql_data_array);
-
-		$_SESSION['customer_id'] = vam_db_insert_id();
-		$customers_id = $user_id;
-
-		$user_id = vam_db_insert_id();
-		vam_write_user_info($user_id);
-
+	$_SESSION['customer_id'] = vam_db_insert_id();
+	vam_db_query("insert into ".TABLE_CUSTOMERS_INFO." (customers_info_id, customers_info_number_of_logons, customers_info_date_account_created) values ('".(int) $_SESSION['customer_id']."', '0', now())");
 		$sql_data_array = array (
 		
 		'customers_id' => $_SESSION['customer_id'], 
@@ -562,19 +566,14 @@ if (isset ($_GET['social_login']) && ($_GET['social_login'] == 'vk')) {
 		
 		);
 
-
-
 		vam_db_perform(TABLE_ADDRESS_BOOK, $sql_data_array);
-
 		$address_id = vam_db_insert_id();
-
 		vam_db_query("update ".TABLE_CUSTOMERS." set customers_default_address_id = '".$address_id."' where customers_id = '".(int) $_SESSION['customer_id']."'");
+	}        
 
-		vam_db_query("insert into ".TABLE_CUSTOMERS_INFO." (customers_info_id, customers_info_number_of_logons, customers_info_date_account_created) values ('".(int) $_SESSION['customer_id']."', '0', now())");
-		
-        $sql_data_array = array('login_reference' => $html_referer);
-        vam_db_perform(TABLE_CUSTOMERS, $sql_data_array, 'update', "customers_id = '" . (int) $_SESSION['customer_id'] . "'");
-        
+		$user_id = $_SESSION['customer_id'];
+		vam_write_user_info($user_id);
+
 		if (SESSION_RECREATE == 'True') {
 			vam_session_recreate();
 		}
