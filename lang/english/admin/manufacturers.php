@@ -20,6 +20,7 @@
 define('HEADING_TITLE', 'Manufacturers');
 
 define('TABLE_HEADING_MANUFACTURERS', 'Manufacturers');
+define('TABLE_HEADING_SORT_ORDER', 'Sort Order');
 define('TABLE_HEADING_ACTION', 'Action');
 
 define('TEXT_HEADING_NEW_MANUFACTURER', 'New Manufacturer');
@@ -50,6 +51,9 @@ define('ERROR_DIRECTORY_DOES_NOT_EXIST', 'Error: Directory does not exist: %s');
 define('TEXT_MANUFACTURERS_META_TITLE', 'Meta title:');
 define('TEXT_MANUFACTURERS_META_KEYWORDS', 'Meta keywords:');
 define('TEXT_MANUFACTURERS_META_DESCRIPTION', 'Meta description:');
-define('TEXT_MANUFACTURERS_DESCRIPTION','Manufacturer description:')
+define('TEXT_MANUFACTURERS_DESCRIPTION','Manufacturer description:');
+
+define('TEXT_MANUFACTURERS_PAGE_URL', 'Manufacturer SEO URL:');
+define('TEXT_MANUFACTURERS_SORT_ORDER', 'Sort Order:');
 
 ?>
