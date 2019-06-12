@@ -717,4 +717,7 @@ define('TEXT_SOCIAL_LOGIN_GOOGLE', 'Google');
 define('TEXT_SOCIAL_LOGIN_FACEBOOK', 'Facebook');
 define('TEXT_SOCIAL_LOGIN_VK', 'VK');
 
+define('TEXT_PRODUCT_SHIPPING', 'Shipping');
+define('TEXT_PRODUCT_PAYMENT', 'Payment');
+
 ?>
