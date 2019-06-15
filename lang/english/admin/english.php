@@ -502,6 +502,8 @@ define('VAMSHOP_SUPPORT_KEY_TEXT','<a href="http://vamshop.com/key.php" target="
 define('VAMSHOP_REGISTER_SUPPORT_KEY','<a href="http://vamshop.com/key.php" target="_blank">register key for free</a>.');
 define('VAMSHOP_SUPPORT_KEY',(file_exists(DIR_FS_CATALOG .'vamshop.key') ? implode('', file(DIR_FS_CATALOG .'vamshop.key')) : VAMSHOP_REGISTER_SUPPORT_KEY));
 
+define('WARNING_VAMSHOP_DEMO', 'VamShop Demo. You can buy VamShop at <a href="http://vamshop.com" target="_blank">http://vamshop.com</a>');
+
 define('TEXT_ACCESS_FORBIDDEN','Access forbidden');
 
 define('TEXT_MANUAL_LINK','Help');

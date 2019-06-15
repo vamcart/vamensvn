@@ -574,6 +574,7 @@ define('TXT_FREE','free');
 define('PRODUCTS_ORDER_QTY_MIN_TEXT_INFO','Minimum quantity to order: ');define('PRODUCTS_ORDER_QTY_MAX_TEXT_INFO','Maximum quantity to order: ');
 
 define('WARNING_VAMSHOP_KEY', 'Register your store at <a href="http://vamshop.com/key.php" target="_blank">http://vamshop.com/key.php</a>');
+define('WARNING_VAMSHOP_DEMO', 'VamShop Demo. You can buy VamShop at <a href="http://vamshop.com" target="_blank">http://vamshop.com</a>');
 
 define('text_zero', 'zero');
 define('text_three', 'three');
