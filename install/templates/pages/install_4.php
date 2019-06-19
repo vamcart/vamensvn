@@ -463,6 +463,11 @@ vam_db_query("UPDATE " .TABLE_CONFIGURATION . " SET configuration_value='". (tri
       <li>Set the permissions on /images/product_images/ to 777.</li>
       <li>Set the permissions on /images/categories/ to 777.</li>
       <li>Set the permissions on /cache/ to 777.</li>
+      <li>Set the permissions on /templates/vamshop/cache/ to 777.</li>
+      <li>Set the permissions on /templates/vamshop1/cache/ to 777.</li>
+      <li>Set the permissions on /templates/vamshop2/cache/ to 777.</li>
+      <li>Set the permissions on /templates/vamshop3/cache/ to 777.</li>
+      <li>Set the permissions on /templates/vamshop4/cache/ to 777.</li>
       <li>Set the permissions on /import/ to 777.</li>
       <li>Set the permissions on /export/ to 777.</li>
       <li>Set the permissions on /tmp/ to 777.</li>
