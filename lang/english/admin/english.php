@@ -607,6 +607,7 @@ define('TEXT_PRODUCTS_ATTRIBUTES','Product Attributes');
 
 define('BOX_ANSWER_TEMPLATES','Answer Templates');
 define('BOX_PRODUCT_LABELS','Product labels');
+define('TEXT_LABEL','Label');
 
 define('BOX_COMPANY_REVIEWS', 'Manufacturers reviews');
 

@@ -270,4 +270,7 @@ define('TEXT_SOLD_IN_BUNDLE', 'This product may be purchased only as a part of t
 
 define ('TEXT_TAB_BUNDLES', 'Bundles');
 
+define('TEXT_EDIT_LABEL', 'Category Label:');
+define('TEXT_EDIT_ICON', 'Category Icon:');
+
 ?>
