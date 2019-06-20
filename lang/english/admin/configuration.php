@@ -1077,4 +1077,7 @@ define('FACEBOOK_OAUTH_CLIENT_ID_DESC', '');
 define('FACEBOOK_OAUTH_SECRET_KEY_TITLE', 'Facebook OAuth App Secret Key');
 define('FACEBOOK_OAUTH_SECRET_KEY_DESC', '');
 
+define('DEFAULT_NAVIGATION_TITLE', 'Default Navigation Menu');
+define('DEFAULT_NAVIGATION_DESC', 'Select default navigation menu.');
+
 ?>
