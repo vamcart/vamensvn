@@ -709,6 +709,7 @@ define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
 define('TITLE_BEST_SELLERS_DEFAULT', 'Best Sellers');
 define('TITLE_NEW_PRODUCTS_DEFAULT', 'New Products');
 define('TITLE_FEATURED_DEFAULT', 'Featured Products');
+define('TITLE_FEATURED_DEFAULT_SHORT', 'Featured');
 define('TITLE_SPECIALS_DEFAULT', 'Specials');
 
 define('TEXT_NOT_FOUND', 'Not found.');
