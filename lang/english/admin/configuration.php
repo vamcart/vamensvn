@@ -1058,6 +1058,9 @@ define('DEFAULT_SLIDER_DESC', 'Select default slider.');
 define('ENABLE_SERVICE_WORKER_TITLE', 'Enable Service Worker');
 define('ENABLE_SERVICE_WORKER_DESC', 'Enable Service Worker Installation in the browser.');
 
+define('SOCIAL_LOGIN_TITLE', 'Enable Social Login');
+define('SOCIAL_LOGIN_DESC', 'Enable Social Networks Login.');
+
 define('CG_SOCIAL_NETWORKS', 'Social Networks');
 define('CG_SOCIAL_NETWORKS_TITLE', 'Social Networks');
 define('CG_SOCIAL_NETWORKS_DESC', '');
