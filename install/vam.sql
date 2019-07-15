@@ -1495,10 +1495,10 @@ CREATE TABLE specials (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `specials` (`specials_id`, `products_id`, `specials_quantity`, `specials_new_products_price`, `specials_date_added`, `specials_last_modified`, `expires_date`, `date_status_change`, `status`) VALUES
-(1, 7, 100000, 14399.1000, '2014-12-13 19:52:41', '2014-12-13 20:54:33', '0000-00-00 00:00:00', NULL, 1),
-(2, 6, 100000, 5599.2000, '2014-12-13 20:50:50', '2014-12-13 20:54:37', '0000-00-00 00:00:00', NULL, 1),
-(3, 3, 100000, 21249.1500, '2014-12-13 20:54:29', NULL, '0000-00-00 00:00:00', NULL, 1),
-(4, 1, 100000, 25499.1500, '2014-12-13 20:55:18', NULL, '0000-00-00 00:00:00', NULL, 1);
+(1, 7, 100000, 399, '2014-12-13 19:52:41', '2014-12-13 20:54:33', '0000-00-00 00:00:00', NULL, 1),
+(2, 6, 100000, 149, '2014-12-13 20:50:50', '2014-12-13 20:54:37', '0000-00-00 00:00:00', NULL, 1),
+(3, 3, 100000, 699, '2014-12-13 20:54:29', NULL, '0000-00-00 00:00:00', NULL, 1),
+(4, 1, 100000, 899, '2014-12-13 20:55:18', NULL, '0000-00-00 00:00:00', NULL, 1);
 
 drop table if exists special_category;
 create table special_category (
