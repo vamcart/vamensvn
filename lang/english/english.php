@@ -454,7 +454,7 @@ define('PERSONAL_DISCOUNT','Your discount ');
 
 // Сборка VaM
 
-define('BOX_HEADING_SEARCH', 'Go');
+define('BOX_HEADING_SEARCH', 'Search');
 define('ICON_ERROR', 'Error');
 
 // RSS2 Info
