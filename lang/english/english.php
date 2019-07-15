@@ -184,7 +184,7 @@ define('IMAGE_BUTTON_CONFIRM_ORDER', 'Confirm order');
 define('IMAGE_BUTTON_CONTINUE', 'Next');
 define('IMAGE_BUTTON_DELETE', 'Delete');
 define('IMAGE_BUTTON_LOGIN', 'Login');
-define('IMAGE_BUTTON_IN_CART', 'Into the cart');
+define('IMAGE_BUTTON_IN_CART', 'Add to cart');
 define('IMAGE_BUTTON_SEARCH', 'Search');
 define('IMAGE_BUTTON_UPDATE', 'Update');
 define('IMAGE_BUTTON_UPDATE_CART', 'Update shopping cart');
@@ -198,7 +198,7 @@ define('SMALL_IMAGE_BUTTON_EDIT', 'Edit');
 define('SMALL_IMAGE_BUTTON_VIEW', 'View');
 
 define('ICON_ARROW_RIGHT', 'Show more');
-define('ICON_CART', 'Into the cart');
+define('ICON_CART', 'Add to cart');
 define('ICON_SUCCESS', 'Success');
 define('ICON_WARNING', 'Warning');
 
@@ -709,7 +709,6 @@ define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
 define('TITLE_BEST_SELLERS_DEFAULT', 'Best Sellers');
 define('TITLE_NEW_PRODUCTS_DEFAULT', 'New Products');
 define('TITLE_FEATURED_DEFAULT', 'Featured Products');
-define('TITLE_FEATURED_DEFAULT_SHORT', 'Featured');
 define('TITLE_SPECIALS_DEFAULT', 'Specials');
 
 define('TEXT_NOT_FOUND', 'Not found.');
