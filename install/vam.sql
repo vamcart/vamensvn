@@ -3656,25 +3656,46 @@ INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufactu
 (6, 1, 'Samsung Galaxy Tab', 'Samsung Galaxy Tab', 'Samsung Galaxy Tab', 'https://samsung.com', 'Samsung Galaxy Tab Products', 0, NULL);
 
 INSERT INTO `banners` (`banners_id`, `banners_title`, `banners_description`, `banners_url`, `banners_image`, `banners_group`, `banners_html_text`, `expires_impressions`, `expires_date`, `date_scheduled`, `date_added`, `date_status_change`, `status`) VALUES
-(1, 'Слайд 1', 'Описание слайда 1', 'https://vamshop.ru', 'slide1.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-06 23:31:11', NULL, 1),
-(2, 'Слайд 2', 'Описание слайда 2', 'https://vamshop.ru', 'slide2.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:02:24', NULL, 1),
-(3, 'Слайд 3', 'Описание слайда 3', 'https://vamshop.ru', 'slide3.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:02:50', NULL, 1),
-(4, 'Скидки', 'Все товары со скидкой', 'https://vamshop.ru', 'slide4.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:03:55', NULL, 1),
-(5, 'Популярные', 'Рекомендуемые товары', 'https://vamshop.ru', 'slide5.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1),
-(6, 'Скидки', 'Все товары со скидкой', 'https://vamshop.ru', '', 'slider_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-07 23:21:15', NULL, 1),
-(7, 'Стоит приглядеться', 'Рекомендуемые товары', 'https://vamshop.ru', '', 'slider_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-07 23:32:44', NULL, 1),
-(8, 'Новинки', 'Все самые интересные товары здесь!', 'https://vamshop.ru', '', 'slider_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-07 23:37:00', NULL, 1),
-(9, 'Слайд 1', 'Описание слайда 1', 'https://vamshop.ru', 'model1.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:15', NULL, 1),
-(10, 'Слайд 2', 'Описание слайда 2', 'https://vamshop.ru', 'model2.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:42', NULL, 1),
-(11, 'Слайд 3', 'Описание слайда 3', 'https://vamshop.ru', 'model3.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:59', NULL, 1),
-(12, 'Слайд 1', 'Описание слайда 1', 'https://vamshop.ru', '', 'slider_parallax_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:35:46', NULL, 1),
-(13, 'Слайд 2', 'Описание слайда 2', 'https://vamshop.ru', '', 'slider_parallax_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:36:02', NULL, 1),
-(14, 'Слайд 3', 'Описание слайда 3', 'https://vamshop.ru', '', 'slider_parallax_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:36:20', NULL, 1),
-(15, 'Слайд 1', 'Описание слайда 1', 'https://vamshop.ru', '', 'slider_starter_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:37:01', NULL, 1),
-(16, 'Слайд 2', 'Описание слайда 2', 'https://vamshop.ru', '', 'slider_starter_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:37:20', NULL, 1),
-(17, 'Слайд 3', 'Описание слайда 3', 'https://vamshop.ru', '', 'slider_starter_basic', 'Если не используется картинка, то данное поле надо обязательно заполнить, иначе баннер не сохранится.', NULL, NULL, NULL, '2019-04-08 10:37:35', NULL, 1),
-(18, 'Слайд 1', 'Описание слайда 1', 'https://vamshop.ru', 'slide1.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-06 23:31:11', NULL, 1),
-(19, 'Слайд 2', 'Описание слайда 2', 'https://vamshop.ru', 'slide2.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:02:24', NULL, 1),
-(20, 'Слайд 3', 'Описание слайда 3', 'https://vamshop.ru', 'slide3.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:02:50', NULL, 1),
-(21, 'Скидки', 'Все товары со скидкой', 'https://vamshop.ru', 'slide4.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:03:55', NULL, 1),
-(22, 'Популярные', 'Рекомендуемые товары', 'https://vamshop.ru', 'slide5.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1);
+(1, 'Slide 1', 'Slide description 1', 'http://vamshop.com', 'slide1.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-06 23:31:11', NULL, 1),
+(2, 'Slide 2', 'Slide description 2', 'http://vamshop.com', 'slide2.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:02:24', NULL, 1),
+(3, 'Slide 3', 'Slide description 3', 'http://vamshop.com', 'slide3.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:02:50', NULL, 1),
+(4, 'Specials', 'Specials', 'http://vamshop.com', 'slide4.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:03:55', NULL, 1),
+(5, 'Best Sellers', 'Best Sellers', 'http://vamshop.com', 'slide5.jpg', 'slider_pop_slide', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1),
+(6, 'Specials', 'Specials', 'http://vamshop.com', '', 'slider_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-07 23:21:15', NULL, 1),
+(7, 'Featured Products', 'Featured Products', 'http://vamshop.com', '', 'slider_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-07 23:32:44', NULL, 1),
+(8, 'New Products', 'New Products', 'http://vamshop.com', '', 'slider_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-07 23:37:00', NULL, 1),
+(9, 'Slide 1', 'Slide description 1', 'http://vamshop.com', 'model1.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:15', NULL, 1),
+(10, 'Slide 2', 'Slide description 2', 'http://vamshop.com', 'model2.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:42', NULL, 1),
+(11, 'Slide 3', 'Slide description 3', 'http://vamshop.com', 'model3.png', 'slider_modern_slide_in', '', NULL, NULL, NULL, '2019-04-08 09:51:59', NULL, 1),
+(12, 'Slide 1', 'Slide description 1', 'http://vamshop.com', '', 'slider_parallax_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:35:46', NULL, 1),
+(13, 'Slide 2', 'Slide description 2', 'http://vamshop.com', '', 'slider_parallax_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:36:02', NULL, 1),
+(14, 'Slide 3', 'Slide description 3', 'http://vamshop.com', '', 'slider_parallax_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:36:20', NULL, 1),
+(15, 'Slide 1', 'Slide description 1', 'http://vamshop.com', '', 'slider_starter_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:37:01', NULL, 1),
+(16, 'Slide 2', 'Slide description 2', 'http://vamshop.com', '', 'slider_starter_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:37:20', NULL, 1),
+(17, 'Slide 3', 'Slide description 3', 'http://vamshop.com', '', 'slider_starter_basic', 'Slide Description', NULL, NULL, NULL, '2019-04-08 10:37:35', NULL, 1),
+(18, 'Slide 1', 'Slide description 1', 'http://vamshop.com', 'slide1.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-06 23:31:11', NULL, 1),
+(19, 'Slide 2', 'Slide description 2', 'http://vamshop.com', 'slide2.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:02:24', NULL, 1),
+(20, 'Slide 3', 'Slide description 3', 'http://vamshop.com', 'slide3.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:02:50', NULL, 1),
+(21, 'Specials', 'Specials', 'http://vamshop.com', 'slide4.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:03:55', NULL, 1),
+(22, 'Best Sellers', 'Best Sellers', 'http://vamshop.com', 'slide5.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1);
+
+INSERT INTO `products_options` (`products_options_id`, `language_id`, `products_options_name`, `products_options_length`, `products_options_size`, `products_options_rows`, `products_options_type`, `sortorder`) VALUES
+(1, 1, 'Color', 64, 32, 1, 1, 1);
+
+INSERT INTO `products_options_values` (`products_options_values_id`, `language_id`, `products_options_values_name`, `products_options_values_description`, `products_options_values_text`, `products_options_values_image`, `products_options_values_link`) VALUES
+(1, 1, 'White', '', '', '', ''),
+(2, 1, 'Blue', '', '', '', ''),
+(3, 1, 'Desc', '', '', '', '');
+
+INSERT INTO `products_options_values_to_products_options` (`products_options_values_to_products_options_id`, `products_options_id`, `products_options_values_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3);
+
+INSERT INTO `products_attributes` (`products_attributes_id`, `products_id`, `options_id`, `options_values_id`, `options_values_price`, `price_prefix`, `attributes_model`, `attributes_stock`, `options_values_weight`, `weight_prefix`, `sortorder`) VALUES
+(1, 7, 1, 1, '100.0000', '+', '', 10000, '0.0000', '+', 0),
+(2, 7, 1, 2, '200.0000', '+', '', 10000, '0.0000', '+', 0),
+(3, 7, 1, 3, '300.0000', '+', '', 10000, '0.0000', '+', 0),
+(4, 4, 1, 1, '100.0000', '+', '', 10000, '0.0000', '+', 0),
+(5, 4, 1, 2, '200.0000', '+', '', 10000, '0.0000', '+', 0),
+(6, 4, 1, 3, '300.0000', '+', '', 10000, '0.0000', '+', 0);
