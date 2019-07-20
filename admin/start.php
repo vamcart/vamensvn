@@ -153,7 +153,7 @@ require ('includes/application_top.php');
 <?php
  
 // We'll process this feed with all of the default options.
-$url = 'http://blog.vamshop.ru/feed/';
+$url = 'http://support.vamshop.com/modules/news/backendt.php?topicid=1';
 $feed = new SimplePie();
 
 // Set which feed to process.
