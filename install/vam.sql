@@ -53,7 +53,7 @@ CREATE TABLE address_book (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `address_book` VALUES
-(1, 1, '', 'VamShop', 'admin', '', 'admin', 'Street Address', NULL, '123456', 'Москва', 'Москва', 176, 98, '2014-01-20 10:14:50', '2014-01-20 10:14:50');
+(1, 1, '', 'VamShop', 'admin', '', 'admin', 'Street Address', NULL, '123456', 'Los Angeles', 'Los Angeles', 223, 332, '2014-01-20 10:14:50', '2014-01-20 10:14:50');
 
 DROP TABLE IF EXISTS affiliate_affiliate;
 CREATE TABLE affiliate_affiliate (
