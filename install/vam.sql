@@ -3685,7 +3685,7 @@ INSERT INTO `products_options` (`products_options_id`, `language_id`, `products_
 INSERT INTO `products_options_values` (`products_options_values_id`, `language_id`, `products_options_values_name`, `products_options_values_description`, `products_options_values_text`, `products_options_values_image`, `products_options_values_link`) VALUES
 (1, 1, 'White', '', '', '', ''),
 (2, 1, 'Blue', '', '', '', ''),
-(3, 1, 'Desc', '', '', '', '');
+(3, 1, 'Red', '', '', '', '');
 
 INSERT INTO `products_options_values_to_products_options` (`products_options_values_to_products_options_id`, `products_options_id`, `products_options_values_id`) VALUES
 (1, 1, 1),
