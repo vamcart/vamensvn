@@ -86,7 +86,7 @@ require ('includes/application_top.php');
 ?>
 
       <div class="row-fluid">
-      <div class="span5">
+      <div class="span8">
 
 			<div class="row-fluid">
 			<div class="panel panel-default span4">
@@ -139,56 +139,6 @@ require ('includes/application_top.php');
 			</ul>
 			<div id="stat">
 			  <?php include(DIR_WS_MODULES . 'summary/statistics.php'); ?>
-			</div>
-		</div>
-      </div>
-      <div class="span3">
-		<div id="news">
-			<ul>
-				<li><a href="#stat"><?php echo vam_image(DIR_WS_IMAGES . 'icons/tabs/comment.png', '', '16', '16'); ?>&nbsp;<?php echo TEXT_SUMMARY_VAMSHOP_NEWS; ?></a></li>
-			</ul>
-			<div id="rss-news">
-
-			  
-<?php
- 
-// We'll process this feed with all of the default options.
-$url = 'http://support.vamshop.com/modules/news/backendt.php?topicid=1';
-$feed = new SimplePie();
-
-// Set which feed to process.
- $feed->set_cache_location('../cache');
- 
-// Set which feed to process.
- $feed->set_feed_url($url);
-
-// Run SimplePie.
-$feed->init();
-
-$feed->handle_content_type();
- 
-?>
- 
-   <ul>
- 
-	<?php
-	/*
-	Here, we'll loop through all of the items in the feed, and $item represents the current item in the loop.
-	*/
-	foreach ($feed->get_items(0,5) as $item):
-	?>
- 
-		<li class="item">
-			<h3><strong><a href="<?php echo $item->get_permalink(); ?>" target="_blank"><?php echo $item->get_title(); ?></a></strong></h3>
-			<p><?php echo $item->get_description(); ?></p>
-		</li>
- 
-	<?php endforeach; ?>
-	
-	</ul>
-
-			  
-			  
 			</div>
 		</div>
       </div>
