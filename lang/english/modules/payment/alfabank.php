@@ -20,7 +20,7 @@
   define('MODULE_PAYMENT_ALFABANK_TEXT_TITLE', 'AlfaBank');
   define('MODULE_PAYMENT_ALFABANK_TEXT_PUBLIC_TITLE', 'AlfaBank');
   define('MODULE_PAYMENT_ALFABANK_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
-  define('MODULE_PAYMENT_ALFABANK_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты Альфа-Банк.');
+  define('MODULE_PAYMENT_ALFABANK_TEXT_ADMIN_DESCRIPTION', 'AlfaBank Payment Module.');
   
 define('MODULE_PAYMENT_ALFABANK_STATUS_TITLE' , 'Разрешить модуль Альфа-Банк');
 define('MODULE_PAYMENT_ALFABANK_STATUS_DESC' , 'Вы хотите разрешить использование модуля при оформлении заказов?');
