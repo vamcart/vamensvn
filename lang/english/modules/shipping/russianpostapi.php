@@ -17,10 +17,10 @@
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_TITLE', 'Почта России');
-define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_DESCRIPTION', 'Почта России');
+define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_TITLE', 'Russian Post');
+define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_DESCRIPTION', 'Russian Post');
 
-define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_NOTE','Доставка Почтой России.');
+define('MODULE_SHIPPING_RUSSIANPOSTAPI_TEXT_NOTE','Russian Post.');
 
 define('MODULE_SHIPPING_RUSSIANPOSTAPI_STATUS_TITLE' , 'Разрешить модуль на единицу');
 define('MODULE_SHIPPING_RUSSIANPOSTAPI_STATUS_DESC' , 'Вы хотите разрешить модуль на единицу?');

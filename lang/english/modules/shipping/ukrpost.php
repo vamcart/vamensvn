@@ -17,9 +17,9 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_UKRPOST_TEXT_TITLE', 'Укрпочта');
-define('MODULE_SHIPPING_UKRPOST_TEXT_DESCRIPTION', 'Укрпочта');
-define('MODULE_SHIPPING_UKRPOST_TEXT_WAY', '«Укрпочта» в любую точку Украины до указанного почтового отделения (наложенный платеж) ');
+define('MODULE_SHIPPING_UKRPOST_TEXT_TITLE', 'Ukrainian Post');
+define('MODULE_SHIPPING_UKRPOST_TEXT_DESCRIPTION', 'Ukrainian Post');
+define('MODULE_SHIPPING_UKRPOST_TEXT_WAY', ' ');
 define('MODULE_SHIPPING_UKRPOST_TEXT_WEIGHT', 'Вес');
 define('MODULE_SHIPPING_UKRPOST_TEXT_AMOUNT', 'Сумма');
 

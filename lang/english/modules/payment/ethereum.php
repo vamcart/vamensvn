@@ -19,20 +19,20 @@
 
 define('MODULE_PAYMENT_ETHEREUM_TEXT_TITLE', 'Ethereum');
 
-define('MODULE_PAYMENT_ETHEREUM_TEXT_DESCRIPTION', 'Информация для оплаты:<br /><br />Номер Ethereum кошелька: ' . MODULE_PAYMENT_ETHEREUM_ID . '<br /><br />');
-define('MODULE_PAYMENT_ETHEREUM_TEXT_EMAIL_FOOTER', "Информация для оплаты:\n\nНомер нашего Ethereum: ". MODULE_PAYMENT_ETHEREUM_ID . "\n\n" . 'Ваш заказ будет выполнен только после получения оплаты!');
+define('MODULE_PAYMENT_ETHEREUM_TEXT_DESCRIPTION', 'Payment Info:<br /><br />Our Ethereum Wallet Number: ' . MODULE_PAYMENT_ETHEREUM_ID . '<br /><br />');
+define('MODULE_PAYMENT_ETHEREUM_TEXT_EMAIL_FOOTER', "Payment Info:\n\nOur Ethereum Wallet Number: ". MODULE_PAYMENT_ETHEREUM_ID . "\n\n" . '');
 
 define('MODULE_PAYMENT_ETHEREUM_TEXT_INFO','');
-define('MODULE_PAYMENT_ETHEREUM_STATUS_TITLE' , 'Разрешить модуль Ethereum');
-define('MODULE_PAYMENT_ETHEREUM_STATUS_DESC' , 'Вы хотите разрешить использование модуля при оформлении заказов?');
-define('MODULE_PAYMENT_ETHEREUM_ALLOWED_TITLE' , 'Разрешённые страны');
-define('MODULE_PAYMENT_ETHEREUM_ALLOWED_DESC' , 'Укажите коды стран, для которых будет доступен данный модуль (например RU,DE (оставьте поле пустым, если хотите что б модуль был доступен покупателям из любых стран))');
-define('MODULE_PAYMENT_ETHEREUM_ID_TITLE' , 'Номер кошелька:');
-define('MODULE_PAYMENT_ETHEREUM_ID_DESC' , 'Укажите Ваш номер в Ethereum');
-define('MODULE_PAYMENT_ETHEREUM_SORT_ORDER_TITLE' , 'Порядок сортировки');
-define('MODULE_PAYMENT_ETHEREUM_SORT_ORDER_DESC' , 'Порядок сортировки модуля.');
-define('MODULE_PAYMENT_ETHEREUM_ZONE_TITLE' , 'Зона');
-define('MODULE_PAYMENT_ETHEREUM_ZONE_DESC' , 'Если выбрана зона, то данный модуль оплаты будет виден только покупателям из выбранной зоны.');
-define('MODULE_PAYMENT_ETHEREUM_ORDER_STATUS_ID_TITLE' , 'Статус заказа');
-define('MODULE_PAYMENT_ETHEREUM_ORDER_STATUS_ID_DESC' , 'Заказы, оформленные с использованием данного модуля оплаты будут принимать указанный статус.');
+define('MODULE_PAYMENT_ETHEREUM_STATUS_TITLE' , 'Enable module Ethereum');
+define('MODULE_PAYMENT_ETHEREUM_STATUS_DESC' , 'Do you want to enable this module?');
+define('MODULE_PAYMENT_ETHEREUM_ALLOWED_TITLE' , 'Allowed zones');
+define('MODULE_PAYMENT_ETHEREUM_ALLOWED_DESC' , 'Please enter the zones <b>separately</b> which should be allowed to use this modul (e. g. AT,DE (leave empty if you want to allow all zones))');
+define('MODULE_PAYMENT_ETHEREUM_ID_TITLE' , 'ETH Wallet Number:');
+define('MODULE_PAYMENT_ETHEREUM_ID_DESC' , 'Your wallet.');
+define('MODULE_PAYMENT_ETHEREUM_SORT_ORDER_TITLE' , 'Sort order of display');
+define('MODULE_PAYMENT_ETHEREUM_SORT_ORDER_DESC' , 'Sort order of display. Lowest is displayed first.');
+define('MODULE_PAYMENT_ETHEREUM_ZONE_TITLE' , 'Payment Zone');
+define('MODULE_PAYMENT_ETHEREUM_ZONE_DESC' , 'If a zone is selected, only enable this payment method for that zone.');
+define('MODULE_PAYMENT_ETHEREUM_ORDER_STATUS_ID_TITLE' , 'Confirmed order status');
+define('MODULE_PAYMENT_ETHEREUM_ORDER_STATUS_ID_DESC' , 'Confirmed order status');
 ?>

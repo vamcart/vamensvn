@@ -17,8 +17,8 @@
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_PEK_TEXT_TITLE', 'ПЭК');
-define('MODULE_SHIPPING_PEK_TEXT_DESCRIPTION', 'ПЭК');
+define('MODULE_SHIPPING_PEK_TEXT_TITLE', 'PEK');
+define('MODULE_SHIPPING_PEK_TEXT_DESCRIPTION', 'PEK');
 
 define('MODULE_SHIPPING_PEK_TEXT_NOTE','Доставка курьерской службой ПЭК.');
 

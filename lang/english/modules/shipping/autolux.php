@@ -17,9 +17,9 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_AUTOLUX_TEXT_TITLE', 'Доставка в другие города');
-define('MODULE_SHIPPING_AUTOLUX_TEXT_DESCRIPTION', 'Служба доставки "Ночной Экспресс", "Автолюкс", "Гюнсел" и др.');
-define('MODULE_SHIPPING_AUTOLUX_TEXT_WAY', 'Служба доставки "Ночной Экспресс", "Автолюкс", "Гюнсел" и др.');
+define('MODULE_SHIPPING_AUTOLUX_TEXT_TITLE', 'Autolux');
+define('MODULE_SHIPPING_AUTOLUX_TEXT_DESCRIPTION', 'Autolux');
+define('MODULE_SHIPPING_AUTOLUX_TEXT_WAY', 'Best Way');
 define('MODULE_SHIPPING_AUTOLUX_TEXT_WEIGHT', 'Вес');
 define('MODULE_SHIPPING_AUTOLUX_TEXT_AMOUNT', 'Сумма');
 

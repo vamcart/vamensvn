@@ -1,8 +1,8 @@
 <?php
 /*rficb payment module translation in russian*/  
-define('MODULE_PAYMENT_RFICB_TEXT_TITLE', 'rficb (Карты, электронные деньги, мобильная коммерция)');
-define('MODULE_PAYMENT_RFICB_TEXT_PUBLIC_TITLE', 'rficb (Карты, электронные деньги, мобильная коммерция)');
-define('MODULE_PAYMENT_RFICB_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты rficb');
+define('MODULE_PAYMENT_RFICB_TEXT_TITLE', 'Rficb');
+define('MODULE_PAYMENT_RFICB_TEXT_PUBLIC_TITLE', 'Rficb');
+define('MODULE_PAYMENT_RFICB_TEXT_ADMIN_DESCRIPTION', 'Rficb');
 define('MODULE_PAYMENT_RFICB_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
   
 define('MODULE_PAYMENT_RFICB_STATUS_TITLE' , 'Разрешить модуль rficb');

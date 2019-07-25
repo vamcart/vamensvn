@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_PAYMENT_OPENBANK_TEXT_TITLE', 'Оплата карточкой (Visa, MasterCard, Maestro, Мир)');
-define('MODULE_PAYMENT_OPENBANK_TEXT_PUBLIC_TITLE', 'Оплата карточкой (Карточки Visa, MasterCard, Maestro, Мир)');
+define('MODULE_PAYMENT_OPENBANK_TEXT_TITLE', 'Open Bank');
+define('MODULE_PAYMENT_OPENBANK_TEXT_PUBLIC_TITLE', 'Open Bank');
 define('MODULE_PAYMENT_OPENBANK_TEXT_DESCRIPTION', '');
 define('MODULE_PAYMENT_OPENBANK_TEXT_ADMIN_DESCRIPTION', 'Модуль приёма оплаты карточками через банк Открытие.');
   

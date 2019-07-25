@@ -15,8 +15,8 @@
    -----------------------------------------------------------------------------------------
 
 */
-define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE_PREPAY', 'Почта России');
-define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE', 'Почта России');
+define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE_PREPAY', 'Russian Post - Parcel');
+define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE', 'Russian Post - Parcel');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_DESCRIPTION_PREPAY', 'При этом способе доставки, заказ необходимо сначала оплатить.');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_INVALID_ZONE', 'В этот регион доставка «Почтой России» невозможна.');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_WAY_PARCEL', 'Цена доставки посылкой, при <i>предварительной оплате</i> заказа.');

@@ -15,8 +15,8 @@
    -----------------------------------------------------------------------------------------
 
 */
-define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE_PF', 'Почта России - наложенный платёж');
-define('MODULE_SHIPPING_RUSSIANPOSTPF_TEXT_TITLE', 'Почта России - наложенный платёж');
+define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_TITLE_PF', 'Russian Post - Express');
+define('MODULE_SHIPPING_RUSSIANPOSTPF_TEXT_TITLE', 'Russian Post - Express');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_DESCRIPTION_PF', 'При этом способе доставки, заказ можно будет оплатить при получении на почте.');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_INVALID_ZONE_PF', 'В этот регион доставка наложенным платежом «Почты России» невозможна.');
 define('MODULE_SHIPPING_RUSSIANPOSTPREPAY_TEXT_WAY_PARCEL_PF', 'Цена доставки посылкой, заказ оплачивается <i>при получении  на почте</i>.');

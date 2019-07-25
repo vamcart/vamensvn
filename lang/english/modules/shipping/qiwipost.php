@@ -1,7 +1,7 @@
 <?php
 
-define('MODULE_SHIPPING_QIWIPOST_TEXT_TITLE', 'Терминалы доставки QIWI Post');
-define('MODULE_SHIPPING_QIWIPOST_TEXT_DESCRIPTION', 'Терминалы доставки QIWI Post');
+define('MODULE_SHIPPING_QIWIPOST_TEXT_TITLE', 'QIWI Post');
+define('MODULE_SHIPPING_QIWIPOST_TEXT_DESCRIPTION', 'QIWI Post');
 
 define('MODULE_SHIPPING_QIWIPOST_TEXT_NOTE','Самовывоз. Получение посылки через ячейку терминала.');
 

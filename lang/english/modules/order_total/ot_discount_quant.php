@@ -1,5 +1,5 @@
 <?php
-  define('MODULE_ORDER_TOTAL_DISCOUNT_QUANT_TITLE', 'Скидка от количества');
+  define('MODULE_ORDER_TOTAL_DISCOUNT_QUANT_TITLE', 'Quantity Discount');
   define('MODULE_ORDER_TOTAL_DISCOUNT_QUANT_DESCRIPTION', 'Скидка в зависимости от количества товара в корзине'); 
   define('MODULE_ORDER_TOTAL_DISCOUNT_QUANT_STATUS_TITLE', 'Показывать скидку');
   define('MODULE_ORDER_TOTAL_DISCOUNT_QUANT_STATUS_DESC', 'Вы хотите показывать скидку в зависимости от количества товаров?');

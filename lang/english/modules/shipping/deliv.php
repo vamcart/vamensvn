@@ -17,13 +17,13 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_DELIV_TEXT_TITLE', 'Доставка службой "Деливери"');
-define('MODULE_SHIPPING_DELIV_TEXT_DESCRIPTION', 'Служба доставки "Деливери"');
-define('MODULE_SHIPPING_DELIV_TEXT_WAY', 'Служба доставки "Деливери"');
+define('MODULE_SHIPPING_DELIV_TEXT_TITLE', 'Delivery');
+define('MODULE_SHIPPING_DELIV_TEXT_DESCRIPTION', 'Delivery');
+define('MODULE_SHIPPING_DELIV_TEXT_WAY', 'Delivery');
 define('MODULE_SHIPPING_DELIV_TEXT_WEIGHT', 'Вес');
 define('MODULE_SHIPPING_DELIV_TEXT_AMOUNT', 'Сумма');
 
-define('MODULE_SHIPPING_DELIV_STATUS_TITLE' , 'Доставка службой "Деливери"');
+define('MODULE_SHIPPING_DELIV_STATUS_TITLE' , 'Delivery');
 define('MODULE_SHIPPING_DELIV_STATUS_DESC' , 'Вы хотите разрешить модуль доставки Доставка службой "Деливери"?');
 define('MODULE_SHIPPING_DELIV_ALLOWED_TITLE' , 'Разрешённые страны');
 define('MODULE_SHIPPING_DELIV_ALLOWED_DESC' , 'Укажите коды стран, для которых будет доступен данный модуль (например RU,DE (оставьте поле пустым, если хотите что б модуль был доступен покупателям из любых стран))');

@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-  define('MODULE_PAYMENT_WALLET_ONE_TEXT_TITLE', 'Единая касса');
-  define('MODULE_PAYMENT_WALLET_ONE_TEXT_PUBLIC_TITLE', 'Единая касса');
+  define('MODULE_PAYMENT_WALLET_ONE_TEXT_TITLE', 'WalletOne');
+  define('MODULE_PAYMENT_WALLET_ONE_TEXT_PUBLIC_TITLE', 'WalletOne');
   define('MODULE_PAYMENT_WALLET_ONE_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты Единая касса (w1.ru)<br />Как правильно настроить модуль читайте <a href="http://vamshop.ru/nastrojka-modulja-oplaty-edinaja-kassa.html" target="_blank"><u>здесь</u></a>.');
   define('MODULE_PAYMENT_WALLET_ONE_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
   

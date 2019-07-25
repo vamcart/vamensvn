@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-  define('MODULE_PAYMENT_AVISO_TEXT_TITLE', 'AvisoSMS (Оплата с баланса мобильного телефона)');
-  define('MODULE_PAYMENT_AVISO_TEXT_PUBLIC_TITLE', 'AvisoSMS (Оплата с баланса мобильного телефона)');
+  define('MODULE_PAYMENT_AVISO_TEXT_TITLE', 'AvisoSMS');
+  define('MODULE_PAYMENT_AVISO_TEXT_PUBLIC_TITLE', 'AvisoSMS');
   define('MODULE_PAYMENT_AVISO_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты AvisoSMS<br />Как правильно настроить модуль читайте <a href="http://vamshop.ru/blog/2011/08/04/%d0%bd%d0%b0%d1%81%d1%82%d1%80%d0%b0%d0%b8%d0%b2%d0%b0%d0%b5%d1%82-avisosms-%d0%bc%d0%be%d0%b1%d0%b8%d0%bb%d1%8c%d0%bd%d0%b0%d1%8f-%d0%ba%d0%be%d0%bc%d0%bc%d0%b5%d1%80%d1%86%d0%b8%d1%8f-%d0%b2-vamshop/" target="_blank"><u>здесь</u></a>.');
   define('MODULE_PAYMENT_AVISO_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
   

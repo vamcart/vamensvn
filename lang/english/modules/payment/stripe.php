@@ -19,22 +19,22 @@
 
 define('MODULE_PAYMENT_STRIPE_TEXT_TITLE', 'Stripe');
 define('MODULE_PAYMENT_STRIPE_TEXT_PUBLIC_TITLE', 'Stripe');
-define('MODULE_PAYMENT_STRIPE_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты Stripe.');
-define('MODULE_PAYMENT_STRIPE_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
+define('MODULE_PAYMENT_STRIPE_TEXT_ADMIN_DESCRIPTION', 'Stripe.');
+define('MODULE_PAYMENT_STRIPE_TEXT_DESCRIPTION', '');
   
-define('MODULE_PAYMENT_STRIPE_STATUS_TITLE' , 'Разрешить модуль Stripe');
-define('MODULE_PAYMENT_STRIPE_STATUS_DESC' , 'Вы хотите разрешить использование модуля при оформлении заказов?');
-define('MODULE_PAYMENT_STRIPE_ALLOWED_TITLE' , 'Разрешённые страны');
-define('MODULE_PAYMENT_STRIPE_ALLOWED_DESC' , 'Укажите коды стран, для которых будет доступен данный модуль (например RU,DE (оставьте поле пустым, если хотите что б модуль был доступен покупателям из любых стран))');
+define('MODULE_PAYMENT_STRIPE_STATUS_TITLE' , 'Enable module Stripe');
+define('MODULE_PAYMENT_STRIPE_STATUS_DESC' , 'Do you want to enable this module?');
+define('MODULE_PAYMENT_STRIPE_ALLOWED_TITLE' , 'Allowed zones');
+define('MODULE_PAYMENT_STRIPE_ALLOWED_DESC' , 'Please enter the zones <b>separately</b> which should be allowed to use this modul (e. g. AT,DE (leave empty if you want to allow all zones))');
 define('MODULE_PAYMENT_STRIPE_PUBLIC_KEY_TITLE' , 'Публикуемый ключ:');
 define('MODULE_PAYMENT_STRIPE_PUBLIC_KEY_DESC' , 'Укажите Ваш пукбликуемый ключ');
-define('MODULE_PAYMENT_STRIPE_SORT_ORDER_TITLE' , 'Порядок сортировки');
-define('MODULE_PAYMENT_STRIPE_SORT_ORDER_DESC' , 'Порядок сортировки модуля.');
-define('MODULE_PAYMENT_STRIPE_ZONE_TITLE' , 'Зона');
-define('MODULE_PAYMENT_STRIPE_ZONE_DESC' , 'Если выбрана зона, то данный модуль оплаты будет виден только покупателям из выбранной зоны.');
+define('MODULE_PAYMENT_STRIPE_SORT_ORDER_TITLE' , 'Sort order of display');
+define('MODULE_PAYMENT_STRIPE_SORT_ORDER_DESC' , 'Sort order of display. Lowest is displayed first.');
+define('MODULE_PAYMENT_STRIPE_ZONE_TITLE' , 'Payment Zone');
+define('MODULE_PAYMENT_STRIPE_ZONE_DESC' , 'If a zone is selected, only enable this payment method for that zone.');
 define('MODULE_PAYMENT_STRIPE_SECRET_KEY_TITLE' , 'Секретный ключ');
 define('MODULE_PAYMENT_STRIPE_SECRET_KEY_DESC' , 'В данной опции укажите Ваш секрутный ключ.');
-define('MODULE_PAYMENT_STRIPE_ORDER_STATUS_ID_TITLE' , 'Укажите оплаченный статус заказа');
-define('MODULE_PAYMENT_STRIPE_ORDER_STATUS_ID_DESC' , 'Укажите оплаченный статус заказа.');
+define('MODULE_PAYMENT_STRIPE_ORDER_STATUS_ID_TITLE' , 'Confirmed order status');
+define('MODULE_PAYMENT_STRIPE_ORDER_STATUS_ID_DESC' , 'Confirmed order status');
   
 ?>

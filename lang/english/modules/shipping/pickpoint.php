@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_PICKPOINT_TEXT_TITLE', 'Постаматы PickPoint.Ru');
-define('MODULE_SHIPPING_PICKPOINT_TEXT_DESCRIPTION', 'Постаматы PickPoint.Ru');
+define('MODULE_SHIPPING_PICKPOINT_TEXT_TITLE', 'PickPoint');
+define('MODULE_SHIPPING_PICKPOINT_TEXT_DESCRIPTION', 'PickPoint');
 
 define('MODULE_SHIPPING_PICKPOINT_TEXT_SELECT_ADDRESS','Выберите адрес доставки');
 define('MODULE_SHIPPING_PICKPOINT_TEXT_ADDRESS_HELP','(откроется во всплывающем окне)');

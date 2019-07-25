@@ -23,7 +23,7 @@
   define('MODULE_PAYMENT_LIQPAY_TEXT_DESCRIPTION', '');
   
 define('MODULE_PAYMENT_LIQPAY_STATUS_TITLE' , 'Enable LiqPAY Module');
-define('MODULE_PAYMENT_LIQPAY_STATUS_DESC' , 'Do you want to accept WebMoney as payments?');
+define('MODULE_PAYMENT_LIQPAY_STATUS_DESC' , 'Do you want to accept LiqPAY as payments?');
 define('MODULE_PAYMENT_LIQPAY_ALLOWED_TITLE' , 'Allowed zones');
 define('MODULE_PAYMENT_LIQPAY_ALLOWED_DESC' , 'Please enter the zones <b>separately</b> which should be allowed to use this modul (e. g. AT,DE (leave empty if you want to allow all zones))');
 define('MODULE_PAYMENT_LIQPAY_ID_TITLE' , 'LiqPAY ID');

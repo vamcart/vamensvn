@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_RUSSIANPOSTCALC_TEXT_TITLE', 'Почта России');
-define('MODULE_SHIPPING_RUSSIANPOSTCALC_TEXT_DESCRIPTION', 'Почта России. Расчёт доставки Почтой России с помощью веб-сервиса http://russianpostcalc.ru');
+define('MODULE_SHIPPING_RUSSIANPOSTCALC_TEXT_TITLE', 'Russian Post Calc');
+define('MODULE_SHIPPING_RUSSIANPOSTCALC_TEXT_DESCRIPTION', 'Russian Post Calc');
 
 define('MODULE_SHIPPING_RUSSIANPOSTCALC_STATUS_TITLE' , 'Разрешить модуль Почта России');
 define('MODULE_SHIPPING_RUSSIANPOSTCALC_STATUS_DESC' , 'Вы хотите разрешить модуль Почта России?');

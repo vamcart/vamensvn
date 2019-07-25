@@ -22,8 +22,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_SOGL_TEXT_TITLE', 'По согласованию');
-define('MODULE_SHIPPING_SOGL_TEXT_DESCRIPTION', 'По согласованию с администрацией магазина');
+define('MODULE_SHIPPING_SOGL_TEXT_TITLE', 'Post Office');
+define('MODULE_SHIPPING_SOGL_TEXT_DESCRIPTION', 'Post Office');
 define('MODULE_SHIPPING_SOGL_SORT_ORDER', 'Порядок сортировки');
 
 define('MODULE_SHIPPING_SOGL_TEXT_TITLE', 'По согласованию');

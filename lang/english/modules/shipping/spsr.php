@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_SPSR_TEXT_TITLE', 'СПСР Экспресс');
-define('MODULE_SHIPPING_SPSR_TEXT_DESCRIPTION', 'СПСР Экспресс');
+define('MODULE_SHIPPING_SPSR_TEXT_TITLE', 'SPSR Express');
+define('MODULE_SHIPPING_SPSR_TEXT_DESCRIPTION', 'SPSR Express');
 
 define('MODULE_SHIPPING_SPSR_TEXT_NOTE','Доставка курьерской службой СПСР Экспресс.');
 

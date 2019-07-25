@@ -17,9 +17,9 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_NOVPOCH_TEXT_TITLE', 'Доставка службой "Новая Почта"');
-define('MODULE_SHIPPING_NOVPOCH_TEXT_DESCRIPTION', 'Служба доставки "Новая Почта"');
-define('MODULE_SHIPPING_NOVPOCH_TEXT_WAY', 'Служба доставки "Новая Почта"');
+define('MODULE_SHIPPING_NOVPOCH_TEXT_TITLE', 'New Post');
+define('MODULE_SHIPPING_NOVPOCH_TEXT_DESCRIPTION', 'New Post');
+define('MODULE_SHIPPING_NOVPOCH_TEXT_WAY', 'New Post');
 define('MODULE_SHIPPING_NOVPOCH_TEXT_WEIGHT', 'Вес');
 define('MODULE_SHIPPING_NOVPOCH_TEXT_AMOUNT', 'Сумма');
 

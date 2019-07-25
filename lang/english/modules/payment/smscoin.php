@@ -16,7 +16,7 @@
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
 
-  define('MODULE_PAYMENT_SMSCOIN_TEXT_TITLE', 'Оплата sms сообщением с мобильного телефона');
+  define('MODULE_PAYMENT_SMSCOIN_TEXT_TITLE', 'SMSCoin');
   define('MODULE_PAYMENT_SMSCOIN_TEXT_DESCRIPTION', 'После нажатия кнопки подтвердить заказ Вы перейдёте на сайт http://smscoin.com, на котором Вы получите информацию с инструкциями об оплате с помощью sms сообщения, после оплаты Вы вернётесь в магазин и сможете сразу получить заказанный товар.');
 
   define('MODULE_PAYMENT_SMSCOIN_ID_TITLE' , 'Идентификатор Вашего смс банка в системе');

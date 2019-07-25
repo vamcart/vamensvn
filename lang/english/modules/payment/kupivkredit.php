@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_TITLE', 'Тинькофф Кредит');
-define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_PUBLIC_TITLE', 'Тинькофф Кредит');
+define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_TITLE', 'Tinkoff');
+define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_PUBLIC_TITLE', 'Tinkoff');
 define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты Тинькофф Кредит');
 define('MODULE_PAYMENT_KUPIVKREDIT_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт Тинькофф Кредит для подтверждения заказа.');
   

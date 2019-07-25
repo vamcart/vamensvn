@@ -17,8 +17,8 @@
    Released under the GNU General Public License
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_RUSSIANPOSTEMS_TEXT_TITLE', 'EMS Почта России');
-define('MODULE_SHIPPING_RUSSIANPOSTEMS_TEXT_DESCRIPTION', 'EMS Почта России');
+define('MODULE_SHIPPING_RUSSIANPOSTEMS_TEXT_TITLE', 'EMS Russian Post');
+define('MODULE_SHIPPING_RUSSIANPOSTEMS_TEXT_DESCRIPTION', 'EMS Russian Post');
 
 define('MODULE_SHIPPING_RUSSIANPOSTEMS_TEXT_NOTE','Доставка курьерской службой EMS Почта России.');
 

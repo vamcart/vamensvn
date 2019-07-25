@@ -17,8 +17,8 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_PAYMENT_PSBANK_TEXT_TITLE', 'Оплата картой через Промсвязьбанк');
-define('MODULE_PAYMENT_PSBANK_TEXT_PUBLIC_TITLE', 'Оплата картой через Промсвязьбанк');
+define('MODULE_PAYMENT_PSBANK_TEXT_TITLE', 'PSB Bank');
+define('MODULE_PAYMENT_PSBANK_TEXT_PUBLIC_TITLE', 'PSB Bank');
 define('MODULE_PAYMENT_PSBANK_TEXT_ADMIN_DESCRIPTION', 'Модуль оплаты Промсвязьбанк<br />Как правильно настроить модуль читайте <a href="http://blog.vamshop.ru" target="_blank"><u>в нашем блоге</u></a>.');
 define('MODULE_PAYMENT_PSBANK_TEXT_DESCRIPTION', 'После нажатия кнопки Подтвердить заказ Вы перейдёте на сайт платёжной системы для оплаты заказа, после оплаты Ваш заказ будет выполнен.');
   
