@@ -37,8 +37,15 @@
 */
 ?>
 <p>
+<?php echo VAMSHOP_SUPPORT_KEY_TEXT; ?>
+<?php echo VAMSHOP_SUPPORT_KEY; ?>
 </p>
-Powered by  <a href="http://vamshop.com" target="_blank">VamShop</a><br />
+E-Commerce Engine Copyright &copy; 2003 <a href="http://www.oscommerce.com" target="_blank">osCommerce</a> Portions Copyright &copy; 2003 - 2005 <a href="http://xt-commerce.com" target="_blank">xt:Commerce</a>, &copy; 2005-<?php echo date("Y"); ?> <a href="http://vamshop.ru" target="_blank">VamShop</a><br />
+osCommerce provides no warranty and is redistributable under the <a href="http://www.fsf.org/licenses/gpl.txt" target="_blank">GNU General Public License</a><br>
+<a href="http://vamshop.ru" target="_blank">VamShop</a> provides no warranty except as to associated support contracts<br />which are limited by and to the Service Level Agreement.<br />
   </td>
   </tr>
 </table>
+
+<script src="<?php echo DIR_WS_CATALOG; ?>jscript/jquery/plugins/scrollup/jquery.scrollup.min.js"></script>
+<script src="<?php echo DIR_WS_ADMIN; ?>includes/javascript/vamshop.js"></script>
