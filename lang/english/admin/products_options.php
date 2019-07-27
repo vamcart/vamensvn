@@ -32,6 +32,7 @@ define('TABLE_HEADING_DOWNLOAD', 'Downloadable products:');
 define('TABLE_TEXT_FILENAME', 'Filename:');
 define('TABLE_TEXT_MAX_DAYS', 'Expiry days:');
 define('TABLE_TEXT_MAX_COUNT', 'Maximum download count:');
+define('TABLE_TEXT_SORT_ORDER', 'Sort Order');
 
 define('MAX_ROW_LISTS_OPTIONS', 10);
 
