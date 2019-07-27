@@ -650,7 +650,7 @@ INSERT INTO `categories_description` VALUES
 (1, 1, 'Notebooks', '', 'Notebooks category description.', '', '', ''),
 (2, 1, 'Tablets', '', 'Tablets category description.', '', '', ''),
 (3, 1, 'Smartphones', '', 'Smartphones category description.', '', '', ''),
-(3, 1, 'Monitors', '', 'Monitors category description.', '', '', '');
+(4, 1, 'Monitors', '', 'Monitors category description.', '', '', '');
 
 DROP TABLE IF EXISTS configuration;
 CREATE TABLE `configuration` (
@@ -3633,7 +3633,7 @@ INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufactu
 INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
 (2, 'Samsung Mobile', 'manufacturers/samsung-mobile.png', '2019-04-06 18:40:46', NULL, 'samsung-mobile.html', 2);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
-(2, 1, 'Samsung Mobile', 'Samsung Mobile', 'Samsung Mobile', 'https://samsung.com', 'Samsung Mobile Products', 0, NULL, 'samsung-mobile.html');
+(2, 1, 'Samsung Mobile', 'Samsung Mobile', 'Samsung Mobile', 'https://samsung.com', 'Samsung Mobile Products', 0, NULL);
 
 INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
 (3, 'Samsung Ativ', 'manufacturers/samsung-ativ.png', '2019-04-06 18:40:46', NULL, 'samsung-ativ.html', 3);
