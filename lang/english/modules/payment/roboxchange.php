@@ -47,5 +47,8 @@
 
   define('MODULE_PAYMENT_ROBOXCHANGE_TEST_TITLE','Режим работы');
   define('MODULE_PAYMENT_ROBOXCHANGE_TEST_DESC','test - для тестирования работы модуля, production - для полноценного приёма оплаты.');
-  
+
+  define('MODULE_PAYMENT_ROBOXCHANGE_RECEIPT_TITLE','54 ФЗ - Онлайн-чеки');
+  define('MODULE_PAYMENT_ROBOXCHANGE_RECEIPT_DESC','Включить передачу данных корзины в робокассу.');
+    
 ?>
