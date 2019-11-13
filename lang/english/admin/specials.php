@@ -18,6 +18,9 @@
    --------------------------------------------------------------*/
 
 define('HEADING_TITLE', 'Specials');
+
+define('TABLE_HEADING_IMAGE', 'Image');
+define('TABLE_HEADING_MODEL', 'Model');
 define('TABLE_HEADING_PRODUCTS', 'Products');
 define('TABLE_HEADING_PRODUCTS_PRICE', 'Products Price');
 define('TABLE_HEADING_STATUS', 'Status');
