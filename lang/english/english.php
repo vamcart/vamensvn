@@ -722,4 +722,10 @@ define('TEXT_SOCIAL_LOGIN_VK', 'VK');
 define('TEXT_PRODUCT_SHIPPING', 'Shipping');
 define('TEXT_PRODUCT_PAYMENT', 'Payment');
 
+define('TEXT_CITY', 'City');
+define('TEXT_CITY_LOCATION', 'Your Location');
+define('TEXT_CITY_NAME', 'City Name');
+define('TEXT_CITY_CLOSE', 'Close');
+define('TEXT_CITY_SAVE', 'Save');
+
 ?>
