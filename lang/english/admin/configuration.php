@@ -1083,4 +1083,7 @@ define('FACEBOOK_OAUTH_SECRET_KEY_DESC', '');
 define('DEFAULT_NAVIGATION_TITLE', 'Default Navigation Menu');
 define('DEFAULT_NAVIGATION_DESC', 'Select default navigation menu.');
 
+define('ENABLE_COOKIE_ALERT_TITLE', 'Enable cookie alert');
+define('ENABLE_COOKIE_ALERT_DESC', 'Enable cookie alert.');
+
 ?>

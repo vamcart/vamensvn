@@ -728,4 +728,8 @@ define('TEXT_CITY_NAME', 'City Name');
 define('TEXT_CITY_CLOSE', 'Close');
 define('TEXT_CITY_SAVE', 'Save');
 
+define('TEXT_ALERT_COOKIE', 'We use cookies to provide our services. By continuing to browse our website, you agree to our use of cookies.');
+define('TEXT_COOKIE_CLOSE', 'Close');
+define('TEXT_COOKIE_OK', 'OK');
+
 ?>
