@@ -732,4 +732,6 @@ define('TEXT_ALERT_COOKIE', 'We use cookies to provide our services. By continui
 define('TEXT_COOKIE_CLOSE', 'Close');
 define('TEXT_COOKIE_OK', 'OK');
 
+define('TEXT_SELECT_OPTIONS','Select options');
+
 ?>
