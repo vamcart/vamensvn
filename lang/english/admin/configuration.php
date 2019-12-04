@@ -1086,4 +1086,7 @@ define('DEFAULT_NAVIGATION_DESC', 'Select default navigation menu.');
 define('ENABLE_COOKIE_ALERT_TITLE', 'Enable cookie alert');
 define('ENABLE_COOKIE_ALERT_DESC', 'Enable cookie alert.');
 
+define('PRODUCT_LISTING_ATTRIBUTES_TITLE' , 'Display product attributes at product listing page');
+define('PRODUCT_LISTING_ATTRIBUTES_DESC', 'Display product attributes at product listing page.');
+
 ?>
