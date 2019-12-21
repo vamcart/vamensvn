@@ -734,4 +734,15 @@ define('TEXT_COOKIE_OK', 'OK');
 
 define('TEXT_SELECT_OPTIONS','Select options');
 
+define('TEXT_TAGS','Tags');
+
+define('TEXT_AUTHOR_COMMENTS','Author comments');
+define('TEXT_AUTHOR_RATING','Author rating');
+define('TEXT_ARTICLE_COMMENTS','Article comments');
+define('TEXT_ARTICLE_RATING','Article rating');
+define('TEXT_ARTICLE_REVIEWS_READ','read article comments');
+define('TEXT_ARTICLE_REVIEWS_ADD','add article comment');
+define('TEXT_AUTHOR_REVIEWS_READ','read author comments');
+define('TEXT_AUTHOR_REVIEWS_ADD','add author comment');
+
 ?>
