@@ -745,4 +745,6 @@ define('TEXT_ARTICLE_REVIEWS_ADD','add article comment');
 define('TEXT_AUTHOR_REVIEWS_READ','read author comments');
 define('TEXT_AUTHOR_REVIEWS_ADD','add author comment');
 
+define('VOICE_SEARCH','Voice Search');
+
 ?>

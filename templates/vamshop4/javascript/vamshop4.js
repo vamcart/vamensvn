@@ -217,7 +217,7 @@ if (window.SpeechRecognition) {
         /* Revert input and icon CSS if no speech is detected */
         if(event.error == 'no-speech'){
             $voiceTrigger.removeClass('active');
-            //$searchInput.attr("placeholder", "Поиск...");
+            //$searchInput.attr("placeholder", "Search...");
         }
     }
 } else {
@@ -234,7 +234,7 @@ jQuery(document).ready(function(){
 function listenStart(e){
     e.preventDefault();
     /* Update input and icon CSS to show that the browser is listening */
-    $searchInput.attr("placeholder", "Говорите...");
+    $searchInput.attr("placeholder", "Listening...");
     $voiceTrigger.addClass('active');
     /* Start voice recognition */
     recognition.start();
