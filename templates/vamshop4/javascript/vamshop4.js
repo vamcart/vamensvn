@@ -208,7 +208,7 @@ if (window.SpeechRecognition) {
     /* setup Speech Recognition */
     var recognition = new SpeechRecognition();
     recognition.interimResults = true;
-    recognition.lang = 'en-US';
+    recognition.lang = 'ru-RU';
     recognition.addEventListener('result', _transcriptHandler);
 
     recognition.onerror = function(event) {
@@ -217,7 +217,7 @@ if (window.SpeechRecognition) {
         /* Revert input and icon CSS if no speech is detected */
         if(event.error == 'no-speech'){
             $voiceTrigger.removeClass('active');
-            //$searchInput.attr("placeholder", "Search...");
+            //$searchInput.attr("placeholder", "Поиск...");
         }
     }
 } else {
@@ -234,7 +234,7 @@ jQuery(document).ready(function(){
 function listenStart(e){
     e.preventDefault();
     /* Update input and icon CSS to show that the browser is listening */
-    $searchInput.attr("placeholder", "Listening...");
+    $searchInput.attr("placeholder", "Говорите...");
     $voiceTrigger.addClass('active');
     /* Start voice recognition */
     recognition.start();
@@ -242,7 +242,7 @@ function listenStart(e){
 
 /* Parse voice input */
 function _parseTranscript(e) {
-    return Array.from(e.results).map(result => result[0]).map(result => result.transcript).join('')
+    return Array.from(e.results).map(function (result) { return result[0] }).map(function (result) { return result.transcript }).join('')
 }
 
 /* Convert our voice input into text and submit the form */
