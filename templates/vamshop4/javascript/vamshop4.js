@@ -208,7 +208,7 @@ if (window.SpeechRecognition) {
     /* setup Speech Recognition */
     var recognition = new SpeechRecognition();
     recognition.interimResults = true;
-    recognition.lang = 'ru-RU';
+    recognition.lang = 'en-US';
     recognition.addEventListener('result', _transcriptHandler);
 
     recognition.onerror = function(event) {
