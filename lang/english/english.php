@@ -747,4 +747,6 @@ define('TEXT_AUTHOR_REVIEWS_ADD','add author comment');
 
 define('VOICE_SEARCH','Voice Search');
 
+define('TEXT_BADGE_CUSTOMER','Customer');
+
 ?>
