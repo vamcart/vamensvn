@@ -134,6 +134,41 @@ if('serviceWorker' in navigator) {
            .register('/sw.js')
            .then(function() { console.log('Service Worker Registered'); });
 }
+
+// Code to handle install prompt on desktop
+var deferredPrompt = null;
+var addBtn = document.querySelector('.a2hs-button');
+if (addBtn != null) {
+addBtn.style.display = 'none';
+
+window.addEventListener('beforeinstallprompt', function(e) {
+	
+  // Prevent Chrome 67 and earlier from automatically showing the prompt
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI to notify the user they can add to home screen
+  addBtn.style.display = '';
+
+  addBtn.addEventListener('click', function(e) {
+
+    // hide our user interface that shows our A2HS button
+    addBtn.style.display = 'none';
+    // Show the prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then(function(choiceResult) {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('User accepted the A2HS prompt');
+        } else {
+          console.log('User dismissed the A2HS prompt');
+        }
+        deferredPrompt = null;
+      });
+  });
+});
+}
+
 });
 
 // Geo Modal
@@ -208,7 +243,7 @@ if (window.SpeechRecognition) {
     /* setup Speech Recognition */
     var recognition = new SpeechRecognition();
     recognition.interimResults = true;
-    recognition.lang = 'en-US';
+    recognition.lang = 'ru-RU';
     recognition.addEventListener('result', _transcriptHandler);
 
     recognition.onerror = function(event) {
@@ -217,7 +252,7 @@ if (window.SpeechRecognition) {
         /* Revert input and icon CSS if no speech is detected */
         if(event.error == 'no-speech'){
             $voiceTrigger.removeClass('active');
-            //$searchInput.attr("placeholder", "Search...");
+            //$searchInput.attr("placeholder", "Поиск...");
         }
     }
 } else {
@@ -234,7 +269,7 @@ jQuery(document).ready(function(){
 function listenStart(e){
     e.preventDefault();
     /* Update input and icon CSS to show that the browser is listening */
-    $searchInput.attr("placeholder", "Listening...");
+    $searchInput.attr("placeholder", "Говорите...");
     $voiceTrigger.addClass('active');
     /* Start voice recognition */
     recognition.start();
