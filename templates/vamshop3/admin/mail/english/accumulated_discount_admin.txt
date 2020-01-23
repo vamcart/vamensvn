@@ -1,7 +1,0 @@
-One of your customers reach accumulated discount limit. All details below:
-
-Customer: {$CUSTOMERNAME}
-E-mail: {$EMAIL}
-Reached limit: {$ACCUMULATED_LIMIT}
-New group: {$GROUPNAME}
-New discount: {$GROUPDISCOUNT}%
