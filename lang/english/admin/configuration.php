@@ -605,7 +605,8 @@ define('GOOGLE_CONVERSION_ID_DESC','Your Google Analytics ID (like UA-XXXXXX-X)'
 define('GOOGLE_LANG_TITLE','Shop Language');
 define('GOOGLE_LANG_DESC','ISO Code of used Language');
 define('YANDEX_METRIKA_ID_TITLE','Your Yandex Metrika ID');define('YANDEX_METRIKA_ID_DESC','Your Yandex Metrika ID.');define('YANDEX_METRIKA_TITLE','Enable Yandex Metrika');define('YANDEX_METRIKA_DESC','Enable Yandex Metrika.');
-
+define('GOOGLE_TAG_MANAGER_TITLE','Enable Google Tag Manager');define('GOOGLE_TAG_MANAGER_DESC','Enable Google Tag Manager.');
+define('GOOGLE_TAG_MANAGER_CONTAINER_ID_TITLE','Your Google Tag Manager Container ID');define('GOOGLE_TAG_MANAGER_CONTAINER_ID_DESC','Your Google Tag Manager Container ID.');
 // Afterbuy
 define('AFTERBUY_ACTIVATED_TITLE','Activ');
 define('AFTERBUY_ACTIVATED_DESC','Activate afterbuy module');
