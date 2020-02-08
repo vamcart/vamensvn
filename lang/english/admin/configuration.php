@@ -1090,4 +1090,10 @@ define('ENABLE_COOKIE_ALERT_DESC', 'Enable cookie alert.');
 define('PRODUCT_LISTING_ATTRIBUTES_TITLE' , 'Display product attributes at product listing page');
 define('PRODUCT_LISTING_ATTRIBUTES_DESC', 'Display product attributes at product listing page.');
 
+define('PRODUCT_LISTING_ATTRIBUTES_TITLE' , 'Allow AutoLogon');
+define('PRODUCT_LISTING_ATTRIBUTES_DESC', 'Allow registered users to save their login-info into a cookie so they are automatically logged in upon return to the shop. Best used on SSL-protected shops.');
+
+define('ALLOW_AUTOLOGON_TITLE' , 'Allow AutoLogon');
+define('ALLOW_AUTOLOGON_DESC', 'Allow registered users to save their login-info into a cookie so they are automatically logged in upon return to the shop. Best used on SSL-protected shops.');
+
 ?>
