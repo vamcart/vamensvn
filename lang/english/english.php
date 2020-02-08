@@ -749,4 +749,6 @@ define('VOICE_SEARCH','Voice Search');
 
 define('TEXT_BADGE_CUSTOMER','Customer');
 
+define('ENTRY_REMEMBER_ME', 'Remember me');
+
 ?>
