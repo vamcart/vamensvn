@@ -19,6 +19,9 @@
 		E-mail: {$EMAIL_ADDRESS}<br />
 		Password: {$PASSWORD}<br />
       </p>
+      
+{if $customer_extra_fields}{$customer_extra_fields}{/if}
+      
       <p>
         <font size="2" face="Verdana, Arial, Helvetica, sans-serif">If you have questions to our customer-service, contact us directly: 
         {$content.MAIL_REPLY_ADDRESS}
