@@ -213,6 +213,8 @@ CREATE TABLE topics (
   date_added datetime default NULL,
   last_modified datetime default NULL,
   topics_page_url varchar(255),
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY  (topics_id),
   KEY idx_topics_parent_id (parent_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -240,6 +242,8 @@ CREATE TABLE articles (
   sort_order int(4) NOT NULL default '0',
   articles_image varchar(255),
   articles_keywords varchar(255),
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY  (articles_id),
   KEY idx_articles_date_added (articles_date_added)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -282,6 +286,8 @@ CREATE TABLE authors (
   authors_image varchar(64) default NULL,
   date_added datetime default NULL,
   last_modified datetime default NULL,
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY  (authors_id),
   KEY IDX_AUTHORS_NAME (authors_name)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -622,6 +628,8 @@ CREATE TABLE categories (
   yml_enable tinyint(1) NOT NULL default '1',
   label_id int(3) NOT NULL,
   icon varchar(255),
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (categories_id),
   KEY idx_categories_parent_id (parent_id)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -898,6 +906,8 @@ CREATE TABLE faq (
    language int(11) NOT NULL default '1',
    status tinyint(1) DEFAULT '0' NOT NULL,
    faq_page_url varchar(255),
+   likes int(3) DEFAULT "0" NOT NULL,
+   dislikes int(3) DEFAULT "0" NOT NULL,
    PRIMARY KEY (faq_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -926,6 +936,8 @@ CREATE TABLE latest_news (
    language int(11) NOT NULL default '1',
    status tinyint(1) DEFAULT '0' NOT NULL,
    news_page_url varchar(255),
+   likes int(3) DEFAULT "0" NOT NULL,
+   dislikes int(3) DEFAULT "0" NOT NULL,
    PRIMARY KEY (news_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -949,6 +961,8 @@ CREATE TABLE manufacturers (
   last_modified datetime NULL,
   manufacturers_seo_url varchar(255),
   sort_order int NOT NULL,
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (manufacturers_id),
   KEY IDX_MANUFACTURERS_NAME (manufacturers_name)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
@@ -1080,6 +1094,8 @@ CREATE TABLE orders (
   orders_ident_key varchar(255),
   orig_reference text,
   login_reference text,
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (orders_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -1245,21 +1261,23 @@ CREATE TABLE products (
   products_volume double,
   products_bundle VARCHAR(255) NOT NULL default "no",
   sold_in_bundle_only VARCHAR(255) NOT NULL default "no",
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (products_id),
   KEY idx_products_date_added (products_date_added),
   KEY idx_manufacturers_id (manufacturers_id)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `products` VALUES
-(1, '', 1000, 1, 1000, 1, 'samsung-ativ-book-9', 0, 0, 0, 0, 1, '1_0.png', '', '999.0000', '100.0000', '2014-01-20 10:43:06', '2014-01-20 11:10:27', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 3, 3, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-ativ-book-9.html',30,20,5,0.003,"no","no"),
-(2, '', 1000, 1, 1000, 1, 'samsung-ativ-smart-pc', 0, 0, 0, 0, 2, '2_0.png', '', '899.0000', '100.0000', '2014-01-20 10:45:50', '2014-01-20 11:10:33', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 3, 0, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-ativ-smart-pc.html',30,20,5,0.003,"no","no"),
-(3, '', 1000, 1, 1000, 1, 'samsung-ativ-book-4', 0, 0, 0, 0, 3, '3_0.png', '', '799.0000', '100.0000', '2014-01-20 10:47:11', '2014-01-20 11:10:38', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 2, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-ativ-book-4.html',30,20,5,0.003,"no","no"),
-(4, '', 1000, 1, 1000, 1, 'samsung-galaxy-tab-3', 0, 0, 0, 0, 1, '4_0.png', '', '399.0000', '100.0000', '2014-01-20 11:00:59', '2014-01-20 11:10:54', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 6, 1, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-galaxy-tab-3.html',30,20,5,0.003,"no","no"),
-(5, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-10-1', 0, 0, 0, 0, 2, '5_0.png', '', '299.0000', '100.0000', '2014-01-20 11:02:11', '2014-01-20 11:10:59', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 4, 0, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-galaxy-note-10-1.html',30,20,5,0.003,"no","no"),
-(6, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-8', 0, 0, 0, 0, 3, '6_0.png', '', '199.0000', '100.0000', '2014-01-20 11:03:21', '2014-01-20 11:11:04', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 5, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-galaxy-note-8.html',30,20,5,0.003,"no","no"),
-(7, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-3', 0, 0, 0, 0, 1, '7_0.png', '', '499.0000', '100.0000', '2014-01-20 11:06:47', '2014-01-20 11:10:02', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 5, 1, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-galaxy-note-3.html',30,20,5,0.003,"no","no"),
-(8, '', 1000, 1, 1000, 1, 'samsung-galaxy-s4', 0, 0, 0, 0, 2, '8_0.png', '', '399.0000', '100.0000', '2014-01-20 11:07:46', '2014-01-20 11:10:06', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 1, 2, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-galaxy-s4.html',30,20,5,0.003,"no","no"),
-(9, '', 1000, 1, 1000, 1, 'samsung-galaxy-ace-3', 0, 0, 0, 0, 3, '9_0.png', '', '299.0000', '100.0000', '2014-01-20 11:08:51', '2014-01-20 11:10:10', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 2, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-galaxy-ace-3.html',30,20,5,0.003,"no","no");
+(1, '', 1000, 1, 1000, 1, 'samsung-ativ-book-9', 0, 0, 0, 0, 1, '1_0.png', '', '999.0000', '100.0000', '2014-01-20 10:43:06', '2014-01-20 11:10:27', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 3, 3, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-ativ-book-9.html',30,20,5,0.003,"no","no",0,0),
+(2, '', 1000, 1, 1000, 1, 'samsung-ativ-smart-pc', 0, 0, 0, 0, 2, '2_0.png', '', '899.0000', '100.0000', '2014-01-20 10:45:50', '2014-01-20 11:10:33', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 3, 0, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-ativ-smart-pc.html',30,20,5,0.003,"no","no",0,0),
+(3, '', 1000, 1, 1000, 1, 'samsung-ativ-book-4', 0, 0, 0, 0, 3, '3_0.png', '', '799.0000', '100.0000', '2014-01-20 10:47:11', '2014-01-20 11:10:38', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 2, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-ativ-book-4.html',30,20,5,0.003,"no","no",0,0),
+(4, '', 1000, 1, 1000, 1, 'samsung-galaxy-tab-3', 0, 0, 0, 0, 1, '4_0.png', '', '399.0000', '100.0000', '2014-01-20 11:00:59', '2014-01-20 11:10:54', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 6, 1, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-galaxy-tab-3.html',30,20,5,0.003,"no","no",0,0),
+(5, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-10-1', 0, 0, 0, 0, 2, '5_0.png', '', '299.0000', '100.0000', '2014-01-20 11:02:11', '2014-01-20 11:10:59', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 4, 0, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-galaxy-note-10-1.html',30,20,5,0.003,"no","no",0,0),
+(6, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-8', 0, 0, 0, 0, 3, '6_0.png', '', '199.0000', '100.0000', '2014-01-20 11:03:21', '2014-01-20 11:11:04', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 5, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-galaxy-note-8.html',30,20,5,0.003,"no","no",0,0),
+(7, '', 1000, 1, 1000, 1, 'samsung-galaxy-note-3', 0, 0, 0, 0, 1, '7_0.png', '', '499.0000', '100.0000', '2014-01-20 11:06:47', '2014-01-20 11:10:02', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 5, 1, 0, 0, 0, 0, '0.0000', 1, 1, 1, '', '', 'samsung-galaxy-note-3.html',30,20,5,0.003,"no","no",0,0),
+(8, '', 1000, 1, 1000, 1, 'samsung-galaxy-s4', 0, 0, 0, 0, 2, '8_0.png', '', '399.0000', '100.0000', '2014-01-20 11:07:46', '2014-01-20 11:10:06', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 1, 2, 0, 0, 0, 0, '0.0000', 1, 2, 1, '', '', 'samsung-galaxy-s4.html',30,20,5,0.003,"no","no",0,0),
+(9, '', 1000, 1, 1000, 1, 'samsung-galaxy-ace-3', 0, 0, 0, 0, 3, '9_0.png', '', '299.0000', '100.0000', '2014-01-20 11:08:51', '2014-01-20 11:10:10', '0000-00-00 00:00:00', '0.6', 1, 0, 'default', 'default', 2, 3, 0, 0, 0, 0, '0.0000', 1, 3, 1, '', '', 'samsung-galaxy-ace-3.html',30,20,5,0.003,"no","no",0,0);
 
 
 DROP TABLE IF EXISTS products_attributes;
@@ -1451,6 +1469,8 @@ CREATE TABLE reviews (
   date_added datetime,
   last_modified datetime,
   reviews_read int(5) NOT NULL default '0',
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (reviews_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -1641,6 +1661,8 @@ CREATE TABLE content_manager (
   content_meta_description TEXT,
   content_meta_keywords TEXT,
   content_page_url varchar(255),
+  likes int(3) DEFAULT "0" NOT NULL,
+  dislikes int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY  (content_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -1876,20 +1898,20 @@ INSERT INTO shipping_status VALUES (3, 1, '2 Weeks', '');
 
 # data
 
-INSERT INTO `content_manager` VALUES (1, 0, 0, '', 1, 'Shipping & Returns', 'Shipping & Returns', 'Put here your Shipping & Returns information.', '', 0, 1, '', 1, 1, 0,'','','','shipping.html');
-INSERT INTO `content_manager` VALUES (2, 0, 0, '', 1, 'Payment Methods', 'Payment Methods', 'Put here your payment methods information.', '', 0, 1, '', 1, 2, 0,'','','','payment.html');
-INSERT INTO `content_manager` VALUES (3, 0, 0, '', 1, 'Conditions of Use', 'Conditions of Use', 'Conditions of Use<br />Put here your Conditions of Use information. <br />1. Validity<br />2. Offers<br />3. Price<br />4. Dispatch and passage of the risk<br />5. Delivery<br />6. Terms of payment<br />7. Retention of title<br />8. Notices of defect, guarantee and compensation<br />9. Fair trading cancelling / non-acceptance<br />10. Place of delivery and area of jurisdiction<br />11. Final clauses', '', 0, 1, '', 1, 3, 0,'','','','privacy.html');
-INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Impressum', 'Impressum', 'Put here your Company information.', '', 0, 1, '', 1, 4, 0,'','','','about_us.html');
-INSERT INTO `content_manager` VALUES (5, 0, 0, '', 1, 'Main page', 'Welcome', '<div class="box h-100 mt-2">\r\n			<div class="itemside">\r\n				<div class="aside align-top">\r\n					<span class="icon-wrap icon-md round bg-warning">\r\n						<i class="fa fa-lightbulb white"></i>\r\n					</span>\r\n				</div>\r\n				<div class="text-wrap">\r\n				   <h5 class="title">Sample Text</h5>\r\n				   <p>You can change it in Admin - Other - Tools - Content manager.</p>\r\n				</div>\r\n			</div>\r\n	</div>\r\n', '', 0, 1, '', 0, 5, 0,'Main page','Main page','Main page','');
-INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Sample page', 'Sample page', 'Sample text', '', 0, 1, '', 0, 6, 1,'','','','');
-INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','contact_us.html');
-INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Sitemap', 'Sitemap', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','');
+INSERT INTO `content_manager` VALUES (1, 0, 0, '', 1, 'Shipping & Returns', 'Shipping & Returns', 'Put here your Shipping & Returns information.', '', 0, 1, '', 1, 1, 0,'','','','shipping.html', 0, 0);
+INSERT INTO `content_manager` VALUES (2, 0, 0, '', 1, 'Payment Methods', 'Payment Methods', 'Put here your payment methods information.', '', 0, 1, '', 1, 2, 0,'','','','payment.html', 0, 0);
+INSERT INTO `content_manager` VALUES (3, 0, 0, '', 1, 'Conditions of Use', 'Conditions of Use', 'Conditions of Use<br />Put here your Conditions of Use information. <br />1. Validity<br />2. Offers<br />3. Price<br />4. Dispatch and passage of the risk<br />5. Delivery<br />6. Terms of payment<br />7. Retention of title<br />8. Notices of defect, guarantee and compensation<br />9. Fair trading cancelling / non-acceptance<br />10. Place of delivery and area of jurisdiction<br />11. Final clauses', '', 0, 1, '', 1, 3, 0,'','','','privacy.html', 0, 0);
+INSERT INTO `content_manager` VALUES (4, 0, 0, '', 1, 'Impressum', 'Impressum', 'Put here your Company information.', '', 0, 1, '', 1, 4, 0,'','','','about_us.html', 0, 0);
+INSERT INTO `content_manager` VALUES (5, 0, 0, '', 1, 'Main page', 'Welcome', '<div class="box h-100 mt-2">\r\n			<div class="itemside">\r\n				<div class="aside align-top">\r\n					<span class="icon-wrap icon-md round bg-warning">\r\n						<i class="fa fa-lightbulb white"></i>\r\n					</span>\r\n				</div>\r\n				<div class="text-wrap">\r\n				   <h5 class="title">Sample Text</h5>\r\n				   <p>You can change it in Admin - Other - Tools - Content manager.</p>\r\n				</div>\r\n			</div>\r\n	</div>\r\n', '', 0, 1, '', 0, 5, 0,'Main page','Main page','Main page','', 0, 0);
+INSERT INTO `content_manager` VALUES (6, 0, 0, '', 1, 'Sample page', 'Sample page', 'Sample text', '', 0, 1, '', 0, 6, 1,'','','','', 0, 0);
+INSERT INTO `content_manager` VALUES (7, 0, 0, '', 1, 'Contact us', 'Contact us', 'Contact us page', '', 0, 1, '', 1, 7, 0,'','','','contact_us.html', 0, 0);
+INSERT INTO `content_manager` VALUES (8, 0, 0, '', 1, 'Sitemap', 'Sitemap', '', '', 0, 0, 'sitemap.php', 1, 8, 0,'','','','', 0, 0);
 
-INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliate terms', 'Affiliate terms', '', 0, 2, '', 1, 9, 0,'','','','');
-INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Affiliate info', 'Affiliate info', 'Affiliate info', '', 0, 2, '', 1, 10, 0,'','','','');
-INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Affiliate faq', 'Affiliate faq', 'Affiliate faq', '', 0, 2, '', 1, 11, 0,'','','','');
+INSERT INTO content_manager VALUES (9, 0, 0, '', 1, 'Affiliate terms', 'Affiliate terms', 'Affiliate terms', '', 0, 2, '', 1, 9, 0,'','','','',0,0);
+INSERT INTO content_manager VALUES (10, 0, 0, '', 1, 'Affiliate info', 'Affiliate info', 'Affiliate info', '', 0, 2, '', 1, 10, 0,'','','','',0,0);
+INSERT INTO content_manager VALUES (11, 0, 0, '', 1, 'Affiliate faq', 'Affiliate faq', 'Affiliate faq', '', 0, 2, '', 1, 11, 0,'','','','',0,0);
 
-INSERT INTO content_manager VALUES (12, 0, 0, '', 1, '404', '404', 'Products not found.\r\n\r\n<form name="new_find" id="new_find" action="advanced_search_result.php" method="get">\r\n<span class="bold">Search form!</span>\r\n<br />\r\n<br />\r\n<!-- form -->\r\n<fieldset class="form">\r\n<legend>Keywords:</legend>\r\n<p><input type="text" name="keywords" size="30" maxlength="30" /></p>\r\n<p><span class="button"><button type="submit"><img src="images/icons/buttons/search.png" alt="Search" title=" Search " width="12" height="12" /> Search</button></span></p>\r\n</fieldset>\r\n<!-- /form -->\r\n</form>', '', 0, 0, '', 0, 12, 1, '', '', '', '404.html');
+INSERT INTO content_manager VALUES (12, 0, 0, '', 1, '404', '404', 'Products not found.\r\n\r\n<form name="new_find" id="new_find" action="advanced_search_result.php" method="get">\r\n<span class="bold">Search form!</span>\r\n<br />\r\n<br />\r\n<!-- form -->\r\n<fieldset class="form">\r\n<legend>Keywords:</legend>\r\n<p><input type="text" name="keywords" size="30" maxlength="30" /></p>\r\n<p><span class="button"><button type="submit"><img src="images/icons/buttons/search.png" alt="Search" title=" Search " width="12" height="12" /> Search</button></span></p>\r\n</fieldset>\r\n<!-- /form -->\r\n</form>', '', 0, 0, '', 0, 12, 1, '', '', '', '404.html',0,0);
 
 # 1 - Default, 2 - USA, 3 - Spain, 4 - Singapore, 5 - Germany
 INSERT INTO address_format VALUES (1, '$firstname $secondname $lastname$cr$streets$cr$city, $postcode$cr$statecomma$country','$city / $country');
@@ -3471,30 +3493,30 @@ INSERT INTO `product_labels` (`id`, `default`, `name`, `alias`, `html`, `active`
 (2, 0, 'Hit', 'hit', '', 1, 2),
 (3, 0, 'Sale', 'sale', '', 1, 3);
 
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(1, 1, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(2, 1, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(3, 2, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(4, 2, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(5, 5, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(6, 5, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(7, 6, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(8, 6, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(9, 7, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(10, 7, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(11, 8, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0);
-INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`) VALUES
-(12, 8, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(1, 1, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(2, 1, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(3, 2, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(4, 2, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(5, 5, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(6, 5, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(7, 6, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(8, 6, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(9, 7, 0, 'Alex', 5, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(10, 7, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(11, 8, 0, 'Alex', 3, '2015-06-03 13:59:34', NULL, 0, 0, 0);
+INSERT INTO `reviews` (`reviews_id`, `products_id`, `customers_id`, `customers_name`, `reviews_rating`, `date_added`, `last_modified`, `reviews_read`, `likes`, `dislikes`) VALUES
+(12, 8, 0, 'Alex', 4, '2015-06-03 13:59:34', NULL, 0, 0, 0);
 
 INSERT INTO `reviews_description` (`reviews_id`, `languages_id`, `reviews_text`) VALUES
 (1, 1, ':) :) :) :)');
@@ -3545,6 +3567,8 @@ CREATE TABLE `article_reviews` (
   `date_added` varchar(255) DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `reviews_read` int(5) NOT NULL default '0',
+  `likes` int(3) DEFAULT "0" NOT NULL,
+  `dislikes` int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (reviews_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -3567,6 +3591,8 @@ CREATE TABLE `author_reviews` (
   `date_added` varchar(255) DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `reviews_read` int(5) NOT NULL default '0',
+  `likes` int(3) DEFAULT "0" NOT NULL,
+  `dislikes` int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (reviews_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -3611,6 +3637,8 @@ CREATE TABLE `site_reviews` (
   `date_added` varchar(255) DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `reviews_read` int(5) NOT NULL default '0',
+  `likes` int(3) DEFAULT "0" NOT NULL,
+  `dislikes` int(3) DEFAULT "0" NOT NULL,
   PRIMARY KEY (reviews_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -3630,33 +3658,33 @@ CREATE TABLE `products_bundles` (
   PRIMARY KEY (bundle_id, subproduct_id)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(1, 'Samsung', 'manufacturers/samsung.png', '2019-04-06 18:40:46', NULL, 'samsung.html', 1);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(1, 'Samsung', 'manufacturers/samsung.png', '2019-04-06 18:40:46', NULL, 'samsung.html', 1, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (1, 1, 'Samsung', 'Samsung', 'Samsung', 'https://samsung.com', 'Samsung Products', 0, NULL);
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(2, 'Samsung Mobile', 'manufacturers/samsung-mobile.png', '2019-04-06 18:40:46', NULL, 'samsung-mobile.html', 2);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(2, 'Samsung Mobile', 'manufacturers/samsung-mobile.png', '2019-04-06 18:40:46', NULL, 'samsung-mobile.html', 2, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (2, 1, 'Samsung Mobile', 'Samsung Mobile', 'Samsung Mobile', 'https://samsung.com', 'Samsung Mobile Products', 0, NULL);
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(3, 'Samsung Ativ', 'manufacturers/samsung-ativ.png', '2019-04-06 18:40:46', NULL, 'samsung-ativ.html', 3);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(3, 'Samsung Ativ', 'manufacturers/samsung-ativ.png', '2019-04-06 18:40:46', NULL, 'samsung-ativ.html', 3, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (3, 1, 'Samsung Ativ', 'Samsung Ativ', 'Samsung Ativ', 'https://samsung.com', 'Samsung Ativ Products', 0, NULL);
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(4, 'Samsung Galaxy', 'manufacturers/samsung-galaxy.png', '2019-04-06 18:40:46', NULL, 'samsung-galaxy.html', 4);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(4, 'Samsung Galaxy', 'manufacturers/samsung-galaxy.png', '2019-04-06 18:40:46', NULL, 'samsung-galaxy.html', 4, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (4, 1, 'Samsung Galaxy', 'Samsung Galaxy', 'Samsung Galaxy', 'https://samsung.com', 'Samsung Galaxy Products', 0, NULL);
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(5, 'Samsung Galaxy Note', 'manufacturers/samsung-galaxy-note.png', '2019-04-06 18:40:46', NULL, 'samsung-note.html', 5);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(5, 'Samsung Galaxy Note', 'manufacturers/samsung-galaxy-note.png', '2019-04-06 18:40:46', NULL, 'samsung-note.html', 5, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (5, 1, 'Samsung Galaxy Note', 'Samsung Galaxy Note', 'Samsung Galaxy Note', 'https://samsung.com', 'Samsung Galaxy Note Products', 0, NULL);
 
-INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`) VALUES
-(6, 'Samsung Galaxy Tab', 'manufacturers/samsung-galaxy-tab.png', '2019-04-06 18:40:46', NULL, 'samsung-galaxy-tab.html', 6);
+INSERT INTO `manufacturers` (`manufacturers_id`, `manufacturers_name`, `manufacturers_image`, `date_added`, `last_modified`, `manufacturers_seo_url`, `sort_order`, `likes`, `dislikes`) VALUES
+(6, 'Samsung Galaxy Tab', 'manufacturers/samsung-galaxy-tab.png', '2019-04-06 18:40:46', NULL, 'samsung-galaxy-tab.html', 6, 0, 0);
 INSERT INTO `manufacturers_info` (`manufacturers_id`, `languages_id`, `manufacturers_meta_title`, `manufacturers_meta_description`, `manufacturers_meta_keywords`, `manufacturers_url`, `manufacturers_description`, `url_clicked`, `date_last_click`) VALUES
 (6, 1, 'Samsung Galaxy Tab', 'Samsung Galaxy Tab', 'Samsung Galaxy Tab', 'https://samsung.com', 'Samsung Galaxy Tab Products', 0, NULL);
 
