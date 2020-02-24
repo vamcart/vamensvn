@@ -683,6 +683,8 @@ define('TEXT_REVIEWS_RATING', 'Rating');
 define('TEXT_CHECKOUT_PROCESS_PAYMENT', 'Continue');
 
 define('TEXT_MY_ORDERS', 'My Orders');
+define('TEXT_MY_PROFILE', 'Profile');
+define('TEXT_MY_ACCOUNT', 'Account');
 define('TEXT_BACK', 'Back');
 
 define('PRIVACY_TEXT','By clicking button you are agree to our <a href="privacy.html">policy.</a>');
