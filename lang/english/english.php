@@ -751,4 +751,7 @@ define('TEXT_BADGE_CUSTOMER','Customer');
 
 define('ENTRY_REMEMBER_ME', 'Remember me');
 
+define('TEXT_LIKE', 'Like');
+define('TEXT_DISLIKE', 'Dislike');
+
 ?>
