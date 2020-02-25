@@ -1096,4 +1096,9 @@ define('PRODUCT_LISTING_ATTRIBUTES_DESC', 'Allow registered users to save their 
 define('ALLOW_AUTOLOGON_TITLE' , 'Allow AutoLogon');
 define('ALLOW_AUTOLOGON_DESC', 'Allow registered users to save their login-info into a cookie so they are automatically logged in upon return to the shop. Best used on SSL-protected shops.');
 
+define('DISPLAY_LIKES_TITLE' , 'Display Likes');
+define('DISPLAY_LIKES_DESC', 'Display Likes.');
+define('DISPLAY_DISLIKES_TITLE' , 'Display Dislikes');
+define('DISPLAY_DISLIKES_DESC', 'Display Dislikes');
+
 ?>
