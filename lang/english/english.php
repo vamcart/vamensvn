@@ -756,4 +756,6 @@ define('ENTRY_REMEMBER_ME', 'Remember me');
 define('TEXT_LIKE', 'Like');
 define('TEXT_DISLIKE', 'Dislike');
 
+define('TEXT_READ_REVIEW', 'Read Review');
+
 ?>
