@@ -758,4 +758,6 @@ define('TEXT_DISLIKE', 'Dislike');
 
 define('TEXT_READ_REVIEW', 'Read Review');
 
+define('TEXT_BUTTON_SUBMIT', 'Apply');
+
 ?>
