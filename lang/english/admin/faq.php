@@ -27,6 +27,10 @@ define('TEXT_DELETE_ITEM_INTRO', 'Are you sure?');
 define('TEXT_FAQ_QUESTION', 'Question');
 define('TEXT_FAQ_ANSWER', 'Answer');
 
+define('TEXT_FAQ_META_TITLE', 'Meta Title');
+define('TEXT_FAQ_META_DESCRIPTION', 'Meta Description');
+define('TEXT_FAQ_META_KEYWORDS', 'Meta Keywords');
+
 define('IMAGE_NEW_FAQ_ITEM', 'Add faq');
 define('IMAGE_EDIT_FAQ_ITEM', 'Edit faq');
 define('TEXT_FAQ_LANGUAGE', 'Language');
