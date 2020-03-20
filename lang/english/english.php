@@ -759,5 +759,6 @@ define('TEXT_DISLIKE', 'Dislike');
 define('TEXT_READ_REVIEW', 'Read Review');
 
 define('TEXT_BUTTON_SUBMIT', 'Apply');
+define('TEXT_PRODUCTS_IN_CART', 'Total Quantity');
 
 ?>
