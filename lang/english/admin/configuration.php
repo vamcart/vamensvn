@@ -1101,4 +1101,7 @@ define('DISPLAY_LIKES_DESC', 'Display Likes.');
 define('DISPLAY_DISLIKES_TITLE' , 'Display Dislikes');
 define('DISPLAY_DISLIKES_DESC', 'Display Dislikes');
 
+define('DISPLAY_LAST_VIEWED_TITLE' , 'Display Last Viewed Products');
+define('DISPLAY_LAST_VIEWED_DESC', 'Display Last Viewed Products');
+
 ?>
