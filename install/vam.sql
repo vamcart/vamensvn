@@ -3261,21 +3261,21 @@ CREATE TABLE IF NOT EXISTS `specification_description` (
 ) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `specification_description` VALUES
-(1, 1, 1, 'Display', '', '', '', 'display.html', 'display'),
-(2, 2, 1, 'Battery', '', '', '', 'battery.html', 'battery'),
-(3, 3, 1, 'Weight', '', '', '', 'weight.html', 'weight'),
-(4, 4, 1, 'Storage', '', '', '', 'memory.html', 'memory'),
-(5, 5, 1, 'Dimensions', '', '', '', 'dimensions.html', 'dimensions'),
-(6, 6, 1, 'Display', '', '', '', 'display.html', 'display'),
-(7, 7, 1, 'Battery', '', '', '', 'battery.html', 'battery'),
-(8, 8, 1, 'Weight', '', '', '', 'weight.html', 'weight'),
-(9, 9, 1, 'Storage', '', '', '', 'memory.html', 'memory'),
-(10, 10, 1, 'Dimensions', '', '', '', 'dimensions.html', 'dimensions'),
-(11, 11, 1, 'Display', '', '', '', 'display.html', 'display'),
-(12, 12, 1, 'Battery', '', '', '', 'battery.html', 'battery'),
-(13, 13, 1, 'Weight', '', '', '', 'weight.html', 'weight'),
-(14, 14, 1, 'Storage', '', '', '', 'memory.html', 'memory'),
-(15, 15, 1, 'Dimensions', '', '', '', 'dimensions.html', 'dimensions');
+(1, 1, 1, 'Display', '', '', '', '', 'display'),
+(2, 2, 1, 'Battery', '', '', '', '', 'battery'),
+(3, 3, 1, 'Weight', '', '', '', '', 'weight'),
+(4, 4, 1, 'Storage', '', '', '', '', 'memory'),
+(5, 5, 1, 'Dimensions', '', '', '', '', 'dimensions'),
+(6, 6, 1, 'Display', '', '', '', '', 'display'),
+(7, 7, 1, 'Battery', '', '', '', '', 'battery'),
+(8, 8, 1, 'Weight', '', '', '', '', 'weight'),
+(9, 9, 1, 'Storage', '', '', '', '', 'memory'),
+(10, 10, 1, 'Dimensions', '', '', '', '', 'dimensions'),
+(11, 11, 1, 'Display', '', '', '', '', 'display'),
+(12, 12, 1, 'Battery', '', '', '', '', 'battery'),
+(13, 13, 1, 'Weight', '', '', '', '', 'weight'),
+(14, 14, 1, 'Storage', '', '', '', '', 'memory'),
+(15, 15, 1, 'Dimensions', '', '', '', '', 'dimensions');
 
 ##
 ## Table structure for table `specification_filters`
