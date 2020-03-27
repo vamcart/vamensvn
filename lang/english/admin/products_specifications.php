@@ -132,6 +132,13 @@
   define ('TEXT_NEW_SPECIFICATION_INTRO', 'Please fill out the following information for the new specification in this category.');
   define ('TEXT_SPECIFICATION_NAME', 'Specification Name:');
   define ('TEXT_SPECIFICATION_DESCRIPTION', 'Specification Description:');
+  
+  define ('TEXT_SPECIFICATION_SEO_ACTIVE', 'Generate SEO URL from specification name');
+  define ('TEXT_SPECIFICATION_SEO_ACTIVE_YES', 'Yes');
+  define ('TEXT_SPECIFICATION_SEO_ACTIVE_NO', 'No');
+  define ('TEXT_SPECIFICATION_SEO_NAME', 'Unique SEO Name:');
+  define ('TEXT_SPECIFICATION_SEO_URL', 'SEO URL:');
+  
   define ('TEXT_SPECIFICATION_PREFIX', 'Specification Prefix:');
   define ('TEXT_SPECIFICATION_SUFFIX', 'Specification Suffix:');
   define ('TEXT_EXISTING_FIELD', 'Use Existing Database Field:');

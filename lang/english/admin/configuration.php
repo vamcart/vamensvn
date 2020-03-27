@@ -1104,4 +1104,11 @@ define('DISPLAY_DISLIKES_DESC', 'Display Dislikes');
 define('DISPLAY_LAST_VIEWED_TITLE' , 'Display Last Viewed Products');
 define('DISPLAY_LAST_VIEWED_DESC', 'Display Last Viewed Products');
 
+define('SPECIFICATIONS_FILTERS_SEO_MAX_FILTER_IDS_TITLE', 'Max filters for SEO');
+define('SPECIFICATIONS_FILTERS_SEO_MAX_FILTER_IDS_DESC', 'Max filters used for generate SEO URL.');
+define('SPECIFICATIONS_FILTERS_SEO_MAX_FILTER_VALUES_TITLE', 'Max filters values for SEO');
+define('SPECIFICATIONS_FILTERS_SEO_MAX_FILTER_VALUES_DESC', 'Max filters values used for generate SEO URL.');
+define('SPECIFICATIONS_FILTERS_HIDE_EMPTY_FILTERS_GROUP_TITLE', 'Hide empty filter groups');
+define('SPECIFICATIONS_FILTERS_HIDE_EMPTY_FILTERS_GROUP_DESC', 'Hide empty filter groups');
+
 ?>
