@@ -49,4 +49,8 @@ define('TEXT_CLICKTHROUGH_RATE_HELP', '<i>Clickthrough Rate</i>  represents the 
 define('TEXT_PAY_PER_SALE_RATE_HELP', '<i>Pay Per Sale Rate</i>  represents the rate you are paid for sales on a sale by sale basis.');
 define('TEXT_COMMISSION_HELP', '<i>Commission</i>  represents the total commission owed to you');
 define('TEXT_CLOSE_WINDOW', 'Close Window [x]');
+
+define('IMAGE_BANNERS','Banners');
+define('IMAGE_CLICKTHROUGHS','Clicks');
+define('IMAGE_SALES','Sales');
 ?>
