@@ -642,4 +642,6 @@ define('BOX_MERKETING_16', 'Affiliate program');
 define('PULL_DOWN_DEFAULT', 'Please choose');
 define('TEXT_NOT_FOUND', 'Not found.');
 
+define('TEXT_NAVIGATION', 'Navigation');
+
 ?>
