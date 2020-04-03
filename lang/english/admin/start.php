@@ -59,6 +59,7 @@
   
   define('TEXT_SUMMARY_VAMSHOP_NEWS','VamShop News');
   define('TEXT_SUMMARY_TOTAL_ORDERS','Total Orders');
+  define('TEXT_SUMMARY_AVERAGE_ORDERS','Average Order');
   define('TEXT_SUMMARY_TOTAL_SALES','Total Sales');
   define('TEXT_SUMMARY_TOTAL_CUSTOMERS','Total Customers');
   define('TEXT_SUMMARY_PENDING_ORDERS','Pending Orders');
