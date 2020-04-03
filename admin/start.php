@@ -498,7 +498,7 @@ $feed->handle_content_type();
 			foreach ($feed->get_items(0,5) as $item) {
 				echo '<li class="rssRow">';
 				echo '<h3><strong><a href="' . $item->get_permalink() .'" target="_blank">' . $item->get_title() .'</a></strong></h3>';
-				echo '<div>' . strip_tags($item->get_description($str)) . '</div>';
+				echo '<div>' . strip_tags($item->get_description()) . '</div>';
 				echo '</li>';
 		 
 			}
