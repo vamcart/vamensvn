@@ -650,4 +650,6 @@ define('TEXT_SUMMARY_TOTAL_SALES','Total Sales');
 define('TEXT_SUMMARY_TOTAL_CUSTOMERS','Total Customers');
 define('TEXT_SUMMARY_PENDING_ORDERS','Pending Orders');
 
+define('TEXT_CLEAR_CACHE','Clear cache');
+
 ?>
