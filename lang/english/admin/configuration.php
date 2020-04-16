@@ -1111,4 +1111,7 @@ define('SPECIFICATIONS_FILTERS_SEO_MAX_FILTER_VALUES_DESC', 'Max filters values 
 define('SPECIFICATIONS_FILTERS_HIDE_EMPTY_FILTERS_GROUP_TITLE', 'Hide empty filter groups');
 define('SPECIFICATIONS_FILTERS_HIDE_EMPTY_FILTERS_GROUP_DESC', 'Hide empty filter groups');
 
+define('ENABLE_1C_EXCHANGE_TITLE' , 'Enable Data Exchange with 1C:Enterprise.');
+define('ENABLE_1C_EXCHANGE_DESC', 'Enable Data Exchange with 1C:Enterprise.');
+
 ?>
