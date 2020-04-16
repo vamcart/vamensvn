@@ -1114,4 +1114,8 @@ define('SPECIFICATIONS_FILTERS_HIDE_EMPTY_FILTERS_GROUP_DESC', 'Hide empty filte
 define('ENABLE_1C_EXCHANGE_TITLE' , 'Enable Data Exchange with 1C:Enterprise.');
 define('ENABLE_1C_EXCHANGE_DESC', 'Enable Data Exchange with 1C:Enterprise.');
 
+define('CG_1C_EXCHANGE', '1C:Enterprise');
+define('CG_1C_EXCHANGE_TITLE', '1C:Enterprise');
+define('CG_1C_EXCHANGE_DESC', '');
+
 ?>
