@@ -440,6 +440,9 @@ define('TEXT_HEADER_DEFAULT','Main');
 define('TEXT_HEADER_SUPPORT','Support');
 define('TEXT_HEADER_SHOP','Shop');
 define('TEXT_HEADER_LOGOFF','Logout');
+define('TEXT_HEADER_PAGES','Pages');
+define('TEXT_HEADER_ARTICLES','Articles');
+define('TEXT_HEADER_NEWS','News');
 
 define('BOX_CACHE_FILES', 'Cache control');
 
