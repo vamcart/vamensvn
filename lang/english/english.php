@@ -763,4 +763,7 @@ define('TEXT_PRODUCTS_IN_CART', 'Total Quantity');
 define('TEXT_PRODUCTS_TOTAL', 'Total Quantity');
 define('TEXT_PIECE', 'pc.');
 
+define('TEXT_CUSTOMER_REVIEW', 'Customer Review:');
+define('TEXT_STORE_ANSWER', 'Store Answer:');
+
 ?>
