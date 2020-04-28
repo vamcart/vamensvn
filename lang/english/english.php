@@ -766,9 +766,11 @@ define('TEXT_PIECE', 'pc.');
 define('TEXT_CUSTOMER_REVIEW', 'Customer Review:');
 define('TEXT_STORE_ANSWER', 'Store Answer:');
 
-define('ONE_CLICK_BUY_NAVBAR_TITLE','Ask a question');
-define('ONE_CLICK_BUY_TEXT_EMAIL_SUCCESSFUL_SENT','Your question about <b>%s</b> successfully sended.');
+define('ONE_CLICK_BUY_NAVBAR_TITLE','One Click Buy');
+define('ONE_CLICK_BUY_TEXT_EMAIL_SUCCESSFUL_SENT','Your order <b>%s</b> successfully sended.');
 define('ONE_CLICK_BUY_THX_SUCCESSFUL_SENT','Thank you!');
 define('ONE_CLICK_BUY_TEXT_MESSAGE_ERROR','Form validation error.');
+
+define('TEXT_OUT_OF_STOCK','Out Of Stock');
 
 ?>
