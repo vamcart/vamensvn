@@ -1118,4 +1118,7 @@ define('CG_1C_EXCHANGE', '1C:Enterprise');
 define('CG_1C_EXCHANGE_TITLE', '1C:Enterprise');
 define('CG_1C_EXCHANGE_DESC', '');
 
+define('ONE_CLICK_BUY_TITLE' , 'Enable One Click Buy Module');
+define('ONE_CLICK_BUY_DESC', 'Enable One Click Buy Module');
+
 ?>
