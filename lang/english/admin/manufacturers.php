@@ -56,4 +56,7 @@ define('TEXT_MANUFACTURERS_DESCRIPTION','Manufacturer description:');
 define('TEXT_MANUFACTURERS_PAGE_URL', 'Manufacturer SEO URL:');
 define('TEXT_MANUFACTURERS_SORT_ORDER', 'Sort Order:');
 
+define('TEXT_MANUFACTURERS_STATUS', 'Active:');
+define('TABLE_HEADING_STATUS', 'Active');
+
 ?>
