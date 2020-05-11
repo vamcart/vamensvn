@@ -773,4 +773,13 @@ define('ONE_CLICK_BUY_TEXT_MESSAGE_ERROR','Form validation error.');
 
 define('TEXT_OUT_OF_STOCK','Out Of Stock');
 
+define('TEXT_ALL_NEW_PRODUCTS','All New Products');
+define('TEXT_ALL_SPECIAL_PRODUCTS','All Specials');
+define('TEXT_ALL_BEST_SELLERS','All Best Sellers');
+define('TEXT_ALL_FEATURED_PRODUCTS','All Featured');
+define('TEXT_ALL_REVIEWS','All Reviews');
+define('TEXT_ALL_SITE_REVIEWS','All Site Reviews');
+define('TEXT_ALL_NEWS','All News');
+define('TEXT_ALL_ARTICLES','All Articles');
+
 ?>
