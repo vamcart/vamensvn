@@ -783,4 +783,9 @@ define('TEXT_ALL_NEWS','All News');
 define('TEXT_ALL_ARTICLES','All Articles');
 define('TEXT_ALL_MANUFACTURERS','Все бренды');
 
+define('TEXT_DUPLICATE_ORDER','Duplicate Order');
+define('TEXT_DUPLICATE_ORDER_ADD_TO_CART','Add To Cart');
+define('TEXT_DUPLICATE_ORDER_ORDER_NUMBER','Order Number');
+define('TEXT_DUPLICATE_ORDER_PRICE','Price');
+
 ?>
