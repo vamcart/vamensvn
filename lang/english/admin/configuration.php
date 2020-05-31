@@ -1124,4 +1124,21 @@ define('ONE_CLICK_BUY_DESC', 'Enable One Click Buy Module');
 define('DISPLAY_PRIVACY_TEXT_TITLE' , 'Display Privacy Text');
 define('DISPLAY_PRIVACY_TEXT_DESC', 'Display Privacy Text.');
 
+define('STORE_VK_TITLE' , 'VK');
+define('STORE_VK_DESC', 'VK Account.');
+define('STORE_FACEBOOK_TITLE' , 'Facebook');
+define('STORE_FACEBOOK_DESC', 'Facebook Account.');
+define('STORE_TELEGRAM_TITLE' , 'Telegram');
+define('STORE_TELEGRAM_DESC', 'Telegram Account.');
+define('STORE_INSTAGRAM_TITLE' , 'Instagram');
+define('STORE_INSTAGRAM_DESC', 'Instagram Account.');
+define('STORE_TWITTER_TITLE' , 'Twitter');
+define('STORE_TWITTER_DESC', 'Twitter Account.');
+define('STORE_YOUTUBE_TITLE' , 'YouTube');
+define('STORE_YOUTUBE_DESC', 'YouTube Account.');
+define('STORE_WHATSAPP_TITLE' , 'WhatsApp');
+define('STORE_WHATSAPP_DESC', 'WhatsApp Account.');
+define('STORE_VIBER_TITLE' , 'Viber');
+define('STORE_VIBER_DESC', 'Viber Account.');
+
 ?>
