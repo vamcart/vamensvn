@@ -1121,4 +1121,7 @@ define('CG_1C_EXCHANGE_DESC', '');
 define('ONE_CLICK_BUY_TITLE' , 'Enable One Click Buy Module');
 define('ONE_CLICK_BUY_DESC', 'Enable One Click Buy Module');
 
+define('DISPLAY_PRIVACY_TEXT_TITLE' , 'Display Privacy Text');
+define('DISPLAY_PRIVACY_TEXT_DESC', 'Display Privacy Text.');
+
 ?>
