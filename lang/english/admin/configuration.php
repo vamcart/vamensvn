@@ -1141,4 +1141,7 @@ define('STORE_WHATSAPP_DESC', 'WhatsApp Account.');
 define('STORE_VIBER_TITLE' , 'Viber');
 define('STORE_VIBER_DESC', 'Viber Account.');
 
+define('DISPLAY_CART_IN_CHECKOUT_TITLE' , 'Display Cart At Checkout Page');
+define('DISPLAY_CART_IN_CHECKOUT_DESC', 'Display Cart At Checkout Page.');
+
 ?>
