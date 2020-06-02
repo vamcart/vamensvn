@@ -28,6 +28,7 @@ function doBuyNow( id, quantity, update, get_cart, attributes, popup ) {
 			if ($(location).attr('pathname') == '/shopping_cart.php') {
 				$("#ajax_cart").empty().html(msg);
 			} else {
+		      $("#divShoppingCartHeader").html(msg);
 		      $("#divShoppingCart").html(msg);
 			}
 	 
@@ -39,7 +40,7 @@ function doBuyNow( id, quantity, update, get_cart, attributes, popup ) {
 		
 			}   
 			});
-			//img_loader();                     
+			img_loader();                     
 }
 
 function doAddProduct(id) {
@@ -65,6 +66,7 @@ function doAddProduct(id) {
 					data : data,
 					type : "GET",
 					success : function(msg) {
+					 $("#divShoppingCartHeader").html(msg);
 					 $("#divShoppingCart").html(msg);
 					 if ($("div").is("#ajax_cart")) {
 					   $("#ajax_cart").empty().html(msg);
@@ -79,7 +81,7 @@ function doAddProduct(id) {
 
     	               }
 		});
-      //img_loader();
+      img_loader();
 	}
 
 function doDelProduct(id, prod_id) {
@@ -108,6 +110,7 @@ function doDelProduct(id, prod_id) {
 					data : data,
 					type : "GET",
 					success : function(msg) {
+					 $("#divShoppingCartHeader").html(msg);
 					 $("#divShoppingCart").html(msg);
 					 if ($("div").is("#ajax_cart")) {
 					   $("#ajax_cart").empty().html(msg);
@@ -115,6 +118,7 @@ function doDelProduct(id, prod_id) {
 					 if (data.total=="0")
   {
   } else {    	             
+					 $("#divShoppingCartHeader").html(msg);
 					 $("#divShoppingCart").html(msg);
 	
     	              }
@@ -127,14 +131,14 @@ function doDelProduct(id, prod_id) {
 					
 					}
 		});
-		//img_loader();
+		img_loader();
 	}
 
 $(document).ready(function(){
 
 	$('body').on('click', '.cart_delete', function(){
        doDelProduct('',$(this).val());
-       //img_loader();
+       img_loader();
    });
 
    $('body').on('click', '.cart_change', function(){
@@ -159,7 +163,7 @@ $(document).ready(function(){
        qty = field.val();
        field.val(parseInt(qty)+parseInt($(this).val()));
        doBuyNow(id,$(this).val(),'',1,attributes,0);
-       //img_loader();
+       img_loader();
    });
 
    $('body').on('change', 'form#cart_quantity .item-quantity', function(){
@@ -184,7 +188,7 @@ $(document).ready(function(){
        //console.log($("input[name^='old_qty[]'").val());
        
        doBuyNow(id,$(this).val(),'1',1,attributes,0);
-       //img_loader();
+       img_loader();
    });
    
    //$('body').on('focusout', '.input-small', function(){
