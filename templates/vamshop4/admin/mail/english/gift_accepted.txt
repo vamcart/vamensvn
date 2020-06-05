@@ -1,0 +1,4 @@
+Dear Customer!
+
+Gift Voucher Available. Amount: {$AMMOUNT}
+
