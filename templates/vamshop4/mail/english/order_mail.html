@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-<title>{$smarty.const.STORE_NAME} - Заказ номер {$oID}</title>
+<title>{$smarty.const.STORE_NAME} - Order {$oID}</title>
 <!--[if !mso]><!-- --> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--<![endif]--> 
@@ -60,7 +60,7 @@
                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                               <tr>
                                  <td align="center" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 1px; font-weight: 400; line-height: 0; text-align: center; color: #F2F2F2;">Заказ успешно оформлен!</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 1px; font-weight: 400; line-height: 0; text-align: center; color: #F2F2F2;">Your Order!</div>
                                  </td>
                               </tr>
                            </table>
@@ -128,7 +128,7 @@
                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
                                           <tr>
                                              <td style="padding:15px 10px;" class="" >
-                                                <![endif]--> <a class="link" href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" target="_blank" style="display: inline-block; color: #808080; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 22px; text-decoration: none; text-transform: none; padding: 0 10px;"> Личный кабинет </a> <!--[if mso | IE]> 
+                                                <![endif]--> <a class="link" href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" target="_blank" style="display: inline-block; color: #808080; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 22px; text-decoration: none; text-transform: none; padding: 0 10px;"> My Account </a> <!--[if mso | IE]> 
                                              </td>
                                           </tr>
                                        </table>
@@ -179,26 +179,26 @@
                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
                                           <tr>
                                              <td align="left" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 26px; font-weight: bold; line-height: 30px; text-align: left; color: #4F4F4F;">Заказ успешно оформлен!</div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 26px; font-weight: bold; line-height: 30px; text-align: left; color: #4F4F4F;">Your Order!</div>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> Здравствуйте, {$NAME}! <br><br> Ваш заказ номер <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}">{$oID}</a> успешно оформлен! Мы будем сообщать Вам о любом изменении статуса заказа. Вы так же можете отслеживать  cтатус заказа в <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}">личном кабинете</a>. <br></div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> Dear, {$NAME}! <br><br> Your order number  <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}">{$oID}</a> registered! Check your order status at <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}">Account History</a>. <br></div>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" vertical-align="middle" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                                    <tr>
-                                                      <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 10px 25px; background: #dd2c00;" valign="middle"> <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 10px 25px; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> Проверить статус заказа </a> </td>
+                                                      <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 10px 25px; background: #dd2c00;" valign="middle"> <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 10px 25px; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> Check Order Status </a> </td>
                                                    </tr>
                                                 </table>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> Если у Вас есть какие-либо вопросы, <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}contact_us.html">свяжитесь с нами</a>! <br></div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> If you have any questions, please, <a target='_blank' style='font-weight: bold;color: #2E9CC3;' href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}contact_us.html">Contact Us</a>! <br></div>
                                              </td>
                                           </tr>
                                        </table>
@@ -248,11 +248,11 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 60px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="60" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/contact.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; line-height: 20px; color: #333; padding-left: 10px;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Контактная информация:</div>
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Номер заказа:</strong> {$oID}<br> </div>
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Дата:</strong> {$DATE}<br> </div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Contact Information:</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Order Number:</strong> {$oID}<br> </div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Date:</strong> {$DATE}<br> </div>
                                     {if $csID}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Код покупателя:</strong> {$csID} </div>{/if}
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Телефон:</strong> {$PHONE}<br /> </div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Phone:</strong> {$PHONE}<br /> </div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>E-mail:</strong> {$EMAIL}<br /> </div>
                                     {if $customer_extra_fields}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> {$customer_extra_fields} </div>{/if}
                                  </td>
@@ -300,14 +300,14 @@
                                  <td align="left" class="products-list-table" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 10px 25px; word-break: break-word;">
                                     <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#999;font-family:Open Sans, Helvetica, Tahoma, Arial, sans-serif;font-size:13px;line-height:22px;table-layout:auto;width:100%;border:none;">
                                        <tr class="products-list-header" style="border-bottom: 2px solid #D8D8D8; line-height: 30px;">
-                                          <th class="image-column" width="55%" align="left" style="line-height: 18px; padding-bottom: 18px; color: #333;"> Информация о заказе</th>
-                                          <th class="price-column" width="45%" align="right" style="line-height: 18px; padding-bottom: 18px; color: #333;">Номер заказа: {$oID}</th>
+                                          <th class="image-column" width="55%" align="left" style="line-height: 18px; padding-bottom: 18px; color: #333;"> Order Details</th>
+                                          <th class="price-column" width="45%" align="right" style="line-height: 18px; padding-bottom: 18px; color: #333;">Order Number: {$oID}</th>
                                        </tr>
                                        {foreach name=aussen item=order_values from=$order_data}
                                        <tr>
                                           <td class="product-img" width="40%" align="center" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; vertical-align: top; line-height: 1; padding: 15px 0 20px 0; border-bottom: 1px dashed #D8D8D8; font-size: 14px;" valign="top"> {if {$order_values.PRODUCTS_IMAGE} != ''}<a href="{$order_values.PRODUCTS_LINK}" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_THUMBNAIL_IMAGES}{$order_values.PRODUCTS_IMAGE}" class="products-gallery-image" style="display: block; width: 80px;" width="80"> </a>{/if} </td>
                                           <td align="left" width="60%" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; vertical-align: top; line-height: 1; padding: 15px 0 20px 0; border-bottom: 1px dashed #D8D8D8; font-size: 14px;" valign="top">
-                                             <div class="product-info" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 100%; min-height: 80px; margin-bottom: 20px;"> <a href="{$order_values.PRODUCTS_LINK}" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; display: block; color: #333; font-weight: bold; line-height: 20px; text-decoration: none;"> {$order_values.PRODUCTS_NAME} </a> <br /><span style="color: #999;">{$order_values.PRODUCTS_ATTRIBUTES}</span> {if $order_values.PRODUCTS_MODEL neq ''}<br /><span style="color: #999;">Артикул: {$order_values.PRODUCTS_MODEL}</span>{if {$order_values.PRODUCTS_ATTRIBUTES_MODEL} != ''} <span style="color: #999;">{$order_values.PRODUCTS_ATTRIBUTES_MODEL}</span>{/if}{/if}{if $order_values.PRODUCTS_SHIPPING_TIME neq ''}<br /><span style="color: #999;">Время доставки: {$order_values.PRODUCTS_SHIPPING_TIME}</span>{/if}</div>
+                                             <div class="product-info" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 100%; min-height: 80px; margin-bottom: 20px;"> <a href="{$order_values.PRODUCTS_LINK}" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; display: block; color: #333; font-weight: bold; line-height: 20px; text-decoration: none;"> {$order_values.PRODUCTS_NAME} </a> <br /><span style="color: #999;">{$order_values.PRODUCTS_ATTRIBUTES}</span> {if $order_values.PRODUCTS_MODEL neq ''}<br /><span style="color: #999;">Model: {$order_values.PRODUCTS_MODEL}</span>{if {$order_values.PRODUCTS_ATTRIBUTES_MODEL} != ''} <span style="color: #999;">{$order_values.PRODUCTS_ATTRIBUTES_MODEL}</span>{/if}{/if}{if $order_values.PRODUCTS_SHIPPING_TIME neq ''}<br /><span style="color: #999;">Время доставки: {$order_values.PRODUCTS_SHIPPING_TIME}</span>{/if}</div>
                                              <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;"> <span class="product-sku" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; display: inline-block; width: 55%; font-weight: bold;">{$order_values.PRODUCTS_QTY} x {$order_values.PRODUCTS_SINGLE_PRICE}</span> <span class="product-quantity" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; display: inline-block; width: 40%; text-align: right; font-weight: bold; color: #333;">{$order_values.PRODUCTS_PRICE}</span> </div>
                                           </td>
                                        </tr>
@@ -331,7 +331,7 @@
                                  <td align="center" vertical-align="middle" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 10px 25px; word-break: break-word;">
                                     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;width:100%;line-height:100%;">
                                        <tr>
-                                          <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 0; background: #dd2c00;" valign="middle"> <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 36px; margin: 0; text-decoration: none; text-transform: none; padding: 0; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> Узнать статус заказа </a> </td>
+                                          <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 0; background: #dd2c00;" valign="middle"> <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY_INFO}?order_id={$oID}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 36px; margin: 0; text-decoration: none; text-transform: none; padding: 0; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> My Order Status </a> </td>
                                        </tr>
                                     </table>
                                  </td>
@@ -380,7 +380,7 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 45px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="45" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/shipping.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; padding-left: 10px; line-height: 20px; color: #333;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; margin-bottom: 8px; font-weight: bold;">Доставка</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; margin-bottom: 8px; font-weight: bold;">Shipping Method</div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;">
                                        <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;">{$SHIPPING_METHOD}</div>
                                     </div>
@@ -401,7 +401,7 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 45px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="45" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/payment.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; line-height: 20px; color: #333; padding-left: 10px;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Оплата</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Payment Method</div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;">
                                        <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;"> {$PAYMENT_METHOD} </div>
                                     </div>
@@ -451,7 +451,7 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 60px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="60" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/shipping-info.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; line-height: 20px; color: #333; padding-left: 10px;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Адрес доставки:</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Shipping Address:</div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> {$address_label_shipping} </div>
                                  </td>
                               </tr>
@@ -499,7 +499,7 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 60px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="60" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/payment-info.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; line-height: 20px; color: #333; padding-left: 10px;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Оплата</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Payment Method</div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> {$PAYMENT_INFO_HTML} </div>
                                  </td>
                               </tr>
@@ -547,7 +547,7 @@
                               <tr>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 60px; margin-bottom: 10px; vertical-align: top;" class="server-img" width="60" valign="top"> <img src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.DIR_WS_IMAGES}/email/info.png" alt style="width: 100%; max-width: 60px;"> </td>
                                  <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; line-height: 20px; color: #333; padding-left: 10px;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Дополнительная информация:</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: bold; margin-bottom: 8px;">Order Comments:</div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> {$COMMENTS} </div>
                                  </td>
                               </tr>
@@ -593,7 +593,7 @@
                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align: top; background-color: transparent;" width="100%" valign="top" bgcolor="transparent">
                               <tr>
                                  <td align="center" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 10px 25px; word-break: break-word;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 24px; font-weight: bold; line-height: 24px; text-align: center; color: #000000;">Рекомендуем</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 24px; font-weight: bold; line-height: 24px; text-align: center; color: #000000;">You May Also Like</div>
                                  </td>
                               </tr>
                            </table>
@@ -636,7 +636,7 @@
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                                                    <tbody>
                                                       <tr>
-                                                         <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 126px;" width="126"> <a href="{$module_data.PRODUCTS_LINK}" target="_blank" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;"> <img alt="" height="auto" src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$module_data.PRODUCTS_IMAGE}" style="border:none;display:block;outline:none;text-decoration:none;height:167px;width:100%;font-size:13px;" width="126"> </a> </td>
+                                                         <td style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; width: 126px;" width="126"> <a href="{$module_data.PRODUCTS_LINK}" target="_blank" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif;"> <img alt="" height="auto" src="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$module_data.PRODUCTS_IMAGE}" style="border:none;display:block;outline:none;text-decoration:none;width:100%;font-size:13px;" width="126"> </a> </td>
                                                       </tr>
                                                    </tbody>
                                                 </table>
@@ -715,11 +715,11 @@
                                                 <td align="center" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                                    <div style="font-family:OpenSans, Helvetica, Tahoma, Arial, sans-serif;font-size:12px;font-weight:400;line-height:20px;text-align:center;color:#4F4F4F;">
                                                       <div>
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Главная</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" style="color: #333333; line-height: 20px; text-decoration: underline;">Мои заказы</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_SPECIALS}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Скидки</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_MANUFACTURERS}" style="color: #333333; line-height: 20px; text-decoration: underline;">Бренды</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_PRODUCTS_NEW}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Новинки</a>
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Home</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" style="color: #333333; line-height: 20px; text-decoration: underline;">My Orders</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_SPECIALS}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Specials</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_MANUFACTURERS}" style="color: #333333; line-height: 20px; text-decoration: underline;">Brands</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_PRODUCTS_NEW}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">New Products</a>
                                                       </div>
                                                       <br /> &copy; {$smarty.now|date_format:"%Y"} {$smarty.const.STORE_NAME}
                                                       <br />
