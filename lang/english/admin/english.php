@@ -502,8 +502,8 @@ define('BOX_HEADING_CUSTOMER_EXTRA_FIELDS', 'Customer extra fields');
 define('ENTRY_EXTRA_FIELDS_ERROR', 'Field %s must contain a minimum of %d characters');
 define('TEXT_DISPLAY_NUMBER_OF_FIELDS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> Fields)');
 
-define('VAMSHOP_SUPPORT_KEY_TEXT','<a href="http://vamshop.com/key.php" target="_blank"><u>Support key:</u></a>');
-define('VAMSHOP_REGISTER_SUPPORT_KEY','<a href="http://vamshop.com/key.php" target="_blank">register key for free</a>.');
+define('VAMSHOP_SUPPORT_KEY_TEXT','');
+define('VAMSHOP_REGISTER_SUPPORT_KEY','');
 define('VAMSHOP_SUPPORT_KEY',(file_exists(DIR_FS_CATALOG .'vamshop.key') ? implode('', file(DIR_FS_CATALOG .'vamshop.key')) : VAMSHOP_REGISTER_SUPPORT_KEY));
 
 define('WARNING_VAMSHOP_DEMO', 'VamShop Demo. You can buy VamShop at <a href="http://vamshop.com" target="_blank">http://vamshop.com</a>');
