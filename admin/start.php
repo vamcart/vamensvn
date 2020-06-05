@@ -472,7 +472,7 @@ $data_date[] = $report->info[$i]['text'];
 <?php
  
 // We'll process this feed with all of the default options.
-$url = 'https://blog.vamshop.ru/feed/';
+$url = 'http://support.vamshop.com/modules/news/backendt.php?topicid=1';
 $feed = new SimplePie();
 
 // Set which feed to process.
