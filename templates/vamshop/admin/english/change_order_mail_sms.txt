@@ -1,6 +1,6 @@
-Заказ {$ORDER_NR} изменён.
+Order #{$ORDER_NR} was changed.
 
-Новый статус: {$ORDER_STATUS}
+New Status: {$ORDER_STATUS}
 
 {if $NOTIFY_COMMENTS}{$NOTIFY_COMMENTS}{/if}
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-<title>{$smarty.const.STORE_NAME} - Please confirm your password request!</title>
+<title>{$smarty.const.STORE_NAME} - One of your customers reach accumulated discount limit!</title>
 <!--[if !mso]><!-- --> 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--<![endif]--> 
@@ -60,7 +60,7 @@
                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                               <tr>
                                  <td align="center" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 1px; font-weight: 400; line-height: 0; text-align: center; color: #F2F2F2;">Please confirm your password request!</div>
+                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 1px; font-weight: 400; line-height: 0; text-align: center; color: #F2F2F2;">One of your customers reach accumulated discount limit!</div>
                                  </td>
                               </tr>
                            </table>
@@ -128,7 +128,7 @@
                                        <table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center">
                                           <tr>
                                              <td style="padding:15px 10px;" class="" >
-                                                <![endif]--> <a class="link" href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" target="_blank" style="display: inline-block; color: #808080; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 22px; text-decoration: none; text-transform: none; padding: 0 10px;"> My Account </a> <!--[if mso | IE]> 
+                                                <![endif]--> <a class="link" href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}account_history.php" target="_blank" style="display: inline-block; color: #808080; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 22px; text-decoration: none; text-transform: none; padding: 0 10px;"> My Account </a> <!--[if mso | IE]> 
                                              </td>
                                           </tr>
                                        </table>
@@ -179,28 +179,44 @@
                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style width="100%">
                                           <tr>
                                              <td align="left" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 26px; font-weight: bold; line-height: 30px; text-align: left; color: #4F4F4F;">Please confirm your password request!</div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 26px; font-weight: bold; line-height: 30px; text-align: left; color: #4F4F4F;">One of your customers reach accumulated discount limit. All details below!</div>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> 
-        Please confirm,that you personally required a new password. 
-For this reason we sent this email with a personal confirmation-link. 
-If you confirm the link, by clicking it, immediately a new password 
-is sent to you in a further email at the disposal. <br><br></div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 400; line-height: 25px; text-align: left; color: #4F4F4F;"><br> Details: <br><br></div>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
-                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">Confirm Your New Password: <strong><a style='font-weight: bold;color: #2E9CC3;' href="{$LINK}">{$LINK}</a></strong> <br></div>
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">Customer: <strong>{$CUSTOMERNAME}</strong> <br></div>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">Email: <strong>{$EMAIL}</strong> <br></div>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">New Discount:: <strong>{$GROUPDISCOUNT}%</strong> <br></div>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">New Group: <strong>{$GROUPNAME}</strong> <br></div>
+                                             </td>
+                                          </tr>
+                                          <tr>
+                                             <td align="left" class="link-wrap" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; padding-bottom: 20px; word-break: break-word;">
+                                                <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 16px; font-weight: 300; line-height: 25px; text-align: left; color: #4F4F4F;">Reached Limit: <strong>{$ACCUMULATED_LIMIT}</strong> <br></div>
                                              </td>
                                           </tr>
                                           <tr>
                                              <td align="left" vertical-align="middle" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 0px; padding: 0; word-break: break-word;">
                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
                                                    <tr>
-                                                      <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 10px 25px; background: #dd2c00;" valign="middle"> <a href="{$LINK}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 10px 25px; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> Get Your New Password</a> </td>
+                                                      <td align="center" bgcolor="#dd2c00" role="presentation" style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; border: none; border-radius: 3px; cursor: auto; mso-padding-alt: 10px 25px; background: #dd2c00;" valign="middle"> <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}" style="display: inline-block; background: #dd2c00; color: #ffffff; font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 18px; font-weight: bold; line-height: 120%; margin: 0; text-decoration: none; text-transform: none; padding: 10px 25px; mso-padding-alt: 0px; border-radius: 3px;" target="_blank"> Go To Store</a> </td>
                                                    </tr>
                                                 </table>
                                              </td>
@@ -281,10 +297,10 @@ is sent to you in a further email at the disposal. <br><br></div>
                                                    <div style="font-family:OpenSans, Helvetica, Tahoma, Arial, sans-serif;font-size:12px;font-weight:400;line-height:20px;text-align:center;color:#4F4F4F;">
                                                       <div>
                                                          <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Home</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_ACCOUNT_HISTORY}" style="color: #333333; line-height: 20px; text-decoration: underline;">My Orders</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_SPECIALS}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Specials</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_MANUFACTURERS}" style="color: #333333; line-height: 20px; text-decoration: underline;">Brands</a> | 
-                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}{$smarty.const.FILENAME_PRODUCTS_NEW}" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">New Products</a>
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}account_history.php" style="color: #333333; line-height: 20px; text-decoration: underline;">My Orders</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}specials.php" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">Specials</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}manufacturers.php" style="color: #333333; line-height: 20px; text-decoration: underline;">Brands</a> | 
+                                                         <a href="{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}products_new.php" target="_blank" style="color: #333333; line-height: 20px; text-decoration: underline;">New Products</a>
                                                       </div>
                                                       <br /> &copy; {$smarty.now|date_format:"%Y"} {$smarty.const.STORE_NAME}
                                                       <br />
