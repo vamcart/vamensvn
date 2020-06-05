@@ -1,12 +1,12 @@
-One Click Buy: {$PRODUCTS_NAME}
+One Click Buy - {$PRODUCTS_NAME}
 
 {if {$TEXT_EMAIL} != ''}Email: {$TEXT_EMAIL}{/if}
-{if {$TEXT_FIRSTNAME} != ''}Firstname: {$TEXT_FIRSTNAME}{/if}
+{if {$TEXT_FIRSTNAME} != ''}Name: {$TEXT_FIRSTNAME}{/if}
 {if {$TEXT_LASTNAME} != ''}Lastname: {$TEXT_LASTNAME}{/if}
-{if {$TEXT_TELEPHONE} != ''}Telephone: {$TEXT_TELEPHONE}{/if}
-Product: {$PRODUCT_LINK}
+{if {$TEXT_TELEPHONE} != ''}Phone: {$TEXT_TELEPHONE}{/if}
+Product Name: {$PRODUCT_LINK}
 
 {if {$TEXT_MESSAGE} != ''}
-Comment:
+Message:
 {$TEXT_MESSAGE}
 {/if}

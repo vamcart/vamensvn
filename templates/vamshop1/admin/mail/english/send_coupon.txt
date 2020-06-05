@@ -1,8 +1,9 @@
+Coupon!
+
 {$MESSAGE}
 
-Sie k&ouml;nnen den Gutschein bei Ihrer Bestellung einl&ouml;sen. Geben Sie daf&uuml;r Ihren Gutschein-Nummer in das Feld Gutscheine ein.
+You can use this coupon at our store.
 
-Ihr Gutschein-Nummer lautet: {$COUPON_ID}
+Coupon Code: {$COUPON_ID}
 
-Heben Sie Ihre Gutschein-Nummer gut auf, nur so k&ouml;nnen Sie von diesem Angebot profitieren
-wenn Sie uns das n&auml;chste mal unter {$WEBSITE} besuchen.
+Redeem this coupon at our store.

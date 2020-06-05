@@ -12,8 +12,6 @@ Login information:
 E-mail: {$EMAIL_ADDRESS}
 Password: {$PASSWORD}
 
-{if $customer_extra_fields}{$customer_extra_fields}{/if}
-
 If you have questions to our customer-service, contact us directly:{$content.MAIL_REPLY_ADDRESS}
 
 Caution: This eMail-address was announced to us by a customer. If you did not announce yourself, please send an eMail to: {$content.MAIL_REPLY_ADDRESS}

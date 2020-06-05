@@ -1,6 +1,6 @@
-Вы оформили заказ в магазине {$smarty.const.STORE_NAME}!
+New Order Registered At {$smarty.const.STORE_NAME}!
 
-Наши контакты:
+Contact Inormation:
 
 {$smarty.const.STORE_OWNER_EMAIL_ADDRESS}
 {$smarty.const.STORE_TELEPHONE}
