@@ -1147,4 +1147,7 @@ define('DISPLAY_CART_IN_CHECKOUT_DESC', 'Display Cart At Checkout Page.');
 define('DISPLAY_WHOS_ONLINE_TITLE' , 'Display Whos Online Widget at Admin');
 define('DISPLAY_WHOS_ONLINE_DESC', 'Display Whos Online Widget at Admin');
 
+define('ENABLE_LAZY_LOAD_TITLE' , 'Enable Lazy Load');
+define('ENABLE_LAZY_LOAD_DESC', 'Enable Lazy Load.');
+
 ?>
