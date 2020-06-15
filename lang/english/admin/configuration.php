@@ -1144,4 +1144,7 @@ define('STORE_VIBER_DESC', 'Viber Account.');
 define('DISPLAY_CART_IN_CHECKOUT_TITLE' , 'Display Cart At Checkout Page');
 define('DISPLAY_CART_IN_CHECKOUT_DESC', 'Display Cart At Checkout Page.');
 
+define('DISPLAY_WHOS_ONLINE_TITLE' , 'Display Whos Online Widget at Admin');
+define('DISPLAY_WHOS_ONLINE_DESC', 'Display Whos Online Widget at Admin');
+
 ?>
