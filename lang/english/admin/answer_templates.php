@@ -44,6 +44,8 @@ define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No templates at this moment');
 
 define('TEXT_AVAILABLE_PLACEHOLDERS', 'Available Placeholders:');
 define('TEXT_NAME', '{$NAME} - Customers name.');
+define('TEXT_FIRST_NAME', '{$FIRST_NAME} - Firstname.');
+define('TEXT_LAST_NAME', '{$LAST_NAME} - Lastname.');
 define('TEXT_ORDER_NR', '{$ORDER_NR} - Order number.');
 define('TEXT_ORDER_TOTAL', '{$ORDER_TOTAL} - Order Total.');
 define('TEXT_ORDER_LINK', '{$ORDER_LINK} - Order link.');
