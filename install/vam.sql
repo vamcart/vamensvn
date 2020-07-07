@@ -3232,7 +3232,7 @@ CREATE TABLE IF NOT EXISTS `specification_groups` (
   `show_comparison` set('True','False') NOT NULL DEFAULT 'True',
   `show_products` set('True','False') NOT NULL DEFAULT 'True',
   `show_filter` set('True','False') NOT NULL DEFAULT 'True',
-  `show_filter_mainpage` set('True','False') NOT NULL DEFAULT 'True',
+  `show_filter_mainpage` set('True','False') NOT NULL DEFAULT 'False',
   PRIMARY KEY (`specification_group_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
@@ -3253,7 +3253,7 @@ CREATE TABLE IF NOT EXISTS `specifications` (
   `show_comparison` set('True','False') NOT NULL DEFAULT 'True',
   `show_products` set('True','False') NOT NULL DEFAULT 'True',
   `show_filter` set('True','False') NOT NULL DEFAULT 'True',
-  `show_filter_mainpage` set('True','False') NOT NULL DEFAULT 'True',
+  `show_filter_mainpage` set('True','False') NOT NULL DEFAULT 'False',
   `products_column_name` varchar(255) NOT NULL,
   `column_justify` set('Left','Center','Right') NOT NULL DEFAULT 'Left',
   `filter_class` set('none','exact','multiple','range','reverse','start','partial','like') NOT NULL DEFAULT 'none',
