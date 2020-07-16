@@ -48,4 +48,10 @@ define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No faq at this moment');
 
 define('TEXT_FAQ_PAGE_URL', 'SEO URL FAQ');
 
+define('TEXT_FAQ_ATTACH_TO_CATEGORIES', 'Attach To Categories');
+define('TEXT_FAQ_SELECT_CATEGORIES', 'Select Categories');
+
+define('TEXT_FAQ_ATTACH_TO_PRODUCTS', 'Attach To Products');
+define('TEXT_FAQ_SELECT_PRODUCTS', 'Select Products');
+
 ?>

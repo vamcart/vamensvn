@@ -117,4 +117,10 @@ define('TEXT_ARTICLE_IMAGE', 'Article Image:');
 
 define('TEXT_ARTICLE_KEYWORDS', 'Keywords (comma separated):');
 
+define('TEXT_ARTICLE_ATTACH_TO_CATEGORIES', 'Attach To Categories');
+define('TEXT_ARTICLE_SELECT_CATEGORIES', 'Select Categories');
+
+define('TEXT_ARTICLE_ATTACH_TO_PRODUCTS', 'Attach To Products');
+define('TEXT_ARTICLE_SELECT_PRODUCTS', 'Select Products');
+
 ?>

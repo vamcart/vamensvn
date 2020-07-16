@@ -48,4 +48,10 @@ define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'No news at this moment');
 
 define('TEXT_NEWS_PAGE_URL', 'News SEO URL');
 
+define('TEXT_NEWS_ATTACH_TO_CATEGORIES', 'Attach To Categories');
+define('TEXT_NEWS_SELECT_CATEGORIES', 'Select Categories');
+
+define('TEXT_NEWS_ATTACH_TO_PRODUCTS', 'Attach To Products');
+define('TEXT_NEWS_SELECT_PRODUCTS', 'Select Products');
+
 ?>
