@@ -780,6 +780,7 @@ define('TEXT_ALL_FEATURED_PRODUCTS','All Featured');
 define('TEXT_ALL_REVIEWS','All Reviews');
 define('TEXT_ALL_SITE_REVIEWS','All Site Reviews');
 define('TEXT_ALL_NEWS','All News');
+define('TEXT_ALL_NEWS','All FAQs');
 define('TEXT_ALL_ARTICLES','All Articles');
 define('TEXT_ALL_MANUFACTURERS','Все бренды');
 
