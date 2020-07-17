@@ -559,6 +559,7 @@ define('CATEGORY_EXTRA_FIELDS', 'Extra Fields');
 
 define('TEXT_RSS_NEWS','News');
 define('TEXT_RSS_ARTICLES','Articles');
+define('TEXT_RSS_REVIEWS','Reviews');
 define('TEXT_RSS_CATEGORIES','Categories');
 define('TEXT_RSS_NEW_PRODUCTS','New products');
 define('TEXT_RSS_FEATURED_PRODUCTS','Featured products');
