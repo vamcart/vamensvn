@@ -656,4 +656,8 @@ define('TEXT_SUMMARY_PENDING_ORDERS','Pending Orders');
 
 define('TEXT_CLEAR_CACHE','Clear cache');
 
+define('BOX_HEADING_CONTENT', 'Content');
+
+define('BOX_TAGS', 'Tags');
+
 ?>
