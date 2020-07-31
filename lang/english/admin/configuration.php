@@ -1150,4 +1150,11 @@ define('DISPLAY_WHOS_ONLINE_DESC', 'Display Whos Online Widget at Admin');
 define('ENABLE_LAZY_LOAD_TITLE' , 'Enable Lazy Load');
 define('ENABLE_LAZY_LOAD_DESC', 'Enable Lazy Load.');
 
+define('MAX_DISPLAY_TAGS_TITLE' , 'Tags box');
+define('MAX_DISPLAY_TAGS_DESC' , 'Maximum number of tags in faq box');
+define('MAX_DISPLAY_TAGS_PAGE_TITLE' , 'Tags per page');
+define('MAX_DISPLAY_TAGS_PAGE_DESC' , 'Maximum number of taqs per page');
+define('MAX_DISPLAY_TAGS_DESCRIPTION_TITLE' , 'Short answer');
+define('MAX_DISPLAY_TAGS_DSCRIPTION_DESC' , 'Number of symbols displayed in tag description');
+
 ?>
