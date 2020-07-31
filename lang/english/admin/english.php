@@ -312,6 +312,7 @@ define('TEXT_DISPLAY_NUMBER_OF_FEATURED', 'Displaying <b>%d</b> to <b>%d</b> (of
 define('TEXT_DISPLAY_NUMBER_OF_FAQS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> faqs)');
 define('TEXT_DISPLAY_NUMBER_OF_NEWS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> news)');
 define('TEXT_DISPLAY_NUMBER_OF_ITEMS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> items)');
+define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Показано <b>%d</b> - <b>%d</b> (всего <b>%d</b> тэгов)');
 
 define('PREVNEXT_BUTTON_PREV', '&lt;&lt;');
 define('PREVNEXT_BUTTON_NEXT', '&gt;&gt;');
@@ -529,6 +530,7 @@ define('MANUAL_LINK_INFOPAGES','http://manual.vamshop.ru/ch13s02.html');
 define('MANUAL_LINK_FAQ','http://manual.vamshop.ru/ch13s03.html');
 define('MANUAL_LINK_ARTICLES','http://manual.vamshop.ru/ch13s04.html');
 define('MANUAL_LINK_BACKUP','http://manual.vamshop.ru/ch13s06.html');
+define('MANUAL_LINK_TAGS','http://manual.vamshop.ru');
 
 define('TXT_FREE','<span class="Requirement"><strong>free</strong></span>');
 
