@@ -782,6 +782,7 @@ define('TEXT_ALL_REVIEWS','All Reviews');
 define('TEXT_ALL_SITE_REVIEWS','All Site Reviews');
 define('TEXT_ALL_NEWS','All News');
 define('TEXT_ALL_NEWS','All FAQs');
+define('TEXT_ALL_TAGS','All Tags');
 define('TEXT_ALL_ARTICLES','All Articles');
 define('TEXT_ALL_MANUFACTURERS','Все бренды');
 
@@ -789,5 +790,10 @@ define('TEXT_DUPLICATE_ORDER','Duplicate Order');
 define('TEXT_DUPLICATE_ORDER_ADD_TO_CART','Add To Cart');
 define('TEXT_DUPLICATE_ORDER_ORDER_NUMBER','Order Number');
 define('TEXT_DUPLICATE_ORDER_PRICE','Price');
+
+define('TABLE_HEADING_TAGS', 'Tags');
+define('NAVBAR_TITLE_FAQ', 'Tags');
+define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> tags)');
+define('TEXT_NO_TAGS', 'No tags.');
 
 ?>
