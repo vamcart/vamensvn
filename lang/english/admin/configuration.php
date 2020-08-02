@@ -1199,11 +1199,11 @@ define('MODULE_ORDER_STATUS_HAVE_6_DESC' , 'Current status of the order');
 define('MODULE_ORDER_STATUS_6_TITLE' , 'New order status');
 define('MODULE_ORDER_STATUS_6_DESC' , 'Setup new order status for matching orders.');
 
-define('POHOZHIE_TOVARY_TITLE' , 'Display Similar Products?');
-define('POHOZHIE_TOVARY_DESC' , '');
-define('POHOZHIE_TOVARY_FULL_TITLE' , 'Similar producst to display');
-define('POHOZHIE_TOVARY_FULL_DESC' , '');
-define('POHOZHIE_TOVARY_RAND_TITLE' , 'Random select of similar products');
-define('POHOZHIE_TOVARY_RAND_DESC' , '');
+define('SIMILAR_PRODUCTS_TITLE' , 'Display Similar Products?');
+define('SIMILAR_PRODUCTS_DESC' , '');
+define('SIMILAR_PRODUCTS_FULL_TITLE' , 'Similar producst to display');
+define('SIMILAR_PRODUCTS_FULL_DESC' , '');
+define('SIMILAR_PRODUCTS_RAND_TITLE' , 'Random select of similar products');
+define('SIMILAR_PRODUCTS_RAND_DESC' , '');
 
 ?>
