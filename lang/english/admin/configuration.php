@@ -1157,4 +1157,46 @@ define('MAX_DISPLAY_TAGS_PAGE_DESC' , 'Maximum number of taqs per page');
 define('MAX_DISPLAY_TAGS_DESCRIPTION_TITLE' , 'Short answer');
 define('MAX_DISPLAY_TAGS_DSCRIPTION_DESC' , 'Number of symbols displayed in tag description');
 
+define('MODULE_ORDER_DAYS_TITLE' , 'Orders creates more that X days ago');
+define('MODULE_ORDER_DAYS_DESC' , 'Setup number of days, just plain number.');
+define('MODULE_ORDER_STATUS_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_DESC' , 'Setup new order status for matching orders.');
+
+define('MODULE_ORDER_DAYS_2_TITLE' , 'Orders creates more that X days ago');
+define('MODULE_ORDER_DAYS_2_DESC' , 'Setup number of days, just plain number.');
+define('MODULE_ORDER_STATUS_2_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_2_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_2_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_2_DESC' , 'Setup new order status for matching orders.');
+
+define('MODULE_ORDER_DAYS_3_TITLE' , 'Orders creates more that X days ago');
+define('MODULE_ORDER_DAYS_3_DESC' , 'Setup number of days, just plain number.');
+define('MODULE_ORDER_STATUS_3_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_3_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_3_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_3_DESC' , 'Setup new order status for matching orders.');
+
+define('MODULE_ORDER_DAYS_4_TITLE' , 'Orders creates more that X days ago');
+define('MODULE_ORDER_DAYS_4_DESC' , 'Setup number of days, just plain number.');
+define('MODULE_ORDER_STATUS_4_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_4_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_4_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_4_DESC' , 'Setup new order status for matching orders.');
+
+define('MODULE_ORDER_MINUTES_5_TITLE' , 'Orders creates more that Y minutes');
+define('MODULE_ORDER_MINUTES_5_DESC' , 'Setup number of minutes, just plain number.');
+define('MODULE_ORDER_STATUS_5_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_5_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_5_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_5_DESC' , 'Setup new order status for matching orders.');
+
+define('MODULE_ORDER_MINUTES_6_TITLE' , 'Orders creates more that Y minutes');
+define('MODULE_ORDER_MINUTES_6_DESC' , 'Setup number of minutes, just plain number.');
+define('MODULE_ORDER_STATUS_6_TITLE' , 'Orders with current status');
+define('MODULE_ORDER_STATUS_6_DESC' , 'Current status of the order');
+define('MODULE_ORDER_STATUS_HAVE_6_TITLE' , 'New order status');
+define('MODULE_ORDER_STATUS_HAVE_6_DESC' , 'Setup new order status for matching orders.');
+
 ?>
