@@ -1206,4 +1206,7 @@ define('SIMILAR_PRODUCTS_FULL_DESC' , '');
 define('SIMILAR_PRODUCTS_RAND_TITLE' , 'Random select of similar products');
 define('SIMILAR_PRODUCTS_RAND_DESC' , '');
 
+define('MAX_DISPLAY_REVIEW_TEXT_TITLE' , 'Length of reviews text');
+define('MAX_DISPLAY_REVIEW_TEXT_DESC' , 'Length of review text');
+
 ?>
