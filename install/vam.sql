@@ -4612,7 +4612,7 @@ INSERT INTO `tags` (`tags_id`, `tags_name`, `tags_title`, `tags_description`, `t
 (1, 'Smartphones 16 Gb', '', '', '/smartphones/storage-16-gb.html', 1, '', '', '', '2020-08-06 12:50:59', 1, 1, 'smartphones-16-gb.html', 0, 0, 0),
 (2, 'Smartphones 32 Gb', '', '', '/smartphones/storage-32-gb.html', 1, '', '', '', '2020-08-06 12:51:49', 1, 1, 'smartphones-32-gb.html', 0, 0, 0),
 (3, 'Smartphones 4 Gb', '', '', '/smartphones/storage-4-gb.html', 1, '', '', '', '2020-08-06 12:52:22', 1, 1, 'smartphones-4-gb.html', 0, 0, 0),
-(4, 'Tablets 10 inches', '', '', '/tablets/display-10-1in-1280-x-800-10-1in-2560-h-1600.html', 1, '', '', '', '2020-08-06 12:54:12', 1, 1, 'tablets-10-in.html', 0, 0, 0),
+(4, 'Tablets 10 inches', '', '', '/tablets/display-10-1in-1280-x-800.html', 1, '', '', '', '2020-08-06 12:54:12', 1, 1, 'tablets-10-in.html', 0, 0, 0),
 (5, 'Tablets 8 inches', '', '', '/tablets/display-8-0in-1280-x-800.html', 1, '', '', '', '2020-08-06 12:54:54', 1, 1, 'tablets-8-in.html', 0, 0, 0),
 (6, 'Slim Notebooks', '', '', '/notebooks/weight-0-744-kg.html', 1, '', '', '', '2020-08-06 12:56:37', 1, 1, 'slim-notebooks.html', 0, 0, 0),
 (7, 'Notebooks 15 inches', '', '', '/notebooks/display-15-0in-1600-x-900.html', 1, '', '', '', '2020-08-06 12:58:08', 1, 1, 'notebooks-15-in.html', 0, 0, 0),
