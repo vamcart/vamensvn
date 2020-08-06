@@ -54,4 +54,7 @@ define('TEXT_FAQ_SELECT_CATEGORIES', 'Select Categories');
 define('TEXT_FAQ_ATTACH_TO_PRODUCTS', 'Attach To Products');
 define('TEXT_FAQ_SELECT_PRODUCTS', 'Select Products');
 
+define('TEXT_FAQ_SHOW_POPULAR_PRODUCTS', 'Show 5 products from attached category');
+define('TEXT_FAQ_SHOW_DISCOUNT_PRODUCTS', 'Show 5 lowest price products from attached category');
+
 ?>
