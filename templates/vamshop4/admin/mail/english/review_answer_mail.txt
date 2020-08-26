@@ -1,0 +1,6 @@
+Added a reply to your review!
+
+Product: {$PRODUCTS_NAME}
+Product Link: {$PRODUCTS_LINK}
+
+Read Answer: {$REVIEWS_LINK}
