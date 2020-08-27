@@ -796,4 +796,6 @@ define('NAVBAR_TITLE_FAQ', 'Tags');
 define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Show <span class="bold">%d</span> to <span class="bold">%d</span> (of in total <span class="bold">%d</span> tags)');
 define('TEXT_NO_TAGS', 'No tags.');
 
+define('REVIEW_NEW_SUBJECT', 'New Review Added');
+
 ?>
