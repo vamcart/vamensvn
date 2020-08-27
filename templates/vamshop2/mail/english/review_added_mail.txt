@@ -1,0 +1,6 @@
+Review Added!
+
+Product: {$PRODUCTS_NAME}
+Product Link: {$PRODUCTS_LINK}
+
+Read Review: {$REVIEWS_LINK}
