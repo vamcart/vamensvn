@@ -1209,4 +1209,7 @@ define('SIMILAR_PRODUCTS_RAND_DESC' , '');
 define('MAX_DISPLAY_REVIEW_TEXT_TITLE' , 'Length of reviews text');
 define('MAX_DISPLAY_REVIEW_TEXT_DESC' , 'Length of review text');
 
+define('DARK_THEME_TITLE' , 'Dark Theme Support');
+define('DARK_THEME_DESC' , 'Enable dark theme support and dark/light theme toggle.');
+
 ?>
