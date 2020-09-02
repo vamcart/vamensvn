@@ -662,4 +662,6 @@ define('BOX_HEADING_CONTENT', 'Content');
 
 define('BOX_TAGS', 'SEO Tags');
 
+define('TEXT_DELETE','delete');
+
 ?>
