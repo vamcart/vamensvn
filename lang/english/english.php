@@ -797,5 +797,7 @@ define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Show <span class="bold">%d</span> to <spa
 define('TEXT_NO_TAGS', 'No tags.');
 
 define('REVIEW_NEW_SUBJECT', 'New Review Added');
+define('REVIEW_PHOTO_HEADER', 'Add Photos');
+define('REVIEW_PHOTO', 'Image');
 
 ?>
