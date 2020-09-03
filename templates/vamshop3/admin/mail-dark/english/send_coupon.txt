@@ -1,0 +1,9 @@
+Coupon!
+
+{$MESSAGE}
+
+You can use this coupon at our store.
+
+Coupon Code: {$COUPON_ID}
+
+Redeem this coupon at our store.

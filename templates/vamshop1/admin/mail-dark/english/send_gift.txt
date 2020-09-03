@@ -1,0 +1,10 @@
+Gift Voucher!
+
+{$MESSAGE}
+  
+You can enter the redeem code when checking out while making a purchase.  
+  
+Amount: {$AMMOUNT}
+Gift Code: {$GIFT_ID}
+
+To use your e-Gift voucher, klick on Following link: {$GIFT_LINK}
