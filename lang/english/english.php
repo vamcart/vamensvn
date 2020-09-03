@@ -800,4 +800,7 @@ define('REVIEW_NEW_SUBJECT', 'New Review Added');
 define('REVIEW_PHOTO_HEADER', 'Add Photos');
 define('REVIEW_PHOTO', 'Image');
 
+define('THEME_DARK', 'Dark Theme');
+define('THEME_LIGHT', 'Light Theme');
+
 ?>
