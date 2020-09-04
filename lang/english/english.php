@@ -772,6 +772,7 @@ define('ONE_CLICK_BUY_TEXT_EMAIL_SUCCESSFUL_SENT','Your order <b>%s</b> successf
 define('ONE_CLICK_BUY_THX_SUCCESSFUL_SENT','Thank you!');
 define('ONE_CLICK_BUY_TEXT_MESSAGE_ERROR','Form validation error.');
 
+define('TEXT_IN_STOCK','Is Stock');
 define('TEXT_OUT_OF_STOCK','Out Of Stock');
 
 define('TEXT_ALL_NEW_PRODUCTS','All New Products');
