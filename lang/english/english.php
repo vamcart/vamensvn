@@ -804,4 +804,17 @@ define('REVIEW_PHOTO', 'Image');
 define('THEME_DARK', 'Dark Theme');
 define('THEME_LIGHT', 'Light Theme');
 
+define('ADD_FILES', 'Add Photos');
+
+define('UPLOAD_TEXT_ABORT', 'Abort');
+define('UPLOAD_TEXT_CANCEL', 'Cancel');
+define('UPLOAD_TEXT_DELETE', 'Delete');
+define('UPLOAD_TEXT_DONE', 'Done');
+define('UPLOAD_TEXT_MULTI_ERROR', 'Multiple File Drag &amp; Drop is not allowed.');
+define('UPLOAD_TEXT_EXT_ERROR', 'is not allowed. Allowed extensions: ');
+define('UPLOAD_TEXT_SIZE_ERROR', 'is not allowed. Allowed Max size: ');
+define('UPLOAD_TEXT_UPLOAD_ERROR', 'Upload is not allowed');
+define('UPLOAD_TEXT_COUNT_ERROR', ' is not allowed. Maximum allowed files are: ');
+define('UPLOAD_TEXT_DOWNLOAD', 'Download');
+
 ?>
