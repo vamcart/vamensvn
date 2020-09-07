@@ -664,4 +664,17 @@ define('BOX_TAGS', 'SEO Tags');
 
 define('TEXT_DELETE','delete');
 
+define('RATING_STAR_5','Rocks!');
+define('RATING_STAR_4','Pretty good');
+define('RATING_STAR_3','Meh');
+define('RATING_STAR_2','Kinda bad');
+define('RATING_STAR_1','Sucks big time');
+
+define('TEXT_STAR_5','5 stars');
+define('TEXT_STAR_4','4 stars');
+define('TEXT_STAR_3','3 stars');
+define('TEXT_STAR_2','2 stars');
+define('TEXT_STAR_1','1 star');
+
+
 ?>
