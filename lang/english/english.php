@@ -832,4 +832,6 @@ define('TEXT_STAR_1','1 star');
 define('TEXT_SITE_REVIEW_HEADER','Please, Add Your Review!');
 define('TEXT_SITE_REVIEW_ADD','Add Review');
 
+define('SITE_REVIEW_NEW_SUBJECT', 'New Site Review Added');
+
 ?>
