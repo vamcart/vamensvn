@@ -1,0 +1,3 @@
+Site Review Added!
+
+Read Review: {$REVIEWS_LINK}
