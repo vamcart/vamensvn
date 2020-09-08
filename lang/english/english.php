@@ -829,4 +829,7 @@ define('TEXT_STAR_3','3 stars');
 define('TEXT_STAR_2','2 stars');
 define('TEXT_STAR_1','1 star');
 
+define('TEXT_SITE_REVIEW_HEADER','Please, Add Your Review!');
+define('TEXT_SITE_REVIEW_ADD','Add Review');
+
 ?>
