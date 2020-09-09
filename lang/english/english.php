@@ -817,11 +817,11 @@ define('UPLOAD_TEXT_UPLOAD_ERROR', 'Upload is not allowed');
 define('UPLOAD_TEXT_COUNT_ERROR', ' is not allowed. Maximum allowed files are: ');
 define('UPLOAD_TEXT_DOWNLOAD', 'Download');
 
-define('RATING_STAR_5','Rocks!');
-define('RATING_STAR_4','Pretty good');
+define('RATING_STAR_5','Rocks');
+define('RATING_STAR_4','Good');
 define('RATING_STAR_3','Meh');
-define('RATING_STAR_2','Kinda bad');
-define('RATING_STAR_1','Sucks big time');
+define('RATING_STAR_2','Bad');
+define('RATING_STAR_1','Sucks');
 
 define('TEXT_STAR_5','5 stars');
 define('TEXT_STAR_4','4 stars');
