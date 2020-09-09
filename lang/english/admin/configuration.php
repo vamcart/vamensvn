@@ -1212,4 +1212,7 @@ define('MAX_DISPLAY_REVIEW_TEXT_DESC' , 'Length of review text');
 define('DARK_THEME_TITLE' , 'Dark Theme Support');
 define('DARK_THEME_DESC' , 'Enable dark theme support and dark/light theme toggle.');
 
+define('REVIEWS_IMAGES_UPLOAD_TITLE' , 'Enable Reviews Images Upload');
+define('REVIEWS_IMAGES_UPLOAD_DESC' , 'Enable Reviews Images Upload.');
+
 ?>
