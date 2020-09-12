@@ -185,9 +185,11 @@ define('IMAGE_BUTTON_CONTINUE', 'Next');
 define('IMAGE_BUTTON_DELETE', 'Delete');
 define('IMAGE_BUTTON_LOGIN', 'Login');
 define('IMAGE_BUTTON_IN_CART', 'Add to cart');
+define('IMAGE_BUTTON_IN_WISHLIST', 'Add to wishlist');
 define('IMAGE_BUTTON_SEARCH', 'Search');
 define('IMAGE_BUTTON_UPDATE', 'Update');
 define('IMAGE_BUTTON_UPDATE_CART', 'Update shopping cart');
+define('IMAGE_BUTTON_UPDATE_WISHLIST', 'Update wishlist');
 define('IMAGE_BUTTON_WRITE_REVIEW', 'Write Evaluation');
 define('IMAGE_BUTTON_ADMIN', 'Admin');
 define('IMAGE_BUTTON_PRODUCT_EDIT', 'Edit product');
@@ -199,6 +201,7 @@ define('SMALL_IMAGE_BUTTON_VIEW', 'View');
 
 define('ICON_ARROW_RIGHT', 'Show more');
 define('ICON_CART', 'Add to cart');
+define('ICON_WISHLIST', 'Add to wishlist');
 define('ICON_SUCCESS', 'Success');
 define('ICON_WARNING', 'Warning');
 
@@ -346,6 +349,7 @@ define('NAVBAR_TITLE_LOGIN', 'Login');
 define('NAVBAR_TITLE_LOGOFF','Good bye');
 define('NAVBAR_TITLE_PRODUCTS_NEW', 'New products');
 define('NAVBAR_TITLE_SHOPPING_CART', 'Shopping cart');
+define('NAVBAR_TITLE_WISHLIST', 'Wishlist');
 define('NAVBAR_TITLE_SPECIALS', 'Special offers');
 define('NAVBAR_TITLE_FEATURED', 'Featured products');
 define('NAVBAR_TITLE_COOKIE_USAGE', 'Cookie Usage');
@@ -660,6 +664,7 @@ define('TEXT_NO_COMPARISON_AVAILABLE', 'No Specifications To Compare Available.'
 define('TEXT_COMPARE','Comparison');
 
 define('TEXT_BUY_BUTTON', 'Add To Cart');
+define('TEXT_WISHLIST_BUTTON', 'Add To Wishlist');
 
 define('TEXT_BEST_BUY', 'best buy!');
 define('TEXT_BEST_BUY_UP', 'Best buy!');
@@ -705,6 +710,11 @@ define('TEXT_POPUP_CART_ADD','Product added to the cart!');
 define('TEXT_POPUP_CART_CONTINUE','Continue shopping');
 define('TEXT_POPUP_CART_CART', 'Go to shopping cart');
 define('TEXT_POPUP_CART_CHECKOUT', 'Checkout');
+
+define('TEXT_POPUP_WISHLIST_ADD','Product added to the wishlist!');
+define('TEXT_POPUP_WISHLIST_CONTINUE','Continue shopping');
+define('TEXT_POPUP_WISHLIST_WISHLIST', 'Go to wishlist');
+define('TEXT_POPUP_WISHLIST_CHECKOUT', 'Checkout');
 
 define('TITLE_DEFAULT_PAGE', 'Mainpage');
 define('TITLE_SPECIALS_DEFAULT', 'Special Offers');
@@ -761,6 +771,7 @@ define('TEXT_READ_REVIEW', 'Read Review');
 
 define('TEXT_BUTTON_SUBMIT', 'Apply');
 define('TEXT_PRODUCTS_IN_CART', 'Total Quantity');
+define('TEXT_PRODUCTS_IN_WISHLIST', 'Total Quantity');
 define('TEXT_PRODUCTS_TOTAL', 'Total Quantity');
 define('TEXT_PIECE', 'pc.');
 
@@ -789,6 +800,7 @@ define('TEXT_ALL_MANUFACTURERS','Все бренды');
 
 define('TEXT_DUPLICATE_ORDER','Duplicate Order');
 define('TEXT_DUPLICATE_ORDER_ADD_TO_CART','Add To Cart');
+define('TEXT_DUPLICATE_ORDER_ADD_TO_WISHLIST','Add To Wishlist');
 define('TEXT_DUPLICATE_ORDER_ORDER_NUMBER','Order Number');
 define('TEXT_DUPLICATE_ORDER_PRICE','Price');
 
