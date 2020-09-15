@@ -1221,4 +1221,7 @@ define('DARK_THEME_DESC' , 'Enable dark theme support and dark/light theme toggl
 define('REVIEWS_IMAGES_UPLOAD_TITLE' , 'Enable Reviews Images Upload');
 define('REVIEWS_IMAGES_UPLOAD_DESC' , 'Enable Reviews Images Upload.');
 
+define('ENABLE_WISHLIST_TITLE' , 'Разрешить избранное');
+define('ENABLE_WISHLIST_DESC' , 'Разрешить добавлять товары в избранное.');
+
 ?>
