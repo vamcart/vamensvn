@@ -310,6 +310,7 @@ define('TEXT_DISPLAY_NUMBER_OF_TAX_RATES', 'Displaying <b>%d</b> to <b>%d</b> (o
 define('TEXT_DISPLAY_NUMBER_OF_ZONES', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> zones)');
 define('TEXT_DISPLAY_NUMBER_OF_FEATURED', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> products on featured)');
 define('TEXT_DISPLAY_NUMBER_OF_FAQS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> faqs)');
+define('TEXT_DISPLAY_NUMBER_OF_FAQ1S', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> visitor questions)');
 define('TEXT_DISPLAY_NUMBER_OF_NEWS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> news)');
 define('TEXT_DISPLAY_NUMBER_OF_ITEMS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> items)');
 define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Показано <b>%d</b> - <b>%d</b> (всего <b>%d</b> тэгов)');
@@ -496,6 +497,7 @@ define('TEXT_EDIT_FIELDS','Edit product extra fields.');
 define('TEXT_ADD_FIELDS','Add product extra fields.');
 
 define('BOX_CATALOG_FAQ', 'FAQ');
+define('BOX_CATALOG_FAQ1', 'Visitor Questions');
 
 require_once(DIR_FS_LANGUAGES . $_SESSION['language'].'/admin/'.'affiliate_' . $_SESSION['language'] .'.php');
 
@@ -676,5 +678,6 @@ define('TEXT_STAR_3','3 stars');
 define('TEXT_STAR_2','2 stars');
 define('TEXT_STAR_1','1 star');
 
+define('ANSWER_SUBJECT','Answer was added!');
 
 ?>
