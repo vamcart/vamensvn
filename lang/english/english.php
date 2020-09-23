@@ -848,4 +848,6 @@ define('TEXT_SITE_REVIEW_ADD','Add Review');
 
 define('SITE_REVIEW_NEW_SUBJECT', 'New Site Review Added');
 
+define('NAVBAR_TITLE_FAQ1', 'Visitor Questions');
+
 ?>
