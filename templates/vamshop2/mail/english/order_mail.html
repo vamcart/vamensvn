@@ -252,7 +252,7 @@
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Order Number:</strong> {$oID}<br> </div>
                                     <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Date:</strong> {$DATE}<br> </div>
                                     {if $csID}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Customer Code:</strong> {$csID} </div>{/if}
-                                    <div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Phone:</strong> {$PHONE}<br /> </div>
+                                    {if $PHONE}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>Phone:</strong> {$PHONE}<br /> </div>{/if}
                                     {if $EMAIL}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> <strong>E-mail:</strong> {$EMAIL}<br /> </div>{/if}
                                     {if $customer_extra_fields}<div style="font-family: Open Sans, Helvetica, Tahoma, Arial, sans-serif; font-size: 14px;"> {$customer_extra_fields} </div>{/if}
                                  </td>
