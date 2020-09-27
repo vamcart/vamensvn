@@ -18,6 +18,7 @@ define('HEADING_TITLE', 'FAQ1');
 
 define('TABLE_HEADING_FAQ1_QUESTION', 'Visitors Questions');
 define('TABLE_HEADING_FAQ1_ACTION', 'Action');
+define('TABLE_HEADING_FAQ1_ANSWER', 'Answer');
 define('TABLE_HEADING_FAQ1_STATUS', 'Status');
 
 define('TEXT_FAQ1_ITEMS', 'Number of faqs:');
@@ -26,6 +27,8 @@ define('TEXT_DELETE_ITEM_INTRO', 'Are you sure?');
 
 define('TEXT_FAQ1_QUESTION', 'Question');
 define('TEXT_FAQ1_ANSWER', 'Answer');
+define('TEXT_FAQ1_NAME', 'Name');
+define('TEXT_FAQ1_EMAIL_ADDRESS', 'Email');
 
 define('TEXT_FAQ1_META_TITLE', 'Meta Title');
 define('TEXT_FAQ1_META_DESCRIPTION', 'Meta Description');
@@ -56,5 +59,10 @@ define('TEXT_FAQ1_SELECT_PRODUCTS', 'Select Products');
 
 define('TEXT_FAQ1_SHOW_POPULAR_PRODUCTS', 'Show 5 products from attached category');
 define('TEXT_FAQ1_SHOW_DISCOUNT_PRODUCTS', 'Show 5 lowest price products from attached category');
+
+define('TABLE_HEADING_FAQ1_SORT_ORDER', 'Sort Order');
+define('TEXT_FAQ1_SORT_ORDER', 'Sort Order');
+
+define('TEXT_FAQ1_PRODUCT_NAME', 'Product Name');
 
 ?>
