@@ -1391,15 +1391,15 @@ CREATE TABLE products_description (
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE utf8_general_ci;
 
 INSERT INTO `products_description` VALUES
-(1, 1, 'Samsung ATIV Book 9', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 0),
-(2, 1, 'Samsung ATIV Smart PC', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 0),
-(3, 1, 'Samsung ATIV Book 4', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 9),
-(4, 1, 'Samsung GALAXY Tab 3', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
-(5, 1, 'Samsung GALAXY Note 10.1', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
-(6, 1, 'Samsung GALAXY Note 8', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
-(7, 1, 'Samsung GALAXY Note 3', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 1),
-(8, 1, 'Samsung GALAXY S4', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 0),
-(9, 1, 'Samsung GALAXY Ace 3', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 0);
+(1, 1, 'ATIV Book 9', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 0),
+(2, 1, 'ATIV Smart PC', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 0),
+(3, 1, 'ATIV Book 4', 'Product description.', 'Product short description.', 'Buy notebook, samsung notebooks', '', '', '', '', 9),
+(4, 1, 'GALAXY Tab 3', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
+(5, 1, 'GALAXY Note 10.1', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
+(6, 1, 'GALAXY Note 8', 'Product description.', 'Product short description.', 'Buy tablet, samsung tablets', '', '', '', '', 0),
+(7, 1, 'GALAXY Note 3', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 1),
+(8, 1, 'GALAXY S4', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 0),
+(9, 1, 'GALAXY Ace 3', 'Product description.', 'Product short description.', 'Buy smartphone, samsung smartphones', '', '', '', '', 0);
 
 DROP TABLE IF EXISTS products_pins;
 CREATE TABLE products_pins (
