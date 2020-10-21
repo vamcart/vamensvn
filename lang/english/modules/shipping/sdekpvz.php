@@ -17,12 +17,12 @@
    Released under the GNU General Public License 
    ---------------------------------------------------------------------------------------*/
 
-define('MODULE_SHIPPING_SDEKPVZ_TEXT_TITLE', 'СДЭК - Доставка в пункт выдачи заказов');
+define('MODULE_SHIPPING_SDEKPVZ_TEXT_TITLE', 'СДЭК - Пункт выдачи заказов');
 define('MODULE_SHIPPING_SDEKPVZ_TEXT_DESCRIPTION', '');
 define('MODULE_SHIPPING_SDEKPVZ_JS', '
 <script>
 $(function () {
-$("select#pvz_sdek").on("change", function() {
+$("select#pvz_sdek").on("select", function() {
     $("[name=shipping]").val(["sdekpvz_sdekpvz"]);
 });
 });
