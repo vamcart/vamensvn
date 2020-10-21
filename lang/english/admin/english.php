@@ -312,6 +312,7 @@ define('TEXT_DISPLAY_NUMBER_OF_FEATURED', 'Displaying <b>%d</b> to <b>%d</b> (of
 define('TEXT_DISPLAY_NUMBER_OF_FAQS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> faqs)');
 define('TEXT_DISPLAY_NUMBER_OF_FAQ1S', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> visitor questions)');
 define('TEXT_DISPLAY_NUMBER_OF_NEWS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> news)');
+define('TEXT_DISPLAY_NUMBER_OF_BLOCKS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> urls)');
 define('TEXT_DISPLAY_NUMBER_OF_ITEMS', 'Displaying <b>%d</b> to <b>%d</b> (of <b>%d</b> items)');
 define('TEXT_DISPLAY_NUMBER_OF_TAGS', 'Показано <b>%d</b> - <b>%d</b> (всего <b>%d</b> тэгов)');
 
@@ -415,6 +416,7 @@ define('BOX_EASY_POPULATE','Easypopulate');
 define('BOX_CATALOG_QUICK_UPDATES', 'Quick Price Updates');
 
 define('BOX_CATALOG_LATEST_NEWS', 'News');
+define('BOX_CATALOG_BLOCK', 'Block urls');
 define('IMAGE_NEW_NEWS_ITEM', 'Add news');
 
 define('TABLE_HEADING_CUSTOMERS', 'Latest customers');
