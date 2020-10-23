@@ -79,7 +79,7 @@ $form_action = ($_GET['cID']) ? 'update_category' : 'insert_category';
 
     echo vam_draw_form('new_category', FILENAME_CATEGORIES, 'cPath=' . $cPath . '&cID=' . $_GET['cID'] . '&action='.$form_action, 'post', 'enctype="multipart/form-data" cf="true"'); ?>
     
-        	<span class="button"><button type="submit" value="<?php echo BUTTON_SAVE; ?>" cf="false"><?php echo vam_image(DIR_WS_IMAGES . 'icons/buttons/save.png', '', '12', '12'); ?>&nbsp;<?php echo BUTTON_SAVE; ?></button></span>&nbsp;&nbsp;<a class="button" href="<?php echo vam_href_link(FILENAME_CATEGORIES, 'cPath=' . $cPath . '&cID=' . $_GET['cID']) . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/cancel.png', '', '12', '12') . '&nbsp;' . BUTTON_CANCEL . '</span></a>'; ?>
+        	<span class="button"><button type="submit" value="<?php echo BUTTON_SAVE; ?>" cf="false"><?php echo vam_image(DIR_WS_IMAGES . 'icons/buttons/save.png', '', '12', '12'); ?>&nbsp;<?php echo BUTTON_SAVE; ?></button></span>&nbsp;&nbsp;<a class="button" href="<?php echo vam_href_link(FILENAME_CATEGORIES, 'cPath=' . $cPath . '&cID=' . $_GET['cID'] . (isset($_GET['page']) ? '&page=' . $_GET['page'] : '')) . '"><span>' . vam_image(DIR_WS_IMAGES . 'icons/buttons/cancel.png', '', '12', '12') . '&nbsp;' . BUTTON_CANCEL . '</span></a>'; ?>
         	
         	</td>
             <td align="right"><a class="button" href="<?php echo $manual_link; ?>" target="_blank"><span><?php echo vam_image(DIR_WS_IMAGES . 'icons/buttons/information.png', '', '12', '12'); ?>&nbsp;<?php echo TEXT_MANUAL_LINK; ?></span></a></td>
@@ -264,6 +264,11 @@ $order_array=array(array('id' => 'ASC','text'=>'ASC (1 first)'),
           <tr>
             <td valign="top" class="main"><?php echo TEXT_EDIT_ICON; ?></td>
             <td valign="top" class="main"><?php echo vam_draw_input_field('icon', $cInfo->icon, 'size="40"'); ?></td>
+          </tr>
+
+          <tr>
+            <td valign="top" class="main"><?php echo TEXT_GOOGLE_CATEGORY_ID; ?></td>
+            <td valign="top" class="main"><?php echo vam_draw_input_field('google_category_id', $cInfo->google_category_id, 'size="40"'); ?></td>
           </tr>
             
           <tr>

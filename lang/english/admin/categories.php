@@ -273,5 +273,6 @@ define ('TEXT_TAB_BUNDLES', 'Bundles');
 
 define('TEXT_EDIT_LABEL', 'Category Label:');
 define('TEXT_EDIT_ICON', 'Category Icon:');
+define('TEXT_GOOGLE_CATEGORY_ID', 'Google Shopping Category ID:');
 
 ?>
