@@ -2,8 +2,8 @@
 {literal}
 $(document).ready(function() {
 $(".shipping-method").on("click",function(){
-$(".shipping-method").parent().removeClass("selected");
-$(this).parent().addClass("selected");
+$(".shipping-method").removeClass("selected");
+$(this).addClass("selected");
 });
 });
 {/literal}
@@ -15,30 +15,56 @@ $(this).parent().addClass("selected");
 {$FREE_SHIPPING_DESCRIPTION}
 </p>
 {else} 
-{foreach name=aussen item=module_data from=$module_content}
+<div class="card-deck shipping-methods">
+{foreach name=aussen item=module_data from=$module_content}
+{foreach name=aussen item=method_data from=$module_data.methods} 
+<div class="col-12 col-sm-12 col-xs-12 col-md-12 col-lg-12 col-xl-12">
+<div class="shipping-method card card-product card-sm text-center h-100{if {$method_data.checked} == 1} selected{/if}">
+<label class="h-100 shipping {$method_data.id}" for="{$method_data.id}">
 
-{foreach name=aussen item=method_data from=$module_data.methods} <label class="shipping {$method_data.id}{if {$method_data.checked} == 1} selected{/if}" for="{$method_data.id}">
-<div class="shipping-method {cycle values="itemOdd,itemEven"}">   
-<p>
-{$method_data.radio_field}&nbsp;{$module_data.icon} <span class="bold">{$module_data.module}</span>
-{$method_data.title}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$method_data.price}
-</p>
+	<div class="card-body">
+	<div class="row">
+		<div class="col-md-2 my-auto">
+			<div class="mx-auto my-auto">
+			  {if $module_data.icon}
+			  {$module_data.icon}
+			  {else}
+			  <img class="img-fluid" src="images/icons/flat.png" alt="{$module_data.module}" title="{$module_data.module}" data-toggle="tooltip" />
+			  {/if}
+			</div>
+		</div>
+		<div class="col-md-8 my-auto text-left">
+			<div class="title d-flex justify-content-start">
+		    {if $method_data.radio_field}<div>{$method_data.radio_field}&nbsp;</div>{/if}
+		    <div class="font-weight-bolder"></div>
+		    <div class="method-title"><span class="title font-weight-bold text-muted">{$module_data.module}</span></div>
+			</div>
+			{if $method_data.title != ''}
+			<div class="card-text small">{$method_data.title}</div>
+			{/if}
+			{if $module_data.error != ''}
+			<div class="card-text small">{$module_data.error}</div>
+			{/if}
+			{if $module_data.description != ''}
+			<div class="card-text small">
+			{$module_data.description}
+			</div>
+			{/if}     
+			{if $module_data.info != ''}
+			<div class="card-text small">
+			{$module_data.info}
+			</div>
+			{/if}   
+		</div>
+		<div class="col-md-2 my-auto py-2">
+				<div class="price-wrap font-weight-bold text-muted text-left">
+					{if {$method_data.cost} > 0}<div><strong>{$method_data.price}</strong></div>{/if}
+				</div>
+		</div>
+	</div>
+	</div>
 
-{if $module_data.error != ''}<p>
-{$module_data.error}
-</p>{/if} 
-
-{if $module_data.info != ''}
-<p>
-{$module_data.info}
-</p>
-{/if}        
-
-{if $module_data.description != ''}
-<p>
-{$module_data.description}
-</p>
-{/if}        
+  <div class="card-footer align-bottom">
 
 {if $method_data.id == "pickpoint"}
 
@@ -91,31 +117,37 @@ var pickpoint_options={};
 <!--
 <script src="//points.boxberry.ru/js/boxberry.js"> </script>
 
-	<a href="#" class="button" onclick="boxberry.open(callback_function); return false;"><span><i class="fa fa-check"></i> {$smarty.const.MODULE_SHIPPING_BOXBERRY_TEXT_SELECT_ADDRESS}</span></a>
 	<input type="hidden" name="boxberry_id" id="boxberry_id" value="" />
 	<input type="hidden" name="boxberry_address" id="boxberry_address" value="" />
-	<span id="boxberry_address_text"></span>
+	<div id="boxberry_address_text"></div>
+	<a href="#" class="button" onclick="boxberry.open(callback_function); return false;"><span><i class="fa fa-check"></i> {$smarty.const.MODULE_SHIPPING_BOXBERRY_TEXT_SELECT_ADDRESS}</span></a>
 
 <script>
 
 function callback_function(result){ 
+
+console.log(result);
+
 document.getElementById("boxberry_address").value = result.address;
 //document.getElementById("js-pricedelivery").innerHTML = result.price;
 document.getElementById("to_boxberry_id").innerHTML = result.id;
 
-result.name = encodeURIComponent(result.name) // Что бы избежать проблемы с кириллическими символами, на страницах отличными от UTF8, вы можете использовать функцию encodeURIComponent() 
+//result.name = encodeURIComponent(result.name); // Что бы избежать проблемы с кириллическими символами, на страницах отличными от UTF8, вы можете использовать функцию encodeURIComponent() 
 
 //document.getElementById("boxberry_name").innerHTML =	result.name;
 document.getElementById("to_boxberry_address").innerHTML =	result.address;
-document.getElementById("boxberry_address_text").innerHTML = "{$smarty.const.MODULE_SHIPPING_BOXBERRY_TEXT_ADDRESS}" + result.address + " ";
+document.getElementById("boxberry_address_text").innerHTML = result.address;
 //document.getElementById("workschedule").innerHTML =	result.workschedule;
 //document.getElementById("boxberry_phone").innerHTML = result.phone;
 //document.getElementById("boxberry_period").innerHTML = result.period;
 
 {if !$smarty.session.customer_id}  
   document.getElementById("street_address").value=result.address;
+  document.getElementById("postcode").value=result.zip;
+  document.getElementById("city").value=result.name;
+  document.getElementById("boxberry").innerHTML += '<input type="hidden" name="street_address" id="street_address" value="'+result.address+'" /><input type="hidden" name="postcode" id="postcode" value="'+result.zip+'" /><input type="hidden" name="city" id="city" value="'+result.city+'" />';
 {else}
-  document.getElementById("boxberry").innerHTML += '<input type="hidden" name="street_address" id="street_address" value="'+result.address+'" />';
+  document.getElementById("boxberry").innerHTML += '<input type="hidden" name="street_address" id="street_address" value="'+result.address+'" /><input type="hidden" name="postcode" id="postcode" value="'+result.zip+'" /><input type="hidden" name="city" id="city" value="'+result.city+'" />';
 {/if}
 
 document.getElementById("boxberry").checked="checked";
@@ -128,7 +160,11 @@ alert("Отделение работает только по предоплат�
 -->
 {/if}
 
+  </div>
+</label>  
 </div>
-</label> {/foreach}
-{/foreach}
+</div>
+{/foreach}
+{/foreach}
+</div>
 {/if}
