@@ -1,7 +1,6 @@
 <?php
-
 /* -----------------------------------------------------------------------------------------
-   $Id: russianpostapi.php 899 2010/05/29 13:24:46 oleg_vamsoft $
+   $Id: russianpostapi.php 899 2020/05/29 13:24:46 oleg_vamsoft $
 
    Modified by Nagh
    http://www.tail.ru
