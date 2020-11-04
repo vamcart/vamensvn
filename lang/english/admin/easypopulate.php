@@ -183,6 +183,9 @@ define('EASY_LABEL_TEXT_NO_MODEL', 'No products_model field in record. This line
 define('EASY_EXTRA_FIELD_UPDATED', 'Product Extra Fields Updated');
 define('EASY_EXTRA_FIELD_ADDED', 'Product Extra Fields Inserted');
 
+define('EASY_CATEGORIES_UPDATED', 'Categories Fields Updated');
+define('EASY_CATEGORIES_ADDED', 'Categories Felds Inserted');
+
 define('TEXT_EASYPOPULATE_QUICK_LINKS_CATEGORIES','Download <b>Categories</b>');
 
 ?>
