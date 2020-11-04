@@ -52,6 +52,7 @@ define('TEXT_EASYPOPULATE_COMPLETE','Complete');
 define('TEXT_EASYPOPULATE_CUSTOM','Custom');
 define('TEXT_EASYPOPULATE_PRICE_QTY','Price/Qty');
 define('TEXT_EASYPOPULATE_CATEGORIES','Categories');
+define('TEXT_EASYPOPULATE_TAGS','Tags');
 define('TEXT_EASYPOPULATE_ATTRIBUTES','Attributes');
 define('TEXT_EASYPOPULATE_FROOGLE','Froogle');
 define('TEXT_EASYPOPULATE_FILE_FORMAT',' file (model number is always included).');
@@ -62,6 +63,7 @@ define('TEXT_EASYPOPULATE_LABEL_URL','url');
 define('TEXT_EASYPOPULATE_LABEL_IMAGE','image');
 define('TEXT_EASYPOPULATE_LABEL_ATTRIBUTES','attributes');
 define('TEXT_EASYPOPULATE_LABEL_CATEGORIES','categories');
+define('TEXT_EASYPOPULATE_LABEL_TAGS','tags');
 define('TEXT_EASYPOPULATE_LABEL_MANUFACTURERS','manufacturer');
 define('TEXT_EASYPOPULATE_LABEL_PRICE','price');
 define('TEXT_EASYPOPULATE_LABEL_QUANTITY','quantity');
@@ -187,5 +189,10 @@ define('EASY_CATEGORIES_UPDATED', 'Categories Fields Updated');
 define('EASY_CATEGORIES_ADDED', 'Categories Felds Inserted');
 
 define('TEXT_EASYPOPULATE_QUICK_LINKS_CATEGORIES','Download <b>Categories</b>');
+
+define('EASY_TAGS_UPDATED', 'Tags Updated');
+define('EASY_TAGS_ADDED', 'Tags Inserted');
+
+define('TEXT_EASYPOPULATE_QUICK_LINKS_TAGS','Download <b>Tags</b>');
 
 ?>
