@@ -108,4 +108,21 @@ define('ENTRY_CUSTOMERS_STATUS_ACCUMULATED_LIMIT_DISPLAY','');
 define('TEXT_INFO_CUSTOMERS_STATUS_ORDERS_STATUS_INTRO', '<b>Accumulated orders status:</b>');
 define('TEXT_INFO_CUSTOMERS_STATUS_ORDERS_STATUS_DISPLAY', '');
 
+define('TEXT_ATTACH_TO_CATEGORIES', 'Discount by categories');
+define('TEXT_SELECT_CATEGORIES', 'Discount by brands');
+
+define('TEXT_ATTACH_TO_MANUFACTURERS', 'Discount by brands');
+define('TEXT_SELECT_MANUFACTURERS', 'Select brands');
+
+define('TEXT_ADD_LINE', 'Add Category');
+define('TEXT_ADD_BRAND', 'Add Brand');
+define('TEXT_REMOVE_PRODUCT', 'Remove');
+
+define('TEXT_INFO_CUSTOMERS_STATUS_DISCOUNT_BY_CATEGORY_INTRO','<b>Discount by categories</b>');
+define('TEXT_INFO_CUSTOMERS_STATUS_DISCOUNT_BY_BRAND_INTRO','<b>Discount by brands</b>');
+
+define('TEXT_SELECT_CATEGORY','Select categories');
+define('TEXT_SELECT_BRAND','Select brands');
+define('TEXT_SELECT_DISCOUNT','Discount');
+
 ?>
