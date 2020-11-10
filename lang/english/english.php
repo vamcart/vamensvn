@@ -453,12 +453,12 @@ define('YOUR_PRICE','');
 define('YOUR_SPECIAL_PRICE','');
 define('YOUR_GRADUATED_PRICE','');
 define('RETAIL_PRICE','');
-define('GROUP_PRICE','Group price');
-define('MANUFACTURER_DISCOUNT','Personal manufacturer disocunt ');
-define('CATEGORY_DISCOUNT','Discount by category ');
-define('BRAND_DISCOUNT','Discount by brand ');
-define('PRODUCT_DISCOUNT','Product discount ');
-define('PERSONAL_DISCOUNT','Your discount ');
+define('GROUP_PRICE','');
+define('MANUFACTURER_DISCOUNT','Sale ');
+define('CATEGORY_DISCOUNT','Sale ');
+define('BRAND_DISCOUNT','Sale ');
+define('PRODUCT_DISCOUNT','Sale ');
+define('PERSONAL_DISCOUNT','Sale ');
 
 // Сборка VaM
 
