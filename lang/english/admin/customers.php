@@ -79,4 +79,14 @@ define('BUS_DELETE_SUCCESS','deleted!');
 define('BUS_DELETE_WARNING','not deleted!');
 define('BUS_DELETE_CUSTOMERS','Delete checked customers');
 
+define('TEXT_TRANSFER_ORDERS_1','Transfer Orders From:');
+define('TEXT_TRANSFER_ORDERS_2','Transfer Order To');
+define('TEXT_TRANSFER_ORDERS_3','Customer ID');
+define('TEXT_TRANSFER_ORDERS_4','Name');
+define('TEXT_TRANSFER_ORDERS_5','Email');
+define('TEXT_TRANSFER_ORDERS_6','Telephone');
+define('TEXT_TRANSFER_ORDERS_7','<strong>Customer ID</strong>:');
+define('TEXT_TRANSFER_ORDERS_8','Transfer Orders');
+define('TEXT_TRANSFER_ORDERS_9','Transfer Orders');
+
 ?>
