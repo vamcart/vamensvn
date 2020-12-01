@@ -156,4 +156,8 @@ define('BUTTON_ORDERS_EXPORT','Orders Export');
 
 define('ENTRY_ANSWER_TEMPLATE', 'Answer Template:');
 
+define('TEXT_ORDER_HISTORY','History');
+define('TEXT_COPY_ORDER','Copy Order');
+define('TEXT_NEW_ORDER_FOR_CUSTOMER','Create New Order For Customer');
+
 ?>
