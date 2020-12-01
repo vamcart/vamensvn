@@ -160,4 +160,9 @@ define('TEXT_ORDER_HISTORY','History');
 define('TEXT_COPY_ORDER','Copy Order');
 define('TEXT_NEW_ORDER_FOR_CUSTOMER','Create New Order For Customer');
 
+define('TEXT_ORDER_LOG_NAME','Name');
+define('TEXT_ORDER_LOG_ACTION','Action');
+define('TEXT_ORDER_LOG_VALUE','Value');
+define('TEXT_ORDER_LOG_DATE','Date');
+
 ?>
