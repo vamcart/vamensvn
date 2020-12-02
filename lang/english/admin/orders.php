@@ -156,7 +156,11 @@ define('BUTTON_ORDERS_EXPORT','Orders Export');
 
 define('ENTRY_ANSWER_TEMPLATE', 'Answer Template:');
 
-define('TEXT_ORDER_HISTORY','History');
+define('TEXT_ORDER_HISTORY','Orders History');
+define('TEXT_ORDER_LOG','Order Log');
+define('TEXT_ORDER_TOTAL','Orders Total:');
+define('TABLE_HEADING_TELEPHONE','Telephone');
+define('TABLE_HEADING_EMAIL_ADDRESS','Email');
 define('TEXT_COPY_ORDER','Copy Order');
 define('TEXT_NEW_ORDER_FOR_CUSTOMER','Create New Order For Customer');
 
