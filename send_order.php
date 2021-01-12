@@ -40,7 +40,7 @@ $order_check = vam_db_fetch_array($order_query_check);
 	$vamTemplate->assign('csID', $order->customer['csID']);
 
   $it=0;
-	$semextrfields = vamDBquery("select * from " . TABLE_EXTRA_FIELDS . " where fields_status=1 and fields_required_email = '1'");
+	$semextrfields = vamDBquery("select * from " . TABLE_EXTRA_FIELDS . " where fields_required_email = '1' and fields_status = '1'");
 	while($dataexfes = vam_db_fetch_array($semextrfields,true)) {
 	$cusextrfields = vamDBquery("select * from " . TABLE_CUSTOMERS_TO_EXTRA_FIELDS . " where customers_id = '" . (int)$_SESSION['customer_id'] . "' and fields_id = '" . $dataexfes['fields_id'] . "'");
 	$rescusextrfields = vam_db_fetch_array($cusextrfields,true);
@@ -48,7 +48,7 @@ $order_check = vam_db_fetch_array($order_query_check);
 	$extrfieldsinf = vamDBquery("select fields_name from " . TABLE_EXTRA_FIELDS_INFO . " where fields_id = '" . $dataexfes['fields_id'] . "' and languages_id = '" . $_SESSION['languages_id'] . "'");
 
 	$extrfieldsres = vam_db_fetch_array($extrfieldsinf,true);
-	$extra_fields .= $extrfieldsres['fields_name'] . ' : ' .
+	$extra_fields .= $extrfieldsres['fields_name'] . ': ' .
 	$rescusextrfields['value'] . "\n";
 	$vamTemplate->assign('customer_extra_fields', $extra_fields);
   }
