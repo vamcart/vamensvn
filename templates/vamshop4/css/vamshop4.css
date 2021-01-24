@@ -316,6 +316,8 @@ a#scrollup:hover {
   min-width: 400px;
   overflow-y: auto;
   overflow-x: hidden;  
+  background: var(--card-background-color);
+  color: var(--color);
 }	
 
 .dropdown-menu {
@@ -335,7 +337,7 @@ left: auto;
   /*height: 350px;
   min-height: 350px;*/
   max-height: 350px;
-  min-width: 400px;
+  min-width: 300px;
   overflow-y: auto;
   overflow-x: hidden;  
 }
