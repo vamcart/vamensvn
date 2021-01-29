@@ -18,6 +18,7 @@ define('HEADING_TITLE', 'Block urls');
 
 define('TABLE_HEADING_BLOCK_HEADLINE', 'URL');
 define('TABLE_HEADING_BLOCK_ACTION', 'Action');
+define('TABLE_HEADING_BLOCK_GOOGLE', 'Google');
 define('TABLE_HEADING_BLOCK_STATUS', 'Status');
 
 define('TEXT_BLOCK_ITEMS', 'URLs Total:');
@@ -43,5 +44,7 @@ define('EMPTY_CATEGORY', 'Not found');
 define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'Add URL');
 
 define('TEXT_BLOCK_PAGE_URL', 'SEO URL');
+
+define('TEXT_BLOCK_PAGE_GOOGLE', 'Block at Google');
 
 ?>
