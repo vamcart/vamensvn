@@ -19,6 +19,8 @@ define('HEADING_TITLE', 'Block urls');
 define('TABLE_HEADING_BLOCK_HEADLINE', 'URL');
 define('TABLE_HEADING_BLOCK_ACTION', 'Action');
 define('TABLE_HEADING_BLOCK_GOOGLE', 'Google');
+define('TABLE_HEADING_BLOCK_YANDEX', 'Yandex');
+define('TABLE_HEADING_BLOCK_EITHER', 'Block All');
 define('TABLE_HEADING_BLOCK_STATUS', 'Status');
 
 define('TEXT_BLOCK_ITEMS', 'URLs Total:');
@@ -46,5 +48,7 @@ define('TEXT_NO_CHILD_CATEGORIES_OR_PRODUCTS', 'Add URL');
 define('TEXT_BLOCK_PAGE_URL', 'SEO URL');
 
 define('TEXT_BLOCK_PAGE_GOOGLE', 'Block at Google');
+define('TEXT_BLOCK_PAGE_YANDEX', 'Block at Yandex');
+define('TEXT_BLOCK_PAGE_EITHER', 'Block at all');
 
 ?>
