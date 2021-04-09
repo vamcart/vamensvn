@@ -915,4 +915,37 @@ define('TEXT_PACKINGSLIP_29','MP');
 define('TEXT_PACKINGSLIP_30','Customer:');
 define('TEXT_PACKINGSLIP_31','');
 
+define('TEXT_PAGE_SHIPPING','Shipping & Returns');
+define('TEXT_PAGE_PAYMENT','Payment Methods');
+define('TEXT_PAGE_PRIVACY','Conditions of Use');
+define('TEXT_PAGE_ABOUT_US','About Us');
+define('TEXT_PAGE_ABOUT_COMPANY','About company');
+define('TEXT_PAGE_CONTACT_US','Contact Us');
+
+define('TEXT_PAYMENT_METHODS','Payment Methods');
+
+define('TEXT_ADVANTAGES_1_TITLE','Fast and free delivery');
+define('TEXT_ADVANTAGES_1_DESC','Free delivery for all orders over $200');
+define('TEXT_ADVANTAGES_2_TITLE','Money back guarantee');
+define('TEXT_ADVANTAGES_2_DESC','We return money within 30 days');
+define('TEXT_ADVANTAGES_3_TITLE','24/7 customer support');
+define('TEXT_ADVANTAGES_3_DESC','Friendly 24/7 customer support');
+define('TEXT_ADVANTAGES_4_TITLE','Secure online payment');
+define('TEXT_ADVANTAGES_4_DESC','We possess SSL / Secure сertificate');
+
+define('TEXT_STAY_INFORMED','Stay informed');
+define('TEXT_NEWSLETTER_EMAIL','Your email');
+define('TEXT_NEWSLETTER_SUBSCRIBE','Subscribe*');
+define('TEXT_NEWSLETTER_DESCRIPTION','*Subscribe to our newsletter to receive early discount offers, updates and new products info.');
+
+define('TEXT_DOWNLOAD_APP','Download our app');
+define('TEXT_DOWNLOAD_ON','Download on the');
+define('TEXT_DOWNLOAD_ON_APPLE','App Store');
+define('TEXT_DOWNLOAD_ON_GOOGLE','Google Play');
+
+define('TEXT_PROFILE_INFORMATION','Account');
+
+define('TEXT_PAGE_MY_ORDERS','My Orders');
+define('TEXT_PAGE_INFORMATION','Information');
+
 ?>
