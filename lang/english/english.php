@@ -948,4 +948,9 @@ define('TEXT_PROFILE_INFORMATION','Account');
 define('TEXT_PAGE_MY_ORDERS','My Orders');
 define('TEXT_PAGE_INFORMATION','Information');
 
+define('TEXT_WIDGET_BLOG_TITLE','Read the blog');
+define('TEXT_WIDGET_BLOG_DESC','Latest store, fashion news and trends');
+define('TEXT_WIDGET_INSTAGRAM_TITLE','Follow on Instagram');
+define('TEXT_WIDGET_INSTAGRAM_DESC','#vamcart');
+
 ?>
