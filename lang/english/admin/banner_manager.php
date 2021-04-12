@@ -27,6 +27,9 @@ define('TABLE_HEADING_ACTION', 'Action');
 
 define('TEXT_BANNERS_TITLE', 'Banner Title:');
 define('TEXT_BANNERS_DESCRIPTION', 'Banner Description:');
+define('TEXT_BANNERS_DESCRIPTION_MORE', 'Additional Banner Description:');
+define('TEXT_BANNERS_DESCRIPTION_BUTTON', 'Button Text:');
+define('TEXT_BANNERS_DESCRIPTION_BACKGROUND', 'Background Color:');
 define('TEXT_BANNERS_URL', 'Banner URL:');
 define('TEXT_BANNERS_GROUP', 'Banner Group:');
 define('TEXT_BANNERS_NEW_GROUP', ', or enter a new banner group below');
