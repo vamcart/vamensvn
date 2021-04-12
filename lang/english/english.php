@@ -953,4 +953,12 @@ define('TEXT_WIDGET_BLOG_DESC','Latest store, fashion news and trends');
 define('TEXT_WIDGET_INSTAGRAM_TITLE','Follow on Instagram');
 define('TEXT_WIDGET_INSTAGRAM_DESC','#vamcart');
 
+define('TEXT_ADS_CONVERSE_TITLE','Hurry up! Limited time offer');
+define('TEXT_ADS_CONVERSE_DESC','Converse All Star on Sale');
+define('TEXT_ADS_CONVERSE_BUTTON','Shop Now');
+
+define('TEXT_ADS_BANNER_TITLE','Your Add Banner Here');
+define('TEXT_ADS_BANNER_DESC','Hurry up to reserve your spot');
+define('TEXT_ADS_BANNER_BUTTON','Contact us');
+
 ?>
