@@ -3711,9 +3711,9 @@ INSERT INTO `banners` (`banners_id`, `banners_title`, `banners_description`, `ba
 (20, 'Slide 3', 'Slide description 3', '', '', '', 'http://vamshop.com', 'slide3.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:02:50', NULL, 0),
 (21, 'Specials', 'Specials', '', '', '', 'http://vamshop.com', 'slide4.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:03:55', NULL, 0),
 (22, 'Best Sellers', 'Best Sellers', '', '', '', 'http://vamshop.com', 'slide5.jpg', 'slider_bootstrap', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 0),
-(23, 'Has just arrived!', 'Huge Summer Collection', 'Swimwear, Tops, Shorts, Sunglasses &amp; much more...', 'Shop Now', '#3aafd2', 'http://vamshop.com', '01.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 0),
-(24, 'Hurry up! Limited time offer.', 'Women Sportswear Sale', 'Sneakers, Keds, Sweatshirts, Hoodies &amp; much more...', 'Shop Now', '#f5b1b0', 'http://vamshop.com', '02.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 0),
-(25, 'Complete your look with', 'New Men\'s Accessories', 'Hats &amp; Caps, Sunglasses, Bags &amp; much more...', 'Shop Now', '#eba170', 'http://vamshop.com', '03.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 0);
+(23, 'Has just arrived!', 'Huge Summer Collection', 'Swimwear, Tops, Shorts, Sunglasses &amp; much more...', 'Shop Now', '#3aafd2', 'http://vamshop.com', '01.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1),
+(24, 'Hurry up! Limited time offer.', 'Women Sportswear Sale', 'Sneakers, Keds, Sweatshirts, Hoodies &amp; much more...', 'Shop Now', '#f5b1b0', 'http://vamshop.com', '02.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1),
+(25, 'Complete your look with', 'New Men\'s Accessories', 'Hats &amp; Caps, Sunglasses, Bags &amp; much more...', 'Shop Now', '#eba170', 'http://vamshop.com', '03.jpg', 'vamshop5', '', NULL, NULL, NULL, '2019-04-07 23:04:12', NULL, 1);
 
 INSERT INTO `products_options` (`products_options_id`, `language_id`, `products_options_name`, `products_options_length`, `products_options_size`, `products_options_rows`, `products_options_type`, `sortorder`) VALUES
 (1, 1, 'Color', 64, 32, 1, 4, 1);
