@@ -94,44 +94,27 @@ li.ajaxQuickFindHeader
     color: #fe696a;
 }
 
-.handheld-toolbar .navbar-tool.wishlist {
-    padding: .5rem;
-    padding-top: .125rem;
-    border-left: 1px solid #e3e9ef;
-    text-align: center;
-}
-
 .handheld-toolbar .d-none {
-
 display: block !important;
-
-}
-
-.handheld-toolbar .navbar-tool .navbar-tool-tooltip {
-    display: inline;
 }
 
 .handheld-toolbar .navbar-tool-tooltip {
-    display: block;
-    color: #7d879c;
-    font-size: .6875rem;
+display: inline;
+color: #7d879c;
+font-size: .6875rem;
+}
+
+.handheld-toolbar a.navbar-tool {
+padding: .5rem;
+padding-top: .125rem;
+border-left: 1px solid #e3e9ef;
+text-align: center;
 }
 
 .handheld-toolbar .navbar-tool-icon-box {
-    display: block;
-    color: #4b566b;
-    font-size: 1.25rem;
-}
-
-
-.handheld-toolbar a.navbar-tool.wishlist {
-    padding: .5rem;
-    padding-top: .125rem;
-    border-left: 1px solid #e3e9ef;
-    text-align: center;
-}
-
-.handheld-toolbar .navbar-tool-icon-box {
+display: block;
+color: #4b566b;
+font-size: 1.25rem;
 margin: 0 auto;
 padding: 0;
 line-height: 1 !important;
