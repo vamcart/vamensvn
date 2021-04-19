@@ -967,4 +967,6 @@ define('TEXT_CART_EMPTY','empty');
 define('TEXT_EXPAND_MENU','Expand menu');
 define('TEXT_MENU','Menu');
 
+define('TEXT_TO_TOP','Top');
+
 ?>
