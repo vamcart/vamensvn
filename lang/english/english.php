@@ -965,8 +965,44 @@ define('TEXT_CART','Cart');
 define('TEXT_CART_EMPTY','empty');
 
 define('TEXT_EXPAND_MENU','Expand menu');
-define('TEXT_MENU','Menu');
 
-define('TEXT_TO_TOP','Top');
+define('TEXT_LOGIN_SIGNIN','Sign in');
+define('TEXT_LOGIN_SIGNUP','Sign up');
+define('TEXT_LOGIN_CLOSE','Close');
+define('TEXT_LOGIN_EMAIL','Email address');
+define('TEXT_LOGIN_EMAIL_PLACEHOLDER','johndoe@example.com');
+define('TEXT_LOGIN_EMAIL_ERROR','Please provide a valid email address.');
+define('TEXT_LOGIN_PASSWORD','Password');
+define('TEXT_LOGIN_PASSWORD_SHOW','Show/hide password');
+define('TEXT_LOGIN_REMEMBER','Remember me');
+define('TEXT_LOGIN_FORGOT','Forgot password?');
+define('TEXT_LOGIN_SIGN_IN_BUTTON','Sign in');
+define('TEXT_REGISTER_FIRSTNAME','Full name');
+define('TEXT_REGISTER_FIRSTNAME_PLACEHOLDER','John Doe');
+define('TEXT_REGISTER_FIRSTNAME_ERROR','Please fill in your name.');
+define('TEXT_REGISTER_EMAIL','Email address');
+define('TEXT_REGISTER_EMAIL_PLACEHOLDER','johndoe@example.com');
+define('TEXT_REGISTER_EMAIL_ERROR','Please provide a valid email address.');
+define('TEXT_REGISTER_PASSWORD','Password');
+define('TEXT_REGISTER_PASSWORD_SHOW','Show/hide password');
+define('TEXT_REGISTER_PASSWORD_CONFIRM','Confirm password');
+define('TEXT_REGISTER_SIGN_UP_BUTTON','Sign up');
+
+define('TEXT_ACCOUNT_HEADER','My Account');
+define('TEXT_ACCOUNT_CLOSE','Close');
+define('TEXT_ACCOUNT_PROFILE','My Profile');
+define('TEXT_ACCOUNT_EDIT','Acccount Edit');
+define('TEXT_ACCOUNT_PASSWORD','Change Password');
+define('TEXT_ACCOUNT_HISTORY','Order History');
+define('TEXT_ACCOUNT_ADDRESS_BOOK','Address Book');
+define('TEXT_ACCOUNT_NEWSLETTER','Newsletter');
+define('TEXT_ACCOUNT_LOGOFF_BUTTON','Logoff');
+
+define('TEXT_ACCOUNT_SIGN_IN','Sign in');
+define('TEXT_LOGIN_HELLO','Hello');
+define('TEXT_LOGIN_MY_PROFILE','My Account');
+define('TEXT_LOGIN_MY_ORDERS','My Orders');
+
+define('TEXT_LOGIN_SOCIAL','Social');
 
 ?>
