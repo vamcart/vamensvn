@@ -961,4 +961,10 @@ define('TEXT_ADS_BANNER_TITLE','Your Add Banner Here');
 define('TEXT_ADS_BANNER_DESC','Hurry up to reserve your spot');
 define('TEXT_ADS_BANNER_BUTTON','Contact us');
 
+define('TEXT_CART','Cart');
+define('TEXT_CART_EMPTY','empty');
+
+define('TEXT_EXPAND_MENU','Expand menu');
+define('TEXT_MENU','Menu');
+
 ?>
