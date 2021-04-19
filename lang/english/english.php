@@ -965,6 +965,9 @@ define('TEXT_CART','Cart');
 define('TEXT_CART_EMPTY','empty');
 
 define('TEXT_EXPAND_MENU','Expand menu');
+define('TEXT_MENU','Menu');
+
+define('TEXT_TO_TOP','Top');
 
 define('TEXT_LOGIN_SIGNIN','Sign in');
 define('TEXT_LOGIN_SIGNUP','Sign up');
