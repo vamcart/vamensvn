@@ -1008,4 +1008,7 @@ define('TEXT_LOGIN_MY_ORDERS','My Orders');
 
 define('TEXT_LOGIN_SOCIAL','Social');
 
+define('BUTTON_PREV', 'Prev');
+define('BUTTON_NEXT', 'Next');
+
 ?>
