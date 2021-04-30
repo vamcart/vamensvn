@@ -1011,4 +1011,6 @@ define('TEXT_LOGIN_SOCIAL','Social');
 define('BUTTON_PREV', 'Prev');
 define('BUTTON_NEXT', 'Next');
 
+define('TEXT_SHARE', 'Share:');
+
 ?>
