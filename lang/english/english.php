@@ -1013,4 +1013,20 @@ define('BUTTON_NEXT', 'Next');
 
 define('TEXT_SHARE', 'Share:');
 
+define('TEXT_SORT_REVIEW', 'Sort');
+define('TEXT_SORT_REVIEW_NEW', 'by date');
+define('TEXT_SORT_REVIEW_RATING', 'by rating');
+define('TEXT_SORT_REVIEW_PHOTO', 'by photo');
+
+define('TEXT_REVIEW_OVERALL_RATING', 'Overall rating');
+
+define('TEXT_WRITE_REVIEW_HEADER', 'Write a review');
+define('TEXT_WRITE_REVIEW_RATING', 'Rating');
+define('TEXT_WRITE_REVIEW_RATING_CHOOSE', 'Choose rating');
+define('TEXT_WRITE_REVIEW_RATING_ERROR', 'Please choose rating!');
+define('TEXT_WRITE_REVIEW_TEXT', 'Review');
+define('TEXT_WRITE_REVIEW_TEXT_ERROR', 'Please write a review!');
+define('TEXT_WRITE_REVIEW_TEXT_ERROR1', 'Your review must be at least 20 characters.');
+define('TEXT_WRITE_REVIEW_SUBMIT', 'Submit a Review');
+
 ?>
