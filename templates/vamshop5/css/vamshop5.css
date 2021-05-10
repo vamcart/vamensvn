@@ -1,7 +1,3 @@
-.dropdown-menu {
-  z-index: 1030;
-}
-
 .product-price .productOldPrice,
 .product-price .your-discount,
 .tns-carousel .productOldPrice,
@@ -1287,6 +1283,10 @@ text-align: left;
 
 .sticky-wrapper {
 	position: static;
+}
+
+.sticky-top {
+	z-index: 700;
 }
 
 @media(min-width: 1200px) {
