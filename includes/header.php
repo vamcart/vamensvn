@@ -170,11 +170,11 @@ if (strstr($PHP_SELF, FILENAME_ACCOUNT) or strstr($PHP_SELF, FILENAME_ACCOUNT_ED
 $vamTemplate->assign('account_current',' class="current"');
 }
 
-if (strstr($PHP_SELF, FILENAME_SHOPPING_CART)) {
+if (strstr($PHP_SELF, FILENAME_SHOPPING_CART) or strstr($PHP_SELF, FILENAME_CHECKOUT) or strstr($PHP_SELF, FILENAME_CHECKOUT_SHIPPING) or strstr($PHP_SELF, FILENAME_CHECKOUT_PAYMENT) or strstr($PHP_SELF, FILENAME_CHECKOUT_CONFIRMATION) or strstr($PHP_SELF, FILENAME_CHECKOUT_SUCCESS)) {
 $vamTemplate->assign('cart_current',' class="current"');
 }
 
-if (strstr($PHP_SELF, FILENAME_WISHLIST)) {
+if (strstr($PHP_SELF, FILENAME_WISHLIST) or strstr($PHP_SELF, FILENAME_CHECKOUT) or strstr($PHP_SELF, FILENAME_CHECKOUT_SHIPPING) or strstr($PHP_SELF, FILENAME_CHECKOUT_PAYMENT) or strstr($PHP_SELF, FILENAME_CHECKOUT_CONFIRMATION) or strstr($PHP_SELF, FILENAME_CHECKOUT_SUCCESS)) {
 $vamTemplate->assign('wishlist_current',' class="current"');
 }
 
