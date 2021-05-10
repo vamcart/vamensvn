@@ -1029,4 +1029,9 @@ define('TEXT_WRITE_REVIEW_TEXT_ERROR', 'Please write a review!');
 define('TEXT_WRITE_REVIEW_TEXT_ERROR1', 'Your review must be at least 20 characters.');
 define('TEXT_WRITE_REVIEW_SUBMIT', 'Submit a Review');
 
+define('TEXT_ORDER_SUMMARY', 'Order summary');
+define('TEXT_CART_PRODUCTS', 'Products');
+define('TEXT_CART_SUBTOTAL', 'Subtotal');
+define('TEXT_BACK_TO_SHOPPING', 'Continue shopping');
+
 ?>
