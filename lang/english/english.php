@@ -1034,4 +1034,6 @@ define('TEXT_CART_PRODUCTS', 'Products');
 define('TEXT_CART_SUBTOTAL', 'Subtotal');
 define('TEXT_BACK_TO_SHOPPING', 'Continue shopping');
 
+define('TEXT_YOUR_ORDER_NUMBER', 'Make sure you make note of your order number, which is');
+
 ?>
