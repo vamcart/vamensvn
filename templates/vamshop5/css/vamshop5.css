@@ -1,3 +1,7 @@
+.dropdown-menu {
+  z-index: 1030;
+}
+
 .product-price .productOldPrice,
 .product-price .your-discount,
 .tns-carousel .productOldPrice,
