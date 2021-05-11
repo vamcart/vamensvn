@@ -1,3 +1,0 @@
-Ваш заказ №{$oID} оформлен!
-
-{$smarty.const.HTTP_SERVER}{$smarty.const.DIR_WS_CATALOG}
