@@ -721,12 +721,12 @@ define('TEXT_POPUP_WISHLIST_WISHLIST', 'Go to wishlist');
 define('TEXT_POPUP_WISHLIST_CHECKOUT', 'Checkout');
 
 define('TITLE_DEFAULT_PAGE', 'Mainpage');
-define('TITLE_SPECIALS_DEFAULT', 'Special Offers');
+define('TITLE_SPECIALS_DEFAULT', 'Special');
 define('TITLE_MANUFACTURERS_DEFAULT', 'Brands');
 define('TITLE_BEST_SELLERS_DEFAULT', 'Best Sellers');
-define('TITLE_NEW_PRODUCTS_DEFAULT', 'New Products');
-define('TITLE_FEATURED_DEFAULT', 'Featured Products');
-define('TITLE_FEATURED_DEFAULT_SHORT', 'Featured Products');
+define('TITLE_NEW_PRODUCTS_DEFAULT', 'New');
+define('TITLE_FEATURED_DEFAULT', 'Featured');
+define('TITLE_FEATURED_DEFAULT_SHORT', 'Featured');
 define('TITLE_SPECIALS_DEFAULT', 'Specials');
 
 define('TEXT_NOT_FOUND', 'Not found.');
@@ -914,6 +914,11 @@ define('TEXT_PACKINGSLIP_28','Customer');
 define('TEXT_PACKINGSLIP_29','MP');
 define('TEXT_PACKINGSLIP_30','Customer:');
 define('TEXT_PACKINGSLIP_31','');
+
+define('TEXT_USEFUL_LINKS','Useful links');
+define('TEXT_ORDER_TRACKING','Order Tracking');
+define('TEXT_SUPPORT','Support');
+define('TEXT_CURRENCY','Currency');
 
 define('TEXT_PAGE_SHIPPING','Shipping & Returns');
 define('TEXT_PAGE_PAYMENT','Payment Methods');
