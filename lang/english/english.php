@@ -999,7 +999,7 @@ define('TEXT_REGISTER_SIGN_UP_BUTTON','Sign up');
 define('TEXT_ACCOUNT_HEADER','My Account');
 define('TEXT_ACCOUNT_CLOSE','Close');
 define('TEXT_ACCOUNT_PROFILE','My Profile');
-define('TEXT_ACCOUNT_EDIT','Acccount Edit');
+define('TEXT_ACCOUNT_EDIT','Account Edit');
 define('TEXT_ACCOUNT_PASSWORD','Change Password');
 define('TEXT_ACCOUNT_HISTORY','Order History');
 define('TEXT_ACCOUNT_ADDRESS_BOOK','Address Book');
