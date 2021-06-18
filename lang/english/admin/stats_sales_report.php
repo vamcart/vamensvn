@@ -56,7 +56,8 @@ define('SORT_VAL5', 'Revenue');
 define('SORT_VAL6', 'Revenue desc');
 
 define('REPORT_STATUS_FILTER', 'Status');
-define('REPORT_PAYMENT_FILTER','Paymenttype');
+define('REPORT_PAYMENT_FILTER','Payment Method');
+define('REPORT_SHIPPING_FILTER','Shipping Method');
 
 define('SR_SEPARATOR1', ';');
 define('SR_SEPARATOR2', ';');
